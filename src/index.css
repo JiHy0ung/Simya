@@ -1,0 +1,31 @@
+:root {
+  --cursor-default: url("./assets/defalt_cursor.cur") 0 0, auto;
+  --cursor-pointer: url("./assets/pointer_cursor.cur") 0 0, pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mona8x12";
+  cursor: inherit;
+}
+
+html {
+  cursor: var(--cursor-default);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  background-color: #19181e;
+  color: rgb(255, 255, 255);
+  font-family: "Mona8x12";
+}
+
+button,
+a,
+[role="button"] {
+  cursor: var(--cursor-pointer);
+}
