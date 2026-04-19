@@ -6,7 +6,7 @@ import { useNavigate } from "react-router";
 
 const HeaderContainer = styled(Box)({
   display: "flex",
-  justifyContent: "",
+  justifyContent: "start",
   alignItems: "center",
   gap: "5rem",
   padding: "0.75rem 1.625rem",
@@ -19,7 +19,7 @@ const HeaderLogoBox = styled(Box)({
   justifyContent: "center",
   alignItems: "center",
   gap: "0.5rem",
-  cursor: "pointer",
+  cursor: "var(--cursor-pointer)",
 });
 
 const HeaderTitle = styled(Typography)({
@@ -32,6 +32,7 @@ const HeaderMenuBox = styled(Box)({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
+  gap: "0.5rem",
 });
 
 const HeaderMenuButton = styled(Button)({
@@ -65,6 +66,9 @@ const Header = () => {
       </HeaderLogoBox>
 
       <HeaderMenuBox>
+        <HeaderMenuButton disableRipple onClick={() => navigate("/like")}>
+          <span style={{ fontFamily: "Mona12" }}>❤️ </span>호감도
+        </HeaderMenuButton>
         <HeaderMenuButton disableRipple onClick={() => navigate("/food")}>
           <span style={{ fontFamily: "Mona12" }}>🍖 </span> 레스토랑 & 카페
         </HeaderMenuButton>
@@ -73,9 +77,6 @@ const Header = () => {
         </HeaderMenuButton>
         <HeaderMenuButton disableRipple onClick={() => navigate("/wood")}>
           <span style={{ fontFamily: "Mona12" }}>🪵 </span>목재
-        </HeaderMenuButton>
-        <HeaderMenuButton disableRipple onClick={() => navigate("/like")}>
-          <span style={{ fontFamily: "Mona12" }}>❤️ </span>호감도
         </HeaderMenuButton>
       </HeaderMenuBox>
     </HeaderContainer>
