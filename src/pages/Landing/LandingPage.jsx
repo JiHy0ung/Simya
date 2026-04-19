@@ -1,6 +1,10 @@
 import React from "react";
 
 const LandingPage = () => {
+  // TODO
+  // 인게임 시간 확인
+  // NPC 복복 할 수 있는 것
+
   return (
     <div>
       본 사이트는 ‘심야 잡화점’ 유저가 제작한 비공식 웹사이트로, 유저 제보를
