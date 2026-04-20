@@ -1,22 +1,21 @@
-import Kimchi from "../assets/images/processed/kimchi.png";
-import Flour from "../assets/images/processed/flour.png";
-import RiceFlour from "../assets/images/processed/rice_flour.png";
-import Starch from "../assets/images/processed/starch.png";
-import Syrup from "../assets/images/processed/syrup.png";
-import CocoaPowder from "../assets/images/processed/cocoa_powder.png";
-import Ketchup from "../assets/images/processed/ketchup.png";
-import Stock from "../assets/images/processed/stock.png";
-import SoySauce from "../assets/images/processed/soy_sauce.png";
-import Doenjang from "../assets/images/processed/doenjang.png";
-import Gochujang from "../assets/images/processed/gochujang.png";
-import GarlicOil from "../assets/images/processed/garlic_oil.png";
-import ChiliOil from "../assets/images/processed/chili_oil.png";
-import Seasoning from "../assets/images/processed/seasoning_sauce.png";
-import Cream from "../assets/images/processed/cream.png";
-import Pickle from "../assets/images/processed/pickle.png";
-import Sugar from "../assets/images/processed/sugar.png";
-
-import { getCropImage } from "../utils/recipeUtils";
+import Kimchi from "../../assets/images/food/processed/kimchi.png";
+import Flour from "../../assets/images/food/processed/flour.png";
+import RiceFlour from "../../assets/images/food/processed/rice_flour.png";
+import Starch from "../../assets/images/food/processed/starch.png";
+import Syrup from "../../assets/images/food/processed/syrup.png";
+import CocoaPowder from "../../assets/images/food/processed/cocoa_powder.png";
+import Ketchup from "../../assets/images/food/processed/ketchup.png";
+import Stock from "../../assets/images/food/processed/stock.png";
+import SoySauce from "../../assets/images/food/processed/soy_sauce.png";
+import Doenjang from "../../assets/images/food/processed/doenjang.png";
+import Gochujang from "../../assets/images/food/processed/gochujang.png";
+import GarlicOil from "../../assets/images/food/processed/garlic_oil.png";
+import ChiliOil from "../../assets/images/food/processed/chili_oil.png";
+import Seasoning from "../../assets/images/food/processed/seasoning_sauce.png";
+import Cream from "../../assets/images/food/processed/cream.png";
+import Pickle from "../../assets/images/food/processed/pickle.png";
+import Sugar from "../../assets/images/food/processed/sugar.png";
+import { getCropImage } from "../../utils/recipeUtils";
 
 export const processedRecipes = [
   {

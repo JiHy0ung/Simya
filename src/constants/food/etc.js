@@ -1,8 +1,8 @@
-import Egg from "../assets/images/etc/egg.png";
-import Meat from "../assets/images/etc/meat.png";
-import Milk from "../assets/images/etc/milk.png";
-import Oil from "../assets/images/etc/oil.png";
-import Salt from "../assets/images/etc/salt.png";
+import Egg from "../../assets/images/food/etc/egg.png";
+import Meat from "../../assets/images/food/etc/meat.png";
+import Milk from "../../assets/images/food/etc/milk.png";
+import Oil from "../../assets/images/food/etc/oil.png";
+import Salt from "../../assets/images/food/etc/salt.png";
 
 export const etc = [
   {

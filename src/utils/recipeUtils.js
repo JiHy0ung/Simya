@@ -1,7 +1,7 @@
-import { seasonal } from "../constants/seasonal";
-import { vanilla } from "../constants/vanilla";
-import { etc } from "../constants/etc";
-import { processedRecipes } from "../constants/processed";
+import { seasonal } from "../constants/food/seasonal";
+import { vanilla } from "../constants/food/vanilla";
+import { etc } from "../constants/food/etc";
+import { processedRecipes } from "../constants/food/processed";
 
 const allCrops = [...vanilla, ...Object.values(seasonal).flat(), ...etc];
 

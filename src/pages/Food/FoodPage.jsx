@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
 import { Box, Tabs, Tab, Container, Typography } from "@mui/material";
-import { processedRecipes } from "../../constants/processed";
-import { restaurantRecipes } from "../../constants/restaurant";
+import { processedRecipes } from "../../constants/food/processed";
+import { restaurantRecipes } from "../../constants/food/restaurant";
 import RecipeCard from "./components/RecipeCard";
 import RecipeDetail from "./components/RecipeDetail";
-import { cafeRecipes } from "../../constants/cafe";
+import { cafeRecipes } from "../../constants/food/cafe";
 
 const FoodContainer = styled(Container)({
   display: "flex",
