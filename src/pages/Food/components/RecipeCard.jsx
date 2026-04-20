@@ -69,6 +69,13 @@ const IngredientIcon = styled("img")({
 });
 
 const Amount = styled("span")({
+  display: "flex",
+  alignItems: "center",
+  gap: "2px",
+  fontFamily: "Mona8x12",
+  fontSize: "0.75rem",
+  lineHeight: 1, // 🔥 핵심
+
   color: "#b7b3da",
 });
 
@@ -84,7 +91,9 @@ const RecipeCard = ({ name, image, ingredients = [], selected, onClick }) => {
               {ing.image && <IngredientIcon src={ing.image} alt={ing.name} />}
               <span>{ing.name}</span>
             </IngredientLeft>
-            <Amount>× {ing.count}</Amount>
+            <Amount>
+              <span style={{ fontSize: "0.75rem" }}>x</span> {ing.count}
+            </Amount>
           </IngredientRow>
         ))}
       </CardBody>

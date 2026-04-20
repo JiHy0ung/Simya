@@ -206,7 +206,10 @@ const RecipeDetail = ({ recipe }) => {
                 )}
               </IngLeft>
               <IngRight>
-                <IngCount>×{ing.count}</IngCount>
+                <IngCount>
+                  <span style={{ fontSize: "0.75rem" }}>x </span>
+                  {ing.count}
+                </IngCount>
               </IngRight>
             </IngRow>
           );
