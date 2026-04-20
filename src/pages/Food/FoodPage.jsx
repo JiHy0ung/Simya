@@ -4,6 +4,8 @@ import { Box, Tabs, Tab, Container, Typography } from "@mui/material";
 import { processedRecipes } from "../../constants/processed";
 import { restaurantRecipes } from "../../constants/restaurant";
 import RecipeCard from "./components/RecipeCard";
+import RecipeDetail from "./components/RecipeDetail";
+import { cafeRecipes } from "../../constants/cafe";
 
 const FoodContainer = styled(Container)({
   display: "flex",
@@ -14,7 +16,7 @@ const FoodContainer = styled(Container)({
 });
 
 const FoodTitle = styled(Typography)({
-  fontSize: "3rem",
+  fontSize: "3.5rem",
   fontWeight: "900",
   marginBottom: "1rem",
 });
@@ -27,7 +29,7 @@ const FoodSubtitle = styled(Typography)({
 });
 
 const FoodDescription = styled(Typography)({
-  fontSize: "0.95rem",
+  fontSize: "0.875rem",
   color: "#888",
   textAlign: "center",
   maxWidth: "600px",
@@ -36,13 +38,9 @@ const FoodDescription = styled(Typography)({
 
 const StyledTabs = styled(Tabs)({
   width: "100%",
-  display: "flex",
-  justifyContent: "center",
   minHeight: "unset",
   marginBottom: "1.25rem",
-  "& .MuiTabs-indicator": {
-    display: "none",
-  },
+  "& .MuiTabs-indicator": { display: "none" },
 });
 
 const StyledTab = styled(Tab)({
@@ -57,35 +55,47 @@ const StyledTab = styled(Tab)({
   cursor: "var(--cursor-pointer)",
   "&.Mui-selected": {
     color: "#c4bdff",
-    backgroundColor: "rgba(184, 178, 236, 0.27)",
+    backgroundColor: "rgba(184,178,236,0.27)",
     borderColor: "rgba(183,179,218,0.5)",
     fontWeight: "bold",
   },
 });
 
-const CardGrid = styled(Box)({
+// 좌우 분할 레이아웃
+const ContentLayout = styled(Box)({
   width: "100%",
   display: "grid",
-  gridTemplateColumns: "repeat(auto-fill, minmax(155px, 1fr))",
+  gridTemplateColumns: "280px 1fr",
+  gap: "1.5rem",
+  alignItems: "start",
+  "@media (max-width: 768px)": {
+    gridTemplateColumns: "1fr",
+  },
+});
+
+const CardGrid = styled(Box)({
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fill, minmax(148px, 1fr))",
   gap: "1rem",
 });
 
 const TABS = [
-  { value: "process", label: "가공 스테이션", data: processedRecipes },
-  { value: "restaurant", label: "레스토랑 스테이션", data: restaurantRecipes },
-  { value: "cafe", label: "카페", data: [] },
+  { value: "process", label: "가공식품", data: processedRecipes },
+  { value: "restaurant", label: "레스토랑", data: restaurantRecipes },
+  { value: "cafe", label: "디저트 카페", data: cafeRecipes },
 ];
 
 const FoodPage = () => {
   const [tab, setTab] = useState("process");
+  const [selected, setSelected] = useState(processedRecipes[0] ?? null);
 
   const currentData = TABS.find((t) => t.value === tab)?.data ?? [];
 
-  // TODO
-  // 왼쪽은 순수익 자세한 재료 오른쪽은 선택 탭 이렇게 나눠서 보여지도록
-  // 미선택시 자동으로 김치 선택, 디폴트 값 넣기
-  // 모바일은 왼쪽/오른쪽이 위/아래로 적용되도록
-  // 왼쪽 정보 - 가격, 계절 작물이 들어간다면 성장기간(가장 오래걸리는)참고해서 완성품 하나 만드는데 걸리는 시간, 각 재료의 순수익 값
+  const handleTabChange = (_, v) => {
+    setTab(v);
+    const newData = TABS.find((t) => t.value === v)?.data ?? [];
+    setSelected(newData[0] ?? null); // 탭 전환 시 첫번째 자동 선택
+  };
 
   return (
     <FoodContainer>
@@ -97,7 +107,7 @@ const FoodPage = () => {
         재료 구성과 총 비용, 순수익을 확인해 효율을 분석하세요.
       </FoodDescription>
 
-      <StyledTabs value={tab} onChange={(_, v) => setTab(v)}>
+      <StyledTabs value={tab} onChange={handleTabChange}>
         {TABS.map((t) => (
           <StyledTab
             key={t.value}
@@ -108,11 +118,22 @@ const FoodPage = () => {
         ))}
       </StyledTabs>
 
-      <CardGrid>
-        {currentData.map((recipe, i) => (
-          <RecipeCard key={i} {...recipe} />
-        ))}
-      </CardGrid>
+      <ContentLayout>
+        {/* 왼쪽: 선택된 레시피 상세 */}
+        <RecipeDetail recipe={selected} />
+
+        {/* 오른쪽: 카드 그리드 */}
+        <CardGrid>
+          {currentData.map((recipe, i) => (
+            <RecipeCard
+              key={i}
+              {...recipe}
+              selected={selected?.name === recipe.name}
+              onClick={() => setSelected(recipe)}
+            />
+          ))}
+        </CardGrid>
+      </ContentLayout>
     </FoodContainer>
   );
 };

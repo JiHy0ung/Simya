@@ -1,266 +1,228 @@
+import Kimchi from "../assets/images/processed/kimchi.png";
+import Flour from "../assets/images/processed/flour.png";
+import RiceFlour from "../assets/images/processed/rice_flour.png";
+import Starch from "../assets/images/processed/starch.png";
+import Syrup from "../assets/images/processed/syrup.png";
+import CocoaPowder from "../assets/images/processed/cocoa_powder.png";
+import Ketchup from "../assets/images/processed/ketchup.png";
+import Stock from "../assets/images/processed/stock.png";
+import SoySauce from "../assets/images/processed/soy_sauce.png";
+import Doenjang from "../assets/images/processed/doenjang.png";
+import Gochujang from "../assets/images/processed/gochujang.png";
+import GarlicOil from "../assets/images/processed/garlic_oil.png";
+import ChiliOil from "../assets/images/processed/chili_oil.png";
+import Seasoning from "../assets/images/processed/seasoning_sauce.png";
+import Cream from "../assets/images/processed/cream.png";
+import Pickle from "../assets/images/processed/pickle.png";
+import Sugar from "../assets/images/processed/sugar.png";
+
+import StirMeatFry from "../assets/images/restaurant/stir_fried_meat.png";
+import Baechujeon from "../assets/images/restaurant/baechujeon.png";
+import PineapplePizza from "../assets/images/restaurant/pineapple_pizza.png";
+import Bibimbap from "../assets/images/restaurant/bibimbap.png";
+import VeggieRice from "../assets/images/restaurant/veggie_rice.png";
+import CreamRisotto from "../assets/images/restaurant/cream_risotto.png";
+import TomatoPasta from "../assets/images/restaurant/tomato_pasta.png";
+import DoenjangStew from "../assets/images/restaurant/doenjang_stew.png";
+import KimchiStew from "../assets/images/restaurant/kimchi_stew.png";
+import GochujangStew from "../assets/images/restaurant/gochujang_stew.png";
+import CreamSoup from "../assets/images/restaurant/cream_soup.png";
+import MixedFries from "../assets/images/restaurant/mixed_fries.png";
+import SweetPotatoStick from "../assets/images/restaurant/sweet_potato_stick.png";
+import VeggieFries from "../assets/images/restaurant/veggie_fries.png";
+import StrawberryPunch from "../assets/images/restaurant/strawberry_punch.png";
+import WatermelonPunch from "../assets/images/restaurant/watermelon_punch.png";
+import CreamPasta from "../assets/images/restaurant/cream_pasta.png";
+import { getCropImage } from "../utils/recipeUtils";
+
 export const restaurantRecipes = [
   {
     name: "고기볶음",
-    image: "/assets/images/restaurant/meat_fry.png",
+    image: StirMeatFry,
+    price: 10780,
     ingredients: [
-      { name: "고기", count: 8, image: "/assets/images/etc/meat.png" },
-      {
-        name: "고추기름",
-        count: 2,
-        image: "/assets/images/processed/chili_oil.png",
-      },
-      { name: "마늘", count: 4, image: "/assets/images/crops/garlic.png" },
-      { name: "파", count: 4, image: "/assets/images/crops/green_onion.png" },
+      { name: "고기", count: 8, image: getCropImage("고기") },
+      { name: "고추기름", count: 2, image: ChiliOil },
+      { name: "마늘", count: 4, image: getCropImage("마늘") },
+      { name: "파", count: 4, image: getCropImage("파") },
     ],
   },
   {
     name: "배추전",
-    image: "/assets/images/restaurant/cabbage_pancake.png",
+    image: Baechujeon,
+    price: 8140,
     ingredients: [
-      {
-        name: "배추",
-        count: 8,
-        image: "/assets/images/crops/napa_cabbage.png",
-      },
-      {
-        name: "마늘기름",
-        count: 2,
-        image: "/assets/images/processed/garlic_oil.png",
-      },
-      {
-        name: "쌀가루",
-        count: 1,
-        image: "/assets/images/processed/rice_flour.png",
-      },
-      { name: "계란", count: 1, image: "/assets/images/etc/egg.png" },
+      { name: "배추", count: 8, image: getCropImage("배추") },
+      { name: "마늘기름", count: 2, image: GarlicOil },
+      { name: "쌀가루", count: 1, image: RiceFlour },
+      { name: "계란", count: 1, image: getCropImage("계란") },
     ],
   },
   {
     name: "파인애플피자",
-    image: "/assets/images/restaurant/pineapple_pizza.png",
+    image: PineapplePizza,
+    price: 9669,
     ingredients: [
-      {
-        name: "파인애플",
-        count: 8,
-        image: "/assets/images/crops/pineapple.png",
-      },
-      { name: "토마토", count: 8, image: "/assets/images/crops/tomato.png" },
-      { name: "밀가루", count: 4, image: "/assets/images/processed/flour.png" },
-      { name: "피클", count: 1, image: "/assets/images/processed/pickle.png" },
+      { name: "파인애플", count: 8, image: getCropImage("파인애플") },
+      { name: "토마토", count: 8, image: getCropImage("토마토") },
+      { name: "밀가루", count: 4, image: Flour },
+      { name: "피클", count: 1, image: Pickle },
     ],
   },
   {
     name: "비빔밥",
-    image: "/assets/images/restaurant/bibimbap.png",
+    image: Bibimbap,
+    price: 8367,
     ingredients: [
-      { name: "쌀", count: 16, image: "/assets/images/crops/rice.png" },
-      { name: "당근", count: 64, image: "/assets/images/crops/carrot.png" },
-      {
-        name: "고추장",
-        count: 1,
-        image: "/assets/images/processed/gochujang.png",
-      },
-      { name: "계란", count: 1, image: "/assets/images/etc/egg.png" },
+      { name: "쌀", count: 16, image: getCropImage("쌀") },
+      { name: "당근", count: 64, image: getCropImage("당근") },
+      { name: "고추장", count: 1, image: Gochujang },
+      { name: "계란", count: 1, image: getCropImage("계란") },
     ],
   },
   {
     name: "채소덮밥",
-    image: "/assets/images/restaurant/veggie_rice.png",
+    image: VeggieRice,
+    price: 9326,
     ingredients: [
-      { name: "쌀", count: 16, image: "/assets/images/crops/rice.png" },
-      {
-        name: "브로콜리",
-        count: 8,
-        image: "/assets/images/crops/broccoli.png",
-      },
-      { name: "당근", count: 128, image: "/assets/images/crops/carrot.png" },
-      {
-        name: "간장",
-        count: 1,
-        image: "/assets/images/processed/soy_sauce.png",
-      },
+      { name: "쌀", count: 16, image: getCropImage("쌀") },
+      { name: "브로콜리", count: 8, image: getCropImage("브로콜리") },
+      { name: "당근", count: 128, image: getCropImage("당근") },
+      { name: "간장", count: 1, image: SoySauce },
     ],
   },
   {
     name: "크림리조또",
-    image: "/assets/images/restaurant/cream_risotto.png",
+    image: CreamRisotto,
+    price: 10952,
     ingredients: [
-      { name: "쌀", count: 16, image: "/assets/images/crops/rice.png" },
-      { name: "크림", count: 1, image: "/assets/images/processed/cream.png" },
-      {
-        name: "브로콜리",
-        count: 4,
-        image: "/assets/images/crops/broccoli.png",
-      },
-      {
-        name: "아스파라거스",
-        count: 4,
-        image: "/assets/images/crops/asparagus.png",
-      },
-      {
-        name: "아티초크",
-        count: 4,
-        image: "/assets/images/crops/artichoke.png",
-      },
+      { name: "쌀", count: 16, image: getCropImage("쌀") },
+      { name: "크림", count: 1, image: Cream },
+      { name: "브로콜리", count: 4, image: getCropImage("브로콜리") },
+      { name: "아스파라거스", count: 4, image: getCropImage("아스파라거스") },
+      { name: "아티초크", count: 4, image: getCropImage("아티초크") },
     ],
   },
   {
     name: "토마토파스타",
-    image: "/assets/images/restaurant/tomato_pasta.png",
+    image: TomatoPasta,
+    price: 8019,
     ingredients: [
-      { name: "밀가루", count: 2, image: "/assets/images/processed/flour.png" },
-      {
-        name: "토마토캐첩",
-        count: 1,
-        image: "/assets/images/processed/ketchup.png",
-      },
-      { name: "파프리카", count: 8, image: "/assets/images/crops/paprika.png" },
-      { name: "파슬리", count: 4, image: "/assets/images/crops/parsley.png" },
+      { name: "밀가루", count: 2, image: Flour },
+      { name: "토마토캐첩", count: 1, image: Ketchup },
+      { name: "파프리카", count: 8, image: getCropImage("파프리카") },
+      { name: "파슬리", count: 4, image: getCropImage("파슬리") },
     ],
   },
   {
     name: "된장찌개",
-    image: "/assets/images/restaurant/doenjang_stew.png",
+    image: DoenjangStew,
+    price: 11022,
     ingredients: [
-      {
-        name: "된장",
-        count: 1,
-        image: "/assets/images/processed/doenjang.png",
-      },
-      { name: "육수", count: 1, image: "/assets/images/etc/broth.png" },
-      { name: "양파", count: 16, image: "/assets/images/crops/onion.png" },
-      {
-        name: "간장",
-        count: 1,
-        image: "/assets/images/processed/soy_sauce.png",
-      },
+      { name: "된장", count: 1, image: Doenjang },
+      { name: "육수", count: 1, image: Stock },
+      { name: "양파", count: 16, image: getCropImage("양파") },
+      { name: "간장", count: 1, image: SoySauce },
     ],
   },
   {
     name: "김치찌개",
-    image: "/assets/images/restaurant/kimchi_stew.png",
+    image: KimchiStew,
+    price: 14036,
     ingredients: [
-      { name: "김치", count: 1, image: "/assets/images/processed/kimchi.png" },
-      { name: "육수", count: 1, image: "/assets/images/etc/broth.png" },
-      { name: "고기", count: 2, image: "/assets/images/etc/meat.png" },
-      { name: "마늘", count: 4, image: "/assets/images/crops/garlic.png" },
+      { name: "김치", count: 1, image: Kimchi },
+      { name: "육수", count: 1, image: Stock },
+      { name: "고기", count: 2, image: getCropImage("고기") },
+      { name: "마늘", count: 4, image: getCropImage("마늘") },
     ],
   },
   {
     name: "고추장찌개",
-    image: "/assets/images/restaurant/gochujang_stew.png",
+    image: GochujangStew,
+    price: 9064,
     ingredients: [
-      {
-        name: "고추장",
-        count: 1,
-        image: "/assets/images/processed/gochujang.png",
-      },
-      { name: "육수", count: 1, image: "/assets/images/etc/broth.png" },
-      { name: "감자", count: 128, image: "/assets/images/crops/potato.png" },
-      { name: "파", count: 8, image: "/assets/images/crops/green_onion.png" },
+      { name: "고추장", count: 1, image: Gochujang },
+      { name: "육수", count: 1, image: Stock },
+      { name: "감자", count: 128, image: getCropImage("감자") },
+      { name: "파", count: 8, image: getCropImage("파") },
     ],
   },
   {
     name: "크림스프",
-    image: "/assets/images/restaurant/cream_soup.png",
+    image: CreamSoup,
+    price: 4422,
     ingredients: [
-      { name: "옥수수", count: 16, image: "/assets/images/crops/corn.png" },
-      { name: "우유", count: 1, image: "/assets/images/etc/milk.png" },
-      {
-        name: "전분가루",
-        count: 1,
-        image: "/assets/images/processed/starch.png",
-      },
-      { name: "양파", count: 6, image: "/assets/images/crops/onion.png" },
-      { name: "호박", count: 64, image: "/assets/images/crops/pumpkin.png" },
+      { name: "옥수수", count: 16, image: getCropImage("옥수수") },
+      { name: "우유", count: 1, image: getCropImage("우유") },
+      { name: "전분가루", count: 1, image: Starch },
+      { name: "양파", count: 6, image: getCropImage("양파") },
+      { name: "호박", count: 64, image: getCropImage("호박") },
     ],
   },
   {
     name: "모둠튀김",
-    image: "/assets/images/restaurant/mixed_fries.png",
+    image: MixedFries,
+    price: 9005,
     ingredients: [
-      {
-        name: "고구마",
-        count: 4,
-        image: "/assets/images/crops/sweet_potato.png",
-      },
-      { name: "감자", count: 64, image: "/assets/images/crops/potato.png" },
-      { name: "가지", count: 12, image: "/assets/images/crops/eggplant.png" },
-      {
-        name: "토마토캐첩",
-        count: 1,
-        image: "/assets/images/processed/ketchup.png",
-      },
+      { name: "고구마", count: 4, image: getCropImage("고구마") },
+      { name: "감자", count: 64, image: getCropImage("감자") },
+      { name: "가지", count: 12, image: getCropImage("가지") },
+      { name: "토마토캐첩", count: 1, image: Ketchup },
     ],
   },
   {
     name: "고구마스틱",
-    image: "/assets/images/restaurant/sweet_potato_stick.png",
+    image: SweetPotatoStick,
+    price: 3912,
     ingredients: [
-      {
-        name: "고구마",
-        count: 4,
-        image: "/assets/images/crops/sweet_potato.png",
-      },
-      { name: "시럽", count: 2, image: "/assets/images/processed/syrup.png" },
-      { name: "오일", count: 1, image: "/assets/images/etc/oil.png" },
-      {
-        name: "전분가루",
-        count: 2,
-        image: "/assets/images/processed/starch.png",
-      },
+      { name: "고구마", count: 4, image: getCropImage("고구마") },
+      { name: "시럽", count: 2, image: Syrup },
+      { name: "기름", count: 1, image: getCropImage("기름") },
+      { name: "전분가루", count: 2, image: Starch },
     ],
   },
   {
     name: "야채튀김",
-    image: "/assets/images/restaurant/veggie_fries.png",
+    image: VeggieFries,
+    price: 2011,
     ingredients: [
-      { name: "감자", count: 64, image: "/assets/images/crops/potato.png" },
-      { name: "당근", count: 64, image: "/assets/images/crops/carrot.png" },
-      {
-        name: "전분가루",
-        count: 2,
-        image: "/assets/images/processed/starch.png",
-      },
-      { name: "오일", count: 1, image: "/assets/images/etc/oil.png" },
+      { name: "감자", count: 64, image: getCropImage("감자") },
+      { name: "당근", count: 64, image: getCropImage("당근") },
+      { name: "전분가루", count: 2, image: Starch },
+      { name: "기름", count: 1, image: getCropImage("기름") },
     ],
   },
   {
     name: "딸기화채",
-    image: "/assets/images/restaurant/strawberry_punch.png",
+    image: StrawberryPunch,
+    price: 7920,
     ingredients: [
-      { name: "딸기", count: 16, image: "/assets/images/crops/strawberry.png" },
-      { name: "멜론", count: 4, image: "/assets/images/crops/melon.png" },
-      { name: "망고", count: 2, image: "/assets/images/crops/mango.png" },
-      { name: "바나나", count: 8, image: "/assets/images/crops/banana.png" },
+      { name: "딸기", count: 16, image: getCropImage("딸기") },
+      { name: "멜론", count: 4, image: getCropImage("멜론") },
+      { name: "망고", count: 2, image: getCropImage("망고") },
+      { name: "바나나", count: 8, image: getCropImage("바나나") },
     ],
   },
   {
     name: "수박화채",
-    image: "/assets/images/restaurant/watermelon_punch.png",
+    image: WatermelonPunch,
+    price: 9592,
     ingredients: [
-      { name: "수박", count: 64, image: "/assets/images/crops/watermelon.png" },
-      {
-        name: "블루베리",
-        count: 10,
-        image: "/assets/images/crops/blueberry.png",
-      },
-      { name: "복숭아", count: 8, image: "/assets/images/crops/peach.png" },
-      { name: "포도", count: 8, image: "/assets/images/crops/grape.png" },
+      { name: "수박", count: 64, image: getCropImage("수박") },
+      { name: "블루베리", count: 10, image: getCropImage("블루베리") },
+      { name: "복숭아", count: 8, image: getCropImage("복숭아") },
+      { name: "포도", count: 8, image: getCropImage("포도") },
     ],
   },
   {
     name: "크림파스타",
-    image: "/assets/images/restaurant/cream_pasta.png",
+    image: CreamPasta,
+    price: 6908,
     ingredients: [
-      { name: "밀가루", count: 4, image: "/assets/images/processed/flour.png" },
-      { name: "크림", count: 2, image: "/assets/images/processed/cream.png" },
-      {
-        name: "브로콜리",
-        count: 4,
-        image: "/assets/images/crops/broccoli.png",
-      },
-      { name: "파슬리", count: 4, image: "/assets/images/crops/parsley.png" },
+      { name: "밀가루", count: 4, image: Flour },
+      { name: "크림", count: 2, image: Cream },
+      { name: "브로콜리", count: 4, image: getCropImage("브로콜리") },
+      { name: "파슬리", count: 4, image: getCropImage("파슬리") },
     ],
   },
 ];

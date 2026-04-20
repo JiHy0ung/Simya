@@ -2,9 +2,9 @@ import React from "react";
 import styled from "@emotion/styled";
 import { Box } from "@mui/material";
 
-const Card = styled(Box)({
+const Card = styled(Box)(({ selected }) => ({
   background: "#18171c",
-  border: "2px solid #3d3a52",
+  border: selected ? "2px solid #b7b3da" : "2px solid #3d3a52",
   borderRadius: "0px",
   overflow: "hidden",
   imageRendering: "pixelated",
@@ -12,7 +12,7 @@ const Card = styled(Box)({
   "&:hover": {
     borderColor: "#b7b3da",
   },
-});
+}));
 
 const ImageBox = styled(Box)({
   width: "100%",
@@ -23,8 +23,8 @@ const ImageBox = styled(Box)({
   alignItems: "center",
   justifyContent: "center",
   "& img": {
-    width: "64px",
-    height: "64px",
+    width: "4rem",
+    height: "4rem",
     objectFit: "contain",
     imageRendering: "pixelated",
   },
@@ -50,20 +50,20 @@ const IngredientRow = styled(Box)({
   alignItems: "center",
   fontSize: "0.6875rem",
   color: "#8a86aa",
-  padding: "2px 0",
+  padding: "1px 0",
   fontFamily: "Mona10x12",
 });
 
 const IngredientLeft = styled(Box)({
   display: "flex",
   alignItems: "center",
-  gap: "4px",
+  gap: "3px",
   fontFamily: "Mona10x12",
 });
 
 const IngredientIcon = styled("img")({
-  width: "12px",
-  height: "12px",
+  width: "1.25rem",
+  height: "1.25rem",
   objectFit: "contain",
   imageRendering: "pixelated",
 });
@@ -72,9 +72,9 @@ const Amount = styled("span")({
   color: "#b7b3da",
 });
 
-const RecipeCard = ({ name, image, ingredients = [] }) => {
+const RecipeCard = ({ name, image, ingredients = [], selected, onClick }) => {
   return (
-    <Card>
+    <Card selected={selected} onClick={onClick}>
       <ImageBox>{image && <img src={image} alt={name} />}</ImageBox>
       <CardBody>
         <CardName>{name}</CardName>
