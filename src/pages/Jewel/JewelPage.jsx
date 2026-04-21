@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "@emotion/styled";
 import { Box, Tabs, Tab, Container, Typography } from "@mui/material";
 import { jewelryRecipes } from "../../constants/town/jewelryRecipes";
-import RecipeCard from "../Food/components/RecipeCard";
+import RecipeCard from "../../commons/components/RecipeCard";
 import JewelDetail from "./components/JewelDetail";
 
 const JewelContainer = styled(Container)({
@@ -14,7 +14,7 @@ const JewelContainer = styled(Container)({
 });
 
 const JewelTitle = styled(Typography)({
-  fontSize: "3rem",
+  fontSize: "3.5rem",
   fontWeight: "900",
   marginBottom: "1rem",
 });
@@ -100,7 +100,7 @@ const JewelPage = () => {
 
   return (
     <JewelContainer>
-      <JewelTitle>보석 분석소</JewelTitle>
+      <JewelTitle>보석 공방</JewelTitle>
       <JewelSubtitle>보석 제작 조합과 순수익을 계산합니다</JewelSubtitle>
       <JewelDescription>
         모든 보석은 고정된 가격 기준으로 계산됩니다.

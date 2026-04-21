@@ -132,8 +132,8 @@ const EmptyPanel = styled(Box)({
 });
 
 const getProfitColor = (value) => {
-  if (value > 0) return "#4caf50";
-  if (value < 0) return "#f44336";
+  if (value > 0) return "#6befc3";
+  if (value < 0) return "#f4365f";
   return "#c4bdff";
 };
 
@@ -155,7 +155,7 @@ const RecipeDetail = ({ recipe }) => {
       <Box sx={{ mb: "1rem" }}>
         <StatRow>
           <span>판매가</span>
-          <StatValue style={{ color: "#ffee7d" }}>
+          <StatValue style={{ color: "#eee" }}>
             {recipe.price?.toLocaleString()}G
           </StatValue>
         </StatRow>

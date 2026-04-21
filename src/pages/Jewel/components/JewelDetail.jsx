@@ -25,7 +25,7 @@ const RecipeName = styled(Typography)({
   fontSize: "1.1rem",
   fontWeight: "bold",
   color: "#e8e4ff",
-  fontFamily: "Mona8x12",
+  fontFamily: "Mona10x12",
   marginBottom: "1rem",
   borderBottom: "1px solid #3d3a52",
   paddingBottom: "0.5rem",
@@ -129,13 +129,14 @@ const TownRow = styled(Box)({
   alignItems: "center",
   padding: "5px 0",
   borderBottom: "1px solid #28263a",
+  marginBottom: "0.5rem",
   "&:last-child": { borderBottom: "none" },
 });
 
 const TownName = styled("span")({
-  fontSize: "0.75rem",
+  fontSize: "0.8125rem",
   color: "#8a86aa",
-  fontFamily: "Mona8x12",
+  fontFamily: "Mona10x12",
 });
 
 const JewelDetail = ({ recipe }) => {
@@ -154,15 +155,19 @@ const JewelDetail = ({ recipe }) => {
       <Box sx={{ mb: "1rem" }}>
         <StatRow>
           <span>판매가</span>
-          <StatValue>{recipe.price?.toLocaleString()}G</StatValue>
+          <StatValue style={{ color: "#eee" }}>
+            {recipe.price?.toLocaleString()}G
+          </StatValue>
         </StatRow>
         <StatRow>
           <span>재료 비용</span>
-          <StatValue>{totalCost.toLocaleString()}G</StatValue>
+          <StatValue style={{ fontWeight: "normal" }}>
+            {totalCost.toLocaleString()}G
+          </StatValue>
         </StatRow>
         <StatRow>
           <span>순수익</span>
-          <StatValue style={{ color: netProfit >= 0 ? "#86efac" : "#f87171" }}>
+          <StatValue style={{ color: netProfit >= 0 ? "#6befc3" : "#f4365f" }}>
             {netProfit >= 0 ? "+" : ""}
             {netProfit.toLocaleString()}G
           </StatValue>
@@ -177,11 +182,13 @@ const JewelDetail = ({ recipe }) => {
               {ing.image && <IngIcon src={ing.image} alt={ing.name} />}
               <IngName>{ing.name}</IngName>
             </IngLeft>
-            <IngCount>×{ing.count}</IngCount>
+            <IngCount>
+              <span style={{ fontSize: "0.75rem" }}>x </span>
+              {ing.count}
+            </IngCount>
           </IngRow>
         ))}
       </Box>
-
       {requiredTowns.length > 0 && (
         <>
           <SectionLabel>채집 마을</SectionLabel>

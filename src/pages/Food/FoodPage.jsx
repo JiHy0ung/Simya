@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { Box, Tabs, Tab, Container, Typography } from "@mui/material";
 import { processedRecipes } from "../../constants/food/processed";
 import { restaurantRecipes } from "../../constants/food/restaurant";
-import RecipeCard from "./components/RecipeCard";
+import RecipeCard from "../../commons/components/RecipeCard";
 import RecipeDetail from "./components/RecipeDetail";
 import { cafeRecipes } from "../../constants/food/cafe";
 
@@ -99,7 +99,7 @@ const FoodPage = () => {
 
   return (
     <FoodContainer>
-      <FoodTitle>요리 분석소</FoodTitle>
+      <FoodTitle>레시피 연구소</FoodTitle>
       <FoodSubtitle>요리의 재료 조합과 순수익을 계산합니다</FoodSubtitle>
       <FoodDescription>
         모든 요리는 고정된 가격 기준으로 계산됩니다.
