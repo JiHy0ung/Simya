@@ -30,7 +30,7 @@ import Garlic from "../../assets/images/food/seasonal/garlic.png";
 import Orange from "../../assets/images/food/seasonal/orange.png";
 
 export const seasonal = {
-  spring: [
+  봄: [
     { day: 1, name: "파슬리", image: Parsley, price: 100 },
     { day: 1, name: "양배추", image: Cabbage, price: 100 },
     { day: 2, name: "딸기", image: Strawberry, price: 200 },
@@ -39,7 +39,7 @@ export const seasonal = {
     { day: 4, name: "아스파라거스", image: Asparagus, price: 400 },
     { day: 5, name: "아티초크", image: Artichoke, price: 500 },
   ],
-  summer: [
+  여름: [
     { day: 1, name: "토마토", image: Tomato, price: 100 },
     { day: 1, name: "옥수수", image: Corn, price: 100 },
     { day: 2, name: "고추", image: Chili, price: 200 },
@@ -52,7 +52,7 @@ export const seasonal = {
     { day: 4, name: "망고", image: Mango, price: 400 },
     { day: 5, name: "복숭아", image: Peach, price: 500 },
   ],
-  autumn: [
+  가을: [
     { day: 1, name: "콩", image: Soybean, price: 100 },
     { day: 2, name: "무", image: Radish, price: 200 },
     { day: 2, name: "쌀", image: Rice, price: 200 },
@@ -61,7 +61,7 @@ export const seasonal = {
     { day: 4, name: "고구마", image: SweetPotato, price: 400 },
     { day: 5, name: "산삼", image: Ginseng, price: 500 },
   ],
-  winter: [
+  겨울: [
     { day: 2, name: "파", image: GreenOnion, price: 200 },
     { day: 3, name: "순무", image: Turnip, price: 300 },
     { day: 3, name: "레몬", image: Lemon, price: 300 },

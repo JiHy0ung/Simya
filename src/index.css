@@ -29,3 +29,29 @@ a,
 [role="button"] {
   cursor: var(--cursor-pointer);
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #18171c;
+  border: 1px solid #3d3a52;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c4bdff;
+  border: 2px solid #18171c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffee7d;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+body {
+  overflow-y: scroll;
+}

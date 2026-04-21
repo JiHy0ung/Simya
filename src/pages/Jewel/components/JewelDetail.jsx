@@ -1,8 +1,9 @@
 import React from "react";
-import styled from "@emotion/styled";
+import { styled } from "@mui/material/styles";
 import { Box, Typography } from "@mui/material";
 import { getJewelryCost, getJewelryProfit } from "../../../utils/jewelryUtils";
 import { getRequiredTowns } from "../../../utils/jewelryUtils";
+import { SEASON_THEME } from "../../../constants/commons";
 
 const Panel = styled(Box)({
   background: "#18171c",
@@ -101,15 +102,8 @@ const EmptyPanel = styled(Box)({
   border: "2px solid #3d3a52",
 });
 
-const SEASON_COLOR = {
-  봄: { bg: "rgba(134,239,172,0.15)", text: "#86efac" },
-  여름: { bg: "rgba(253,224,71,0.15)", text: "#fde047" },
-  가을: { bg: "rgba(251,146,60,0.15)", text: "#fb923c" },
-  겨울: { bg: "rgba(147,197,253,0.15)", text: "#93c5fd" },
-};
-
 const SeasonBadge = styled("span")(({ season }) => {
-  const c = SEASON_COLOR[season] ?? {
+  const c = SEASON_THEME[season] ?? {
     bg: "rgba(255,255,255,0.1)",
     text: "#fff",
   };

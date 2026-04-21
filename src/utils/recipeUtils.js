@@ -50,13 +50,6 @@ const allSeasonalWithSeason = Object.entries(seasonal).flatMap(
 export const getSeasonalInfo = (name) =>
   allSeasonalWithSeason.find((c) => c.name === name) ?? null;
 
-export const SEASON_LABEL = {
-  spring: "봄",
-  summer: "여름",
-  autumn: "가을",
-  winter: "겨울",
-};
-
 const findProcessedRecipe = (name) =>
   processedRecipes.find((r) => r.name === name) ?? null;
 

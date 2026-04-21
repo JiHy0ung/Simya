@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "@emotion/styled";
+import { styled } from "@mui/material/styles";
 import { Box, Tabs, Tab, Container, Typography } from "@mui/material";
 import { woodRecipes } from "../../constants/town/woodRecipes";
 import RecipeCard from "../../commons/components/RecipeCard";

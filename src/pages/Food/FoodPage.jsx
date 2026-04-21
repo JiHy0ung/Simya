@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "@emotion/styled";
+import { styled } from "@mui/material/styles";
 import { Box, Tabs, Tab, Container, Typography } from "@mui/material";
 import { processedRecipes } from "../../constants/food/processed";
 import { restaurantRecipes } from "../../constants/food/restaurant";

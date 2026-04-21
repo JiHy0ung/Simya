@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "@emotion/styled";
+import { styled } from "@mui/material/styles";
 import { Box, Typography } from "@mui/material";
 import {
   getMaxGrowthDay,
@@ -8,6 +8,7 @@ import {
   getTotalCost,
   SEASON_LABEL,
 } from "../../../utils/recipeUtils";
+import { SEASON_THEME } from "../../../constants/commons";
 
 const Panel = styled(Box)({
   background: "#18171c",
@@ -104,13 +105,10 @@ const IngCount = styled("span")({
 });
 
 const SeasonBadge = styled("span")(({ season }) => {
-  const colors = {
-    spring: { bg: "rgba(134,239,172,0.15)", text: "#86efac" },
-    summer: { bg: "rgba(253,224,71,0.15)", text: "#fde047" },
-    autumn: { bg: "rgba(251,146,60,0.15)", text: "#fb923c" },
-    winter: { bg: "rgba(147,197,253,0.15)", text: "#93c5fd" },
+  const c = SEASON_THEME[season] ?? {
+    bg: "rgba(255,255,255,0.1)",
+    text: "#fff",
   };
-  const c = colors[season] ?? { bg: "rgba(255,255,255,0.1)", text: "#fff" };
   return {
     fontSize: "0.625rem",
     padding: "1px 5px",
@@ -194,6 +192,8 @@ const RecipeDetail = ({ recipe }) => {
       <Box>
         {recipe.ingredients.map((ing, i) => {
           const seasonal = getSeasonalIngredients([ing])[0]?.seasonal ?? null;
+
+          console.log("ss", seasonal);
           return (
             <IngRow key={i}>
               <IngLeft>
@@ -201,7 +201,7 @@ const RecipeDetail = ({ recipe }) => {
                 <IngName>{ing.name}</IngName>
                 {seasonal && (
                   <SeasonBadge season={seasonal.season}>
-                    {SEASON_LABEL[seasonal.season]}
+                    {seasonal.season}
                   </SeasonBadge>
                 )}
               </IngLeft>
