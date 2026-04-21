@@ -15,26 +15,35 @@ const FoodContainer = styled(Container)({
   marginTop: "3rem",
 });
 
-const FoodTitle = styled(Typography)({
+const FoodTitle = styled(Typography)(({ theme }) => ({
   fontSize: "3.5rem",
   fontWeight: "900",
   marginBottom: "1rem",
-});
+  [theme.breakpoints.down("md")]: {
+    fontSize: "3rem",
+  },
+}));
 
-const FoodSubtitle = styled(Typography)({
+const FoodSubtitle = styled(Typography)(({ theme }) => ({
   fontSize: "1.1rem",
   color: "#666",
   marginBottom: "0.5rem",
   textAlign: "center",
-});
+  [theme.breakpoints.down("md")]: {
+    fontSize: "0.875rem",
+  },
+}));
 
-const FoodDescription = styled(Typography)({
-  fontSize: "0.875rem",
+const FoodDescription = styled(Typography)(({ theme }) => ({
+  fontSize: "0.95rem",
   color: "#888",
   textAlign: "center",
   maxWidth: "600px",
   marginBottom: "4rem",
-});
+  [theme.breakpoints.down("md")]: {
+    fontSize: "0.75rem",
+  },
+}));
 
 const StyledTabs = styled(Tabs)({
   width: "100%",
@@ -43,7 +52,7 @@ const StyledTabs = styled(Tabs)({
   "& .MuiTabs-indicator": { display: "none" },
 });
 
-const StyledTab = styled(Tab)({
+const StyledTab = styled(Tab)(({ theme }) => ({
   minHeight: "unset",
   minWidth: "140px",
   padding: "8px 18px",
@@ -59,19 +68,22 @@ const StyledTab = styled(Tab)({
     borderColor: "rgba(183,179,218,0.5)",
     fontWeight: "bold",
   },
-});
+  [theme.breakpoints.down("md")]: {
+    minWidth: "100px",
+  },
+}));
 
 // 좌우 분할 레이아웃
-const ContentLayout = styled(Box)({
+const ContentLayout = styled(Box)(({ theme }) => ({
   width: "100%",
   display: "grid",
   gridTemplateColumns: "280px 1fr",
   gap: "1.5rem",
   alignItems: "start",
-  "@media (max-width: 768px)": {
+  [theme.breakpoints.down("md")]: {
     gridTemplateColumns: "1fr",
   },
-});
+}));
 
 const CardGrid = styled(Box)({
   display: "grid",

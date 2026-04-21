@@ -5,15 +5,16 @@ import { getJewelryCost, getJewelryProfit } from "../../../utils/jewelryUtils";
 import { getRequiredTowns } from "../../../utils/jewelryUtils";
 import { SEASON_THEME } from "../../../constants/commons";
 
-const Panel = styled(Box)({
+const Panel = styled(Box)(({ theme }) => ({
   background: "#18171c",
   border: "2px solid #3d3a52",
   padding: "1.25rem",
   position: "sticky",
   top: "1rem",
-  "@media (max-width: 768px)": { position: "static" },
-});
-
+  [theme.breakpoints.down("md")]: {
+    position: "static",
+  },
+}));
 const RecipeImage = styled("img")({
   width: "80px",
   height: "80px",
