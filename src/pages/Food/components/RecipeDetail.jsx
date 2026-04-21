@@ -6,7 +6,6 @@ import {
   getNetProfit,
   getSeasonalIngredients,
   getTotalCost,
-  SEASON_LABEL,
 } from "../../../utils/recipeUtils";
 import { SEASON_THEME } from "../../../constants/commons";
 
@@ -193,7 +192,6 @@ const RecipeDetail = ({ recipe }) => {
         {recipe.ingredients.map((ing, i) => {
           const seasonal = getSeasonalIngredients([ing])[0]?.seasonal ?? null;
 
-          console.log("ss", seasonal);
           return (
             <IngRow key={i}>
               <IngLeft>

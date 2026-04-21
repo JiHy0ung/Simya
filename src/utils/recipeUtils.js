@@ -24,10 +24,6 @@ const getIngredientPrice = (name) => {
   const processed = processedRecipes.find((r) => r.name === name);
   if (processed) return processed.price ?? 0;
 
-  if (priceMap[name] === undefined) {
-    console.log("❌ 가격 없음:", name);
-  }
-
   return priceMap[name] ?? 0;
 };
 
