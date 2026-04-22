@@ -13,6 +13,68 @@ import Ian from "../assets/images/npc/ian.png";
 import Luca from "../assets/images/npc/luca.png";
 import Who from "../assets/images/npc/who.png";
 
+// 아이템 이미지
+import WheatFlour from "../assets/images/food/processed/flour.png";
+import Strawberry from "../assets/images/food/seasonal/strawberry.png";
+import Coal from "../assets/images/items/coal.png";
+import Hydrangea from "../assets/images/flower/hydrangea.png";
+import Calamus from "../assets/images/flower/calamus.png";
+import Corn from "../assets/images/food/seasonal/corn.png";
+import Sugarcane from "../assets/images/food/vanilla/sugar_cane.png";
+import Wheat from "../assets/images/food/vanilla/wheat.png";
+import DiamondBlock from "../assets/images/items/diamond_block.png";
+import MaplePlanks from "../assets/images/wood/maple_planks.png";
+import WillowPlanks from "../assets/images/wood/willow_planks.png";
+import OldTreePlanks from "../assets/images/wood/old_tree_planks.png";
+import AquamarineGem from "../assets/images/jewelry/aquamarine_gem.png";
+import OrderArrivalTicket from "../assets/images/tickets/order_arrival_ticket.png";
+import CoralGem from "../assets/images/jewelry/coral_gem.png";
+import FlameLily from "../assets/images/flower/flame_lily.png";
+import Potato from "../assets/images/food/vanilla/potato.png";
+import GreenOnion from "../assets/images/food/seasonal/green_onion.png";
+import Garlic from "../assets/images/food/seasonal/garlic.png";
+import Jacaranda from "../assets/images/flower/jacaranda.png";
+import SoyBean from "../assets/images/food/seasonal/soybean.png";
+import Radish from "../assets/images/food/seasonal/radish.png";
+import PeridotGem from "../assets/images/jewelry/peridot_gem.png";
+
+import AmberGem from "../assets/images/jewelry/amber_gem.png";
+import CitrineGem from "../assets/images/jewelry/citrine_gem.png";
+import LarimarGem from "../assets/images/jewelry/larimar_gem.png";
+import GarnetGem from "../assets/images/jewelry/garnet_gem.png";
+import RubyGem from "../assets/images/jewelry/ruby_gem.png";
+import StoneChunk from "../assets/images/jewelry/stone_chunk.png";
+
+import LifeRadianceGem from "../assets/images/jewelry/life_radiance_gem.png";
+import SunBlessingGem from "../assets/images/jewelry/sun_blessing_gem.png";
+import SeaDawnGem from "../assets/images/jewelry/sea_dawn_gem.png";
+import PassionFlameGem from "../assets/images/jewelry/passion_flame_gem.png";
+
+import LifeNecklace from "../assets/images/jewelry/life_necklace.png";
+import SunNecklace from "../assets/images/jewelry/sun_necklace.png";
+import SeaNecklace from "../assets/images/jewelry/sea_necklace.png";
+import PassionNecklace from "../assets/images/jewelry/passion_necklace.png";
+
+import LifeRing from "../assets/images/jewelry/life_ring.png";
+import SunRing from "../assets/images/jewelry/sun_ring.png";
+import SeaRing from "../assets/images/jewelry/sea_ring.png";
+import PassionRing from "../assets/images/jewelry/passion_ring.png";
+
+import Hibiscus from "../assets/images/flower/hibiscus.png";
+import DesertRose from "../assets/images/flower/desert_rose.png";
+import Lavender from "../assets/images/flower/lavender.png";
+import Agave from "../assets/images/flower/agave.png";
+
+import Adamantium from "../assets/images/ingot/adamantium.png";
+import Amethyst from "../assets/images/ingot/amethyst.png";
+import Iridium from "../assets/images/ingot/iridium.png";
+import Jade from "../assets/images/ingot/jade.png";
+import Malachite from "../assets/images/ingot/malachite.png";
+import Sapphire from "../assets/images/ingot/sapphire.png";
+import Spinel from "../assets/images/ingot/spinel.png";
+import Tungsten from "../assets/images/ingot/tungsten.png";
+import YellowCrystal from "../assets/images/ingot/yellow_crystal.png";
+
 export const npcData = [
   {
     name: "헨리",
@@ -23,8 +85,13 @@ export const npcData = [
       "전직 유명 호텔 수셰프.\n 요리에 인생을 바치다 보니 숫기가 없어졌고,\n 더 많은 사람에게 음식을 선보이고 싶어 심야잡화점에 가게를 차렸다.",
     loved: [],
     liked: [],
-    neutral: [],
-    disliked: [],
+    neutral: [
+      { name: "밀가루", image: WheatFlour },
+      { name: "딸기", image: Strawberry },
+      { name: "석탄", image: Coal },
+      { name: "산호석 보석", image: CoralGem },
+    ],
+    disliked: [{ name: "수국", image: Hydrangea }],
     blush: {
       background: "rgba(255, 151, 123, 0.77)",
       left: { x: "32%", y: "67%" },
@@ -39,9 +106,15 @@ export const npcData = [
     description:
       "원래 심야잡화점 거리 출신 고양이.\n이상한 걸 주워 먹고 사람이 됐다.\n 가공식품점 할아버지의 도움으로 판매원으로 일하고 있으며, 아직 사람을 많이 경계한다.",
     loved: [],
-    liked: [],
-    neutral: [],
-    disliked: [],
+    liked: [{ name: "창포", image: Calamus }],
+    neutral: [
+      { name: "수국", image: Hydrangea },
+      { name: "석탄", image: Coal },
+    ],
+    disliked: [
+      { name: "파", image: GreenOnion },
+      { name: "마늘", image: Garlic },
+    ],
     blush: {
       background: "rgba(255, 130, 117, 0.6)",
       left: { x: "35%", y: "68%" },
@@ -55,9 +128,12 @@ export const npcData = [
     job: "카페 바리스타",
     description:
       "심야잡화점의 햇살 같은 존재.\n밝고 명량하며 거절을 잘 못하지만 선은 분명하다.\n비 오는 날엔 유독 기운이 빠지는 비밀이 있다.",
-    loved: [],
-    liked: [],
-    neutral: [],
+    loved: [{ name: "능소화", image: Jacaranda }],
+    liked: [{ name: "수국", image: Hydrangea }],
+    neutral: [
+      { name: "콩", image: SoyBean },
+      { name: "석탄", image: Coal },
+    ],
     disliked: [],
     blush: {
       background: "rgba(255, 146, 132, 0.59)",
@@ -74,7 +150,13 @@ export const npcData = [
       "심야잡화점에서 가장 쿨한 상남자.\n표현이 투박해 가끔 상처를 주지만 계산된 행동이 아니다.\n인기가 많은데 본인은 전혀 모른다.",
     loved: [],
     liked: [],
-    neutral: [],
+    neutral: [
+      { name: "무", image: Radish },
+      { name: "수국", image: Hydrangea },
+      { name: "단풍나무 판자", image: MaplePlanks },
+      { name: "석탄", image: Coal },
+      { name: "페리도트 보석", image: PeridotGem },
+    ],
     disliked: [],
     blush: {
       background: "rgba(255, 124, 88, 0.68)",
@@ -91,8 +173,13 @@ export const npcData = [
       "지적이고 호기심 넘치는 MBTI 대문자 T.\n예의를 중시하고 분석적이라 젊은 꼰대 소리를 듣기도 하지만, 친해지면 누구보다 다정하다.",
     loved: [],
     liked: [],
-    neutral: [],
-    disliked: [],
+    neutral: [
+      { name: "옥수수", image: Corn },
+      { name: "수국", image: Hydrangea },
+      { name: "석탄", image: Coal },
+      { name: "산호석 보석", image: CoralGem },
+    ],
+    disliked: [{ name: "사탕수수", image: Sugarcane }],
     blush: {
       background: "rgba(255, 123, 147, 0.66)",
       left: { x: "43%", y: "67%" },
@@ -108,7 +195,12 @@ export const npcData = [
       "농사에 열정적이고 털털한 심야잡화점의 말괄량이.\n주근깨가 매력 포인트이며, 아재 개그를 진심으로 사랑하는 비밀스러운 취미가 있다.",
     loved: [],
     liked: [],
-    neutral: [],
+    neutral: [
+      { name: "수국", image: Hydrangea },
+      { name: "밀", image: Wheat },
+      { name: "석탄", image: Coal },
+      { name: "라리마 보석", image: LarimarGem },
+    ],
     disliked: [],
     blush: {
       background: "rgba(255, 134, 69, 0.68)",
@@ -125,8 +217,13 @@ export const npcData = [
       "사춘기 한창인 18살.\n부모님에 의해 억지로 상점에 앉혀졌다.\n퉁명스럽고 자존감이 낮지만 친해지면 한없이 잘해주는 아이다.",
     loved: [],
     liked: [],
-    neutral: [],
-    disliked: [],
+    neutral: [
+      { name: "수국", image: Hydrangea },
+      { name: "다이아몬드 블록", image: DiamondBlock },
+      { name: "석탄", image: Coal },
+      { name: "라리마 보석", image: LarimarGem },
+    ],
+    disliked: [{ name: "페리도트 보석", image: PeridotGem }],
     blush: {
       background: "rgba(255, 117, 161, 0.6)",
       left: { x: "41%", y: "70%" },
@@ -140,9 +237,17 @@ export const npcData = [
     job: "나무 상점 주인",
     description:
       "526세 엘프족.\n나무를 구원하겠다는 신념으로 심야잡화점에 왔다.\n인간을 극도로 혐오하지만,\n잘 보이려 노력하는 인간에게는 같이 어울려준다.",
-    loved: [],
+    loved: [
+      { name: "수양나무 판자", image: WillowPlanks },
+      { name: "고목나무 판자", image: OldTreePlanks },
+    ],
     liked: [],
-    neutral: [],
+    neutral: [
+      { name: "수국", image: Hydrangea },
+      { name: "단풍나무 판자", image: MaplePlanks },
+      { name: "석탄", image: Coal },
+      { name: "라리마 보석", image: LarimarGem },
+    ],
     disliked: [],
     blush: {
       background: "rgba(255, 145, 109, 0.71)",
@@ -159,7 +264,11 @@ export const npcData = [
       "12살이지만 비상한 두뇌로 가게를 직접 구상한 아이.\n어른인 척하지만 가끔 어린아이 티가 난다.\n밝고 장난기 많으며 신기한 걸 탐구하길 좋아한다.",
     loved: [],
     liked: [],
-    neutral: [],
+    neutral: [
+      { name: "수국", image: Hydrangea },
+      { name: "석탄", image: Coal },
+      { name: "라리마 보석", image: LarimarGem },
+    ],
     disliked: [],
     blush: {
       background: "rgba(255, 132, 123, 0.71)",
@@ -176,7 +285,13 @@ export const npcData = [
       "이세계 귀족 출신.\n차별을 없애고자 직접 가게를 차렸다.\n공평하고 절제된 아름다움을 가졌으며,\n아닌 건 아니라고 확실히 말하는 주관이 뚜렷한 사람이다.",
     loved: [],
     liked: [],
-    neutral: [],
+    neutral: [
+      { name: "아쿠아마린 보석", image: AquamarineGem },
+      { name: "수국", image: Hydrangea },
+      { name: "주문 도착 티켓", image: OrderArrivalTicket },
+      { name: "석탄", image: Coal },
+      { name: "산호석 보석", image: CoralGem },
+    ],
     disliked: [],
     blush: {
       background: "rgba(255, 146, 132, 0.66)",
@@ -193,7 +308,12 @@ export const npcData = [
       "모두에게 사랑받는 엄친아.\n빈곤하게 자라서인지 반짝이는 것과 고급스러운 것을 좋아한다.\n너무 헤프다는 말도 있지만 한 번이라도 만나보면 그 말이 나오지 않는다.",
     loved: [],
     liked: [],
-    neutral: [],
+    neutral: [
+      { name: "아쿠아마린 보석", image: AquamarineGem },
+      { name: "수국", image: Hydrangea },
+      { name: "석탄", image: Coal },
+      { name: "페리도트 보석", image: PeridotGem },
+    ],
     disliked: [],
     blush: {
       background: "rgba(255, 157, 132, 0.77)",
@@ -209,9 +329,16 @@ export const npcData = [
     description:
       "돈 쓸 곳은 많아 취업한 20살 MZ. 기본적으로 불친절하지만 잘해주는 사람에겐 어쩔 줄 몰라한다. 일하는 내내 핸드폰을 놓지 않는 SNS 중독자.",
     loved: [],
-    liked: [],
-    neutral: [],
-    disliked: [],
+    liked: [
+      { name: "산호석 보석", image: CoralGem },
+      { name: "불꽃 백합", image: FlameLily },
+    ],
+    neutral: [
+      { name: "수국", image: Hydrangea },
+      { name: "석탄", image: Coal },
+      { name: "라리마 보석", image: LarimarGem },
+    ],
+    disliked: [{ name: "감자", image: Potato }],
     blush: {
       background: "rgba(255, 109, 143, 0.71)",
       left: { x: "40%", y: "69%" },
@@ -227,7 +354,12 @@ export const npcData = [
       "알을 다루는 이종족 루카족 출신.\n화를 낼 줄 모르고 누구에게나 친절하지만,\n생명을 모독하는 순간만큼은 절대 건드려선 안 된다.",
     loved: [],
     liked: [],
-    neutral: [],
+    neutral: [
+      { name: "옥수수", image: Corn },
+      { name: "수국", image: Hydrangea },
+      { name: "석탄", image: Coal },
+      { name: "페리도트 보석", image: PeridotGem },
+    ],
     disliked: [],
     blush: {
       background: "rgba(255, 146, 170, 0.63)",
@@ -244,7 +376,7 @@ export const npcData = [
       "어디서 왔는지 아무도 모르는 정체 모를 존재.\n말수가 적고 알아들을 수 없는 말을 남발하지만, 친해질수록 조금씩 소통이 된다.\n이 거리의 비밀을 가장 많이 아는 존재일지도.",
     loved: [],
     liked: [],
-    neutral: [],
+    neutral: [{ name: "석탄", image: Coal }],
     disliked: [],
     blush: {
       background: "rgba(255, 136, 132, 0.67)",

@@ -218,8 +218,12 @@ const GiftBadge = styled(Box)(({ variant }) => {
   };
   const s = styles[variant] ?? styles.neutral;
   return {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "0.2rem",
     fontSize: "0.75rem",
-    padding: "3px 10px",
+    padding: "0.2rem 0.4rem",
     background: s.bg,
     color: s.text,
     border: `0.5px solid ${s.border}`,
@@ -260,7 +264,7 @@ const GIFT_SECTIONS = [
   },
   {
     key: "disliked",
-    emoji: "🤮",
+    emoji: "🤢",
     label: "싫어하는 선물",
     score: "-3점",
     color: "#818cf8",
@@ -350,7 +354,8 @@ const LikePage = () => {
                   {selected[key].length > 0 ? (
                     selected[key].map((gift, i) => (
                       <GiftBadge key={i} variant={key}>
-                        {gift}
+                        <img src={gift.image} style={{ height: "1rem" }} />
+                        {gift.name}
                       </GiftBadge>
                     ))
                   ) : (
