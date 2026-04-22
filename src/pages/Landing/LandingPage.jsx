@@ -120,6 +120,30 @@ const Disclaimer = styled(Typography)({
   lineHeight: 1.8,
 });
 
+const TopNotice = styled(Box)({
+  width: "100%",
+  maxWidth: "720px",
+  background: "#18171c",
+  border: "1px solid #3d3a52",
+  padding: "0.75rem 1rem",
+  display: "flex",
+  flexDirection: "column",
+  gap: "0.4rem",
+});
+
+const NoticeTitle = styled(Typography)({
+  fontSize: "0.75rem",
+  color: "#c4bdff",
+  fontFamily: "Mona10x12",
+});
+
+const NoticeText = styled(Typography)({
+  fontSize: "0.6875rem",
+  color: "rgba(255,255,255,0.5)",
+  fontFamily: "Mona8x12",
+  lineHeight: 1.6,
+});
+
 const MENUS = [
   { icon: "🍖", label: "요리 분석소", desc: "레시피 & 순수익", path: "/food" },
   { icon: "💎", label: "보석 공방", desc: "보석 제작 & 마을", path: "/jewel" },
@@ -152,9 +176,20 @@ const LandingPage = () => {
     <LandingContainer>
       {/* 면책 */}
       <Disclaimer>
-        본 사이트는 '심야 잡화점' 유저가 제작한 비공식 웹사이트로, 유저 제보를
-        바탕으로 정보를 제공하며 일부 내용은 실제와 다를 수 있습니다.
+        본 사이트는 '심야 잡화점' 유저가 제작한 비공식 웹사이트로,
+        <br />
+        유저 제보를 바탕으로 정보를 제공하며 일부 내용은 실제와 다를 수
+        있습니다.
       </Disclaimer>
+      <TopNotice>
+        <NoticeTitle>
+          <span style={{ fontFamily: "Mona12" }}>📢 </span> 최근 업데이트
+        </NoticeTitle>
+        <NoticeText>
+          · 루시 능소화 선호 추가
+          <br />· 김치 수익 정보 갱신
+        </NoticeText>
+      </TopNotice>
       {/* 타이틀
       <Box sx={{ textAlign: "center" }}>
         <Title>심야잡화점</Title>

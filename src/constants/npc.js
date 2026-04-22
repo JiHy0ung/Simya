@@ -75,6 +75,10 @@ import Spinel from "../assets/images/ingot/spinel.png";
 import Tungsten from "../assets/images/ingot/tungsten.png";
 import YellowCrystal from "../assets/images/ingot/yellow_crystal.png";
 
+import TropicalPlanks from "../assets/images/wood/tropical_planks.png";
+import VolcanicPlanks from "../assets/images/wood/volcanic_planks.png";
+import WeepingPlanks from "../assets/images/wood/weeping_planks.png";
+
 export const npcData = [
   {
     name: "헨리",
@@ -238,7 +242,7 @@ export const npcData = [
     description:
       "526세 엘프족.\n나무를 구원하겠다는 신념으로 심야잡화점에 왔다.\n인간을 극도로 혐오하지만,\n잘 보이려 노력하는 인간에게는 같이 어울려준다.",
     loved: [
-      { name: "수양나무 판자", image: WillowPlanks },
+      { name: "수양나무 판자", image: WeepingPlanks },
       { name: "고목나무 판자", image: OldTreePlanks },
     ],
     liked: [],
