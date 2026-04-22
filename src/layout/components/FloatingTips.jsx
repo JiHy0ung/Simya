@@ -13,17 +13,22 @@ const marquee = keyframes`
 `;
 
 // 전체 영역 (헤더 아래 고정)
-const Wrapper = styled("div")({
+const Wrapper = styled("div")(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
   position: "fixed",
-  top: "70px",
+  bottom: "0rem",
   width: "100%",
-  height: "100vh",
+  height: "2em",
   pointerEvents: "none",
   overflow: "hidden",
   zIndex: 9999,
-});
-
-const MarqueeText = styled("div")({
+  background: "#00000065",
+  [theme.breakpoints.down("md")]: {
+    height: "1.875em",
+  },
+}));
+const MarqueeText = styled("div")(({ theme }) => ({
   position: "absolute",
   whiteSpace: "nowrap",
   fontFamily: "Mona8x12",
@@ -31,7 +36,11 @@ const MarqueeText = styled("div")({
   color: "#fffce9",
   textShadow: "0 0 6px rgba(0,0,0,0.8)",
   animation: `${marquee} 20s linear forwards`,
-});
+
+  [theme.breakpoints.down("md")]: {
+    fontSize: "0.75rem",
+  },
+}));
 
 const FloatingTips = () => {
   const [tips, setTips] = useState([]);
@@ -45,7 +54,7 @@ const FloatingTips = () => {
         {
           id: Date.now(),
           text: random,
-          top: Math.random() * 1000, // 살짝 랜덤 높이
+          // top: Math.random() * 1000, // 살짝 랜덤 높이
         },
       ]);
     };
