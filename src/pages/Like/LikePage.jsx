@@ -173,7 +173,9 @@ const GiftSection = styled(Box)({
   padding: "1rem 1.25rem",
 });
 
-const SectionLabel = styled(Typography)(({ customColor }) => ({
+const SectionLabel = styled(Typography, {
+  shouldForwardProp: (prop) => prop !== "customColor",
+})(({ customColor }) => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
