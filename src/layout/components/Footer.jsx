@@ -13,7 +13,7 @@ const FooterContainer = styled(Box)(({ theme }) => ({
   alignItems: "center",
   gap: "5rem",
 
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down("md")]: {
     flexDirection: "column",
     gap: "1.5rem",
   },
@@ -74,7 +74,7 @@ const Divider = styled(Box)(({ theme }) => ({
   height: "60px",
   background: "linear-gradient(to bottom, transparent, #3d3a52, transparent)",
 
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down("md")]: {
     width: "100%",
     height: "1px",
     background: "linear-gradient(to right, transparent, #3d3a52, transparent)",
