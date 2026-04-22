@@ -8,7 +8,7 @@
 // [교정된 기준점]
 // 현실 시간: 2026-04-21 13:06:00
 // 서버 시간: 봄 18일 15:00:00
-const BASE_REAL_TIME = new Date("2026-04-21T13:06:00").getTime();
+const BASE_REAL_TIME = new Date("2026-04-22T23:07:00").getTime();
 
 const SEC_PER_MIN = 2; // 현실 2초 = 서버 1분
 const SEC_PER_HOUR = SEC_PER_MIN * 60; // 현실 120초 = 서버 1시간
@@ -24,10 +24,10 @@ export const getGameTime = () => {
 
   // 기준 서버 시간(봄 18일 15시 0분)을 초로 환산
   const baseServerSeconds =
-    0 * SEC_PER_SEASON + // 봄 (Index 0)
-    (18 - 1) * SEC_PER_DAY + // 18일
-    15 * SEC_PER_HOUR + // 15시
-    0 * SEC_PER_MIN; // 0분
+    1 * SEC_PER_SEASON + // 여름
+    (29 - 1) * SEC_PER_DAY +
+    21 * SEC_PER_HOUR +
+    30 * SEC_PER_MIN;
 
   // 현재 총 서버 시간
   const totalServerSeconds = baseServerSeconds + diffInSeconds;

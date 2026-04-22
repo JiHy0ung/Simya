@@ -215,6 +215,20 @@ const EmptyText = styled(Typography)({
   fontFamily: "Mona8x12",
 });
 
+const NoticeText = styled(Typography)(({ theme }) => ({
+  fontSize: "0.75rem",
+  color: "rgba(255,255,255,0.35)",
+  textAlign: "center",
+  marginBottom: "1rem",
+  fontFamily: "Mona8x12",
+  lineHeight: 1.6,
+  maxWidth: "500px",
+
+  [theme.breakpoints.down("md")]: {
+    fontSize: "0.7rem",
+  },
+}));
+
 const GIFT_SECTIONS = [
   {
     key: "loved",
