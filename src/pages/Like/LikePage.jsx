@@ -173,14 +173,11 @@ const GiftSection = styled(Box)({
   padding: "1rem 1.25rem",
 });
 
-const SectionLabel = styled(Typography, {
-  shouldForwardProp: (prop) => prop !== "customColor",
-})(({ customColor }) => ({
+const SectionLabel = styled(Typography)(({ color }) => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
   fontSize: "0.6875rem",
-  color: customColor ?? "#5a5670",
   fontFamily: "Mona10x12",
   fontWeight: "bold",
   marginBottom: "0.5rem",
@@ -327,7 +324,7 @@ const LikePage = () => {
                   <Box
                     sx={{ display: "flex", alignItems: "center", gap: "4px" }}
                   >
-                    <SectionLabel customColor={color}>
+                    <SectionLabel sx={{ color: color }}>
                       <span
                         style={{
                           fontFamily: "Mona12",
@@ -340,8 +337,8 @@ const LikePage = () => {
                       {label}
                     </SectionLabel>
                     <SectionLabel
-                      customColor={color}
                       sx={{
+                        color: color,
                         opacity: 0.6,
                         fontFamily: "Mona8x12",
                         fontWeight: "normal",
@@ -350,7 +347,7 @@ const LikePage = () => {
                       · {reaction}
                     </SectionLabel>
                   </Box>
-                  <SectionLabel customColor={color}>{score}</SectionLabel>
+                  <SectionLabel sx={{ color: color }}>{score}</SectionLabel>
                 </Box>
                 <GiftList>
                   {selected[key].length > 0 ? (
