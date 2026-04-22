@@ -173,17 +173,12 @@ const GiftSection = styled(Box)({
   padding: "1rem 1.25rem",
 });
 
-const SectionLabel = styled(Typography)(({ $color }) => ({
+const SectionLabel = styled(Typography)(({ textColor }) => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
   fontSize: "0.6875rem",
-  color: $color ?? "#5a5670",
-  // 추가: 링크나 자동 감지된 텍스트의 스타일 리셋
-  textDecoration: "none",
-  "& a": { color: "inherit" },
-  // 모바일 Safari 등에서 강제로 색상을 유지하도록 설정
-  WebkitTextFillColor: $color ?? "#5a5670",
+  color: textColor ?? "#5a5670",
   fontFamily: "Mona10x12",
   fontWeight: "bold",
   marginBottom: "0.5rem",
@@ -343,7 +338,7 @@ const LikePage = () => {
                       {label}
                     </SectionLabel>
                     <SectionLabel
-                      color={color}
+                      textColor={color}
                       sx={{
                         opacity: 0.6,
                         fontFamily: "Mona8x12",
@@ -353,7 +348,7 @@ const LikePage = () => {
                       · {reaction}
                     </SectionLabel>
                   </Box>
-                  <SectionLabel sx={{ color }}>{score}</SectionLabel>
+                  <SectionLabel textColor={color}>{score}</SectionLabel>
                 </Box>
                 <GiftList>
                   {selected[key].length > 0 ? (
