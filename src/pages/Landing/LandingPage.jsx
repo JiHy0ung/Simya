@@ -226,6 +226,7 @@ const LandingPage = () => {
         <NoticeText>
           · NPC 호감도 아이템 추가
           <br />· 모든 스테이션 레시피 추가
+          <br />· (4/23) 패치된 판매가 적용 완료
         </NoticeText>
 
         <NoticeText sx={{ opacity: 0.6, fontFamily: "Mona8x12" }}>
