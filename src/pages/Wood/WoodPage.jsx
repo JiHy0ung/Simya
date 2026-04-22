@@ -113,7 +113,7 @@ const WoodPage = () => {
 
   return (
     <WoodContainer>
-      <WoodTitle>제재소</WoodTitle>
+      <WoodTitle>나무 공방</WoodTitle>
       <WoodSubtitle>목재 제작 조합과 순수익을 계산합니다</WoodSubtitle>
       <WoodDescription>
         모든 목재는 고정된 가격 기준으로 계산됩니다.

@@ -180,10 +180,15 @@ const NpcWrapper = styled(Box)({
 });
 
 const MENUS = [
-  { icon: "🍖", label: "요리 분석소", desc: "레시피 & 순수익", path: "/food" },
+  { icon: "❤️", label: "NPC 호감도", desc: "NPC 선물 정보", path: "/like" },
+  {
+    icon: "🍖",
+    label: "레시피 연구소",
+    desc: "레시피 & 순수익",
+    path: "/food",
+  },
   { icon: "💎", label: "보석 공방", desc: "보석 제작 & 마을", path: "/jewel" },
-  { icon: "🪵", label: "목재 공방", desc: "목재 제작 & 마을", path: "/wood" },
-  { icon: "❤️", label: "호감도", desc: "NPC 선물 정보", path: "/like" },
+  { icon: "🪵", label: "나무 공방", desc: "목재 제작 & 마을", path: "/wood" },
 ];
 
 const LINKS = [

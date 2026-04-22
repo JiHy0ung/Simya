@@ -255,7 +255,7 @@ const LikePage = () => {
 
   return (
     <LikeContainer>
-      <LikeTitle>호감도</LikeTitle>
+      <LikeTitle>NPC 호감도</LikeTitle>
       <LikeSubtitle>주민과의 관계를 쌓아보세요</LikeSubtitle>
       <LikeDescription>
         선물을 통해 호감 점수를 올릴 수 있어요.

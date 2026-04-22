@@ -3,6 +3,7 @@ import "./App.css";
 import AppRouter from "./routes/AppRouter";
 import { useState } from "react";
 import Intro from "./commons/components/Intro";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
   const [showIntro, setShowIntro] = useState(() => {
@@ -21,6 +22,7 @@ function App() {
 
       <AppRouter />
       <Analytics />
+      <SpeedInsights />
     </>
   );
 }
