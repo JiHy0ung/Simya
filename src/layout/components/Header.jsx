@@ -180,7 +180,7 @@ const Header = () => {
             height: "100vh",
           }}
         >
-          <MobileHeaderLogoBox onClick={() => navigate("/")}>
+          <MobileHeaderLogoBox>
             <Box
               sx={{
                 display: "flex",
@@ -188,6 +188,7 @@ const Header = () => {
                 alignItems: "center",
                 gap: "0.75rem",
               }}
+              onClick={() => navigate("/")}
             >
               <Box component="img" src={Logo} sx={{ height: "2rem" }} />
               <MobileHeaderTitle>시먀</MobileHeaderTitle>
@@ -210,7 +211,10 @@ const Header = () => {
           </MobileHeaderLogoBox>
           {MENU_ITEMS.map((item) => (
             <ListItem key={item.path} disablePadding>
-              <ListItemButton onClick={() => handleMenuClick(item.path)}>
+              <ListItemButton
+                onClick={() => handleMenuClick(item.path)}
+                sx={{ color: "white" }}
+              >
                 <Typography sx={{ color: "white", fontSize: "0.875rem" }}>
                   <span style={{ marginRight: "10px", fontFamily: "Mona12" }}>
                     {item.emoji}
