@@ -380,7 +380,7 @@ export const npcData = [
       "어디서 왔는지 아무도 모르는 정체 모를 존재.\n말수가 적고 알아들을 수 없는 말을 남발하지만, 친해질수록 조금씩 소통이 된다.\n이 거리의 비밀을 가장 많이 아는 존재일지도.",
     loved: [],
     liked: [],
-    neutral: [{ name: "석탄", image: Coal }],
+    neutral: [],
     disliked: [],
     blush: {
       background: "rgba(255, 136, 132, 0.67)",
