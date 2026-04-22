@@ -68,7 +68,7 @@ export const processedRecipes = [
     ingredients: [
       { name: "토마토", count: 16, image: getCropImage("토마토") },
       { name: "양파", count: 4, image: getCropImage("양파") },
-      { name: "파", count: 4, image: getCropImage("파") },
+      { name: "설탕", count: 1, image: Sugar },
     ],
   },
   {
