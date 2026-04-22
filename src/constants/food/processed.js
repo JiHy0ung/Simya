@@ -76,7 +76,7 @@ export const processedRecipes = [
     image: Stock,
     price: 2270,
     ingredients: [
-      { name: "양배추", count: 16, image: getCropImage("양배추") },
+      { name: "양배추", count: 4, image: getCropImage("양배추") },
       { name: "당근", count: 64, image: getCropImage("당근") },
       { name: "양파", count: 4, image: getCropImage("양파") },
       { name: "파", count: 4, image: getCropImage("파") },

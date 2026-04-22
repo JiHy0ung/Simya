@@ -54,7 +54,7 @@ export const restaurantRecipes = [
     price: 8140,
     ingredients: [
       { name: "배추", count: 8, image: getCropImage("배추") },
-      { name: "마늘기름", count: 2, image: GarlicOil },
+      { name: "마늘기름", count: 1, image: GarlicOil },
       { name: "쌀가루", count: 1, image: RiceFlour },
       { name: "계란", count: 1, image: getCropImage("계란") },
     ],
