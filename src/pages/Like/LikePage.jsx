@@ -173,19 +173,40 @@ const GiftSection = styled(Box)({
   padding: "1rem 1.25rem",
 });
 
-const SectionLabel = styled(Typography)(({ textcolor }) => ({
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  fontSize: "0.6875rem",
-  color: textcolor ?? "#5a5670",
-  fontFamily: "Mona10x12",
-  fontWeight: "bold",
-  marginBottom: "0.5rem",
-  textTransform: "uppercase",
-  letterSpacing: "0.05em",
-  gap: "0.4rem",
-}));
+const SectionLabel = styled(Typography, {
+  shouldForwardProp: (prop) => prop !== "variant",
+})(({ variant }) => {
+  const styles = {
+    loved: {
+      color: "#fb7185",
+    },
+    liked: {
+      color: "#fbbf24",
+    },
+    neutral: {
+      color: "#94a3b8",
+    },
+    disliked: {
+      color: "#818cf8",
+    },
+  };
+
+  const s = styles[variant] ?? styles.neutral;
+
+  return {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    fontSize: "0.6875rem",
+    color: s.color,
+    fontFamily: "Mona10x12",
+    fontWeight: "bold",
+    marginBottom: "0.5rem",
+    textTransform: "uppercase",
+    letterSpacing: "0.05em",
+    gap: "0.4rem",
+  };
+});
 
 const GiftList = styled(Box)({
   display: "flex",
@@ -243,7 +264,6 @@ const GIFT_SECTIONS = [
     emoji: "😍",
     label: "가장 좋아하는 선물",
     score: "+4점",
-    color: "#fb7185",
     reaction: "대폭 상승",
   },
   {
@@ -251,7 +271,6 @@ const GIFT_SECTIONS = [
     emoji: "😀",
     label: "좋아하는 선물",
     score: "+2점",
-    color: "#fbbf24",
     reaction: "상승",
   },
   {
@@ -259,7 +278,6 @@ const GIFT_SECTIONS = [
     emoji: "😐",
     label: "보통의 선물",
     score: "+1점",
-    color: "#94a3b8",
     reaction: "소폭 상승",
   },
   {
@@ -267,7 +285,6 @@ const GIFT_SECTIONS = [
     emoji: "🤢",
     label: "싫어하는 선물",
     score: "-3점",
-    color: "#818cf8",
     reaction: "하락",
   },
 ];
@@ -325,7 +342,7 @@ const LikePage = () => {
                   <Box
                     sx={{ display: "flex", alignItems: "center", gap: "4px" }}
                   >
-                    <SectionLabel textcolor={color}>
+                    <SectionLabel variant={key}>
                       <span
                         style={{
                           fontFamily: "Mona12",
@@ -338,7 +355,7 @@ const LikePage = () => {
                       {label}
                     </SectionLabel>
                     <SectionLabel
-                      textcolor={color}
+                      variant={key}
                       sx={{
                         opacity: 0.6,
                         fontFamily: "Mona8x12",
@@ -348,7 +365,7 @@ const LikePage = () => {
                       · {reaction}
                     </SectionLabel>
                   </Box>
-                  <SectionLabel textcolor={color}>{score}</SectionLabel>
+                  <SectionLabel variant={key}>{score}</SectionLabel>
                 </Box>
                 <GiftList>
                   {selected[key].length > 0 ? (
