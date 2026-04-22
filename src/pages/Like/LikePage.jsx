@@ -179,6 +179,11 @@ const SectionLabel = styled(Typography)(({ color }) => ({
   alignItems: "center",
   fontSize: "0.6875rem",
   color: color ?? "#5a5670",
+  // 추가: 링크나 자동 감지된 텍스트의 스타일 리셋
+  textDecoration: "none",
+  "& a": { color: "inherit" },
+  // 모바일 Safari 등에서 강제로 색상을 유지하도록 설정
+  WebkitTextFillColor: color ?? "#5a5670",
   fontFamily: "Mona10x12",
   fontWeight: "bold",
   marginBottom: "0.5rem",
