@@ -176,34 +176,15 @@ const GiftSection = styled(Box)({
 const SectionLabel = styled(Typography, {
   shouldForwardProp: (prop) => prop !== "variant",
 })(({ variant }) => {
-  const styles = {
-    loved: {
-      color: "#fb7185",
-    },
-    liked: {
-      color: "#fbbf24",
-    },
-    neutral: {
-      color: "#94a3b8",
-    },
-    disliked: {
-      color: "#818cf8",
-    },
-  };
-
-  const s = styles[variant] ?? styles.neutral;
+  const c = textColors[variant] ?? textColors.neutral;
 
   return {
     display: "flex",
-    justifyContent: "center",
     alignItems: "center",
     fontSize: "0.6875rem",
-    color: s.color,
+    color: c.main,
     fontFamily: "Mona10x12",
     fontWeight: "bold",
-    marginBottom: "0.5rem",
-    textTransform: "uppercase",
-    letterSpacing: "0.05em",
     gap: "0.4rem",
   };
 });
@@ -257,6 +238,25 @@ const EmptyText = styled(Typography)({
   color: "#3d3a52",
   fontFamily: "Mona8x12",
 });
+
+const textColors = {
+  loved: {
+    main: "#fb7185",
+    soft: "#d45a6c",
+  },
+  liked: {
+    main: "#fbbf24",
+    soft: "#d1a11f",
+  },
+  neutral: {
+    main: "#94a3b8",
+    soft: "#6e7c91",
+  },
+  disliked: {
+    main: "#818cf8",
+    soft: "#5f68c4",
+  },
+};
 
 const GIFT_SECTIONS = [
   {
@@ -328,60 +328,56 @@ const LikePage = () => {
 
         {/* 오른쪽: 선물 정보 */}
         <GiftPanel>
-          {GIFT_SECTIONS.map(
-            ({ key, emoji, label, score, color, reaction }) => (
-              <GiftSection key={key}>
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    mb: "0.5rem",
-                  }}
-                >
-                  <Box
-                    sx={{ display: "flex", alignItems: "center", gap: "4px" }}
-                  >
-                    <SectionLabel variant={key}>
-                      <span
-                        style={{
-                          fontFamily: "Mona12",
-                          fontWeight: "normal",
-                          fontSize: "0.875rem",
-                        }}
-                      >
-                        {emoji}{" "}
-                      </span>
-                      {label}
-                    </SectionLabel>
-                    <SectionLabel
-                      variant={key}
-                      sx={{
-                        opacity: 0.6,
-                        fontFamily: "Mona8x12",
+          {GIFT_SECTIONS.map(({ key, emoji, label, score, reaction }) => (
+            <GiftSection key={key}>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  mb: "0.5rem",
+                }}
+              >
+                <Box sx={{ display: "flex", alignItems: "center", gap: "4px" }}>
+                  <SectionLabel variant={key}>
+                    <span
+                      style={{
+                        fontFamily: "Mona12",
                         fontWeight: "normal",
+                        fontSize: "0.875rem",
                       }}
                     >
-                      · {reaction}
-                    </SectionLabel>
-                  </Box>
-                  <SectionLabel variant={key}>{score}</SectionLabel>
+                      {emoji}{" "}
+                    </span>
+                    {label}
+                  </SectionLabel>
+                  <SectionLabel
+                    variant={key}
+                    sx={{
+                      color: textColors[key].soft,
+                      fontFamily: "Mona8x12",
+                      fontWeight: "normal",
+                    }}
+                  >
+                    · {reaction}
+                  </SectionLabel>
                 </Box>
-                <GiftList>
-                  {selected[key].length > 0 ? (
-                    selected[key].map((gift, i) => (
-                      <GiftBadge key={i} variant={key}>
-                        <img src={gift.image} style={{ height: "1rem" }} />
-                        {gift.name}
-                      </GiftBadge>
-                    ))
-                  ) : (
-                    <EmptyText>준비 중</EmptyText>
-                  )}
-                </GiftList>
-              </GiftSection>
-            ),
-          )}
+                <SectionLabel variant={key}>{score}</SectionLabel>
+              </Box>
+              <GiftList>
+                {selected[key].length > 0 ? (
+                  selected[key].map((gift, i) => (
+                    <GiftBadge key={i} variant={key}>
+                      <img src={gift.image} style={{ height: "1rem" }} />
+                      {gift.name}
+                    </GiftBadge>
+                  ))
+                ) : (
+                  <EmptyText>준비 중</EmptyText>
+                )}
+              </GiftList>
+            </GiftSection>
+          ))}
         </GiftPanel>
       </ContentLayout>
     </LikeContainer>
