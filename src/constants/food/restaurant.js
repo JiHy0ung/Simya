@@ -40,7 +40,7 @@ export const restaurantRecipes = [
   {
     name: "고기볶음",
     image: StirMeatFry,
-    price: 10780,
+    price: 12552,
     ingredients: [
       { name: "고기", count: 8, image: getCropImage("고기") },
       { name: "고추기름", count: 2, image: ChiliOil },
@@ -51,7 +51,7 @@ export const restaurantRecipes = [
   {
     name: "배추전",
     image: Baechujeon,
-    price: 8140,
+    price: 9276,
     ingredients: [
       { name: "배추", count: 8, image: getCropImage("배추") },
       { name: "마늘기름", count: 1, image: GarlicOil },
@@ -62,18 +62,18 @@ export const restaurantRecipes = [
   {
     name: "파인애플피자",
     image: PineapplePizza,
-    price: 9669,
+    price: 10548,
     ingredients: [
       { name: "파인애플", count: 8, image: getCropImage("파인애플") },
       { name: "토마토", count: 8, image: getCropImage("토마토") },
-      { name: "밀가루", count: 4, image: Flour },
+      { name: "밀가루", count: 2, image: Flour },
       { name: "피클", count: 1, image: Pickle },
     ],
   },
   {
     name: "비빔밥",
     image: Bibimbap,
-    price: 8367,
+    price: 9127,
     ingredients: [
       { name: "쌀", count: 16, image: getCropImage("쌀") },
       { name: "당근", count: 64, image: getCropImage("당근") },
@@ -84,7 +84,7 @@ export const restaurantRecipes = [
   {
     name: "채소덮밥",
     image: VeggieRice,
-    price: 9326,
+    price: 10174,
     ingredients: [
       { name: "쌀", count: 16, image: getCropImage("쌀") },
       { name: "브로콜리", count: 8, image: getCropImage("브로콜리") },
@@ -95,7 +95,7 @@ export const restaurantRecipes = [
   {
     name: "크림리조또",
     image: CreamRisotto,
-    price: 10952,
+    price: 8748,
     ingredients: [
       { name: "쌀", count: 16, image: getCropImage("쌀") },
       { name: "크림", count: 1, image: Cream },
@@ -107,7 +107,7 @@ export const restaurantRecipes = [
   {
     name: "토마토파스타",
     image: TomatoPasta,
-    price: 8019,
+    price: 11947,
     ingredients: [
       { name: "밀가루", count: 2, image: Flour },
       { name: "토마토캐첩", count: 1, image: Ketchup },
@@ -118,7 +118,7 @@ export const restaurantRecipes = [
   {
     name: "된장찌개",
     image: DoenjangStew,
-    price: 11022,
+    price: 12240,
     ingredients: [
       { name: "된장", count: 1, image: Doenjang },
       { name: "육수", count: 1, image: Stock },
@@ -129,7 +129,7 @@ export const restaurantRecipes = [
   {
     name: "김치찌개",
     image: KimchiStew,
-    price: 14036,
+    price: 15312,
     ingredients: [
       { name: "김치", count: 1, image: Kimchi },
       { name: "육수", count: 1, image: Stock },
@@ -140,7 +140,7 @@ export const restaurantRecipes = [
   {
     name: "고추장찌개",
     image: GochujangStew,
-    price: 9064,
+    price: 9888,
     ingredients: [
       { name: "고추장", count: 1, image: Gochujang },
       { name: "육수", count: 1, image: Stock },
@@ -151,7 +151,7 @@ export const restaurantRecipes = [
   {
     name: "크림스프",
     image: CreamSoup,
-    price: 4422,
+    price: 4747,
     ingredients: [
       { name: "옥수수", count: 16, image: getCropImage("옥수수") },
       { name: "우유", count: 1, image: getCropImage("우유") },
@@ -163,7 +163,7 @@ export const restaurantRecipes = [
   {
     name: "모둠튀김",
     image: MixedFries,
-    price: 9005,
+    price: 9823,
     ingredients: [
       { name: "고구마", count: 4, image: getCropImage("고구마") },
       { name: "감자", count: 64, image: getCropImage("감자") },
@@ -174,7 +174,7 @@ export const restaurantRecipes = [
   {
     name: "고구마스틱",
     image: SweetPotatoStick,
-    price: 3912,
+    price: 4276,
     ingredients: [
       { name: "고구마", count: 4, image: getCropImage("고구마") },
       { name: "시럽", count: 2, image: Syrup },
@@ -185,7 +185,7 @@ export const restaurantRecipes = [
   {
     name: "야채튀김",
     image: VeggieFries,
-    price: 2011,
+    price: 2194,
     ingredients: [
       { name: "감자", count: 64, image: getCropImage("감자") },
       { name: "당근", count: 64, image: getCropImage("당근") },
@@ -196,7 +196,7 @@ export const restaurantRecipes = [
   {
     name: "딸기화채",
     image: StrawberryPunch,
-    price: 7920,
+    price: 8640,
     ingredients: [
       { name: "딸기", count: 16, image: getCropImage("딸기") },
       { name: "멜론", count: 4, image: getCropImage("멜론") },
@@ -207,7 +207,7 @@ export const restaurantRecipes = [
   {
     name: "수박화채",
     image: WatermelonPunch,
-    price: 9592,
+    price: 10464,
     ingredients: [
       { name: "수박", count: 64, image: getCropImage("수박") },
       { name: "블루베리", count: 10, image: getCropImage("블루베리") },
@@ -218,7 +218,7 @@ export const restaurantRecipes = [
   {
     name: "크림파스타",
     image: CreamPasta,
-    price: 6908,
+    price: 7536,
     ingredients: [
       { name: "밀가루", count: 4, image: Flour },
       { name: "크림", count: 2, image: Cream },

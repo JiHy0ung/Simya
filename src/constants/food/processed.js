@@ -15,6 +15,7 @@ import Seasoning from "../../assets/images/food/processed/seasoning_sauce.png";
 import Cream from "../../assets/images/food/processed/cream.png";
 import Pickle from "../../assets/images/food/processed/pickle.png";
 import Sugar from "../../assets/images/food/processed/sugar.png";
+import Oil from "../../assets/images/food/etc/oil.png";
 import { getCropImage } from "../../utils/recipeUtils";
 
 export const processedRecipes = [
@@ -95,7 +96,7 @@ export const processedRecipes = [
   {
     name: "된장",
     image: Doenjang,
-    price: 1800,
+    price: 1980,
     ingredients: [
       { name: "콩", count: 16, image: getCropImage("콩") },
       { name: "소금", count: 2, image: getCropImage("소금") },
@@ -114,19 +115,19 @@ export const processedRecipes = [
   {
     name: "마늘기름",
     image: GarlicOil,
-    price: 3300,
+    price: 3630,
     ingredients: [
       { name: "마늘", count: 8, image: getCropImage("마늘") },
-      { name: "오일", count: 1, image: getCropImage("오일") },
+      { name: "기름", count: 1, image: Oil },
     ],
   },
   {
     name: "고추기름",
     image: ChiliOil,
-    price: 3300,
+    price: 3630,
     ingredients: [
       { name: "고추", count: 16, image: getCropImage("고추") },
-      { name: "오일", count: 1, image: getCropImage("오일") },
+      { name: "기름", count: 1, image: Oil },
     ],
   },
   {

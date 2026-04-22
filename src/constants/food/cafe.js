@@ -94,7 +94,7 @@ export const cafeRecipes = [
   {
     name: "메론빵",
     image: MelonBread,
-    price: 6406,
+    price: 3766,
     ingredients: [
       { name: "멜론", count: 12, image: getCropImage("멜론") },
       { name: "밀가루", count: 2, image: Flour },
