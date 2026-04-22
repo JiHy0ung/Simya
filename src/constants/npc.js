@@ -25,6 +25,11 @@ export const npcData = [
     liked: [],
     neutral: [],
     disliked: [],
+    blush: {
+      background: "rgba(255, 151, 123, 0.77)",
+      left: { x: "32%", y: "67%" },
+      right: { x: "63%", y: "67%" },
+    },
   },
   {
     name: "레오",
@@ -37,6 +42,11 @@ export const npcData = [
     liked: [],
     neutral: [],
     disliked: [],
+    blush: {
+      background: "rgba(255, 130, 117, 0.6)",
+      left: { x: "35%", y: "68%" },
+      right: { x: "64%", y: "68%" },
+    },
   },
   {
     name: "루시",
@@ -49,6 +59,11 @@ export const npcData = [
     liked: [],
     neutral: [],
     disliked: [],
+    blush: {
+      background: "rgba(255, 146, 132, 0.59)",
+      left: { x: "40%", y: "67%" },
+      right: { x: "70%", y: "67%" },
+    },
   },
   {
     name: "오스카",
@@ -61,6 +76,11 @@ export const npcData = [
     liked: [],
     neutral: [],
     disliked: [],
+    blush: {
+      background: "rgba(255, 124, 88, 0.68)",
+      left: { x: "43%", y: "67%" },
+      right: { x: "73%", y: "67%" },
+    },
   },
   {
     name: "세실리아",
@@ -73,6 +93,11 @@ export const npcData = [
     liked: [],
     neutral: [],
     disliked: [],
+    blush: {
+      background: "rgba(255, 123, 147, 0.66)",
+      left: { x: "43%", y: "67%" },
+      right: { x: "73%", y: "67%" },
+    },
   },
   {
     name: "캐서린",
@@ -85,6 +110,11 @@ export const npcData = [
     liked: [],
     neutral: [],
     disliked: [],
+    blush: {
+      background: "rgba(255, 134, 69, 0.68)",
+      left: { x: "43%", y: "67%" },
+      right: { x: "72%", y: "67%" },
+    },
   },
   {
     name: "에반",
@@ -97,6 +127,11 @@ export const npcData = [
     liked: [],
     neutral: [],
     disliked: [],
+    blush: {
+      background: "rgba(255, 117, 161, 0.6)",
+      left: { x: "41%", y: "70%" },
+      right: { x: "70%", y: "70%" },
+    },
   },
   {
     name: "주드",
@@ -109,6 +144,11 @@ export const npcData = [
     liked: [],
     neutral: [],
     disliked: [],
+    blush: {
+      background: "rgba(255, 145, 109, 0.71)",
+      left: { x: "40%", y: "67%" },
+      right: { x: "70%", y: "67%" },
+    },
   },
   {
     name: "콜린",
@@ -121,6 +161,11 @@ export const npcData = [
     liked: [],
     neutral: [],
     disliked: [],
+    blush: {
+      background: "rgba(255, 132, 123, 0.71)",
+      left: { x: "36%", y: "75%" },
+      right: { x: "70%", y: "75%" },
+    },
   },
   {
     name: "엘리샤",
@@ -133,6 +178,11 @@ export const npcData = [
     liked: [],
     neutral: [],
     disliked: [],
+    blush: {
+      background: "rgba(255, 146, 132, 0.66)",
+      left: { x: "40%", y: "67%" },
+      right: { x: "70%", y: "67%" },
+    },
   },
   {
     name: "케빈",
@@ -145,6 +195,11 @@ export const npcData = [
     liked: [],
     neutral: [],
     disliked: [],
+    blush: {
+      background: "rgba(255, 157, 132, 0.77)",
+      left: { x: "36%", y: "71%" },
+      right: { x: "72%", y: "71%" },
+    },
   },
   {
     name: "이안",
@@ -157,6 +212,11 @@ export const npcData = [
     liked: [],
     neutral: [],
     disliked: [],
+    blush: {
+      background: "rgba(255, 109, 143, 0.71)",
+      left: { x: "40%", y: "69%" },
+      right: { x: "71%", y: "69%" },
+    },
   },
   {
     name: "루카",
@@ -169,6 +229,11 @@ export const npcData = [
     liked: [],
     neutral: [],
     disliked: [],
+    blush: {
+      background: "rgba(255, 146, 170, 0.63)",
+      left: { x: "35%", y: "78%" },
+      right: { x: "72%", y: "77%" },
+    },
   },
   {
     name: "???",
@@ -181,5 +246,10 @@ export const npcData = [
     liked: [],
     neutral: [],
     disliked: [],
+    blush: {
+      background: "rgba(255, 136, 132, 0.67)",
+      left: { x: "40%", y: "69%" },
+      right: { x: "67%", y: "69%" },
+    },
   },
 ];
