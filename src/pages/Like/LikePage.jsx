@@ -149,7 +149,7 @@ const SectionLabel = ({ labelColor, style, children }) => (
       alignItems: "center",
       fontSize: "0.6875rem",
       color: labelColor ?? "#5a5670",
-      fontFamily: "Mona10x12",
+      fontFamily: "sans-serif", // ← 임시로 변경
       fontWeight: "bold",
       marginBottom: "0.5rem",
       textTransform: "uppercase",
