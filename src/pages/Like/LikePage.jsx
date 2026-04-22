@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { styled } from "@mui/material/styles";
-import { Box, Container, Tabs, Tab, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import { npcData } from "../../constants/npc";
 
 const LikeContainer = styled(Container)(({ theme }) => ({
@@ -45,37 +45,6 @@ const LikeDescription = styled(Typography)(({ theme }) => ({
   },
 }));
 
-const StyledTabs = styled(Tabs)({
-  width: "100%",
-  minHeight: "unset",
-  marginBottom: "1.5rem",
-  "& .MuiTabs-indicator": { display: "none" },
-  "& .MuiTabs-scroller": {
-    overflow: "visible !important",
-  },
-  "& .MuiTabs-flexContainer": {
-    flexWrap: "wrap",
-    gap: "6px",
-  },
-});
-
-const StyledTab = styled(Tab)({
-  minHeight: "unset",
-  minWidth: "unset",
-  padding: "6px 14px",
-  fontSize: "0.8125rem",
-  color: "rgba(255,255,255,0.45)",
-  border: "0.5px solid rgba(183,179,218,0.25)",
-  borderRadius: "8px",
-  cursor: "var(--cursor-pointer)",
-  "&.Mui-selected": {
-    color: "#c4bdff",
-    backgroundColor: "rgba(184,178,236,0.27)",
-    borderColor: "rgba(183,179,218,0.5)",
-    fontWeight: "bold",
-  },
-});
-
 const TabContainer = styled(Box)({
   width: "100%",
   display: "flex",
@@ -114,7 +83,6 @@ const ContentLayout = styled(Box)(({ theme }) => ({
   },
 }));
 
-// 왼쪽 NPC 프로필 패널
 const ProfilePanel = styled(Box)({
   background: "#18171c",
   border: "2px solid #3d3a52",
@@ -160,7 +128,6 @@ const NpcDescription = styled(Typography)({
   whiteSpace: "pre-line",
 });
 
-// 오른쪽 선물 정보 패널
 const GiftPanel = styled(Box)({
   display: "flex",
   flexDirection: "column",
@@ -173,18 +140,28 @@ const GiftSection = styled(Box)({
   padding: "1rem 1.25rem",
 });
 
-const SectionLabel = styled(Typography)(({ color }) => ({
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  fontSize: "0.6875rem",
-  fontFamily: "Mona10x12",
-  fontWeight: "bold",
-  marginBottom: "0.5rem",
-  textTransform: "uppercase",
-  letterSpacing: "0.05em",
-  gap: "0.4rem",
-}));
+// styled 완전히 제거, 인라인 style로 교체
+const SectionLabel = ({ labelColor, style, children, ...props }) => (
+  <Typography
+    {...props}
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      fontSize: "0.6875rem",
+      color: labelColor ?? "#5a5670",
+      fontFamily: "Mona10x12",
+      fontWeight: "bold",
+      marginBottom: "0.5rem",
+      textTransform: "uppercase",
+      letterSpacing: "0.05em",
+      gap: "0.4rem",
+      ...style,
+    }}
+  >
+    {children}
+  </Typography>
+);
 
 const GiftList = styled(Box)({
   display: "flex",
@@ -192,7 +169,9 @@ const GiftList = styled(Box)({
   gap: "6px",
 });
 
-const GiftBadge = styled(Box)(({ variant }) => {
+const GiftBadge = styled(Box, {
+  shouldForwardProp: (prop) => prop !== "variant",
+})(({ variant }) => {
   const styles = {
     loved: {
       bg: "rgba(251,113,133,0.15)",
@@ -324,7 +303,7 @@ const LikePage = () => {
                   <Box
                     sx={{ display: "flex", alignItems: "center", gap: "4px" }}
                   >
-                    <SectionLabel sx={{ color: color }}>
+                    <SectionLabel labelColor={color}>
                       <span
                         style={{
                           fontFamily: "Mona12",
@@ -337,8 +316,8 @@ const LikePage = () => {
                       {label}
                     </SectionLabel>
                     <SectionLabel
-                      sx={{
-                        color: color,
+                      labelColor={color}
+                      style={{
                         opacity: 0.6,
                         fontFamily: "Mona8x12",
                         fontWeight: "normal",
@@ -347,7 +326,7 @@ const LikePage = () => {
                       · {reaction}
                     </SectionLabel>
                   </Box>
-                  <SectionLabel sx={{ color: color }}>{score}</SectionLabel>
+                  <SectionLabel labelColor={color}>{score}</SectionLabel>
                 </Box>
                 <GiftList>
                   {selected[key].length > 0 ? (
