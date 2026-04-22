@@ -96,13 +96,14 @@ const MenuIcon = styled(Typography)({
 });
 
 const MenuLabel = styled(Typography)({
-  fontSize: "0.8125rem",
+  fontSize: "1rem",
   color: "#e8e4ff",
-  fontFamily: "Mona8x12",
+  fontFamily: "Mona10x12",
+  fontWeight: "bold",
 });
 
 const MenuDesc = styled(Typography)({
-  fontSize: "0.6875rem",
+  fontSize: "0.75rem",
   color: "#5a5670",
   fontFamily: "Mona8x12",
 });

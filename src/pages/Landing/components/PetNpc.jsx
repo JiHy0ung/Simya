@@ -90,7 +90,7 @@ const BlushCircle = styled(Box)({
 });
 
 const NpcName = styled(Typography)({
-  fontSize: "0.9375rem",
+  fontSize: "1rem",
   fontWeight: "bold",
   color: "#e8e4ff",
   fontFamily: "Mona10x12",
@@ -110,7 +110,7 @@ const NpcJob = styled(Typography)({
 });
 
 const HintText = styled(Typography)(({ active }) => ({
-  fontSize: "0.6875rem",
+  fontSize: "0.75rem",
   color: active ? "#b7b3da" : "rgba(183,179,218,0.3)",
   fontFamily: "Mona10x12",
   textAlign: "center",
