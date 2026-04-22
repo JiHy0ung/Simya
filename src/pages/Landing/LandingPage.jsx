@@ -13,7 +13,7 @@ const LandingContainer = styled(Container)({
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-  gap: "1.75rem",
+  gap: "1.875rem",
   paddingBlock: "3rem",
 });
 
