@@ -67,12 +67,12 @@ const IntroTitle = styled("div")({
 
 const IntroSub = styled("div")({
   fontFamily: "Mona8x12",
-  fontSize: "0.6875rem",
-  color: "rgba(183,179,218,0.35)",
+  fontSize: "0.75rem",
+  color: "rgba(189, 184, 238, 0.35)",
   textAlign: "center",
-  letterSpacing: "0.25em",
-  animation: `${subReveal} 1.5s ease forwards`,
-  animationDelay: "2s",
+  letterSpacing: "-1",
+  animation: `${subReveal} 1s ease forwards`,
+  animationDelay: "1.2s",
   opacity: 0,
 });
 
@@ -101,8 +101,8 @@ const Intro = ({ onDone }) => {
         : Math.random() * W;
       const y = fromEdge ? Math.random() * H * 0.5 : Math.random() * H;
 
-      const isShooting = Math.random() < 0.01;
-      const speed = isShooting ? 3 + Math.random() * 8 : 0;
+      const isShooting = Math.random() < 0.02;
+      const speed = isShooting ? 1.7 + Math.random() * 8 : 0;
 
       return {
         x,
@@ -143,25 +143,6 @@ const Intro = ({ onDone }) => {
         rotation: Math.random() * Math.PI,
       };
     });
-
-    // 먼지
-    // const DUST = Array.from({ length: 60 }, () => spawnDust());
-
-    // function spawnDust() {
-    //   const angle = Math.random() * Math.PI * 2;
-    //   const r = 60 + Math.random() * Math.min(W, H) * 0.4;
-    //   return {
-    //     x: cx + Math.cos(angle) * r,
-    //     y: cy + Math.sin(angle) * r,
-    //     vx: (Math.random() - 0.5) * 0.15,
-    //     vy: (Math.random() - 0.5) * 0.15,
-    //     size: 0.05 + Math.random() * 1.2,
-    //     alpha: 0.3 + Math.random() * 0.4,
-    //     decay: 0.001 + Math.random() * 0.002,
-    //     hue: 240 + Math.random() * 70,
-    //     phase: Math.random() * Math.PI * 2,
-    //   };
-    // }
 
     function render() {
       t += 0.01;
@@ -247,24 +228,6 @@ const Intro = ({ onDone }) => {
           ctx.fill();
         }
       });
-
-      // // ─ 먼지
-      // DUST.forEach((d) => {
-      //   d.phase += 0.02;
-      //   d.x += d.vx;
-      //   d.y += d.vy;
-      //   d.alpha -= d.decay;
-      //   if (d.alpha <= 0) Object.assign(d, spawnDust());
-
-      //   const a = d.alpha * (0.5 + 0.5 * Math.sin(d.phase));
-      //   const grd = ctx.createRadialGradient(d.x, d.y, 0, d.x, d.y, d.size * 3);
-      //   grd.addColorStop(0, `hsla(${d.hue},60%,85%,${a})`);
-      //   grd.addColorStop(1, `hsla(${d.hue},60%,85%,0)`);
-      //   ctx.beginPath();
-      //   ctx.arc(d.x, d.y, d.size * 3, 0, Math.PI * 2);
-      //   ctx.fillStyle = grd;
-      //   ctx.fill();
-      // });
 
       // ─ 블랙홀 코어
       const bhR = 55 + 4 * Math.sin(t * 0.7);
