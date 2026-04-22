@@ -250,13 +250,13 @@ const LandingPage = () => {
       <Divider />
 
       {/* NPC */}
-      <SectionTitle>오늘의 NPC</SectionTitle>
+      <SectionTitle>복복복복</SectionTitle>
       <PetNpc npc={npc} />
 
       <Divider />
 
       {/* 외부 링크 */}
-      <SectionTitle>외부 링크</SectionTitle>
+      <SectionTitle>공식 링크</SectionTitle>
       <LinkGrid>
         {LINKS.map((link) => (
           <LinkCard
