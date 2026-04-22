@@ -110,7 +110,7 @@ export const restaurantRecipes = [
     price: 8748,
     ingredients: [
       { name: "밀가루", count: 2, image: Flour },
-      { name: "토마토캐첩", count: 1, image: Ketchup },
+      { name: "토마토케첩", count: 1, image: Ketchup },
       { name: "파프리카", count: 8, image: getCropImage("파프리카") },
       { name: "파슬리", count: 4, image: getCropImage("파슬리") },
     ],
@@ -168,7 +168,7 @@ export const restaurantRecipes = [
       { name: "고구마", count: 4, image: getCropImage("고구마") },
       { name: "감자", count: 64, image: getCropImage("감자") },
       { name: "가지", count: 12, image: getCropImage("가지") },
-      { name: "토마토캐첩", count: 1, image: Ketchup },
+      { name: "토마토케첩", count: 1, image: Ketchup },
     ],
   },
   {
