@@ -11,6 +11,7 @@ const JewelContainer = styled(Container)({
   justifyContent: "center",
   alignItems: "center",
   marginTop: "3rem",
+  paddingBottom: "3rem",
 });
 
 const JewelTitle = styled(Typography)(({ theme }) => ({

@@ -72,7 +72,7 @@ const HeaderMenuButton = styled(Button)({
 const HamburgerButton = styled(IconButton)(({ theme }) => ({
   justifyContent: "center",
   alignItems: "center",
-  padding: "0 1rem",
+  padding: "0.2rem 0 0 1rem",
   display: "none",
   color: "white",
   [theme.breakpoints.down("md")]: {

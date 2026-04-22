@@ -1,0 +1,185 @@
+import Henry from "../assets/images/npc/henry.png";
+import Leo from "../assets/images/npc/leo.png";
+import Lucy from "../assets/images/npc/lucy.png";
+import Oscar from "../assets/images/npc/oscar.png";
+import Cecilia from "../assets/images/npc/cecilia.png";
+import Catherine from "../assets/images/npc/catherine.png";
+import Evan from "../assets/images/npc/evan.png";
+import Judd from "../assets/images/npc/judd.png";
+import Colleen from "../assets/images/npc/colleen.png";
+import Elisha from "../assets/images/npc/elisha.png";
+import Kevin from "../assets/images/npc/kevin.png";
+import Ian from "../assets/images/npc/ian.png";
+import Luca from "../assets/images/npc/luca.png";
+import Who from "../assets/images/npc/who.png";
+
+export const npcData = [
+  {
+    name: "헨리",
+    image: Henry,
+    age: 32,
+    job: "레스토랑 셰프",
+    description:
+      "전직 유명 호텔 수셰프.\n 요리에 인생을 바치다 보니 숫기가 없어졌고,\n 더 많은 사람에게 음식을 선보이고 싶어 심야잡화점에 가게를 차렸다.",
+    loved: [],
+    liked: [],
+    neutral: [],
+    disliked: [],
+  },
+  {
+    name: "레오",
+    image: Leo,
+    age: null,
+    job: "가공식품점 판매원",
+    description:
+      "원래 심야잡화점 거리 출신 고양이.\n이상한 걸 주워 먹고 사람이 됐다.\n 가공식품점 할아버지의 도움으로 판매원으로 일하고 있으며, 아직 사람을 많이 경계한다.",
+    loved: [],
+    liked: [],
+    neutral: [],
+    disliked: [],
+  },
+  {
+    name: "루시",
+    image: Lucy,
+    age: null,
+    job: "카페 바리스타",
+    description:
+      "심야잡화점의 햇살 같은 존재.\n밝고 명량하며 거절을 잘 못하지만 선은 분명하다.\n비 오는 날엔 유독 기운이 빠지는 비밀이 있다.",
+    loved: [],
+    liked: [],
+    neutral: [],
+    disliked: [],
+  },
+  {
+    name: "오스카",
+    image: Oscar,
+    age: null,
+    job: "가구 공장 주인",
+    description:
+      "심야잡화점에서 가장 쿨한 상남자.\n표현이 투박해 가끔 상처를 주지만 계산된 행동이 아니다.\n인기가 많은데 본인은 전혀 모른다.",
+    loved: [],
+    liked: [],
+    neutral: [],
+    disliked: [],
+  },
+  {
+    name: "세실리아",
+    image: Cecilia,
+    age: 28,
+    job: "보석상 주인",
+    description:
+      "지적이고 호기심 넘치는 MBTI 대문자 T.\n예의를 중시하고 분석적이라 젊은 꼰대 소리를 듣기도 하지만, 친해지면 누구보다 다정하다.",
+    loved: [],
+    liked: [],
+    neutral: [],
+    disliked: [],
+  },
+  {
+    name: "캐서린",
+    image: Catherine,
+    age: null,
+    job: "농작물 상점 주인",
+    description:
+      "농사에 열정적이고 털털한 심야잡화점의 말괄량이.\n주근깨가 매력 포인트이며, 아재 개그를 진심으로 사랑하는 비밀스러운 취미가 있다.",
+    loved: [],
+    liked: [],
+    neutral: [],
+    disliked: [],
+  },
+  {
+    name: "에반",
+    image: Evan,
+    age: 18,
+    job: "광물 상점 판매원",
+    description:
+      "사춘기 한창인 18살.\n부모님에 의해 억지로 상점에 앉혀졌다.\n퉁명스럽고 자존감이 낮지만 친해지면 한없이 잘해주는 아이다.",
+    loved: [],
+    liked: [],
+    neutral: [],
+    disliked: [],
+  },
+  {
+    name: "주드",
+    image: Judd,
+    age: 526,
+    job: "나무 상점 주인",
+    description:
+      "526세 엘프족.\n나무를 구원하겠다는 신념으로 심야잡화점에 왔다.\n인간을 극도로 혐오하지만,\n잘 보이려 노력하는 인간에게는 같이 어울려준다.",
+    loved: [],
+    liked: [],
+    neutral: [],
+    disliked: [],
+  },
+  {
+    name: "콜린",
+    image: Colleen,
+    age: 12,
+    job: "블록 상점 주인",
+    description:
+      "12살이지만 비상한 두뇌로 가게를 직접 구상한 아이.\n어른인 척하지만 가끔 어린아이 티가 난다.\n밝고 장난기 많으며 신기한 걸 탐구하길 좋아한다.",
+    loved: [],
+    liked: [],
+    neutral: [],
+    disliked: [],
+  },
+  {
+    name: "엘리샤",
+    image: Elisha,
+    age: null,
+    job: "토큰 상점 주인",
+    description:
+      "이세계 귀족 출신.\n차별을 없애고자 직접 가게를 차렸다.\n공평하고 절제된 아름다움을 가졌으며,\n아닌 건 아니라고 확실히 말하는 주관이 뚜렷한 사람이다.",
+    loved: [],
+    liked: [],
+    neutral: [],
+    disliked: [],
+  },
+  {
+    name: "케빈",
+    image: Kevin,
+    age: null,
+    job: "루나 상점 주인",
+    description:
+      "모두에게 사랑받는 엄친아.\n빈곤하게 자라서인지 반짝이는 것과 고급스러운 것을 좋아한다.\n너무 헤프다는 말도 있지만 한 번이라도 만나보면 그 말이 나오지 않는다.",
+    loved: [],
+    liked: [],
+    neutral: [],
+    disliked: [],
+  },
+  {
+    name: "이안",
+    image: Ian,
+    age: 20,
+    job: "잡화점 관리인",
+    description:
+      "돈 쓸 곳은 많아 취업한 20살 MZ. 기본적으로 불친절하지만 잘해주는 사람에겐 어쩔 줄 몰라한다. 일하는 내내 핸드폰을 놓지 않는 SNS 중독자.",
+    loved: [],
+    liked: [],
+    neutral: [],
+    disliked: [],
+  },
+  {
+    name: "루카",
+    image: Luca,
+    age: null,
+    job: "테이밍 도우미",
+    description:
+      "알을 다루는 이종족 루카족 출신.\n화를 낼 줄 모르고 누구에게나 친절하지만,\n생명을 모독하는 순간만큼은 절대 건드려선 안 된다.",
+    loved: [],
+    liked: [],
+    neutral: [],
+    disliked: [],
+  },
+  {
+    name: "???",
+    image: Who,
+    age: null,
+    job: "심야잡화점 주인",
+    description:
+      "어디서 왔는지 아무도 모르는 정체 모를 존재.\n말수가 적고 알아들을 수 없는 말을 남발하지만, 친해질수록 조금씩 소통이 된다.\n이 거리의 비밀을 가장 많이 아는 존재일지도.",
+    loved: [],
+    liked: [],
+    neutral: [],
+    disliked: [],
+  },
+];

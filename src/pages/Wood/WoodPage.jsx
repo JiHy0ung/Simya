@@ -11,6 +11,7 @@ const WoodContainer = styled(Container)({
   justifyContent: "center",
   alignItems: "center",
   marginTop: "3rem",
+  paddingBottom: "3rem",
 });
 
 const WoodTitle = styled(Typography)(({ theme }) => ({

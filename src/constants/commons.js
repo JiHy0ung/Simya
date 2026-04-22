@@ -10,13 +10,13 @@ export const SEASON_THEME = {
     image: Spring,
   },
   여름: {
-    bg: "rgba(183, 253, 71, 0.15)",
-    text: "#b0e25f",
+    bg: "rgba(253, 247, 71, 0.15)",
+    text: "#e2de5f",
     image: Summer,
   },
   가을: {
-    bg: "rgba(251,146,60,0.15)",
-    text: "#fb923c",
+    bg: "rgba(251, 60, 60, 0.15)",
+    text: "#fb593c",
     image: Autumn,
   },
   겨울: {
