@@ -353,7 +353,7 @@ const LikePage = () => {
                       · {reaction}
                     </SectionLabel>
                   </Box>
-                  <SectionLabel $color={color}>{score}</SectionLabel>
+                  <SectionLabel sx={{ color }}>{score}</SectionLabel>
                 </Box>
                 <GiftList>
                   {selected[key].length > 0 ? (
