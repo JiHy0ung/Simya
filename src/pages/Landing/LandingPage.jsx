@@ -13,22 +13,21 @@ const LandingContainer = styled(Container)({
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-  marginTop: "3rem",
-  gap: "2.5rem",
+  gap: "1.75rem",
+  paddingBlock: "3rem",
 });
 
 const Title = styled(Typography)({
-  fontSize: "3.5rem",
-  fontWeight: "900",
-  textAlign: "center",
-  letterSpacing: "-0.02em",
-});
-
-const Subtitle = styled(Typography)({
-  fontSize: "1rem",
-  color: "#666",
-  textAlign: "center",
-  lineHeight: 1.8,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  width: "100%",
+  maxWidth: "720px",
+  fontSize: "3rem",
+  fontWeight: "bold",
+  color: "#ffffff",
+  fontFamily: "Mona8x12",
+  letterSpacing: "0.08em",
 });
 
 const Divider = styled(Box)({
@@ -38,15 +37,36 @@ const Divider = styled(Box)({
   background: "linear-gradient(to right, transparent, #3d3a52, transparent)",
 });
 
-const MenuGrid = styled(Box)({
-  display: "grid",
-  gridTemplateColumns: "repeat(4, 1fr)",
-  gap: "0.75rem",
+/* 섹션 타이틀 개선 */
+const SectionTitle = styled(Typography)({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
   width: "100%",
-  "@media (max-width: 768px)": {
-    gridTemplateColumns: "repeat(2, 1fr)",
-  },
+  maxWidth: "720px",
+  fontSize: "0.8rem",
+  color: "#c4bdff",
+  fontFamily: "Mona10x12",
+  letterSpacing: "0.08em",
 });
+
+/* 메뉴 (2x2 유지 + 인터랙션 추가) */
+const MenuGrid = styled(Box)(({ theme }) => ({
+  display: "grid",
+  gridTemplateColumns: "repeat(1, 1fr)", // 기본: 모바일
+  gap: "0.75rem",
+  width: "90%",
+
+  [theme.breakpoints.up("sm")]: {
+    gridTemplateColumns: "repeat(2, 1fr)", // 태블릿
+    width: "90%",
+  },
+
+  [theme.breakpoints.up("md")]: {
+    gridTemplateColumns: "repeat(4, 1fr)", // 데스크탑
+    width: "100%",
+  },
+}));
 
 const MenuCard = styled(Box)({
   background: "#18171c",
@@ -57,32 +77,37 @@ const MenuCard = styled(Box)({
   alignItems: "center",
   gap: "0.5rem",
   cursor: "var(--cursor-pointer)",
-  transition: "border-color 0.15s ease",
+  transition: "all 0.15s ease",
+
   "&:hover": {
     borderColor: "#b7b3da",
+    transform: "translateY(-2px)",
+    background: "#1f1d26",
+  },
+
+  "&:active": {
+    transform: "translateY(0px) scale(0.98)",
   },
 });
 
 const MenuIcon = styled(Typography)({
   fontSize: "1.5rem",
   fontFamily: "Mona12",
-  lineHeight: 1,
 });
 
 const MenuLabel = styled(Typography)({
   fontSize: "0.8125rem",
   color: "#e8e4ff",
   fontFamily: "Mona8x12",
-  textAlign: "center",
 });
 
 const MenuDesc = styled(Typography)({
   fontSize: "0.6875rem",
   color: "#5a5670",
   fontFamily: "Mona8x12",
-  textAlign: "center",
 });
 
+/* 외부 링크 */
 const LinkGrid = styled(Box)({
   display: "flex",
   gap: "0.75rem",
@@ -92,17 +117,18 @@ const LinkGrid = styled(Box)({
 
 const LinkCard = styled("a")({
   display: "flex",
-  justifyContent: "center",
-  alignContent: "center",
+  alignItems: "center",
   background: "#18171c",
   border: "0.5px solid #3d3a52",
   padding: "0.625rem 1.25rem",
   gap: "0.5rem",
   cursor: "var(--cursor-pointer)",
   textDecoration: "none",
-  transition: "border-color 0.15s ease",
+  transition: "all 0.15s ease",
+
   "&:hover": {
     borderColor: "#b7b3da",
+    background: "#1f1d26",
   },
 });
 
@@ -112,36 +138,45 @@ const LinkLabel = styled(Typography)({
   fontFamily: "Mona10x12",
 });
 
-const Disclaimer = styled(Typography)({
-  fontSize: "0.75rem",
-  color: "rgba(255,255,255,0.2)",
-  textAlign: "center",
-  maxWidth: "500px",
-  lineHeight: 1.8,
-});
-
+/* 상단 공지 (카드 느낌 강화) */
 const TopNotice = styled(Box)({
-  width: "100%",
-  maxWidth: "720px",
-  background: "#18171c",
-  border: "1px solid #3d3a52",
-  padding: "0.75rem 1rem",
   display: "flex",
   flexDirection: "column",
-  gap: "0.4rem",
+  justifyContent: "center",
+  alignItems: "center",
+  width: "100%",
+  maxWidth: "600px",
+  background: "linear-gradient(135deg, #18171c, #1f1d26)",
+  border: "1px solid #3d3a52",
+  padding: "0.9rem 1.1rem",
+
+  gap: "0.5rem",
+  boxShadow: "0 0 0 1px rgba(183,179,218,0.1)",
 });
 
 const NoticeTitle = styled(Typography)({
-  fontSize: "0.75rem",
+  fontWeight: "bold",
+  fontSize: "0.95rem",
   color: "#c4bdff",
   fontFamily: "Mona10x12",
+  wordBreak: "keep-all",
 });
 
 const NoticeText = styled(Typography)({
-  fontSize: "0.6875rem",
+  fontSize: "0.75rem",
   color: "rgba(255,255,255,0.5)",
-  fontFamily: "Mona8x12",
+  fontFamily: "Mona10x12",
+  wordBreak: "keep-all",
   lineHeight: 1.6,
+});
+
+/* NPC 카드 감싸기 */
+const NpcWrapper = styled(Box)({
+  border: "1px solid #3d3a52",
+  padding: "1rem",
+  background: "#18171c",
+  width: "100%",
+  maxWidth: "400px",
 });
 
 const MENUS = [
@@ -156,7 +191,6 @@ const LINKS = [
     icon: Discord,
     label: "공식 디스코드",
     href: "https://discord.gg/wsRpXq2H",
-    isPixel: true,
   },
   { icon: Wiki, label: "위키", href: "https://wiki.moonlit.kr/ko" },
   {
@@ -174,32 +208,30 @@ const LandingPage = () => {
 
   return (
     <LandingContainer>
-      {/* 면책 */}
-      <Disclaimer>
-        본 사이트는 '심야 잡화점' 유저가 제작한 비공식 웹사이트로,
-        <br />
-        유저 제보를 바탕으로 정보를 제공하며 일부 내용은 실제와 다를 수
-        있습니다.
-      </Disclaimer>
+      {/* 상단 공지 */}
       <TopNotice>
         <NoticeTitle>
-          <span style={{ fontFamily: "Mona12" }}>📢 </span> 최근 업데이트
+          <span style={{ fontFamily: "Mona12", fontWeight: "normal" }}>
+            📢{" "}
+          </span>{" "}
+          최근 업데이트
         </NoticeTitle>
+
         <NoticeText>
-          · 루시 능소화 선호 추가
-          <br />· 김치 수익 정보 갱신
+          · NPC 호감도 아이템 추가
+          <br />· 모든 스테이션 레시피 추가
+        </NoticeText>
+
+        <NoticeText sx={{ opacity: 0.6, fontFamily: "Mona8x12" }}>
+          본 사이트는 '심야 잡화점' 유저가 제작한 비공식 웹사이트로, 유저 제보를
+          바탕으로 정보를 제공하며 일부 내용은 실제와 다를 수 있습니다.
         </NoticeText>
       </TopNotice>
-      {/* 타이틀
-      <Box sx={{ textAlign: "center" }}>
-        <Title>심야잡화점</Title>
-        <Subtitle>
-          요리 분석, 보석 공방, 호감도까지
-          <br />
-          심야잡화점 공략 정보를 한눈에 확인하세요
-        </Subtitle>
-      </Box>
-      빠른 메뉴
+
+      <Divider />
+
+      {/* 빠른 메뉴 */}
+      <SectionTitle>빠른 메뉴</SectionTitle>
       <MenuGrid>
         {MENUS.map((menu) => (
           <MenuCard key={menu.path} onClick={() => navigate(menu.path)}>
@@ -208,12 +240,18 @@ const LandingPage = () => {
             <MenuDesc>{menu.desc}</MenuDesc>
           </MenuCard>
         ))}
-      </MenuGrid> */}
+      </MenuGrid>
+
       <Divider />
-      {/* NPC 쓰다듬기 */}
+
+      {/* NPC */}
+      <SectionTitle>오늘의 NPC</SectionTitle>
       <PetNpc npc={npc} />
+
       <Divider />
+
       {/* 외부 링크 */}
+      <SectionTitle>외부 링크</SectionTitle>
       <LinkGrid>
         {LINKS.map((link) => (
           <LinkCard
