@@ -141,9 +141,8 @@ const GiftSection = styled(Box)({
 });
 
 // styled 완전히 제거, 인라인 style로 교체
-const SectionLabel = ({ labelColor, style, children, ...props }) => (
-  <Typography
-    {...props}
+const SectionLabel = ({ labelColor, style, children }) => (
+  <span
     style={{
       display: "flex",
       justifyContent: "center",
@@ -160,7 +159,7 @@ const SectionLabel = ({ labelColor, style, children, ...props }) => (
     }}
   >
     {children}
-  </Typography>
+  </span>
 );
 
 const GiftList = styled(Box)({
