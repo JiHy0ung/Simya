@@ -95,7 +95,7 @@ export const restaurantRecipes = [
   {
     name: "크림리조또",
     image: CreamRisotto,
-    price: 8748,
+    price: 11947,
     ingredients: [
       { name: "쌀", count: 16, image: getCropImage("쌀") },
       { name: "크림", count: 1, image: Cream },
