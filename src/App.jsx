@@ -17,7 +17,7 @@ function App() {
 
   return (
     <>
-      {showIntro && <Intro onDone={handleIntroDone} />}
+      {!showIntro && <Intro onDone={handleIntroDone} />}
 
       <AppRouter />
       <Analytics />

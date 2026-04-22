@@ -175,6 +175,54 @@ const Intro = ({ onDone }) => {
         ctx.restore();
       });
 
+      // 🌙 그믐달 (Moon) 추가 - 베지에 곡선 방식
+      const moonX = cx + W * 0.25; // 중앙에서 오른쪽으로
+      const moonY = cy - H * 0.25; // 중앙에서 위쪽으로
+      const moonR = 30; // 달의 기본 반지름
+
+      ctx.save();
+
+      // 달의 각도를 살짝 기울임 (더 자연스럽게)
+      ctx.translate(moonX, moonY);
+      ctx.rotate(-Math.PI * 0.1); // 왼쪽으로 약 18도 기울임
+
+      // 1. 달의 은은한 광환 (Glow) - 달 뒤에 먼저 그려짐
+      const moonGlow = ctx.createRadialGradient(0, 0, 0, 0, 0, moonR * 2.5);
+      moonGlow.addColorStop(0, "rgba(220, 215, 255, 0.15)");
+      moonGlow.addColorStop(0.6, "rgba(160, 150, 255, 0.05)");
+      moonGlow.addColorStop(1, "rgba(100, 80, 220, 0)");
+      ctx.fillStyle = moonGlow;
+      ctx.beginPath();
+      ctx.arc(0, 0, moonR * 2.5, 0, Math.PI * 2);
+      ctx.fill();
+
+      // 2. 그믐달 몸체 (Crescent Shape)
+      // 타이틀 및 텍스트와 어우러지는 네온 효과 추가
+      ctx.shadowBlur = 15;
+      ctx.shadowColor = "rgba(220, 215, 255, 0.9)";
+      ctx.fillStyle = "#f0eeff"; // 달의 밝은 색
+
+      ctx.beginPath();
+      // 1. 바깥쪽 원
+      ctx.arc(0, 0, moonR, -Math.PI / 2, Math.PI / 2, false);
+
+      // 2. 안쪽 곡선
+      ctx.bezierCurveTo(
+        -moonR * -0.7,
+        -moonR * -0.7, // 제어점 1: 아래쪽에서 안으로 당김
+        -moonR * -0.7,
+        moonR * -0.7, // 제어점 2: 위쪽에서 안으로 당김
+        0,
+        -moonR, // 도착점: 다시 꼭대기로
+      );
+
+      ctx.closePath();
+      ctx.fill();
+
+      // 그림자 효과 초기화 (이후 그리기 영향 방지)
+      ctx.shadowBlur = 0;
+      ctx.restore();
+
       // ─ 별 + 별똥별
       STARS.forEach((s) => {
         s.x += s.vx;
@@ -282,7 +330,7 @@ const Intro = ({ onDone }) => {
       <Canvas ref={canvasRef} />
       <TextWrap>
         <IntroTitle>시먀</IntroTitle>
-        <IntroSub>차원의 틈 사이로 발을 들이세요</IntroSub>
+        <IntroSub>달빛 아래 신비함이 가득한 곳</IntroSub>
       </TextWrap>
     </Overlay>
   );
