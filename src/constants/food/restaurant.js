@@ -107,7 +107,7 @@ export const restaurantRecipes = [
   {
     name: "토마토파스타",
     image: TomatoPasta,
-    price: 11947,
+    price: 8748,
     ingredients: [
       { name: "밀가루", count: 2, image: Flour },
       { name: "토마토캐첩", count: 1, image: Ketchup },
