@@ -79,6 +79,28 @@ import TropicalPlanks from "../assets/images/wood/tropical_planks.png";
 import VolcanicPlanks from "../assets/images/wood/volcanic_planks.png";
 import WeepingPlanks from "../assets/images/wood/weeping_planks.png";
 
+import Kimchi from "../assets/images/food/processed/kimchi.png";
+import Flour from "../assets/images/food/processed/flour.png";
+import RiceFlour from "../assets/images/food/processed/rice_flour.png";
+import Starch from "../assets/images/food/processed/starch.png";
+import Syrup from "../assets/images/food/processed/syrup.png";
+import CocoaPowder from "../assets/images/food/processed/cocoa_powder.png";
+import Ketchup from "../assets/images/food/processed/ketchup.png";
+import Stock from "../assets/images/food/processed/stock.png";
+import SoySauce from "../assets/images/food/processed/soy_sauce.png";
+import Doenjang from "../assets/images/food/processed/doenjang.png";
+import Gochujang from "../assets/images/food/processed/gochujang.png";
+import GarlicOil from "../assets/images/food/processed/garlic_oil.png";
+import ChiliOil from "../assets/images/food/processed/chili_oil.png";
+import Seasoning from "../assets/images/food/processed/seasoning_sauce.png";
+import Cream from "../assets/images/food/processed/cream.png";
+import Pickle from "../assets/images/food/processed/pickle.png";
+import Sugar from "../assets/images/food/processed/sugar.png";
+import Oil from "../assets/images/food/etc/oil.png";
+
+import Hay from "../assets/images/items/hay_bale.png";
+import Bread from "../assets/images/items/bread.png";
+
 export const npcData = [
   {
     name: "헨리",
@@ -94,6 +116,8 @@ export const npcData = [
       { name: "딸기", image: Strawberry },
       { name: "석탄", image: Coal },
       { name: "산호석 보석", image: CoralGem },
+      { name: "설탕", image: Sugar },
+      { name: "빵", image: Bread },
     ],
     disliked: [{ name: "수국", image: Hydrangea }],
     blush: {
@@ -204,6 +228,8 @@ export const npcData = [
       { name: "밀", image: Wheat },
       { name: "석탄", image: Coal },
       { name: "라리마 보석", image: LarimarGem },
+      { name: "건초더미", image: Hay },
+      { name: "빵", image: Bread },
     ],
     disliked: [],
     blush: {
@@ -318,7 +344,7 @@ export const npcData = [
       { name: "석탄", image: Coal },
       { name: "페리도트 보석", image: PeridotGem },
     ],
-    disliked: [],
+    disliked: [{ name: "히비스커스", image: Hibiscus }],
     blush: {
       background: "rgba(255, 157, 132, 0.77)",
       left: { x: "36%", y: "71%" },
@@ -336,6 +362,7 @@ export const npcData = [
     liked: [
       { name: "산호석 보석", image: CoralGem },
       { name: "불꽃 백합", image: FlameLily },
+      { name: "사막 장미 ", image: DesertRose },
     ],
     neutral: [
       { name: "수국", image: Hydrangea },
