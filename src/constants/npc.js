@@ -126,6 +126,9 @@ import Orange from "../assets/images/food/seasonal/orange.png";
 import Hay from "../assets/images/items/hay_bale.png";
 import Bread from "../assets/images/items/bread.png";
 
+import Plywood from "../assets/images/wood/plywood.png";
+import PremiumPlywood from "../assets/images/wood/premium_plywood.png";
+
 export const npcData = [
   {
     name: "헨리",
@@ -144,6 +147,7 @@ export const npcData = [
       { name: "설탕", image: Sugar },
       { name: "빵", image: Bread },
       { name: "바나나", image: Banana },
+      { name: "콩", image: SoyBean },
     ],
     disliked: [{ name: "수국", image: Hydrangea }],
     blush: {
@@ -212,6 +216,7 @@ export const npcData = [
       { name: "단풍나무 판자", image: MaplePlanks },
       { name: "석탄", image: Coal },
       { name: "페리도트 보석", image: PeridotGem },
+      { name: "합판", image: Plywood },
     ],
     disliked: [],
     blush: {
@@ -227,7 +232,7 @@ export const npcData = [
     job: "보석상 주인",
     description:
       "지적이고 호기심 넘치는 MBTI 대문자 T.\n예의를 중시하고 분석적이라 젊은 꼰대 소리를 듣기도 하지만, 친해지면 누구보다 다정하다.",
-    loved: [],
+    loved: [{ name: "용설란 꽃", image: Agave }],
     liked: [{ name: "사막 장미", image: DesertRose }],
     neutral: [
       { name: "옥수수", image: Corn },
