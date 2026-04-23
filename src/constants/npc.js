@@ -98,6 +98,32 @@ import Pickle from "../assets/images/food/processed/pickle.png";
 import Sugar from "../assets/images/food/processed/sugar.png";
 import Oil from "../assets/images/food/etc/oil.png";
 
+import Parsley from "../assets/images/food/seasonal/parsley.png";
+import Cabbage from "../assets/images/food/seasonal/cabbage.png";
+import Onion from "../assets/images/food/seasonal/onion.png";
+import Broccoli from "../assets/images/food/seasonal/broccoli.png";
+import Asparagus from "../assets/images/food/seasonal/asparagus.png";
+import Artichoke from "../assets/images/food/seasonal/artichoke.png";
+import Tomato from "../assets/images/food/seasonal/tomato.png";
+import Chili from "../assets/images/food/seasonal/chili.png";
+import Blueberry from "../assets/images/food/seasonal/blueberry.png";
+import Melon from "../assets/images/food/seasonal/melon.png";
+import Eggplant from "../assets/images/food/seasonal/eggplant.png";
+import Pineapple from "../assets/images/food/seasonal/pineapple.png";
+import Banana from "../assets/images/food/seasonal/banana.png";
+import Paprika from "../assets/images/food/seasonal/paprika.png";
+import Mango from "../assets/images/food/seasonal/mango.png";
+import Peach from "../assets/images/food/seasonal/peach.png";
+import Soybean from "../assets/images/food/seasonal/soybean.png";
+import Rice from "../assets/images/food/seasonal/rice.png";
+import NapaCabbage from "../assets/images/food/seasonal/napa_cabbage.png";
+import Grape from "../assets/images/food/seasonal/grape.png";
+import SweetPotato from "../assets/images/food/seasonal/sweet_potato.png";
+import Ginseng from "../assets/images/food/seasonal/ginseng.png";
+import Turnip from "../assets/images/food/seasonal/turnip.png";
+import Lemon from "../assets/images/food/seasonal/lemon.png";
+import Orange from "../assets/images/food/seasonal/orange.png";
+
 import Hay from "../assets/images/items/hay_bale.png";
 import Bread from "../assets/images/items/bread.png";
 
@@ -133,7 +159,7 @@ export const npcData = [
     job: "가공식품점 판매원",
     description:
       "원래 심야잡화점 거리 출신 고양이.\n이상한 걸 주워 먹고 사람이 됐다.\n 가공식품점 할아버지의 도움으로 판매원으로 일하고 있으며, 아직 사람을 많이 경계한다.",
-    loved: [],
+    loved: [{ name: "딸기", image: Strawberry }],
     liked: [{ name: "창포", image: Calamus }],
     neutral: [
       { name: "수국", image: Hydrangea },
@@ -206,6 +232,7 @@ export const npcData = [
       { name: "수국", image: Hydrangea },
       { name: "석탄", image: Coal },
       { name: "산호석 보석", image: CoralGem },
+      { name: "멜론", image: Melon },
     ],
     disliked: [{ name: "사탕수수", image: Sugarcane }],
     blush: {
@@ -230,6 +257,7 @@ export const npcData = [
       { name: "라리마 보석", image: LarimarGem },
       { name: "건초더미", image: Hay },
       { name: "빵", image: Bread },
+      { name: "딸기", image: Strawberry },
     ],
     disliked: [],
     blush: {
@@ -252,6 +280,7 @@ export const npcData = [
       { name: "다이아몬드 블록", image: DiamondBlock },
       { name: "석탄", image: Coal },
       { name: "라리마 보석", image: LarimarGem },
+      { name: "딸기", image: Strawberry },
     ],
     disliked: [{ name: "페리도트 보석", image: PeridotGem }],
     blush: {
@@ -298,6 +327,7 @@ export const npcData = [
       { name: "수국", image: Hydrangea },
       { name: "석탄", image: Coal },
       { name: "라리마 보석", image: LarimarGem },
+      { name: "딸기", image: Strawberry },
     ],
     disliked: [],
     blush: {
@@ -321,6 +351,7 @@ export const npcData = [
       { name: "주문 도착 티켓", image: OrderArrivalTicket },
       { name: "석탄", image: Coal },
       { name: "산호석 보석", image: CoralGem },
+      { name: "딸기", image: Strawberry },
     ],
     disliked: [],
     blush: {
@@ -343,6 +374,7 @@ export const npcData = [
       { name: "수국", image: Hydrangea },
       { name: "석탄", image: Coal },
       { name: "페리도트 보석", image: PeridotGem },
+      { name: "딸기", image: Strawberry },
     ],
     disliked: [{ name: "히비스커스", image: Hibiscus }],
     blush: {
@@ -390,6 +422,7 @@ export const npcData = [
       { name: "수국", image: Hydrangea },
       { name: "석탄", image: Coal },
       { name: "페리도트 보석", image: PeridotGem },
+      { name: "토마토", image: Tomato },
     ],
     disliked: [],
     blush: {
