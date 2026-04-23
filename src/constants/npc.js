@@ -129,6 +129,8 @@ import Bread from "../assets/images/items/bread.png";
 import Plywood from "../assets/images/wood/plywood.png";
 import PremiumPlywood from "../assets/images/wood/premium_plywood.png";
 
+import PoisonousPotato from "../assets/images/items/poisonous_potato.png";
+
 export const npcData = [
   {
     name: "헨리",
@@ -266,6 +268,7 @@ export const npcData = [
       { name: "빵", image: Bread },
       { name: "딸기", image: Strawberry },
       { name: "아쿠아마린 보석", image: AquamarineGem },
+      { name: "독이 든 감자", image: PoisonousPotato },
     ],
     disliked: [],
     blush: {
@@ -290,6 +293,7 @@ export const npcData = [
       { name: "라리마 보석", image: LarimarGem },
       { name: "딸기", image: Strawberry },
       { name: "포도", image: Grape },
+      { name: "공작석 주괴", image: Malachite },
     ],
     disliked: [{ name: "페리도트 보석", image: PeridotGem }],
     blush: {
@@ -332,7 +336,7 @@ export const npcData = [
     description:
       "12살이지만 비상한 두뇌로 가게를 직접 구상한 아이.\n어른인 척하지만 가끔 어린아이 티가 난다.\n밝고 장난기 많으며 신기한 걸 탐구하길 좋아한다.",
     loved: [],
-    liked: [],
+    liked: [{ name: "멜론", image: Melon }],
     neutral: [
       { name: "수국", image: Hydrangea },
       { name: "석탄", image: Coal },
@@ -364,6 +368,7 @@ export const npcData = [
       { name: "산호석 보석", image: CoralGem },
       { name: "딸기", image: Strawberry },
       { name: "사막 장미", image: DesertRose },
+      { name: "히비스커스", image: Hibiscus },
     ],
     disliked: [],
     blush: {
