@@ -96,12 +96,12 @@ export const getSeasonalIngredients = (ingredients, visited = new Set()) => {
     const seasonal = getSeasonalInfo(ing.name);
     if (seasonal) result.push({ ...ing, seasonal });
 
-    const processed = findProcessedRecipe(ing.name);
-    if (processed) {
-      visited.add(ing.name);
-      const subResults = getSeasonalIngredients(processed.ingredients, visited);
-      result.push(...subResults);
-    }
+    // const processed = findProcessedRecipe(ing.name);
+    // if (processed) {
+    //   visited.add(ing.name);
+    //   const subResults = getSeasonalIngredients(processed.ingredients, visited);
+    //   result.push(...subResults);
+    // }
   }
   return result.filter(
     (item, idx, self) => self.findIndex((i) => i.name === item.name) === idx,
