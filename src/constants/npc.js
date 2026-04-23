@@ -226,7 +226,7 @@ export const npcData = [
     description:
       "지적이고 호기심 넘치는 MBTI 대문자 T.\n예의를 중시하고 분석적이라 젊은 꼰대 소리를 듣기도 하지만, 친해지면 누구보다 다정하다.",
     loved: [],
-    liked: [],
+    liked: [{ name: "사막 장미", image: DesertRose }],
     neutral: [
       { name: "옥수수", image: Corn },
       { name: "수국", image: Hydrangea },
