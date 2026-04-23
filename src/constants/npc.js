@@ -114,7 +114,6 @@ import Banana from "../assets/images/food/seasonal/banana.png";
 import Paprika from "../assets/images/food/seasonal/paprika.png";
 import Mango from "../assets/images/food/seasonal/mango.png";
 import Peach from "../assets/images/food/seasonal/peach.png";
-import Soybean from "../assets/images/food/seasonal/soybean.png";
 import Rice from "../assets/images/food/seasonal/rice.png";
 import NapaCabbage from "../assets/images/food/seasonal/napa_cabbage.png";
 import Grape from "../assets/images/food/seasonal/grape.png";
@@ -144,6 +143,7 @@ export const npcData = [
       { name: "산호석 보석", image: CoralGem },
       { name: "설탕", image: Sugar },
       { name: "빵", image: Bread },
+      { name: "바나나", image: Banana },
     ],
     disliked: [{ name: "수국", image: Hydrangea }],
     blush: {
@@ -164,6 +164,7 @@ export const npcData = [
     neutral: [
       { name: "수국", image: Hydrangea },
       { name: "석탄", image: Coal },
+      { name: "복숭아", image: Peach },
     ],
     disliked: [
       { name: "파", image: GreenOnion },
@@ -187,6 +188,7 @@ export const npcData = [
     neutral: [
       { name: "콩", image: SoyBean },
       { name: "석탄", image: Coal },
+      { name: "포도", image: Grape },
     ],
     disliked: [],
     blush: {
@@ -258,6 +260,7 @@ export const npcData = [
       { name: "건초더미", image: Hay },
       { name: "빵", image: Bread },
       { name: "딸기", image: Strawberry },
+      { name: "아쿠아마린 보석", image: AquamarineGem },
     ],
     disliked: [],
     blush: {
@@ -281,6 +284,7 @@ export const npcData = [
       { name: "석탄", image: Coal },
       { name: "라리마 보석", image: LarimarGem },
       { name: "딸기", image: Strawberry },
+      { name: "포도", image: Grape },
     ],
     disliked: [{ name: "페리도트 보석", image: PeridotGem }],
     blush: {
@@ -306,6 +310,7 @@ export const npcData = [
       { name: "단풍나무 판자", image: MaplePlanks },
       { name: "석탄", image: Coal },
       { name: "라리마 보석", image: LarimarGem },
+      { name: "버드나무 판자", image: WillowPlanks },
     ],
     disliked: [],
     blush: {
@@ -328,6 +333,7 @@ export const npcData = [
       { name: "석탄", image: Coal },
       { name: "라리마 보석", image: LarimarGem },
       { name: "딸기", image: Strawberry },
+      { name: "포도", image: Grape },
     ],
     disliked: [],
     blush: {
@@ -352,6 +358,7 @@ export const npcData = [
       { name: "석탄", image: Coal },
       { name: "산호석 보석", image: CoralGem },
       { name: "딸기", image: Strawberry },
+      { name: "사막 장미", image: DesertRose },
     ],
     disliked: [],
     blush: {
@@ -375,6 +382,7 @@ export const npcData = [
       { name: "석탄", image: Coal },
       { name: "페리도트 보석", image: PeridotGem },
       { name: "딸기", image: Strawberry },
+      { name: "사막 장미", image: DesertRose },
     ],
     disliked: [{ name: "히비스커스", image: Hibiscus }],
     blush: {
