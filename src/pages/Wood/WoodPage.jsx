@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { styled } from "@mui/material/styles";
 import { Box, Tabs, Tab, Container, Typography } from "@mui/material";
 import { woodRecipes } from "../../constants/town/woodRecipes";
@@ -100,15 +100,33 @@ const TABS = [
 ];
 
 const WoodPage = () => {
-  const [tab, setTab] = useState("tier1");
-  const [selected, setSelected] = useState(tier1[0] ?? null);
+  const [tab, setTab] = useState(() => {
+    return localStorage.getItem("wood_tab") || "tier1";
+  });
+
+  const [selectedName, setSelectedName] = useState(() => {
+    return localStorage.getItem("wood_selected") || null;
+  });
 
   const currentData = TABS.find((t) => t.value === tab)?.data ?? [];
+
+  const selected =
+    currentData.find((item) => item.name === selectedName) ??
+    currentData[0] ??
+    null;
+
+  useEffect(() => {
+    localStorage.setItem("wood_tab", tab);
+  }, [tab]);
+
+  useEffect(() => {
+    localStorage.setItem("wood_selected", selectedName || "");
+  }, [selectedName]);
 
   const handleTabChange = (_, v) => {
     setTab(v);
     const newData = TABS.find((t) => t.value === v)?.data ?? [];
-    setSelected(newData[0] ?? null);
+    setSelectedName(newData[0]?.name ?? null);
   };
 
   return (
@@ -140,7 +158,7 @@ const WoodPage = () => {
               key={i}
               {...recipe}
               selected={selected?.name === recipe.name}
-              onClick={() => setSelected(recipe)}
+              onClick={() => setSelectedName(recipe.name)}
             />
           ))}
         </CardGrid>

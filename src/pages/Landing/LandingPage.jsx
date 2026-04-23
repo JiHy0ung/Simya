@@ -226,6 +226,7 @@ const LandingPage = () => {
         <NoticeText>
           · (4/23) 패치된 판매가 적용 완료
           <br />· 절임통, 양조통 레시피 추가
+          <br />· 마지막으로 선택한 아이템 레시피 저장
         </NoticeText>
 
         <NoticeText sx={{ opacity: 0.6, fontFamily: "Mona8x12" }}>

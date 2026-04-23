@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { styled } from "@mui/material/styles";
 import { Box, Tabs, Tab, Container, Typography } from "@mui/material";
 import { processedRecipes } from "../../constants/food/processed";
@@ -116,8 +116,24 @@ const TABS = [
 ];
 
 const FoodPage = () => {
-  const [tab, setTab] = useState("process");
-  const [selected, setSelected] = useState(processedRecipes[0] ?? null);
+  const [tab, setTab] = useState(() => {
+    return localStorage.getItem("food_tab") || "process";
+  });
+
+  const [selected, setSelected] = useState(() => {
+    const saved = localStorage.getItem("food_selected");
+    return saved ? JSON.parse(saved) : (processedRecipes[0] ?? null);
+  });
+
+  useEffect(() => {
+    localStorage.setItem("food_tab", tab);
+  }, [tab]);
+
+  useEffect(() => {
+    if (selected) {
+      localStorage.setItem("food_selected", JSON.stringify(selected));
+    }
+  }, [selected]);
 
   const currentData = TABS.find((t) => t.value === tab)?.data ?? [];
 
