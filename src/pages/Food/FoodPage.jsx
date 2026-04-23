@@ -6,6 +6,8 @@ import { restaurantRecipes } from "../../constants/food/restaurant";
 import RecipeCard from "../../commons/components/RecipeCard";
 import RecipeDetail from "./components/RecipeDetail";
 import { cafeRecipes } from "../../constants/food/cafe";
+import { jamRecipes } from "../../constants/food/jam";
+import { wineRecipes } from "../../constants/food/wine";
 
 const FoodContainer = styled(Container)({
   display: "flex",
@@ -46,29 +48,42 @@ const FoodDescription = styled(Typography)(({ theme }) => ({
   },
 }));
 
+const TabsWrapper = styled(Box)({
+  display: "flex",
+  flexWrap: "wrap",
+  width: "100%",
+  gap: "8px",
+  marginBottom: "1.25rem",
+});
+
 const StyledTabs = styled(Tabs)({
+  display: "flex",
+  flexWrap: "wrap",
   width: "100%",
   minHeight: "unset",
   marginBottom: "1.25rem",
   "& .MuiTabs-indicator": { display: "none" },
 });
 
-const StyledTab = styled(Tab)(({ theme }) => ({
-  minHeight: "unset",
+const StyledTab = styled(Box)(({ theme, active }) => ({
   minWidth: "140px",
   padding: "8px 18px",
   fontSize: "0.85rem",
   color: "rgba(255,255,255,0.45)",
   border: "0.5px solid rgba(183,179,218,0.25)",
   borderRadius: "8px",
-  marginRight: "8px",
   cursor: "var(--cursor-pointer)",
-  "&.Mui-selected": {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+
+  ...(active && {
     color: "#c4bdff",
     backgroundColor: "rgba(184,178,236,0.27)",
     borderColor: "rgba(183,179,218,0.5)",
     fontWeight: "bold",
-  },
+  }),
+
   [theme.breakpoints.down("md")]: {
     minWidth: "100px",
   },
@@ -96,6 +111,8 @@ const TABS = [
   { value: "process", label: "가공식품", data: processedRecipes },
   { value: "restaurant", label: "레스토랑", data: restaurantRecipes },
   { value: "cafe", label: "디저트 카페", data: cafeRecipes },
+  { value: "preserves", label: "절임통", data: jamRecipes },
+  { value: "winery", label: "양조통", data: wineRecipes },
 ];
 
 const FoodPage = () => {
@@ -120,16 +137,17 @@ const FoodPage = () => {
         재료 구성과 총 비용, 순수익을 확인해 효율을 분석하세요.
       </FoodDescription>
 
-      <StyledTabs value={tab} onChange={handleTabChange}>
+      <TabsWrapper>
         {TABS.map((t) => (
           <StyledTab
             key={t.value}
-            value={t.value}
-            label={t.label}
-            disableRipple
-          />
+            active={tab === t.value}
+            onClick={() => handleTabChange(null, t.value)}
+          >
+            {t.label}
+          </StyledTab>
         ))}
-      </StyledTabs>
+      </TabsWrapper>
 
       <ContentLayout>
         {/* 왼쪽: 선택된 레시피 상세 */}
