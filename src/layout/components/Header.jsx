@@ -99,6 +99,7 @@ const MobileHeaderTitle = styled(Typography)({
 
 const MENU_ITEMS = [
   { label: "호감도", path: "/like", emoji: "❤️" },
+  { label: "행상인", path: "/shop", emoji: "🧺" },
   { label: "레스토랑 & 카페", path: "/food", emoji: "🍖" },
   { label: "보석", path: "/jewel", emoji: "💎" },
   { label: "목재", path: "/wood", emoji: "🪵" },

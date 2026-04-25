@@ -8,6 +8,7 @@ import {
   getTotalCost,
 } from "../../../utils/recipeUtils";
 import { SEASON_THEME } from "../../../constants/commons";
+import IngredientTree from "../../../commons/components/IngredientTree";
 
 const Panel = styled(Box)(({ theme }) => ({
   background: "#18171c",
@@ -190,29 +191,7 @@ const RecipeDetail = ({ recipe }) => {
       {/* 재료 목록 */}
       <SectionLabel>재료</SectionLabel>
       <Box>
-        {recipe.ingredients.map((ing, i) => {
-          const seasonal = getSeasonalIngredients([ing])[0]?.seasonal ?? null;
-
-          return (
-            <IngRow key={i}>
-              <IngLeft>
-                {ing.image && <IngIcon src={ing.image} alt={ing.name} />}
-                <IngName>{ing.name}</IngName>
-                {seasonal && (
-                  <SeasonBadge season={seasonal.season}>
-                    {seasonal.season}
-                  </SeasonBadge>
-                )}
-              </IngLeft>
-              <IngRight>
-                <IngCount>
-                  <span style={{ fontSize: "0.75rem" }}>x </span>
-                  {ing.count}
-                </IngCount>
-              </IngRight>
-            </IngRow>
-          );
-        })}
+        <IngredientTree ingredients={recipe.ingredients} />
       </Box>
     </Panel>
   );

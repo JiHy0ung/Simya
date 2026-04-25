@@ -7,6 +7,7 @@ const FoodPage = React.lazy(() => import("../pages/Food/FoodPage"));
 const JewelPage = React.lazy(() => import("../pages/Jewel/JewelPage"));
 const WoodPage = React.lazy(() => import("../pages/Wood/WoodPage"));
 const LikePage = React.lazy(() => import("../pages/Like/LikePage"));
+const ShopPage = React.lazy(() => import("../pages/Shop/ShopPage"));
 
 const AppRouter = () => {
   return (
@@ -18,6 +19,7 @@ const AppRouter = () => {
           <Route path="/jewel" element={<JewelPage />} />
           <Route path="/wood" element={<WoodPage />} />
           <Route path="/like" element={<LikePage />} />
+          <Route path="/shop" element={<ShopPage />} />
         </Route>
       </Routes>
     </Suspense>

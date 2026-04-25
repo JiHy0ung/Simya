@@ -4,6 +4,7 @@ import { Box, Typography } from "@mui/material";
 import { getJewelryCost, getJewelryProfit } from "../../../utils/jewelryUtils";
 import { getRequiredTowns } from "../../../utils/jewelryUtils";
 import { SEASON_THEME } from "../../../constants/commons";
+import IngredientTree from "../../../commons/components/IngredientTree";
 
 const Panel = styled(Box)(({ theme }) => ({
   background: "#18171c",
@@ -171,18 +172,7 @@ const JewelDetail = ({ recipe }) => {
 
       <SectionLabel>재료</SectionLabel>
       <Box sx={{ mb: "1rem" }}>
-        {recipe.ingredients.map((ing, i) => (
-          <IngRow key={i}>
-            <IngLeft>
-              {ing.image && <IngIcon src={ing.image} alt={ing.name} />}
-              <IngName>{ing.name}</IngName>
-            </IngLeft>
-            <IngCount>
-              <span style={{ fontSize: "0.75rem" }}>x </span>
-              {ing.count}
-            </IngCount>
-          </IngRow>
-        ))}
+        <IngredientTree ingredients={recipe.ingredients} />
       </Box>
       {requiredTowns.length > 0 && (
         <>

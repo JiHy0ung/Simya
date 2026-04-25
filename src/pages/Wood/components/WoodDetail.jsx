@@ -7,6 +7,7 @@ import {
   getRequiredTownsByTree,
 } from "../../../utils/woodUtils";
 import { SEASON_THEME } from "../../../constants/commons";
+import IngredientTree from "../../../commons/components/IngredientTree";
 
 const Panel = styled(Box)(({ theme }) => ({
   background: "#18171c",
@@ -174,15 +175,7 @@ const WoodDetail = ({ recipe }) => {
 
       <SectionLabel>재료</SectionLabel>
       <Box sx={{ mb: "1rem" }}>
-        {recipe.ingredients.map((ing, i) => (
-          <IngRow key={i}>
-            <IngLeft>
-              {ing.image && <IngIcon src={ing.image} alt={ing.name} />}
-              <IngName>{ing.name}</IngName>
-            </IngLeft>
-            <IngCount>x {ing.count}</IngCount>
-          </IngRow>
-        ))}
+        <IngredientTree ingredients={recipe.ingredients} />
       </Box>
 
       {requiredTowns.length > 0 && (
