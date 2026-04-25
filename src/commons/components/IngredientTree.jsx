@@ -4,6 +4,8 @@ import styled from "@emotion/styled";
 import { processedRecipes } from "../../constants/food/processed";
 import { jewelryRecipes } from "../../constants/town/jewelryRecipes";
 import { woodRecipes } from "../../constants/town/woodRecipes";
+import { getSeasonalInfo, SEASON_LABEL } from "../../utils/recipeUtils";
+import { SEASON_THEME } from "../../constants/commons";
 
 const allProcessed = [...processedRecipes, ...jewelryRecipes, ...woodRecipes];
 
@@ -53,10 +55,33 @@ const ExpandIcon = styled("span")(({ open }) => ({
   transform: open ? "rotate(90deg)" : "rotate(0deg)",
 }));
 
+const SeasonBadge = styled("span")(({ season }) => {
+  const c = SEASON_THEME[season] ?? {
+    bg: "rgba(255,255,255,0.1)",
+    text: "#fff",
+  };
+  return {
+    fontSize: "0.625rem",
+    padding: "1px 5px",
+    background: c.bg,
+    color: c.text,
+    fontFamily: "Mona8x12",
+    whiteSpace: "nowrap",
+  };
+});
+
 const IngredientNode = ({ ing, depth = 0 }) => {
   const [open, setOpen] = useState(false);
   const subRecipe = findSubRecipe(ing.name);
   const expandable = !!subRecipe;
+  const seasonal = getSeasonalInfo(ing.name);
+
+  console.log(
+    "seasonal:",
+    seasonal?.season,
+    "label:",
+    SEASON_LABEL[seasonal?.season],
+  );
 
   return (
     <Row depth={depth}>
@@ -69,6 +94,11 @@ const IngredientNode = ({ ing, depth = 0 }) => {
           <span style={{ color: expandable && open ? "#c4bdff" : undefined }}>
             {ing.name}
           </span>
+          {seasonal && (
+            <SeasonBadge season={seasonal.season}>
+              {SEASON_LABEL[seasonal.season]}
+            </SeasonBadge>
+          )}
           {expandable && <ExpandIcon open={open}>▶</ExpandIcon>}
         </IngLeft>
         <span style={{ color: "#c4bdff", fontFamily: "Mona8x12" }}>

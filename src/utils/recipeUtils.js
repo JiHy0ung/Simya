@@ -3,6 +3,13 @@ import { vanilla } from "../constants/food/vanilla";
 import { etc } from "../constants/food/etc";
 import { processedRecipes } from "../constants/food/processed";
 
+export const SEASON_LABEL = {
+  봄: "봄",
+  여름: "여름",
+  가을: "가을",
+  겨울: "겨울",
+};
+
 // 1. 모든 재료 데이터 통합 (이미지 검색용)
 // 이 변수들은 원시 배열들이라 초기화 에러 위험이 적습니다.
 const allSeasonalCrops = Object.values(seasonal).flat();
