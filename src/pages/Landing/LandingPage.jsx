@@ -230,7 +230,7 @@ const LandingPage = () => {
         </NoticeTitle>
 
         <NoticeText>
-          · 절임통, 양조통 레시피 추가
+          · 행상인 슬롯별 아이템 레시피 확인
           <br />· 하위 재료 레시피까지 확인할 수 있는 UI 개선
         </NoticeText>
 
