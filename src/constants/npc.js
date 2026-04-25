@@ -45,6 +45,17 @@ import GarnetGem from "../assets/images/jewelry/garnet_gem.png";
 import RubyGem from "../assets/images/jewelry/ruby_gem.png";
 import StoneChunk from "../assets/images/jewelry/stone_chunk.png";
 
+import AquamarineRaw from "../assets/images/jewelry/aquamarine_raw.png";
+import PeridotRaw from "../assets/images/jewelry/peridot_raw.png";
+import AmberRaw from "../assets/images/jewelry/amber_raw.png";
+import CitrineRaw from "../assets/images/jewelry/citrine_raw.png";
+import CoralRaw from "../assets/images/jewelry/coral_raw.png";
+import LarimarRaw from "../assets/images/jewelry/larimar_raw.png";
+import GarnetRaw from "../assets/images/jewelry/garnet_raw.png";
+import RubyRaw from "../assets/images/jewelry/ruby_gem.png";
+import CobbleStone from "../assets/images/jewelry/cobble_stone.png";
+import CobbledDeepslate from "../assets/images/jewelry/cobbled_deepslate.png";
+
 import LifeRadianceGem from "../assets/images/jewelry/life_radiance_gem.png";
 import SunBlessingGem from "../assets/images/jewelry/sun_blessing_gem.png";
 import SeaDawnGem from "../assets/images/jewelry/sea_dawn_gem.png";
@@ -131,6 +142,29 @@ import PremiumPlywood from "../assets/images/wood/premium_plywood.png";
 
 import PoisonousPotato from "../assets/images/items/poisonous_potato.png";
 
+import Willow from "../assets/images/wood/willow.png";
+import Maple from "../assets/images/wood/maple.png";
+import Palm from "../assets/images/wood/palm.png";
+import PalmPlanks from "../assets/images/wood/palm_planks.png";
+import Baobab from "../assets/images/wood/baobab.png";
+import BaobabPlanks from "../assets/images/wood/baobab_planks.png";
+import Olive from "../assets/images/wood/olive.png";
+import OlivePlanks from "../assets/images/wood/olive_planks.png";
+import Cypress from "../assets/images/wood/cypress.png";
+import CypressPlanks from "../assets/images/wood/cypress_planks.png";
+import Eucalyptus from "../assets/images/wood/eucalyptus.png";
+import EucalyptusPlanks from "../assets/images/wood/eucalyptus_planks.png";
+import Dragon from "../assets/images/wood/dragon.png";
+import DragonPlanks from "../assets/images/wood/dragon_planks.png";
+
+import Egg from "../assets/images/food/etc/egg.png";
+import Meat from "../assets/images/food/etc/meat.png";
+import Milk from "../assets/images/food/etc/milk.png";
+import Salt from "../assets/images/food/etc/salt.png";
+
+import NetherWart from "../assets/images/items/nether_wart.png";
+import Apple from "../assets/images/items/apple.png";
+
 export const npcData = [
   {
     name: "헨리",
@@ -150,8 +184,13 @@ export const npcData = [
       { name: "빵", image: Bread },
       { name: "바나나", image: Banana },
       { name: "콩", image: SoyBean },
+      { name: "레몬", image: Lemon },
     ],
-    disliked: [{ name: "수국", image: Hydrangea }],
+    disliked: [
+      { name: "수국", image: Hydrangea },
+      { name: "네더 사마귀", image: NetherWart },
+      { name: "히비스커스", image: Hibiscus },
+    ],
     blush: {
       background: "rgba(255, 151, 123, 0.77)",
       left: { x: "32%", y: "67%" },
@@ -171,10 +210,12 @@ export const npcData = [
       { name: "수국", image: Hydrangea },
       { name: "석탄", image: Coal },
       { name: "복숭아", image: Peach },
+      { name: "우유", image: Milk },
     ],
     disliked: [
       { name: "파", image: GreenOnion },
       { name: "마늘", image: Garlic },
+      { name: "네더 사마귀", image: NetherWart },
     ],
     blush: {
       background: "rgba(255, 130, 117, 0.6)",
@@ -195,6 +236,7 @@ export const npcData = [
       { name: "콩", image: SoyBean },
       { name: "석탄", image: Coal },
       { name: "포도", image: Grape },
+      { name: "용설란 꽃", image: Agave },
     ],
     disliked: [],
     blush: {
@@ -210,7 +252,7 @@ export const npcData = [
     job: "가구 공장 주인",
     description:
       "심야잡화점에서 가장 쿨한 상남자.\n표현이 투박해 가끔 상처를 주지만 계산된 행동이 아니다.\n인기가 많은데 본인은 전혀 모른다.",
-    loved: [],
+    loved: [{ name: "사과", image: Apple }],
     liked: [],
     neutral: [
       { name: "무", image: Radish },
@@ -219,6 +261,8 @@ export const npcData = [
       { name: "석탄", image: Coal },
       { name: "페리도트 보석", image: PeridotGem },
       { name: "합판", image: Plywood },
+      { name: "설탕", image: Sugar },
+      { name: "고기", image: Meat },
     ],
     disliked: [],
     blush: {
@@ -269,6 +313,8 @@ export const npcData = [
       { name: "딸기", image: Strawberry },
       { name: "아쿠아마린 보석", image: AquamarineGem },
       { name: "독이 든 감자", image: PoisonousPotato },
+      { name: "불꽃 백합", image: FlameLily },
+      { name: "라벤더", image: Lavender },
     ],
     disliked: [],
     blush: {
@@ -294,6 +340,8 @@ export const npcData = [
       { name: "딸기", image: Strawberry },
       { name: "포도", image: Grape },
       { name: "공작석 주괴", image: Malachite },
+      { name: "창포", image: Calamus },
+      { name: "고기", image: Meat },
     ],
     disliked: [{ name: "페리도트 보석", image: PeridotGem }],
     blush: {
@@ -320,6 +368,8 @@ export const npcData = [
       { name: "석탄", image: Coal },
       { name: "라리마 보석", image: LarimarGem },
       { name: "버드나무 판자", image: WillowPlanks },
+      { name: "유칼립투스 판자", image: EucalyptusPlanks },
+      { name: "블루베리", image: Blueberry },
     ],
     disliked: [],
     blush: {
@@ -343,6 +393,8 @@ export const npcData = [
       { name: "라리마 보석", image: LarimarGem },
       { name: "딸기", image: Strawberry },
       { name: "포도", image: Grape },
+      { name: "블루베리", image: Blueberry },
+      { name: "망고", image: Mango },
     ],
     disliked: [],
     blush: {
@@ -369,6 +421,8 @@ export const npcData = [
       { name: "딸기", image: Strawberry },
       { name: "사막 장미", image: DesertRose },
       { name: "히비스커스", image: Hibiscus },
+      { name: "창포", image: Calamus },
+      { name: "라벤더", image: Lavender },
     ],
     disliked: [],
     blush: {
@@ -393,6 +447,8 @@ export const npcData = [
       { name: "페리도트 보석", image: PeridotGem },
       { name: "딸기", image: Strawberry },
       { name: "사막 장미", image: DesertRose },
+      { name: "불꽃 백합", image: FlameLily },
+      { name: "레몬", image: Lemon },
     ],
     disliked: [{ name: "히비스커스", image: Hibiscus }],
     blush: {
@@ -418,6 +474,9 @@ export const npcData = [
       { name: "수국", image: Hydrangea },
       { name: "석탄", image: Coal },
       { name: "라리마 보석", image: LarimarGem },
+      { name: "용설란 꽃", image: Agave },
+      { name: "루비 보석", image: RubyGem },
+      { name: "레몬", image: Lemon },
     ],
     disliked: [{ name: "감자", image: Potato }],
     blush: {
@@ -441,6 +500,8 @@ export const npcData = [
       { name: "석탄", image: Coal },
       { name: "페리도트 보석", image: PeridotGem },
       { name: "토마토", image: Tomato },
+      { name: "우유", image: Milk },
+      { name: "레몬", image: Lemon },
     ],
     disliked: [],
     blush: {
@@ -457,8 +518,15 @@ export const npcData = [
     description:
       "어디서 왔는지 아무도 모르는 정체 모를 존재.\n말수가 적고 알아들을 수 없는 말을 남발하지만, 친해질수록 조금씩 소통이 된다.\n이 거리의 비밀을 가장 많이 아는 존재일지도.",
     loved: [],
-    liked: [],
-    neutral: [],
+    liked: [{ name: "사과", image: Apple }],
+    neutral: [
+      { name: "석탄", image: Coal },
+      { name: "아쿠아마린 보석", image: AquamarineGem },
+      { name: "밀", image: Wheat },
+      { name: "가넷 원석", image: GarnetRaw },
+      { name: "딸기", image: Strawberry },
+      { name: "고기", image: Meat },
+    ],
     disliked: [],
     blush: {
       background: "rgba(255, 136, 132, 0.67)",
