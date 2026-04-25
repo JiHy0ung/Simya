@@ -63,7 +63,7 @@ const MenuGrid = styled(Box)(({ theme }) => ({
   },
 
   [theme.breakpoints.up("md")]: {
-    gridTemplateColumns: "repeat(4, 1fr)", // 데스크탑
+    gridTemplateColumns: "repeat(5, 1fr)", // 데스크탑
     width: "100%",
   },
 }));
@@ -183,6 +183,12 @@ const NpcWrapper = styled(Box)({
 const MENUS = [
   { icon: "❤️", label: "NPC 호감도", desc: "NPC 선물 정보", path: "/like" },
   {
+    icon: "💰",
+    label: "행상인",
+    desc: "슬롯별 아이템 레시피 확인",
+    path: "/shop",
+  },
+  {
     icon: "🍖",
     label: "레시피 연구소",
     desc: "레시피 & 순수익",
@@ -224,9 +230,8 @@ const LandingPage = () => {
         </NoticeTitle>
 
         <NoticeText>
-          · (4/23) 패치된 판매가 적용 완료
-          <br />· 절임통, 양조통 레시피 추가
-          <br />· 마지막으로 선택한 아이템 레시피 저장
+          · 절임통, 양조통 레시피 추가
+          <br />· 하위 재료 레시피까지 확인할 수 있는 UI 개선
         </NoticeText>
 
         <NoticeText sx={{ opacity: 0.6, fontFamily: "Mona8x12" }}>
