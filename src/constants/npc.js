@@ -360,6 +360,8 @@ export const npcData = [
     loved: [
       { name: "수양나무 판자", image: WeepingPlanks },
       { name: "고목나무 판자", image: OldTreePlanks },
+      { name: "열대나무 판자", image: TropicalPlanks },
+      { name: "화산나무 판자", image: VolcanicPlanks },
     ],
     liked: [],
     neutral: [
