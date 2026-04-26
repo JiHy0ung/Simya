@@ -351,7 +351,7 @@ const LikePage = () => {
                       </GiftBadge>
                     ))
                   ) : (
-                    <EmptyText>준비 중</EmptyText>
+                    <EmptyText>찾아 헤매는 중</EmptyText>
                   )}
                 </GiftList>
               </GiftSection>
