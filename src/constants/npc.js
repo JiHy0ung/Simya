@@ -164,6 +164,7 @@ import Salt from "../assets/images/food/etc/salt.png";
 
 import NetherWart from "../assets/images/items/nether_wart.png";
 import Apple from "../assets/images/items/apple.png";
+import WaterMelon from "../assets/images/food/vanilla/watermelon.png";
 
 export const npcData = [
   {
@@ -185,6 +186,7 @@ export const npcData = [
       { name: "바나나", image: Banana },
       { name: "콩", image: SoyBean },
       { name: "레몬", image: Lemon },
+      { name: "수박", image: WaterMelon },
     ],
     disliked: [
       { name: "수국", image: Hydrangea },
@@ -205,12 +207,16 @@ export const npcData = [
     description:
       "원래 심야잡화점 거리 출신 고양이.\n이상한 걸 주워 먹고 사람이 됐다.\n 가공식품점 할아버지의 도움으로 판매원으로 일하고 있으며, 아직 사람을 많이 경계한다.",
     loved: [{ name: "딸기", image: Strawberry }],
-    liked: [{ name: "창포", image: Calamus }],
+    liked: [
+      { name: "창포", image: Calamus },
+      { name: "아쿠아마린 보석", image: AquamarineGem },
+    ],
     neutral: [
       { name: "수국", image: Hydrangea },
       { name: "석탄", image: Coal },
       { name: "복숭아", image: Peach },
       { name: "우유", image: Milk },
+      { name: "사과", image: Apple },
     ],
     disliked: [
       { name: "파", image: GreenOnion },
@@ -237,6 +243,7 @@ export const npcData = [
       { name: "석탄", image: Coal },
       { name: "포도", image: Grape },
       { name: "용설란 꽃", image: Agave },
+      { name: "사과", image: Apple },
     ],
     disliked: [],
     blush: {
@@ -315,6 +322,7 @@ export const npcData = [
       { name: "독이 든 감자", image: PoisonousPotato },
       { name: "불꽃 백합", image: FlameLily },
       { name: "라벤더", image: Lavender },
+      { name: "사과", image: Apple },
     ],
     disliked: [],
     blush: {
@@ -342,6 +350,7 @@ export const npcData = [
       { name: "공작석 주괴", image: Malachite },
       { name: "창포", image: Calamus },
       { name: "고기", image: Meat },
+      { name: "수박", image: WaterMelon },
     ],
     disliked: [{ name: "페리도트 보석", image: PeridotGem }],
     blush: {
@@ -372,6 +381,7 @@ export const npcData = [
       { name: "버드나무 판자", image: WillowPlanks },
       { name: "유칼립투스 판자", image: EucalyptusPlanks },
       { name: "블루베리", image: Blueberry },
+      { name: "사과", image: Apple },
     ],
     disliked: [],
     blush: {
@@ -397,6 +407,7 @@ export const npcData = [
       { name: "포도", image: Grape },
       { name: "블루베리", image: Blueberry },
       { name: "망고", image: Mango },
+      { name: "수박", image: WaterMelon },
     ],
     disliked: [],
     blush: {
@@ -425,6 +436,7 @@ export const npcData = [
       { name: "히비스커스", image: Hibiscus },
       { name: "창포", image: Calamus },
       { name: "라벤더", image: Lavender },
+      { name: "사과", image: Apple },
     ],
     disliked: [],
     blush: {
@@ -451,6 +463,7 @@ export const npcData = [
       { name: "사막 장미", image: DesertRose },
       { name: "불꽃 백합", image: FlameLily },
       { name: "레몬", image: Lemon },
+      { name: "수박", image: WaterMelon },
     ],
     disliked: [{ name: "히비스커스", image: Hibiscus }],
     blush: {
@@ -471,6 +484,7 @@ export const npcData = [
       { name: "산호석 보석", image: CoralGem },
       { name: "불꽃 백합", image: FlameLily },
       { name: "사막 장미 ", image: DesertRose },
+      { name: "아쿠아마린 보석", image: AquamarineGem },
     ],
     neutral: [
       { name: "수국", image: Hydrangea },
@@ -479,6 +493,7 @@ export const npcData = [
       { name: "용설란 꽃", image: Agave },
       { name: "루비 보석", image: RubyGem },
       { name: "레몬", image: Lemon },
+      { name: "사과", image: Apple },
     ],
     disliked: [{ name: "감자", image: Potato }],
     blush: {
@@ -504,6 +519,7 @@ export const npcData = [
       { name: "토마토", image: Tomato },
       { name: "우유", image: Milk },
       { name: "레몬", image: Lemon },
+      { name: "사과", image: Apple },
     ],
     disliked: [],
     blush: {
