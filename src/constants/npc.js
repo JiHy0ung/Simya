@@ -166,7 +166,7 @@ import NetherWart from "../assets/images/items/nether_wart.png";
 import Apple from "../assets/images/items/apple.png";
 import WaterMelon from "../assets/images/food/vanilla/watermelon.png";
 
-import OrangeCandy from "../../assets/images/food/cafe/orange_candy.png";
+import OrangeCandy from "../assets/images/food/cafe/orange_candy.png";
 
 export const npcData = [
   {
