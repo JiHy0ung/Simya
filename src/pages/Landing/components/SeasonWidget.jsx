@@ -14,7 +14,7 @@ const Widget = styled(Box)(({ season }) => {
     background: theme.bg.replace("0.15)", "0.02)"),
     border: `1.5px solid ${
       theme.bg
-        ? theme.text.replace(")", ", 0.2)").replace("rgb", "rgba")
+        ? theme.text.replace(")", ", 0.15)").replace("rgb", "rgba")
         : "#3d3a52"
     }`,
     padding: "1.25rem",
