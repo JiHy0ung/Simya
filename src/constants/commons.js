@@ -6,22 +6,22 @@ import Winter from "../assets/images/season/winter.png";
 export const SEASON_THEME = {
   봄: {
     bg: "rgba(255, 183, 195, 0.15)",
-    text: "#ffb7c8",
+    text: "rgb(255, 183, 200)",
     image: Spring,
   },
   여름: {
-    bg: "rgba(253, 247, 71, 0.15)",
-    text: "#e2de5f",
+    bg: "rgba(253, 211, 71, 0.15)",
+    text: "rgb(226, 208, 95)",
     image: Summer,
   },
   가을: {
     bg: "rgba(251, 60, 60, 0.15)",
-    text: "#fb593c",
+    text: "rgb(250, 72, 72)",
     image: Autumn,
   },
   겨울: {
     bg: "rgba(147,197,253,0.15)",
-    text: "#93affd",
+    text: "rgb(147, 175, 253)",
     image: Winter,
   },
 };

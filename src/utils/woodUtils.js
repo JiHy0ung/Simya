@@ -40,3 +40,40 @@ export const getRequiredTownsByTree = (ingredients, visited = new Set()) => {
 
   return result;
 };
+
+export const findWoodByIngredient = (ingredientName, visited = new Set()) => {
+  const result = [];
+
+  for (const recipe of woodRecipes) {
+    if (visited.has(recipe.name)) continue;
+
+    const hasIngredient = recipe.ingredients.some(
+      (ing) =>
+        ing.name.replace(/\s/g, "") === ingredientName.replace(/\s/g, ""),
+    );
+
+    if (hasIngredient) {
+      result.push(recipe);
+      continue;
+    }
+
+    // 재료가 가공품인 경우 재귀 탐색
+    for (const ing of recipe.ingredients) {
+      const subRecipe = woodRecipes.find(
+        (r) => r.name.replace(/\s/g, "") === ing.name.replace(/\s/g, ""),
+      );
+      if (subRecipe && !visited.has(subRecipe.name)) {
+        visited.add(subRecipe.name);
+        const subHas = subRecipe.ingredients.some(
+          (si) =>
+            si.name.replace(/\s/g, "") === ingredientName.replace(/\s/g, ""),
+        );
+        if (subHas && !result.find((r) => r.name === recipe.name)) {
+          result.push(recipe);
+        }
+      }
+    }
+  }
+
+  return result;
+};

@@ -5,7 +5,7 @@ import CitrineRaw from "../../assets/images/jewelry/citrine_raw.png";
 import CoralRaw from "../../assets/images/jewelry/coral_raw.png";
 import LarimarRaw from "../../assets/images/jewelry/larimar_raw.png";
 import GarnetRaw from "../../assets/images/jewelry/garnet_raw.png";
-import RubyRaw from "../../assets/images/jewelry/ruby_gem.png";
+import RubyRaw from "../../assets/images/jewelry/ruby_raw.png";
 import CobbleStone from "../../assets/images/jewelry/cobble_stone.png";
 import CobbledDeepslate from "../../assets/images/jewelry/cobbled_deepslate.png";
 

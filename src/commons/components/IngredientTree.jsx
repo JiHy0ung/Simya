@@ -76,13 +76,6 @@ const IngredientNode = ({ ing, depth = 0 }) => {
   const expandable = !!subRecipe;
   const seasonal = getSeasonalInfo(ing.name);
 
-  console.log(
-    "seasonal:",
-    seasonal?.season,
-    "label:",
-    SEASON_LABEL[seasonal?.season],
-  );
-
   return (
     <Row depth={depth}>
       <IngItem

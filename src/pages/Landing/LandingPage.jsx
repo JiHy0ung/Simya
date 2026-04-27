@@ -7,6 +7,7 @@ import { useNavigate } from "react-router";
 import Discord from "../../assets/images/icons/discord.png";
 import Wiki from "../../assets/images/icons/moonlit.png";
 import Minelist from "../../assets/images/icons/minecraft.png";
+import SeasonWidget from "./components/SeasonWidget";
 
 const LandingContainer = styled(Container)({
   display: "flex",
@@ -53,24 +54,29 @@ const SectionTitle = styled(Typography)({
 /* 메뉴 (2x2 유지 + 인터랙션 추가) */
 const MenuGrid = styled(Box)(({ theme }) => ({
   display: "grid",
-  gridTemplateColumns: "repeat(1, 1fr)", // 기본: 모바일
   gap: "0.75rem",
-  width: "90%",
+  width: "100%",
+  gridTemplateColumns: "repeat(1, 1fr)",
 
   [theme.breakpoints.up("sm")]: {
-    gridTemplateColumns: "repeat(2, 1fr)", // 태블릿
-    width: "90%",
+    gridTemplateColumns: "repeat(2, 1fr)",
+    width: "100%",
   },
 
   [theme.breakpoints.up("md")]: {
-    gridTemplateColumns: "repeat(5, 1fr)", // 데스크탑
+    gridTemplateColumns: "repeat(3, 1fr)",
+    width: "100%",
+  },
+
+  [theme.breakpoints.up("lg")]: {
+    gridTemplateColumns: "repeat(6, 1fr)",
     width: "100%",
   },
 }));
 
 const MenuCard = styled(Box)({
   background: "#18171c",
-  border: "2px solid #3d3a52",
+  border: "1.5px solid #3d3a52",
   padding: "1.25rem 1rem",
   display: "flex",
   flexDirection: "column",
@@ -181,6 +187,12 @@ const NpcWrapper = styled(Box)({
 });
 
 const MENUS = [
+  {
+    icon: "🌅",
+    label: "계절 정보",
+    desc: "계절별 아이템 정보",
+    path: "/season",
+  },
   { icon: "❤️", label: "NPC 호감도", desc: "NPC 선물 정보", path: "/like" },
   {
     icon: "💰",
@@ -230,8 +242,8 @@ const LandingPage = () => {
         </NoticeTitle>
 
         <NoticeText>
-          · 행상인 슬롯별 아이템 레시피 확인
-          <br />· 하위 재료 레시피까지 확인할 수 있는 UI 개선
+          · Scroll To Top 버튼 추가
+          <br />· 계절별 획득 가능 아이템 정보 추가
         </NoticeText>
 
         <NoticeText sx={{ opacity: 0.6, fontFamily: "Mona8x12" }}>
@@ -253,6 +265,11 @@ const LandingPage = () => {
           </MenuCard>
         ))}
       </MenuGrid>
+
+      <Divider />
+
+      <SectionTitle>계절 정보</SectionTitle>
+      <SeasonWidget />
 
       <Divider />
 

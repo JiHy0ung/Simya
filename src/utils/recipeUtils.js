@@ -2,6 +2,10 @@ import { seasonal } from "../constants/food/seasonal";
 import { vanilla } from "../constants/food/vanilla";
 import { etc } from "../constants/food/etc";
 import { processedRecipes } from "../constants/food/processed";
+import { restaurantRecipes } from "../constants/food/restaurant";
+import { cafeRecipes } from "../constants/food/cafe";
+import { jamRecipes } from "../constants/food/jam";
+import { wineRecipes } from "../constants/food/wine";
 
 export const SEASON_LABEL = {
   봄: "봄",
@@ -14,9 +18,6 @@ export const SEASON_LABEL = {
 // 이 변수들은 원시 배열들이라 초기화 에러 위험이 적습니다.
 const allSeasonalCrops = Object.values(seasonal).flat();
 const allCrops = [...vanilla, ...allSeasonalCrops, ...etc];
-
-export const getCropImage = (name) =>
-  allCrops.find((c) => c.name === name)?.image ?? null;
 
 /**
  * 2. 가격 맵을 반환하는 헬퍼 함수
@@ -113,4 +114,53 @@ export const getSeasonalIngredients = (ingredients, visited = new Set()) => {
   return result.filter(
     (item, idx, self) => self.findIndex((i) => i.name === item.name) === idx,
   );
+};
+
+const allFinalRecipes = [
+  ...processedRecipes,
+  ...restaurantRecipes,
+  ...cafeRecipes,
+  ...jamRecipes,
+  ...wineRecipes,
+];
+
+// 특정 재료가 들어가는 완성품 찾기 (재귀)
+export const findRecipesByIngredient = (
+  ingredientName,
+  visited = new Set(),
+) => {
+  const result = [];
+
+  for (const recipe of allFinalRecipes) {
+    if (visited.has(recipe.name)) continue;
+
+    const hasIngredient = recipe.ingredients.some(
+      (ing) =>
+        ing.name.replace(/\s/g, "") === ingredientName.replace(/\s/g, ""),
+    );
+
+    if (hasIngredient) {
+      result.push(recipe);
+      continue;
+    }
+
+    // 재료가 가공품인 경우 재귀 탐색
+    for (const ing of recipe.ingredients) {
+      const subRecipe = processedRecipes.find(
+        (r) => r.name.replace(/\s/g, "") === ing.name.replace(/\s/g, ""),
+      );
+      if (subRecipe && !visited.has(subRecipe.name)) {
+        visited.add(subRecipe.name);
+        const subHas = subRecipe.ingredients.some(
+          (si) =>
+            si.name.replace(/\s/g, "") === ingredientName.replace(/\s/g, ""),
+        );
+        if (subHas && !result.find((r) => r.name === recipe.name)) {
+          result.push(recipe);
+        }
+      }
+    }
+  }
+
+  return result;
 };

@@ -16,7 +16,7 @@ import Cream from "../../assets/images/food/processed/cream.png";
 import Pickle from "../../assets/images/food/processed/pickle.png";
 import Sugar from "../../assets/images/food/processed/sugar.png";
 import Oil from "../../assets/images/food/etc/oil.png";
-import { getCropImage } from "../../utils/recipeUtils";
+import { getItemImage } from "../../utils/getItemImage";
 
 export const processedRecipes = [
   {
@@ -24,7 +24,7 @@ export const processedRecipes = [
     image: Kimchi,
     price: 8690,
     ingredients: [
-      { name: "배추", count: 8, image: getCropImage("배추") },
+      { name: "배추", count: 8, image: getItemImage("배추") },
       { name: "양념장", count: 1, image: Seasoning },
     ],
   },
@@ -32,26 +32,26 @@ export const processedRecipes = [
     name: "밀가루",
     image: Flour,
     price: 384,
-    ingredients: [{ name: "밀", count: 128, image: getCropImage("밀") }],
+    ingredients: [{ name: "밀", count: 128, image: getItemImage("밀") }],
   },
   {
     name: "쌀가루",
     image: RiceFlour,
     price: 1600,
-    ingredients: [{ name: "쌀", count: 8, image: getCropImage("쌀") }],
+    ingredients: [{ name: "쌀", count: 8, image: getItemImage("쌀") }],
   },
   {
     name: "전분가루",
     image: Starch,
     price: 800,
-    ingredients: [{ name: "옥수수", count: 8, image: getCropImage("옥수수") }],
+    ingredients: [{ name: "옥수수", count: 8, image: getItemImage("옥수수") }],
   },
   {
     name: "시럽",
     image: Syrup,
     price: 128,
     ingredients: [
-      { name: "사탕수수", count: 128, image: getCropImage("사탕수수") },
+      { name: "사탕수수", count: 128, image: getItemImage("사탕수수") },
     ],
   },
   {
@@ -59,7 +59,7 @@ export const processedRecipes = [
     image: CocoaPowder,
     price: 128,
     ingredients: [
-      { name: "코코아콩", count: 128, image: getCropImage("코코아콩") },
+      { name: "코코아콩", count: 128, image: getItemImage("코코아콩") },
     ],
   },
   {
@@ -67,8 +67,8 @@ export const processedRecipes = [
     image: Ketchup,
     price: 2922,
     ingredients: [
-      { name: "토마토", count: 16, image: getCropImage("토마토") },
-      { name: "양파", count: 4, image: getCropImage("양파") },
+      { name: "토마토", count: 16, image: getItemImage("토마토") },
+      { name: "양파", count: 4, image: getItemImage("양파") },
       { name: "설탕", count: 1, image: Sugar },
     ],
   },
@@ -77,10 +77,10 @@ export const processedRecipes = [
     image: Stock,
     price: 2270,
     ingredients: [
-      { name: "양배추", count: 4, image: getCropImage("양배추") },
-      { name: "당근", count: 64, image: getCropImage("당근") },
-      { name: "양파", count: 4, image: getCropImage("양파") },
-      { name: "파", count: 4, image: getCropImage("파") },
+      { name: "양배추", count: 4, image: getItemImage("양배추") },
+      { name: "당근", count: 64, image: getItemImage("당근") },
+      { name: "양파", count: 4, image: getItemImage("양파") },
+      { name: "파", count: 4, image: getItemImage("파") },
     ],
   },
   {
@@ -88,9 +88,9 @@ export const processedRecipes = [
     image: SoySauce,
     price: 2750,
     ingredients: [
-      { name: "콩", count: 16, image: getCropImage("콩") },
-      { name: "쌀", count: 4, image: getCropImage("쌀") },
-      { name: "소금", count: 1, image: getCropImage("소금") },
+      { name: "콩", count: 16, image: getItemImage("콩") },
+      { name: "쌀", count: 4, image: getItemImage("쌀") },
+      { name: "소금", count: 1, image: getItemImage("소금") },
     ],
   },
   {
@@ -98,8 +98,8 @@ export const processedRecipes = [
     image: Doenjang,
     price: 1980,
     ingredients: [
-      { name: "콩", count: 16, image: getCropImage("콩") },
-      { name: "소금", count: 2, image: getCropImage("소금") },
+      { name: "콩", count: 16, image: getItemImage("콩") },
+      { name: "소금", count: 2, image: getItemImage("소금") },
     ],
   },
   {
@@ -107,8 +107,8 @@ export const processedRecipes = [
     image: Gochujang,
     price: 4242,
     ingredients: [
-      { name: "고추", count: 16, image: getCropImage("고추") },
-      { name: "쌀", count: 2, image: getCropImage("쌀") },
+      { name: "고추", count: 16, image: getItemImage("고추") },
+      { name: "쌀", count: 2, image: getItemImage("쌀") },
       { name: "설탕", count: 1, image: Sugar },
     ],
   },
@@ -117,7 +117,7 @@ export const processedRecipes = [
     image: GarlicOil,
     price: 3630,
     ingredients: [
-      { name: "마늘", count: 8, image: getCropImage("마늘") },
+      { name: "마늘", count: 8, image: getItemImage("마늘") },
       { name: "기름", count: 1, image: Oil },
     ],
   },
@@ -126,7 +126,7 @@ export const processedRecipes = [
     image: ChiliOil,
     price: 3630,
     ingredients: [
-      { name: "고추", count: 16, image: getCropImage("고추") },
+      { name: "고추", count: 16, image: getItemImage("고추") },
       { name: "기름", count: 1, image: Oil },
     ],
   },
@@ -135,9 +135,9 @@ export const processedRecipes = [
     image: Seasoning,
     price: 5500,
     ingredients: [
-      { name: "고추", count: 10, image: getCropImage("고추") },
-      { name: "마늘", count: 5, image: getCropImage("마늘") },
-      { name: "파", count: 5, image: getCropImage("파") },
+      { name: "고추", count: 10, image: getItemImage("고추") },
+      { name: "마늘", count: 5, image: getItemImage("마늘") },
+      { name: "파", count: 5, image: getItemImage("파") },
     ],
   },
   {
@@ -145,9 +145,9 @@ export const processedRecipes = [
     image: Cream,
     price: 1956,
     ingredients: [
-      { name: "우유", count: 16, image: getCropImage("우유") },
+      { name: "우유", count: 16, image: getItemImage("우유") },
       { name: "설탕", count: 1, image: Sugar },
-      { name: "계란", count: 1, image: getCropImage("계란") },
+      { name: "계란", count: 1, image: getItemImage("계란") },
     ],
   },
   {
@@ -155,9 +155,9 @@ export const processedRecipes = [
     image: Pickle,
     price: 4822,
     ingredients: [
-      { name: "비트", count: 128, image: getCropImage("비트") },
-      { name: "무", count: 8, image: getCropImage("무") },
-      { name: "순무", count: 8, image: getCropImage("순무") },
+      { name: "비트", count: 128, image: getItemImage("비트") },
+      { name: "무", count: 8, image: getItemImage("무") },
+      { name: "순무", count: 8, image: getItemImage("순무") },
     ],
   },
   {
@@ -165,8 +165,8 @@ export const processedRecipes = [
     image: Sugar,
     price: 256,
     ingredients: [
-      { name: "사탕수수", count: 64, image: getCropImage("사탕수수") },
-      { name: "비트", count: 64, image: getCropImage("비트") },
+      { name: "사탕수수", count: 64, image: getItemImage("사탕수수") },
+      { name: "비트", count: 64, image: getItemImage("비트") },
     ],
   },
 ];

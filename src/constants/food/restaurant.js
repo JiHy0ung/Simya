@@ -34,7 +34,7 @@ import StrawberryPunch from "../../assets/images/food/restaurant/strawberry_punc
 import WatermelonPunch from "../../assets/images/food/restaurant/watermelon_punch.png";
 import CreamPasta from "../../assets/images/food/restaurant/cream_pasta.png";
 
-import { getCropImage } from "../../utils/recipeUtils";
+import { getItemImage } from "../../utils/getItemImage";
 
 export const restaurantRecipes = [
   {
@@ -42,10 +42,10 @@ export const restaurantRecipes = [
     image: StirMeatFry,
     price: 12552,
     ingredients: [
-      { name: "고기", count: 8, image: getCropImage("고기") },
+      { name: "고기", count: 8, image: getItemImage("고기") },
       { name: "고추기름", count: 2, image: ChiliOil },
-      { name: "마늘", count: 4, image: getCropImage("마늘") },
-      { name: "파", count: 4, image: getCropImage("파") },
+      { name: "마늘", count: 4, image: getItemImage("마늘") },
+      { name: "파", count: 4, image: getItemImage("파") },
     ],
   },
   {
@@ -53,10 +53,10 @@ export const restaurantRecipes = [
     image: Baechujeon,
     price: 9276,
     ingredients: [
-      { name: "배추", count: 8, image: getCropImage("배추") },
+      { name: "배추", count: 8, image: getItemImage("배추") },
       { name: "마늘기름", count: 1, image: GarlicOil },
       { name: "쌀가루", count: 1, image: RiceFlour },
-      { name: "계란", count: 1, image: getCropImage("계란") },
+      { name: "계란", count: 1, image: getItemImage("계란") },
     ],
   },
   {
@@ -64,8 +64,8 @@ export const restaurantRecipes = [
     image: PineapplePizza,
     price: 10548,
     ingredients: [
-      { name: "파인애플", count: 8, image: getCropImage("파인애플") },
-      { name: "토마토", count: 8, image: getCropImage("토마토") },
+      { name: "파인애플", count: 8, image: getItemImage("파인애플") },
+      { name: "토마토", count: 8, image: getItemImage("토마토") },
       { name: "밀가루", count: 2, image: Flour },
       { name: "피클", count: 1, image: Pickle },
     ],
@@ -75,10 +75,10 @@ export const restaurantRecipes = [
     image: Bibimbap,
     price: 9127,
     ingredients: [
-      { name: "쌀", count: 16, image: getCropImage("쌀") },
-      { name: "당근", count: 64, image: getCropImage("당근") },
+      { name: "쌀", count: 16, image: getItemImage("쌀") },
+      { name: "당근", count: 64, image: getItemImage("당근") },
       { name: "고추장", count: 1, image: Gochujang },
-      { name: "계란", count: 1, image: getCropImage("계란") },
+      { name: "계란", count: 1, image: getItemImage("계란") },
     ],
   },
   {
@@ -86,9 +86,9 @@ export const restaurantRecipes = [
     image: VeggieRice,
     price: 10174,
     ingredients: [
-      { name: "쌀", count: 16, image: getCropImage("쌀") },
-      { name: "브로콜리", count: 8, image: getCropImage("브로콜리") },
-      { name: "당근", count: 128, image: getCropImage("당근") },
+      { name: "쌀", count: 16, image: getItemImage("쌀") },
+      { name: "브로콜리", count: 8, image: getItemImage("브로콜리") },
+      { name: "당근", count: 128, image: getItemImage("당근") },
       { name: "간장", count: 1, image: SoySauce },
     ],
   },
@@ -97,11 +97,11 @@ export const restaurantRecipes = [
     image: CreamRisotto,
     price: 11947,
     ingredients: [
-      { name: "쌀", count: 16, image: getCropImage("쌀") },
+      { name: "쌀", count: 16, image: getItemImage("쌀") },
       { name: "크림", count: 1, image: Cream },
-      { name: "브로콜리", count: 4, image: getCropImage("브로콜리") },
-      { name: "아스파라거스", count: 4, image: getCropImage("아스파라거스") },
-      { name: "아티초크", count: 4, image: getCropImage("아티초크") },
+      { name: "브로콜리", count: 4, image: getItemImage("브로콜리") },
+      { name: "아스파라거스", count: 4, image: getItemImage("아스파라거스") },
+      { name: "아티초크", count: 4, image: getItemImage("아티초크") },
     ],
   },
   {
@@ -111,8 +111,8 @@ export const restaurantRecipes = [
     ingredients: [
       { name: "밀가루", count: 2, image: Flour },
       { name: "토마토케첩", count: 1, image: Ketchup },
-      { name: "파프리카", count: 8, image: getCropImage("파프리카") },
-      { name: "파슬리", count: 4, image: getCropImage("파슬리") },
+      { name: "파프리카", count: 8, image: getItemImage("파프리카") },
+      { name: "파슬리", count: 4, image: getItemImage("파슬리") },
     ],
   },
   {
@@ -122,7 +122,7 @@ export const restaurantRecipes = [
     ingredients: [
       { name: "된장", count: 1, image: Doenjang },
       { name: "육수", count: 1, image: Stock },
-      { name: "양파", count: 16, image: getCropImage("양파") },
+      { name: "양파", count: 16, image: getItemImage("양파") },
       { name: "간장", count: 1, image: SoySauce },
     ],
   },
@@ -133,8 +133,8 @@ export const restaurantRecipes = [
     ingredients: [
       { name: "김치", count: 1, image: Kimchi },
       { name: "육수", count: 1, image: Stock },
-      { name: "고기", count: 2, image: getCropImage("고기") },
-      { name: "마늘", count: 4, image: getCropImage("마늘") },
+      { name: "고기", count: 2, image: getItemImage("고기") },
+      { name: "마늘", count: 4, image: getItemImage("마늘") },
     ],
   },
   {
@@ -144,8 +144,8 @@ export const restaurantRecipes = [
     ingredients: [
       { name: "고추장", count: 1, image: Gochujang },
       { name: "육수", count: 1, image: Stock },
-      { name: "감자", count: 128, image: getCropImage("감자") },
-      { name: "파", count: 8, image: getCropImage("파") },
+      { name: "감자", count: 128, image: getItemImage("감자") },
+      { name: "파", count: 8, image: getItemImage("파") },
     ],
   },
   {
@@ -153,11 +153,11 @@ export const restaurantRecipes = [
     image: CreamSoup,
     price: 4747,
     ingredients: [
-      { name: "옥수수", count: 16, image: getCropImage("옥수수") },
-      { name: "우유", count: 1, image: getCropImage("우유") },
+      { name: "옥수수", count: 16, image: getItemImage("옥수수") },
+      { name: "우유", count: 1, image: getItemImage("우유") },
       { name: "전분가루", count: 1, image: Starch },
-      { name: "양파", count: 6, image: getCropImage("양파") },
-      { name: "호박", count: 64, image: getCropImage("호박") },
+      { name: "양파", count: 6, image: getItemImage("양파") },
+      { name: "호박", count: 64, image: getItemImage("호박") },
     ],
   },
   {
@@ -165,9 +165,9 @@ export const restaurantRecipes = [
     image: MixedFries,
     price: 9823,
     ingredients: [
-      { name: "고구마", count: 4, image: getCropImage("고구마") },
-      { name: "감자", count: 64, image: getCropImage("감자") },
-      { name: "가지", count: 12, image: getCropImage("가지") },
+      { name: "고구마", count: 4, image: getItemImage("고구마") },
+      { name: "감자", count: 64, image: getItemImage("감자") },
+      { name: "가지", count: 12, image: getItemImage("가지") },
       { name: "토마토케첩", count: 1, image: Ketchup },
     ],
   },
@@ -176,9 +176,9 @@ export const restaurantRecipes = [
     image: SweetPotatoStick,
     price: 4276,
     ingredients: [
-      { name: "고구마", count: 4, image: getCropImage("고구마") },
+      { name: "고구마", count: 4, image: getItemImage("고구마") },
       { name: "시럽", count: 2, image: Syrup },
-      { name: "기름", count: 1, image: getCropImage("기름") },
+      { name: "기름", count: 1, image: getItemImage("기름") },
       { name: "전분가루", count: 2, image: Starch },
     ],
   },
@@ -187,10 +187,10 @@ export const restaurantRecipes = [
     image: VeggieFries,
     price: 2194,
     ingredients: [
-      { name: "감자", count: 64, image: getCropImage("감자") },
-      { name: "당근", count: 64, image: getCropImage("당근") },
+      { name: "감자", count: 64, image: getItemImage("감자") },
+      { name: "당근", count: 64, image: getItemImage("당근") },
       { name: "전분가루", count: 2, image: Starch },
-      { name: "기름", count: 1, image: getCropImage("기름") },
+      { name: "기름", count: 1, image: getItemImage("기름") },
     ],
   },
   {
@@ -198,10 +198,10 @@ export const restaurantRecipes = [
     image: StrawberryPunch,
     price: 8640,
     ingredients: [
-      { name: "딸기", count: 16, image: getCropImage("딸기") },
-      { name: "멜론", count: 4, image: getCropImage("멜론") },
-      { name: "망고", count: 2, image: getCropImage("망고") },
-      { name: "바나나", count: 8, image: getCropImage("바나나") },
+      { name: "딸기", count: 16, image: getItemImage("딸기") },
+      { name: "멜론", count: 4, image: getItemImage("멜론") },
+      { name: "망고", count: 2, image: getItemImage("망고") },
+      { name: "바나나", count: 8, image: getItemImage("바나나") },
     ],
   },
   {
@@ -209,10 +209,10 @@ export const restaurantRecipes = [
     image: WatermelonPunch,
     price: 10464,
     ingredients: [
-      { name: "수박", count: 64, image: getCropImage("수박") },
-      { name: "블루베리", count: 10, image: getCropImage("블루베리") },
-      { name: "복숭아", count: 8, image: getCropImage("복숭아") },
-      { name: "포도", count: 8, image: getCropImage("포도") },
+      { name: "수박", count: 64, image: getItemImage("수박") },
+      { name: "블루베리", count: 10, image: getItemImage("블루베리") },
+      { name: "복숭아", count: 8, image: getItemImage("복숭아") },
+      { name: "포도", count: 8, image: getItemImage("포도") },
     ],
   },
   {
@@ -222,8 +222,8 @@ export const restaurantRecipes = [
     ingredients: [
       { name: "밀가루", count: 4, image: Flour },
       { name: "크림", count: 2, image: Cream },
-      { name: "브로콜리", count: 4, image: getCropImage("브로콜리") },
-      { name: "파슬리", count: 4, image: getCropImage("파슬리") },
+      { name: "브로콜리", count: 4, image: getItemImage("브로콜리") },
+      { name: "파슬리", count: 4, image: getItemImage("파슬리") },
     ],
   },
 ];

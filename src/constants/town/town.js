@@ -1,3 +1,12 @@
+import AquamarineRaw from "../../assets/images/jewelry/aquamarine_raw.png";
+import PeridotRaw from "../../assets/images/jewelry/peridot_raw.png";
+import AmberRaw from "../../assets/images/jewelry/amber_raw.png";
+import CitrineRaw from "../../assets/images/jewelry/citrine_raw.png";
+import CoralRaw from "../../assets/images/jewelry/coral_raw.png";
+import LarimarRaw from "../../assets/images/jewelry/larimar_raw.png";
+import GarnetRaw from "../../assets/images/jewelry/garnet_raw.png";
+import RubyRaw from "../../assets/images/jewelry/ruby_raw.png";
+
 export const town = [
   {
     name: "세레니티 폭포",

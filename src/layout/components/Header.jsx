@@ -98,6 +98,7 @@ const MobileHeaderTitle = styled(Typography)({
 });
 
 const MENU_ITEMS = [
+  { label: "계절", path: "/season", emoji: "🌅" },
   { label: "호감도", path: "/like", emoji: "❤️" },
   { label: "행상인", path: "/shop", emoji: "🧺" },
   { label: "레스토랑 & 카페", path: "/food", emoji: "🍖" },

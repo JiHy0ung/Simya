@@ -38,7 +38,7 @@ import ChocoCreamDonut from "../../assets/images/food/cafe/choco_cream_donut.png
 import CornIcecream from "../../assets/images/food/cafe/corn_icecream.png";
 import RiceCroissant from "../../assets/images/food/cafe/rice_croissant.png";
 
-import { getCropImage } from "../../utils/recipeUtils";
+import { getItemImage } from "../../utils/getItemImage";
 
 export const cafeRecipes = [
   {
@@ -66,7 +66,7 @@ export const cafeRecipes = [
     image: SweetPotatoRoll,
     price: 4193,
     ingredients: [
-      { name: "고구마", count: 8, image: getCropImage("고구마") },
+      { name: "고구마", count: 8, image: getItemImage("고구마") },
       { name: "우유", count: 1, image: Milk },
       { name: "시럽", count: 4, image: Syrup },
     ],
@@ -86,7 +86,7 @@ export const cafeRecipes = [
     image: MangoRoll,
     price: 5782,
     ingredients: [
-      { name: "망고", count: 12, image: getCropImage("망고") },
+      { name: "망고", count: 12, image: getItemImage("망고") },
       { name: "우유", count: 2, image: Milk },
       { name: "시럽", count: 2, image: Syrup },
     ],
@@ -96,7 +96,7 @@ export const cafeRecipes = [
     image: MelonBread,
     price: 3766,
     ingredients: [
-      { name: "멜론", count: 12, image: getCropImage("멜론") },
+      { name: "멜론", count: 12, image: getItemImage("멜론") },
       { name: "밀가루", count: 2, image: Flour },
       { name: "설탕", count: 1, image: Sugar },
     ],
@@ -107,8 +107,8 @@ export const cafeRecipes = [
     price: 2605,
     ingredients: [
       { name: "밀가루", count: 2, image: Flour },
-      { name: "양배추", count: 8, image: getCropImage("양배추") },
-      { name: "토마토", count: 8, image: getCropImage("토마토") },
+      { name: "양배추", count: 8, image: getItemImage("양배추") },
+      { name: "토마토", count: 8, image: getItemImage("토마토") },
     ],
   },
   {
@@ -117,7 +117,7 @@ export const cafeRecipes = [
     price: 5905,
     ingredients: [
       { name: "크림", count: 2, image: Cream },
-      { name: "블루베리", count: 8, image: getCropImage("블루베리") },
+      { name: "블루베리", count: 8, image: getItemImage("블루베리") },
       { name: "설탕", count: 1, image: Sugar },
     ],
   },
@@ -126,7 +126,7 @@ export const cafeRecipes = [
     image: StrawberryMacaron,
     price: 5733,
     ingredients: [
-      { name: "딸기", count: 6, image: getCropImage("딸기") },
+      { name: "딸기", count: 6, image: getItemImage("딸기") },
       { name: "우유", count: 1, image: Milk },
       { name: "크림", count: 2, image: Cream },
     ],
@@ -138,7 +138,7 @@ export const cafeRecipes = [
     ingredients: [
       { name: "설탕", count: 2, image: Sugar },
       { name: "시럽", count: 2, image: Syrup },
-      { name: "오렌지", count: 8, image: getCropImage("오렌지") },
+      { name: "오렌지", count: 8, image: getItemImage("오렌지") },
     ],
   },
   {
@@ -146,7 +146,7 @@ export const cafeRecipes = [
     image: AdultCandy,
     price: 5245,
     ingredients: [
-      { name: "산삼", count: 8, image: getCropImage("산삼") },
+      { name: "산삼", count: 8, image: getItemImage("산삼") },
       { name: "시럽", count: 2, image: Syrup },
       { name: "설탕", count: 2, image: Sugar },
     ],
@@ -156,7 +156,7 @@ export const cafeRecipes = [
     image: LemonTart,
     price: 5812,
     ingredients: [
-      { name: "레몬", count: 8, image: getCropImage("레몬") },
+      { name: "레몬", count: 8, image: getItemImage("레몬") },
       { name: "크림", count: 1, image: Cream },
       { name: "전분가루", count: 1, image: Starch },
       { name: "시럽", count: 1, image: Syrup },
@@ -178,7 +178,7 @@ export const cafeRecipes = [
     image: CornIcecream,
     price: 5465,
     ingredients: [
-      { name: "옥수수", count: 8, image: getCropImage("옥수수") },
+      { name: "옥수수", count: 8, image: getItemImage("옥수수") },
       { name: "크림", count: 2, image: Cream },
       { name: "설탕", count: 1, image: Sugar },
     ],
@@ -189,7 +189,7 @@ export const cafeRecipes = [
     price: 4193,
     ingredients: [
       { name: "쌀가루", count: 2, image: RiceFlour },
-      { name: "계란", count: 1, image: getCropImage("계란") },
+      { name: "계란", count: 1, image: getItemImage("계란") },
       { name: "설탕", count: 1, image: Sugar },
       { name: "시럽", count: 2, image: Syrup },
     ],
