@@ -187,6 +187,7 @@ export const npcData = [
       { name: "콩", image: SoyBean },
       { name: "레몬", image: Lemon },
       { name: "수박", image: WaterMelon },
+      { name: "토마토", image: Tomato },
     ],
     disliked: [
       { name: "수국", image: Hydrangea },
@@ -323,6 +324,7 @@ export const npcData = [
       { name: "불꽃 백합", image: FlameLily },
       { name: "라벤더", image: Lavender },
       { name: "사과", image: Apple },
+      { name: "망고", image: Mango },
     ],
     disliked: [],
     blush: {
@@ -351,6 +353,7 @@ export const npcData = [
       { name: "창포", image: Calamus },
       { name: "고기", image: Meat },
       { name: "수박", image: WaterMelon },
+      { name: "블루베리", image: Blueberry },
     ],
     disliked: [{ name: "페리도트 보석", image: PeridotGem }],
     blush: {
@@ -437,6 +440,7 @@ export const npcData = [
       { name: "창포", image: Calamus },
       { name: "라벤더", image: Lavender },
       { name: "사과", image: Apple },
+      { name: "블루베리", image: Blueberry },
     ],
     disliked: [],
     blush: {
