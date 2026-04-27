@@ -498,7 +498,7 @@ export const npcData = [
     job: "잡화점 관리인",
     description:
       "돈 쓸 곳은 많아 취업한 20살 MZ. 기본적으로 불친절하지만 잘해주는 사람에겐 어쩔 줄 몰라한다. 일하는 내내 핸드폰을 놓지 않는 SNS 중독자.",
-    loved: [],
+    loved: [{ name: "라벤더", image: Lavender }],
     liked: [
       { name: "산호석 보석", image: CoralGem },
       { name: "불꽃 백합", image: FlameLily },
@@ -529,7 +529,7 @@ export const npcData = [
     job: "테이밍 도우미",
     description:
       "알을 다루는 이종족 루카족 출신.\n화를 낼 줄 모르고 누구에게나 친절하지만,\n생명을 모독하는 순간만큼은 절대 건드려선 안 된다.",
-    loved: [],
+    loved: [{ name: "생명의 광휘 보석", image: LifeRadianceGem }],
     liked: [],
     neutral: [
       { name: "옥수수", image: Corn },
