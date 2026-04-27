@@ -4,13 +4,14 @@ import { styled } from "@mui/material/styles";
 
 const ScrollTopButton = styled(Fab)({
   position: "fixed",
-  bottom: "24px",
-  right: "24px",
+  bottom: "2rem",
+  right: "2rem",
   backgroundColor: "#18171c",
   color: "#c4c0d8",
   boxShadow: "0 0 0 1px #3d3a52",
   fontSize: "1.5rem",
   paddingLeft: "0.15rem",
+  paddingTop: "0.1rem",
   cursor: "var(--cursor-pointer)",
 
   "&:hover": {
