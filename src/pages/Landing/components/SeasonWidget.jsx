@@ -11,7 +11,7 @@ import { getItemImage } from "../../../utils/getItemImage";
 const Widget = styled(Box)(({ season }) => {
   const theme = SEASON_THEME[season] ?? {};
   return {
-    background: "#18171c",
+    background: theme.bg.replace("0.15)", "0.02)"),
     border: `1.5px solid ${
       theme.bg
         ? theme.text.replace(")", ", 0.2)").replace("rgb", "rgba")
