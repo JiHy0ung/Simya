@@ -328,6 +328,7 @@ export const npcData = [
       { name: "사과", image: Apple },
       { name: "망고", image: Mango },
       { name: "바나나", image: Banana },
+      { name: "파인애플", image: Pineapple },
     ],
     disliked: [],
     blush: {
@@ -358,6 +359,7 @@ export const npcData = [
       { name: "수박", image: WaterMelon },
       { name: "블루베리", image: Blueberry },
       { name: "바나나", image: Banana },
+      { name: "파인애플", image: Pineapple },
     ],
     disliked: [{ name: "페리도트 보석", image: PeridotGem }],
     blush: {
@@ -451,6 +453,7 @@ export const npcData = [
       { name: "사과", image: Apple },
       { name: "블루베리", image: Blueberry },
       { name: "능소화", image: Jacaranda },
+      { name: "파인애플", image: Pineapple },
     ],
     disliked: [],
     blush: {
@@ -479,6 +482,7 @@ export const npcData = [
       { name: "레몬", image: Lemon },
       { name: "수박", image: WaterMelon },
       { name: "용설란 꽃", image: Agave },
+      { name: "파인애플", image: Pineapple },
     ],
     disliked: [{ name: "히비스커스", image: Hibiscus }],
     blush: {
@@ -537,6 +541,7 @@ export const npcData = [
       { name: "레몬", image: Lemon },
       { name: "사과", image: Apple },
       { name: "수박", image: WaterMelon },
+      { name: "파인애플", image: Pineapple },
     ],
     disliked: [],
     blush: {
