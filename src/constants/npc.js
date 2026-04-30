@@ -167,6 +167,7 @@ import Apple from "../assets/images/items/apple.png";
 import WaterMelon from "../assets/images/food/vanilla/watermelon.png";
 
 import OrangeCandy from "../assets/images/food/cafe/orange_candy.png";
+import { Carrot } from "lucide-react";
 
 export const npcData = [
   {
@@ -345,7 +346,7 @@ export const npcData = [
     description:
       "사춘기 한창인 18살.\n부모님에 의해 억지로 상점에 앉혀졌다.\n퉁명스럽고 자존감이 낮지만 친해지면 한없이 잘해주는 아이다.",
     loved: [],
-    liked: [],
+    liked: [{ name: "고추", image: Chili }],
     neutral: [
       { name: "수국", image: Hydrangea },
       { name: "다이아몬드 블록", image: DiamondBlock },
@@ -423,7 +424,7 @@ export const npcData = [
       { name: "수박", image: WaterMelon },
       { name: "사과", image: Apple },
     ],
-    disliked: [],
+    disliked: [{ name: "아티초크", image: Artichoke }],
     blush: {
       background: "rgba(255, 132, 123, 0.71)",
       left: { x: "36%", y: "75%" },
@@ -484,7 +485,10 @@ export const npcData = [
       { name: "용설란 꽃", image: Agave },
       { name: "파인애플", image: Pineapple },
     ],
-    disliked: [{ name: "히비스커스", image: Hibiscus }],
+    disliked: [
+      { name: "히비스커스", image: Hibiscus },
+      { name: "당근", image: Carrot },
+    ],
     blush: {
       background: "rgba(255, 157, 132, 0.77)",
       left: { x: "36%", y: "71%" },
