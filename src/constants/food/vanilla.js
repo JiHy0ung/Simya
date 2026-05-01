@@ -14,6 +14,6 @@ export const vanilla = [
   { id: "sugar_cane", name: "사탕수수", image: SugarCane, price: 1 },
   { id: "beetroot", name: "비트", image: BeetRoot, price: 3 },
   { id: "cocoa_beans", name: "코코아콩", image: CocoaBeans, price: 1 },
-  { id: "pumpkin", name: "호박", image: Pumpkin, price: 4 },
-  { id: "watermelon", name: "수박", image: WaterMelon, price: 5 },
+  { id: "pumpkin", name: "호박", image: Pumpkin, price: 2 },
+  { id: "watermelon", name: "수박", image: WaterMelon, price: 2 },
 ];
