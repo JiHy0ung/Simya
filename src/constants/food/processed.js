@@ -22,7 +22,7 @@ export const processedRecipes = [
   {
     name: "김치",
     image: Kimchi,
-    price: 8690,
+    price: 13035,
     ingredients: [
       { name: "배추", count: 8, image: getItemImage("배추") },
       { name: "양념장", count: 1, image: Seasoning },
@@ -37,13 +37,13 @@ export const processedRecipes = [
   {
     name: "쌀가루",
     image: RiceFlour,
-    price: 1600,
+    price: 2400,
     ingredients: [{ name: "쌀", count: 8, image: getItemImage("쌀") }],
   },
   {
     name: "전분가루",
     image: Starch,
-    price: 800,
+    price: 1200,
     ingredients: [{ name: "옥수수", count: 8, image: getItemImage("옥수수") }],
   },
   {
@@ -75,7 +75,7 @@ export const processedRecipes = [
   {
     name: "육수",
     image: Stock,
-    price: 2270,
+    price: 3370,
     ingredients: [
       { name: "양배추", count: 4, image: getItemImage("양배추") },
       { name: "당근", count: 64, image: getItemImage("당근") },
@@ -86,7 +86,7 @@ export const processedRecipes = [
   {
     name: "간장",
     image: SoySauce,
-    price: 2750,
+    price: 4070,
     ingredients: [
       { name: "콩", count: 16, image: getItemImage("콩") },
       { name: "쌀", count: 4, image: getItemImage("쌀") },
@@ -96,7 +96,7 @@ export const processedRecipes = [
   {
     name: "된장",
     image: Doenjang,
-    price: 1980,
+    price: 2860,
     ingredients: [
       { name: "콩", count: 16, image: getItemImage("콩") },
       { name: "소금", count: 2, image: getItemImage("소금") },
@@ -105,7 +105,7 @@ export const processedRecipes = [
   {
     name: "고추장",
     image: Gochujang,
-    price: 4242,
+    price: 6222,
     ingredients: [
       { name: "고추", count: 16, image: getItemImage("고추") },
       { name: "쌀", count: 2, image: getItemImage("쌀") },
@@ -115,7 +115,7 @@ export const processedRecipes = [
   {
     name: "마늘기름",
     image: GarlicOil,
-    price: 3630,
+    price: 5390,
     ingredients: [
       { name: "마늘", count: 8, image: getItemImage("마늘") },
       { name: "기름", count: 1, image: Oil },
@@ -124,7 +124,7 @@ export const processedRecipes = [
   {
     name: "고추기름",
     image: ChiliOil,
-    price: 3630,
+    price: 5390,
     ingredients: [
       { name: "고추", count: 16, image: getItemImage("고추") },
       { name: "기름", count: 1, image: Oil },
@@ -133,7 +133,7 @@ export const processedRecipes = [
   {
     name: "양념장",
     image: Seasoning,
-    price: 5500,
+    price: 8250,
     ingredients: [
       { name: "고추", count: 10, image: getItemImage("고추") },
       { name: "마늘", count: 5, image: getItemImage("마늘") },
@@ -153,7 +153,7 @@ export const processedRecipes = [
   {
     name: "피클",
     image: Pickle,
-    price: 4822,
+    price: 7022,
     ingredients: [
       { name: "비트", count: 128, image: getItemImage("비트") },
       { name: "무", count: 8, image: getItemImage("무") },

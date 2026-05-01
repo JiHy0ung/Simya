@@ -44,7 +44,7 @@ export const cafeRecipes = [
   {
     name: "초코쉐이크",
     image: ChocoShake,
-    price: 1236,
+    price: 1349,
     ingredients: [
       { name: "우유", count: 1, image: Milk },
       { name: "코코아가루", count: 4, image: CocoaPowder },
@@ -54,7 +54,7 @@ export const cafeRecipes = [
   {
     name: "초코뚱카롱",
     image: ChocoMacaron,
-    price: 4695,
+    price: 5122,
     ingredients: [
       { name: "우유", count: 1, image: Milk },
       { name: "코코아가루", count: 2, image: CocoaPowder },
@@ -64,7 +64,7 @@ export const cafeRecipes = [
   {
     name: "고구마롤케이크",
     image: SweetPotatoRoll,
-    price: 4193,
+    price: 6494,
     ingredients: [
       { name: "고구마", count: 8, image: getItemImage("고구마") },
       { name: "우유", count: 1, image: Milk },
@@ -74,7 +74,7 @@ export const cafeRecipes = [
   {
     name: "우유롤케이크",
     image: MilkRoll,
-    price: 5258,
+    price: 5736,
     ingredients: [
       { name: "우유", count: 1, image: Milk },
       { name: "밀가루", count: 2, image: Flour },
@@ -84,7 +84,7 @@ export const cafeRecipes = [
   {
     name: "망고롤케이크",
     image: MangoRoll,
-    price: 5782,
+    price: 9187,
     ingredients: [
       { name: "망고", count: 12, image: getItemImage("망고") },
       { name: "우유", count: 2, image: Milk },
@@ -94,7 +94,7 @@ export const cafeRecipes = [
   {
     name: "메론빵",
     image: MelonBread,
-    price: 3766,
+    price: 5549,
     ingredients: [
       { name: "멜론", count: 12, image: getItemImage("멜론") },
       { name: "밀가루", count: 2, image: Flour },
@@ -104,7 +104,7 @@ export const cafeRecipes = [
   {
     name: "샌드위치",
     image: Sandwich,
-    price: 2605,
+    price: 3802,
     ingredients: [
       { name: "밀가루", count: 2, image: Flour },
       { name: "양배추", count: 8, image: getItemImage("양배추") },
@@ -114,7 +114,7 @@ export const cafeRecipes = [
   {
     name: "블루베리케이크",
     image: BlueberryCake,
-    price: 5905,
+    price: 7162,
     ingredients: [
       { name: "크림", count: 2, image: Cream },
       { name: "블루베리", count: 8, image: getItemImage("블루베리") },
@@ -124,7 +124,7 @@ export const cafeRecipes = [
   {
     name: "딸기마카롱",
     image: StrawberryMacaron,
-    price: 5733,
+    price: 6974,
     ingredients: [
       { name: "딸기", count: 6, image: getItemImage("딸기") },
       { name: "우유", count: 1, image: Milk },
@@ -134,7 +134,7 @@ export const cafeRecipes = [
   {
     name: "오렌지캔디",
     image: OrangeCandy,
-    price: 5245,
+    price: 5722,
     ingredients: [
       { name: "설탕", count: 2, image: Sugar },
       { name: "시럽", count: 2, image: Syrup },
@@ -144,7 +144,7 @@ export const cafeRecipes = [
   {
     name: "어른캔디",
     image: AdultCandy,
-    price: 5245,
+    price: 8122,
     ingredients: [
       { name: "산삼", count: 8, image: getItemImage("산삼") },
       { name: "시럽", count: 2, image: Syrup },
@@ -154,7 +154,7 @@ export const cafeRecipes = [
   {
     name: "레몬타르트",
     image: LemonTart,
-    price: 5812,
+    price: 8261,
     ingredients: [
       { name: "레몬", count: 8, image: getItemImage("레몬") },
       { name: "크림", count: 1, image: Cream },
@@ -165,7 +165,7 @@ export const cafeRecipes = [
   {
     name: "초코크림도넛",
     image: ChocoCreamDonut,
-    price: 2081,
+    price: 2270,
     ingredients: [
       { name: "코코아가루", count: 6, image: CocoaPowder },
       { name: "우유", count: 1, image: Milk },
@@ -176,7 +176,7 @@ export const cafeRecipes = [
   {
     name: "옥수수아이스크림",
     image: CornIcecream,
-    price: 5465,
+    price: 6442,
     ingredients: [
       { name: "옥수수", count: 8, image: getItemImage("옥수수") },
       { name: "크림", count: 2, image: Cream },
@@ -186,7 +186,7 @@ export const cafeRecipes = [
   {
     name: "쌀크루아상",
     image: RiceCroissant,
-    price: 4193,
+    price: 6494,
     ingredients: [
       { name: "쌀가루", count: 2, image: RiceFlour },
       { name: "계란", count: 1, image: getItemImage("계란") },
