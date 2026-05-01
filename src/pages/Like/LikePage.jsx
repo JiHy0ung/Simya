@@ -183,10 +183,15 @@ const GiftBadge = styled(Box, {
       text: "#fbbf24",
       border: "rgba(251,191,36,0.3)",
     },
-    neutral: {
+    okay: {
       bg: "rgba(148,163,184,0.15)",
       text: "#94a3b8",
       border: "rgba(148,163,184,0.3)",
+    },
+    normal: {
+      bg: "rgba(107,114,128,0.15)",
+      text: "#6b7280",
+      border: "rgba(107,114,128,0.3)",
     },
     disliked: {
       bg: "rgba(99,102,241,0.15)",
@@ -247,12 +252,20 @@ const GIFT_SECTIONS = [
     reaction: "상승",
   },
   {
-    key: "neutral",
-    emoji: "😐",
-    label: "보통의 선물",
+    key: "okay",
+    emoji: "🙂",
+    label: "그럭저럭 선물",
     score: "+1점",
     color: "#94a3b8",
     reaction: "소폭 상승",
+  },
+  {
+    key: "normal",
+    emoji: "😶",
+    label: "보통의 선물",
+    score: "0점",
+    color: "#6b7280",
+    reaction: "유지",
   },
   {
     key: "disliked",
