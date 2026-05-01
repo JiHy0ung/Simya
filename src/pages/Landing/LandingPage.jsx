@@ -243,7 +243,7 @@ const LandingPage = () => {
 
         <NoticeText>
           · 패치된 아이템 판매가 적용 완료
-          {/* <br />· 계절별 획득 가능 아이템 정보 추가 */}
+          <br />· 세분화된 npc 호감도 템 범위 적용 및 해당 범위 아이템 리셋
         </NoticeText>
 
         <NoticeText sx={{ opacity: 0.6, fontFamily: "Mona8x12" }}>
