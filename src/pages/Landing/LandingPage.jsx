@@ -242,8 +242,8 @@ const LandingPage = () => {
         </NoticeTitle>
 
         <NoticeText>
-          · Scroll To Top 버튼 추가
-          <br />· 계절별 획득 가능 아이템 정보 추가
+          · 패치된 아이템 판매가 적용 완료
+          {/* <br />· 계절별 획득 가능 아이템 정보 추가 */}
         </NoticeText>
 
         <NoticeText sx={{ opacity: 0.6, fontFamily: "Mona8x12" }}>
