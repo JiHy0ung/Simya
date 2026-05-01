@@ -280,7 +280,7 @@ export const npcData = [
     description:
       "농사에 열정적이고 털털한 심야잡화점의 말괄량이.\n주근깨가 매력 포인트이며, 아재 개그를 진심으로 사랑하는 비밀스러운 취미가 있다.",
     loved: [],
-    liked: [],
+    liked: [{ name: "올리브나무 판자", image: OlivePlanks }],
     okay: [],
     normal: [{ name: "이끼 블록", image: MossBlock }],
     disliked: [],
