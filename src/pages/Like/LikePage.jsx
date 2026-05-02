@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { styled } from "@mui/material/styles";
 import { Box, Container, Typography } from "@mui/material";
 import { npcData } from "../../constants/npc";
@@ -280,6 +280,13 @@ const GIFT_SECTIONS = [
 
 const LikePage = () => {
   const [selected, setSelected] = useState(npcData[0]);
+
+  useEffect(() => {
+    npcData.forEach((npc) => {
+      const img = new Image();
+      img.src = npc.image;
+    });
+  }, []);
 
   return (
     <LikeContainer>
