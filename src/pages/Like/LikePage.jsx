@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { styled } from "@mui/material/styles";
 import { Box, Container, Typography } from "@mui/material";
 import { npcData } from "../../constants/npc";
+import NpcHint from "./components/NpcHint";
 
 const LikeContainer = styled(Container)(({ theme }) => ({
   display: "flex",
@@ -75,7 +76,7 @@ const TabButton = styled("button")(({ selected }) => ({
 const ContentLayout = styled(Box)(({ theme }) => ({
   width: "100%",
   display: "grid",
-  gridTemplateColumns: "240px 1fr",
+  gridTemplateColumns: "270px 1fr",
   gap: "1.5rem",
   alignItems: "start",
   [theme.breakpoints.down("sm")]: {
@@ -312,6 +313,7 @@ const LikePage = () => {
             {selected.age ? ` · ${selected.age}세` : ""}
           </NpcMeta>
           <NpcDescription>{selected.description}</NpcDescription>
+          <NpcHint npc={selected} />
         </ProfilePanel>
 
         {/* 오른쪽: 선물 정보 */}
