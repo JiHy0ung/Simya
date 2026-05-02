@@ -296,6 +296,7 @@ export const npcData = [
       { name: "이끼 블록", image: MossBlock },
       { name: "경작지" },
       { name: "단풍나무 통나무", image: Maple },
+      { name: "야자나무 판자", image: PalmPlanks },
     ],
     disliked: [],
     hints: ["좋아하는 나무 종류가 있어!", "난 초콜릿이 싫어!"],
