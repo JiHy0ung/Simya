@@ -244,6 +244,7 @@ const LandingPage = () => {
         <NoticeText>
           · 패치된 아이템 판매가 적용 완료
           <br />· 세분화된 npc 호감도 템 범위 적용 및 해당 범위 아이템 리셋
+          <br />· npc 호감도 아이템 힌트 대사 추가
         </NoticeText>
 
         <NoticeText sx={{ opacity: 0.6, fontFamily: "Mona8x12" }}>
