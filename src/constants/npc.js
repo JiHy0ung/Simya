@@ -28,6 +28,7 @@ import WillowPlanks from "../assets/images/wood/willow_planks.png";
 import OldTreePlanks from "../assets/images/wood/old_tree_planks.png";
 import AquamarineGem from "../assets/images/jewelry/aquamarine_gem.png";
 import OrderArrivalTicket from "../assets/images/tickets/order_arrival_ticket.png";
+import OrderDeliveryTicket from "../assets/images/tickets/order_delivery_ticket.png";
 import CoralGem from "../assets/images/jewelry/coral_gem.png";
 import FlameLily from "../assets/images/flower/flame_lily.png";
 import Potato from "../assets/images/food/vanilla/potato.png";
@@ -165,10 +166,13 @@ import Salt from "../assets/images/food/etc/salt.png";
 import NetherWart from "../assets/images/items/nether_wart.png";
 import Apple from "../assets/images/items/apple.png";
 import MossBlock from "../assets/images/items/moss_block.png";
+import OakFence from "../assets/images/items/oak_fence.png";
+import AdventureCoin from "../assets/images/items/adventure_coin.png";
 import WaterMelon from "../assets/images/food/vanilla/watermelon.png";
 
 import OrangeCandy from "../assets/images/food/cafe/orange_candy.png";
-import { Carrot } from "lucide-react";
+
+import Carrot from "../assets/images/food/vanilla/carrot.png";
 
 export const npcData = [
   {
@@ -181,12 +185,13 @@ export const npcData = [
     loved: [],
     liked: [{ name: "수박", image: WaterMelon }],
     okay: [],
-    normal: [],
+    normal: [{ name: "빛바랜 상회의 곡괭이" }, { name: "고추", image: Chili }],
     disliked: [
       { name: "수국", image: Hydrangea },
       { name: "네더 사마귀", image: NetherWart },
       { name: "히비스커스", image: Hibiscus },
     ],
+    hints: ["단거라도 주시면 좋았을 것 같은데..."],
     blush: {
       background: "rgba(255, 151, 123, 0.77)",
       left: { x: "32%", y: "67%" },
@@ -206,12 +211,16 @@ export const npcData = [
       { name: "아쿠아마린 보석", image: AquamarineGem },
     ],
     okay: [],
-    normal: [],
+    normal: [
+      { name: "수박", image: WaterMelon },
+      { name: "라벤더", image: Lavender },
+    ],
     disliked: [
       { name: "파", image: GreenOnion },
       { name: "마늘", image: Garlic },
       { name: "네더 사마귀", image: NetherWart },
     ],
+    hints: ["꽃 중에 좋은 향이 나는게 하나 있던데..."],
     blush: {
       background: "rgba(255, 130, 117, 0.6)",
       left: { x: "35%", y: "68%" },
@@ -228,8 +237,9 @@ export const npcData = [
     loved: [{ name: "능소화", image: Jacaranda }],
     liked: [{ name: "수국", image: Hydrangea }],
     okay: [],
-    normal: [],
+    normal: [{ name: "사과", image: Apple }],
     disliked: [],
+    hints: ["시트러스 향 나는게 좋아~"],
     blush: {
       background: "rgba(255, 146, 132, 0.59)",
       left: { x: "40%", y: "67%" },
@@ -282,8 +292,13 @@ export const npcData = [
     loved: [],
     liked: [{ name: "올리브나무 판자", image: OlivePlanks }],
     okay: [],
-    normal: [{ name: "이끼 블록", image: MossBlock }],
+    normal: [
+      { name: "이끼 블록", image: MossBlock },
+      { name: "경작지" },
+      { name: "단풍나무 통나무", image: Maple },
+    ],
     disliked: [],
+    hints: ["좋아하는 나무 종류가 있어!", "난 초콜릿이 싫어!"],
     blush: {
       background: "rgba(255, 134, 69, 0.68)",
       left: { x: "43%", y: "67%" },
@@ -300,7 +315,7 @@ export const npcData = [
     loved: [],
     liked: [{ name: "고추", image: Chili }],
     okay: [],
-    normal: [],
+    normal: [{ name: "주문 도착 티켓", image: OrderArrivalTicket }],
     disliked: [{ name: "페리도트 보석", image: PeridotGem }],
     blush: {
       background: "rgba(255, 117, 161, 0.6)",
@@ -323,8 +338,12 @@ export const npcData = [
     ],
     liked: [],
     okay: [],
-    normal: [],
+    normal: [
+      { name: "주문 전달 티켓", image: OrderDeliveryTicket },
+      { name: "야자나무 판자", image: PalmPlanks },
+    ],
     disliked: [],
+    hints: ["인간냄새, 바다냄새 극혐이야."],
     blush: {
       background: "rgba(255, 145, 109, 0.71)",
       left: { x: "40%", y: "67%" },
@@ -344,8 +363,13 @@ export const npcData = [
       { name: "오렌지 사탕", image: OrangeCandy },
     ],
     okay: [],
-    normal: [{ name: "달걀", image: Egg }],
+    normal: [
+      { name: "달걀", image: Egg },
+      { name: "참나무 울타리", image: OakFence },
+      { name: "설탕", image: Sugar },
+    ],
     disliked: [{ name: "아티초크", image: Artichoke }],
+    hints: ["카페에서 맛있는것 좀 가져다주시면 안돼요?"],
     blush: {
       background: "rgba(255, 132, 123, 0.71)",
       left: { x: "36%", y: "75%" },
@@ -362,8 +386,12 @@ export const npcData = [
     loved: [],
     liked: [{ name: "산삼", image: Ginseng }],
     okay: [],
-    normal: [{ name: "달걀", image: Egg }],
+    normal: [
+      { name: "달걀", image: Egg },
+      { name: "포도", image: Grape },
+    ],
     disliked: [],
+    hints: ["와인 종류를 좋아해~"],
     blush: {
       background: "rgba(255, 146, 132, 0.66)",
       left: { x: "40%", y: "67%" },
@@ -380,7 +408,10 @@ export const npcData = [
     loved: [],
     liked: [],
     okay: [],
-    normal: [{ name: "능소화", image: Jacaranda }],
+    normal: [
+      { name: "능소화", image: Jacaranda },
+      { name: "야자나무 판자", image: PalmPlanks },
+    ],
     disliked: [
       { name: "히비스커스", image: Hibiscus },
       { name: "당근", image: Carrot },
@@ -406,7 +437,7 @@ export const npcData = [
       { name: "아쿠아마린 보석", image: AquamarineGem },
     ],
     okay: [],
-    normal: [],
+    normal: [{ name: "용사의 모험 코인", image: AdventureCoin }],
     disliked: [{ name: "감자", image: Potato }],
     blush: {
       background: "rgba(255, 109, 143, 0.71)",
@@ -424,8 +455,12 @@ export const npcData = [
     loved: [{ name: "생명의 광휘 보석", image: LifeRadianceGem }],
     liked: [],
     okay: [{ name: "파인애플", image: Pineapple }],
-    normal: [{ name: "달걀", image: Egg }],
+    normal: [
+      { name: "달걀", image: Egg },
+      { name: "오렌지", image: Orange },
+    ],
     disliked: [],
+    hints: ["다음엔 와인 종류면 좋겠어요."],
     blush: {
       background: "rgba(255, 146, 170, 0.63)",
       left: { x: "35%", y: "78%" },
