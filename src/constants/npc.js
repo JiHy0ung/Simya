@@ -312,9 +312,14 @@ export const npcData = [
       { name: "경작지" },
       { name: "단풍나무 통나무", image: Maple },
       { name: "야자나무 판자", image: PalmPlanks },
+      { name: "유칼립투스 통나무", image: Eucalyptus },
     ],
     disliked: [],
-    hints: ["좋아하는 나무 종류가 있어!", "난 초콜릿이 싫어!"],
+    hints: [
+      "좋아하는 나무 종류가 있어!",
+      "난 초콜릿이 싫어!",
+      "뜨끈한 국물이 떙기는걸?",
+    ],
     blush: {
       background: "rgba(255, 134, 69, 0.68)",
       left: { x: "43%", y: "67%" },
@@ -360,6 +365,7 @@ export const npcData = [
     normal: [
       { name: "주문 전달 티켓", image: OrderDeliveryTicket },
       { name: "야자나무 판자", image: PalmPlanks },
+      { name: "딸기", image: Strawberry },
     ],
     disliked: [],
     hints: ["인간냄새, 바다냄새 극혐이야."],
@@ -409,9 +415,10 @@ export const npcData = [
     normal: [
       { name: "달걀", image: Egg },
       { name: "포도", image: Grape },
+      { name: "아스파라거스", image: Asparagus },
     ],
     disliked: [],
-    hints: ["와인 종류를 좋아해~"],
+    hints: ["와인 종류를 좋아해~", "건강한 음식은 즐겁게 받을 수 있지~"],
     blush: {
       background: "rgba(255, 146, 132, 0.66)",
       left: { x: "40%", y: "67%" },
@@ -432,6 +439,8 @@ export const npcData = [
       { name: "능소화", image: Jacaranda },
       { name: "야자나무 판자", image: PalmPlanks },
       { name: "가넷 보석", image: GarnetGem },
+      { name: "딸기", image: Strawberry },
+      { name: "산삼", image: Ginseng },
     ],
     disliked: [
       { name: "히비스커스", image: Hibiscus },
@@ -479,6 +488,7 @@ export const npcData = [
     normal: [
       { name: "달걀", image: Egg },
       { name: "오렌지", image: Orange },
+      { name: "포도", image: Grape },
     ],
     disliked: [],
     hints: ["다음엔 와인 종류면 좋겠어요."],
