@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import { Box } from "@mui/material";
 
 const SortSelect = styled("select")({
+  width: "fit-content",
   background: "#0f0e13",
   border: "1px solid #3d3a52",
   color: "#e8e4ff",

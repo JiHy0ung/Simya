@@ -53,10 +53,11 @@ const FoodDescription = styled(Typography)(({ theme }) => ({
 const TabsWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
   flexWrap: "wrap",
-  width: "100%",
+  width: "fit-content",
   gap: "8px",
   marginBottom: "-1.75rem",
   marginRight: "auto",
+  zIndex: "99999",
 
   [theme.breakpoints.down("md")]: {
     marginBottom: "1.25rem",
