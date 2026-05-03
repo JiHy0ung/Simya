@@ -189,6 +189,24 @@ import ChocoCreamDonut from "../assets/images/food/cafe/choco_cream_donut.png";
 import CornIcecream from "../assets/images/food/cafe/corn_icecream.png";
 import RiceCroissant from "../assets/images/food/cafe/rice_croissant.png";
 
+import StirMeatFry from "../assets/images/food/restaurant/stir_fried_meat.png";
+import Baechujeon from "../assets/images/food/restaurant/baechujeon.png";
+import PineapplePizza from "../assets/images/food/restaurant/pineapple_pizza.png";
+import Bibimbap from "../assets/images/food/restaurant/bibimbap.png";
+import VeggieRice from "../assets/images/food/restaurant/veggie_rice.png";
+import CreamRisotto from "../assets/images/food/restaurant/cream_risotto.png";
+import TomatoPasta from "../assets/images/food/restaurant/tomato_pasta.png";
+import DoenjangStew from "../assets/images/food/restaurant/doenjang_stew.png";
+import KimchiStew from "../assets/images/food/restaurant/kimchi_stew.png";
+import GochujangStew from "../assets/images/food/restaurant/gochujang_stew.png";
+import CreamSoup from "../assets/images/food/restaurant/cream_soup.png";
+import MixedFries from "../assets/images/food/restaurant/mixed_fries.png";
+import SweetPotatoStick from "../assets/images/food/restaurant/sweet_potato_stick.png";
+import VeggieFries from "../assets/images/food/restaurant/veggie_fries.png";
+import StrawberryPunch from "../assets/images/food/restaurant/strawberry_punch.png";
+import WatermelonPunch from "../assets/images/food/restaurant/watermelon_punch.png";
+import CreamPasta from "../assets/images/food/restaurant/cream_pasta.png";
+
 export const npcData = [
   {
     name: "헨리",
@@ -305,7 +323,10 @@ export const npcData = [
     description:
       "농사에 열정적이고 털털한 심야잡화점의 말괄량이.\n주근깨가 매력 포인트이며, 아재 개그를 진심으로 사랑하는 비밀스러운 취미가 있다.",
     loved: [],
-    liked: [{ name: "올리브나무 판자", image: OlivePlanks }],
+    liked: [
+      { name: "올리브나무 판자", image: OlivePlanks },
+      { name: "김치찌개", image: KimchiStew },
+    ],
     okay: [],
     normal: [
       { name: "이끼 블록", image: MossBlock },
@@ -416,6 +437,7 @@ export const npcData = [
       { name: "달걀", image: Egg },
       { name: "포도", image: Grape },
       { name: "아스파라거스", image: Asparagus },
+      { name: "어른 캔디", image: AdultCandy },
     ],
     disliked: [],
     hints: ["와인 종류를 좋아해~", "건강한 음식은 즐겁게 받을 수 있지~"],
