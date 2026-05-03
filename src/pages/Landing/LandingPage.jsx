@@ -214,7 +214,7 @@ const LINKS = [
   {
     icon: Discord,
     label: "공식 디스코드",
-    href: "https://discord.gg/wsRpXq2H",
+    href: "https://discord.gg/EjFhfmWqs",
   },
   { icon: Wiki, label: "위키", href: "https://wiki.moonlit.kr/ko" },
   {
