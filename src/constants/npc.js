@@ -174,6 +174,21 @@ import OrangeCandy from "../assets/images/food/cafe/orange_candy.png";
 
 import Carrot from "../assets/images/food/vanilla/carrot.png";
 
+import ChocoShake from "../assets/images/food/cafe/choco_shake.png";
+import ChocoMacaron from "../assets/images/food/cafe/choco_macaron.png";
+import SweetPotatoRoll from "../assets/images/food/cafe/sweet_potato_roll.png";
+import MilkRoll from "../assets/images/food/cafe/milk_roll.png";
+import MangoRoll from "../assets/images/food/cafe/mango_roll.png";
+import MelonBread from "../assets/images/food/cafe/melon_bread.png";
+import Sandwich from "../assets/images/food/cafe/sandwich.png";
+import BlueberryCake from "../assets/images/food/cafe/blueberry_cake.png";
+import StrawberryMacaron from "../assets/images/food/cafe/strawberry_macaron.png";
+import AdultCandy from "../assets/images/food/cafe/adult_candy.png";
+import LemonTart from "../assets/images/food/cafe/lemon_tart.png";
+import ChocoCreamDonut from "../assets/images/food/cafe/choco_cream_donut.png";
+import CornIcecream from "../assets/images/food/cafe/corn_icecream.png";
+import RiceCroissant from "../assets/images/food/cafe/rice_croissant.png";
+
 export const npcData = [
   {
     name: "헨리",
@@ -313,7 +328,7 @@ export const npcData = [
     job: "광물 상점 판매원",
     description:
       "사춘기 한창인 18살.\n부모님에 의해 억지로 상점에 앉혀졌다.\n퉁명스럽고 자존감이 낮지만 친해지면 한없이 잘해주는 아이다.",
-    loved: [],
+    loved: [{ name: "초코 뚱카롱", image: ChocoMacaron }],
     liked: [{ name: "고추", image: Chili }],
     okay: [],
     normal: [{ name: "주문 도착 티켓", image: OrderArrivalTicket }],
@@ -412,6 +427,7 @@ export const npcData = [
     normal: [
       { name: "능소화", image: Jacaranda },
       { name: "야자나무 판자", image: PalmPlanks },
+      { name: "가넷 보석", image: GarnetGem },
     ],
     disliked: [
       { name: "히비스커스", image: Hibiscus },
