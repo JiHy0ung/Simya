@@ -1,8 +1,11 @@
 import { jewelryRecipes } from "../constants/town/jewelryRecipes";
 import { woodRecipes } from "../constants/town/woodRecipes";
+import { processedRecipes } from "../constants/food/processed";
 import { getJewelryProfit } from "./jewelryUtils";
-import { getNetProfit, getSeasonalIngredients } from "./recipeUtils";
+import { getNetProfit, getSeasonalInfo } from "./recipeUtils";
 import { getWoodProfit } from "./woodUtils";
+
+const allProcessed = [...processedRecipes, ...jewelryRecipes, ...woodRecipes];
 
 const getProfit = (recipe) => {
   if (jewelryRecipes.find((r) => r.name === recipe.name))
@@ -12,8 +15,32 @@ const getProfit = (recipe) => {
   return getNetProfit(recipe);
 };
 
+// 재귀적으로 계절 재료 이름 수집
+export const collectSeasonalNames = (ingredients, visited = new Set()) => {
+  const names = new Set();
+
+  for (const ing of ingredients) {
+    if (visited.has(ing.name)) continue;
+
+    const seasonal = getSeasonalInfo(ing.name);
+    if (seasonal) names.add(ing.name);
+
+    // 가공품이면 재귀 탐색
+    const subRecipe = allProcessed.find(
+      (r) => r.name.replace(/\s/g, "") === ing.name.replace(/\s/g, ""),
+    );
+    if (subRecipe) {
+      visited.add(ing.name);
+      const subNames = collectSeasonalNames(subRecipe.ingredients, visited);
+      subNames.forEach((n) => names.add(n));
+    }
+  }
+
+  return names;
+};
+
 const getSeasonalCount = (recipe) =>
-  getSeasonalIngredients(recipe.ingredients).length;
+  collectSeasonalNames(recipe.ingredients).size;
 
 export const sortRecipes = (recipes, sortKey) => {
   const arr = [...recipes];

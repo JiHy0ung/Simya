@@ -9,6 +9,7 @@ import {
 } from "../../../utils/recipeUtils";
 import { SEASON_THEME } from "../../../constants/commons";
 import IngredientTree from "../../../commons/components/IngredientTree";
+import { collectSeasonalNames } from "../../../utils/sortUtils";
 
 const Panel = styled(Box)(({ theme }) => ({
   background: "#18171c",
@@ -140,7 +141,7 @@ const RecipeDetail = ({ recipe }) => {
   if (!recipe) return <EmptyPanel>레시피를 선택하세요</EmptyPanel>;
 
   const maxDay = getMaxGrowthDay(recipe.ingredients);
-  const seasonalIngs = getSeasonalIngredients(recipe.ingredients);
+  const seasonalIngs = collectSeasonalNames(recipe.ingredients);
   const totalCost = getTotalCost(recipe.ingredients);
   const netProfit = getNetProfit(recipe);
 
@@ -180,10 +181,10 @@ const RecipeDetail = ({ recipe }) => {
             <StatValue>{maxDay}일</StatValue>
           </StatRow>
         )}
-        {seasonalIngs.length > 0 && (
+        {seasonalIngs.size > 0 && (
           <StatRow>
             <span>계절 재료</span>
-            <StatValue>{seasonalIngs.length}종</StatValue>
+            <StatValue>{seasonalIngs.size}종</StatValue>
           </StatRow>
         )}
       </Box>
