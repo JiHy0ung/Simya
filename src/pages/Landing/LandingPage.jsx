@@ -242,9 +242,8 @@ const LandingPage = () => {
         </NoticeTitle>
 
         <NoticeText>
-          · 패치된 아이템 판매가 적용 완료
-          <br />· 세분화된 npc 호감도 템 범위 적용 및 해당 범위 아이템 리셋
-          <br />· npc 호감도 아이템 힌트 대사 추가
+          · 레시피 정렬 기능 추가
+          <br />· 레시피 목록에서 계절 작물 성장 일자 표시
         </NoticeText>
 
         <NoticeText sx={{ opacity: 0.6, fontFamily: "Mona8x12" }}>

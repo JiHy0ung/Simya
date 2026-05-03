@@ -57,7 +57,7 @@ const TabsWrapper = styled(Box)(({ theme }) => ({
   gap: "8px",
   marginBottom: "-1.75rem",
   marginRight: "auto",
-  zIndex: "99999",
+  zIndex: "999",
 
   [theme.breakpoints.down("md")]: {
     marginBottom: "1.25rem",

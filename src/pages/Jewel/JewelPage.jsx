@@ -51,7 +51,7 @@ const StyledTabs = styled(Tabs)(({ theme }) => ({
   minHeight: "unset",
   marginBottom: "-1.625rem",
   marginRight: "auto",
-  zIndex: "99999",
+  zIndex: "999",
 
   "& .MuiTabs-indicator": { display: "none" },
 
