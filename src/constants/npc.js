@@ -484,7 +484,7 @@ export const npcData = [
       "알을 다루는 이종족 루카족 출신.\n화를 낼 줄 모르고 누구에게나 친절하지만,\n생명을 모독하는 순간만큼은 절대 건드려선 안 된다.",
     loved: [{ name: "생명의 광휘 보석", image: LifeRadianceGem }],
     liked: [],
-    okay: [{ name: "파인애플", image: Pineapple }],
+    okay: [],
     normal: [
       { name: "달걀", image: Egg },
       { name: "오렌지", image: Orange },
