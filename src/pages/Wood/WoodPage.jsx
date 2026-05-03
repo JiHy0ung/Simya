@@ -4,6 +4,8 @@ import { Box, Tabs, Tab, Container, Typography } from "@mui/material";
 import { woodRecipes } from "../../constants/town/woodRecipes";
 import RecipeCard from "../../commons/components/RecipeCard";
 import WoodDetail from "./components/WoodDetail";
+import { sortRecipes } from "../../utils/sortUtils";
+import SortBar from "../../commons/components/SortBar";
 
 const WoodContainer = styled(Container)({
   display: "flex",
@@ -44,12 +46,18 @@ const WoodDescription = styled(Typography)(({ theme }) => ({
   },
 }));
 
-const StyledTabs = styled(Tabs)({
-  width: "100%",
+const StyledTabs = styled(Tabs)(({ theme }) => ({
+  display: "flex",
   minHeight: "unset",
-  marginBottom: "1.25rem",
+  marginBottom: "-1.625rem",
+  marginRight: "auto",
+
   "& .MuiTabs-indicator": { display: "none" },
-});
+
+  [theme.breakpoints.down("md")]: {
+    marginBottom: "1.25rem",
+  },
+}));
 
 const StyledTab = styled(Tab)(({ theme }) => ({
   minHeight: "unset",
@@ -104,11 +112,17 @@ const WoodPage = () => {
     return localStorage.getItem("wood_tab") || "tier1";
   });
 
+  const [sort, setSort] = useState(() => {
+    return localStorage.getItem("food_sort") || "default";
+  });
+
   const [selectedName, setSelectedName] = useState(() => {
     return localStorage.getItem("wood_selected") || null;
   });
 
   const currentData = TABS.find((t) => t.value === tab)?.data ?? [];
+
+  const sortedData = sortRecipes(currentData, sort);
 
   const selected =
     currentData.find((item) => item.name === selectedName) ??
@@ -151,17 +165,27 @@ const WoodPage = () => {
       </StyledTabs>
 
       <ContentLayout>
-        <WoodDetail recipe={selected} />
-        <CardGrid>
-          {currentData.map((recipe, i) => (
-            <RecipeCard
-              key={i}
-              {...recipe}
-              selected={selected?.name === recipe.name}
-              onClick={() => setSelectedName(recipe.name)}
-            />
-          ))}
-        </CardGrid>
+        <Box sx={{ mt: { xs: 0, md: "2.5rem" } }}>
+          <WoodDetail recipe={selected} />
+        </Box>
+
+        <Box>
+          <Box
+            sx={{ display: "flex", justifyContent: "flex-end", mb: "0.75rem" }}
+          >
+            <SortBar sort={sort} onChange={setSort} />
+          </Box>
+          <CardGrid>
+            {sortedData.map((recipe, i) => (
+              <RecipeCard
+                key={i}
+                {...recipe}
+                selected={selected?.name === recipe.name}
+                onClick={() => setSelectedName(recipe.name)}
+              />
+            ))}
+          </CardGrid>
+        </Box>
       </ContentLayout>
     </WoodContainer>
   );

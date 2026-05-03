@@ -65,7 +65,7 @@ export const processedRecipes = [
   {
     name: "토마토케첩",
     image: Ketchup,
-    price: 2922,
+    price: 4242,
     ingredients: [
       { name: "토마토", count: 16, image: getItemImage("토마토") },
       { name: "양파", count: 4, image: getItemImage("양파") },

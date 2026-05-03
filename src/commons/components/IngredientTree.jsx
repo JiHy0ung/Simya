@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import styled from "@emotion/styled";
 import { processedRecipes } from "../../constants/food/processed";
 import { jewelryRecipes } from "../../constants/town/jewelryRecipes";
@@ -36,6 +36,7 @@ const IngItem = styled(Box)(({ expandable }) => ({
 
 const IngLeft = styled(Box)({
   display: "flex",
+  justifyContent: "center",
   alignItems: "center",
   gap: "4px",
 });
@@ -84,13 +85,18 @@ const IngredientNode = ({ ing, depth = 0 }) => {
       >
         <IngLeft>
           {ing.image && <IngIcon src={ing.image} alt={ing.name} />}
-          <span style={{ color: expandable && open ? "#c4bdff" : undefined }}>
-            {ing.name}
-          </span>
           {seasonal && (
             <SeasonBadge season={seasonal.season}>
               {SEASON_LABEL[seasonal.season]}
             </SeasonBadge>
+          )}
+          <span style={{ color: expandable && open ? "#c4bdff" : undefined }}>
+            {ing.name}{" "}
+          </span>
+          {seasonal && (
+            <Typography sx={{ fontSize: "0.6275rem", color: "#514e5f" }}>
+              ({seasonal.day}일)
+            </Typography>
           )}
           {expandable && <ExpandIcon open={open}>▶</ExpandIcon>}
         </IngLeft>

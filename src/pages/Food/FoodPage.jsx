@@ -8,6 +8,8 @@ import RecipeDetail from "./components/RecipeDetail";
 import { cafeRecipes } from "../../constants/food/cafe";
 import { jamRecipes } from "../../constants/food/jam";
 import { wineRecipes } from "../../constants/food/wine";
+import { sortRecipes } from "../../utils/sortUtils";
+import SortBar from "../../commons/components/SortBar";
 
 const FoodContainer = styled(Container)({
   display: "flex",
@@ -48,13 +50,18 @@ const FoodDescription = styled(Typography)(({ theme }) => ({
   },
 }));
 
-const TabsWrapper = styled(Box)({
+const TabsWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
   flexWrap: "wrap",
   width: "100%",
   gap: "8px",
-  marginBottom: "1.25rem",
-});
+  marginBottom: "-1.75rem",
+  marginRight: "auto",
+
+  [theme.breakpoints.down("md")]: {
+    marginBottom: "1.25rem",
+  },
+}));
 
 const StyledTabs = styled(Tabs)({
   display: "flex",
@@ -66,7 +73,7 @@ const StyledTabs = styled(Tabs)({
 });
 
 const StyledTab = styled(Box)(({ theme, active }) => ({
-  minWidth: "140px",
+  minWidth: "137px",
   padding: "8px 18px",
   fontSize: "0.85rem",
   color: "rgba(255,255,255,0.45)",
@@ -116,6 +123,13 @@ const TABS = [
 ];
 
 const FoodPage = () => {
+  const [sort, setSort] = useState(() => {
+    return localStorage.getItem("food_sort") || "default";
+  });
+
+  useEffect(() => {
+    localStorage.setItem("food_sort", sort);
+  }, [sort]);
   const [tab, setTab] = useState(() => {
     return localStorage.getItem("food_tab") || "process";
   });
@@ -136,6 +150,12 @@ const FoodPage = () => {
   }, [selected]);
 
   const currentData = TABS.find((t) => t.value === tab)?.data ?? [];
+
+  const sortedData = sortRecipes(currentData, sort);
+
+  useEffect(() => {
+    localStorage.setItem("food_sort", sort);
+  }, [sort]);
 
   const handleTabChange = (_, v) => {
     setTab(v);
@@ -167,19 +187,28 @@ const FoodPage = () => {
 
       <ContentLayout>
         {/* 왼쪽: 선택된 레시피 상세 */}
-        <RecipeDetail recipe={selected} />
+        <Box sx={{ mt: { xs: 0, md: "2.5rem" } }}>
+          <RecipeDetail recipe={selected} />
+        </Box>
 
         {/* 오른쪽: 카드 그리드 */}
-        <CardGrid>
-          {currentData.map((recipe, i) => (
-            <RecipeCard
-              key={i}
-              {...recipe}
-              selected={selected?.name === recipe.name}
-              onClick={() => setSelected(recipe)}
-            />
-          ))}
-        </CardGrid>
+        <Box>
+          <Box
+            sx={{ display: "flex", justifyContent: "flex-end", mb: "0.75rem" }}
+          >
+            <SortBar sort={sort} onChange={setSort} />
+          </Box>
+          <CardGrid>
+            {sortedData.map((recipe, i) => (
+              <RecipeCard
+                key={i}
+                {...recipe}
+                selected={selected?.name === recipe.name}
+                onClick={() => setSelected(recipe)}
+              />
+            ))}
+          </CardGrid>
+        </Box>
       </ContentLayout>
     </FoodContainer>
   );

@@ -173,6 +173,7 @@ const CropCard = styled(Box)(({ selected }) => ({
   gap: "5px",
   cursor: "var(--cursor-pointer)",
   transition: "all 0.12s",
+  aspectRatio: "1 / 1",
   "&:hover": {
     borderColor: "1.5px solid #b7b3da",
     background: "rgba(183,179,218,0.08)",
@@ -188,6 +189,7 @@ const CropIcon = styled("img")({
 
 const CropName = styled("span")({
   display: "flex",
+  flexDirection: "column",
   alignItems: "center",
   gap: "0.15rem",
   fontSize: "0.75rem",
