@@ -489,6 +489,7 @@ export const npcData = [
       { name: "달걀", image: Egg },
       { name: "오렌지", image: Orange },
       { name: "포도", image: Grape },
+      { name: "파인애플", image: Pineapple },
     ],
     disliked: [],
     hints: ["다음엔 와인 종류면 좋겠어요."],
