@@ -155,6 +155,12 @@ const PanelTitle = styled(Typography)({
   borderBottom: "1px solid #3d3a52",
 });
 
+const TownIcon = styled("img")({
+  width: "3.5rem",
+  height: "3.5rem",
+  imageRendering: "pixelated",
+});
+
 // 작물 카드 그리드
 const CropGrid = styled(Box)({
   display: "grid",
@@ -462,6 +468,10 @@ const SeasonPage = () => {
                     key={t.name}
                     onClick={() => handleTownClick(t)}
                     sx={{
+                      display: "flex",
+                      justifyContent: "start",
+                      alignItems: "center",
+                      gap: "0.875rem",
                       background:
                         selectedTown?.name === t.name
                           ? "rgba(183,179,218,0.06)"
@@ -479,37 +489,42 @@ const SeasonPage = () => {
                       },
                     }}
                   >
-                    <Typography
-                      sx={{
-                        fontSize: "0.9375rem",
-                        fontWeight: "bold",
-                        color: "#e8e4ff",
-                        fontFamily: "Mona10x12",
-                        mb: "0.5rem",
-                      }}
-                    >
-                      {t.name}
-                    </Typography>
-                    <Box sx={{ display: "flex", flexWrap: "wrap", gap: "4px" }}>
-                      {[
-                        ...t.resources.minerals,
-                        ...t.resources.trees,
-                        ...t.resources.flowers,
-                      ].map((item) => (
-                        <span
-                          key={item}
-                          style={{
-                            fontSize: "0.625rem",
-                            color: "#5a5670",
-                            background: "rgba(255,255,255,0.04)",
-                            border: "0.5px solid #28263a",
-                            padding: "1px 6px",
-                            fontFamily: "Mona8x12",
-                          }}
-                        >
-                          {item}
-                        </span>
-                      ))}
+                    <TownIcon src={t.image} alt={t.name} />
+                    <Box>
+                      <Typography
+                        sx={{
+                          fontSize: "0.9375rem",
+                          fontWeight: "bold",
+                          color: "#e8e4ff",
+                          fontFamily: "Mona10x12",
+                          mb: "0.5rem",
+                        }}
+                      >
+                        {t.name}
+                      </Typography>
+                      <Box
+                        sx={{ display: "flex", flexWrap: "wrap", gap: "4px" }}
+                      >
+                        {[
+                          ...t.resources.minerals,
+                          ...t.resources.trees,
+                          ...t.resources.flowers,
+                        ].map((item) => (
+                          <span
+                            key={item}
+                            style={{
+                              fontSize: "0.625rem",
+                              color: "#5a5670",
+                              background: "rgba(255,255,255,0.04)",
+                              border: "0.5px solid #28263a",
+                              padding: "1px 6px",
+                              fontFamily: "Mona8x12",
+                            }}
+                          >
+                            {item}
+                          </span>
+                        ))}
+                      </Box>
                     </Box>
                   </Box>
                 ))}

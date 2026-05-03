@@ -7,9 +7,15 @@ import LarimarRaw from "../../assets/images/jewelry/larimar_raw.png";
 import GarnetRaw from "../../assets/images/jewelry/garnet_raw.png";
 import RubyRaw from "../../assets/images/jewelry/ruby_raw.png";
 
+import Serenity from "../../assets/images/town/serenity.png";
+import Bluena from "../../assets/images/town/bluena.png";
+import Sunbris from "../../assets/images/town/sunbris.png";
+import Fury from "../../assets/images/town/fury.png";
+
 export const town = [
   {
     name: "세레니티 폭포",
+    image: Serenity,
     seasons: ["봄", "여름", "가을", "겨울"],
     resources: {
       minerals: ["페리도트 원석", "아쿠아마린 원석"],
@@ -19,6 +25,7 @@ export const town = [
   },
   {
     name: "블루나 해안",
+    image: Bluena,
     seasons: ["봄", "여름"],
     resources: {
       minerals: ["산호석 원석", "라리마 원석"],
@@ -28,6 +35,7 @@ export const town = [
   },
   {
     name: "썬브리즈 사막",
+    image: Sunbris,
     seasons: ["여름", "가을"],
     resources: {
       minerals: ["앰버 원석", "시트린 원석"],
@@ -37,6 +45,7 @@ export const town = [
   },
   {
     name: "퓨리 화산",
+    image: Fury,
     seasons: ["가을", "겨울"],
     resources: {
       minerals: ["가넷 원석", "루비 원석"],
