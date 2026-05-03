@@ -197,7 +197,7 @@ export const npcData = [
     job: "레스토랑 셰프",
     description:
       "전직 유명 호텔 수셰프.\n 요리에 인생을 바치다 보니 숫기가 없어졌고,\n 더 많은 사람에게 음식을 선보이고 싶어 심야잡화점에 가게를 차렸다.",
-    loved: [],
+    loved: [{ name: "초코 쉐이크", image: ChocoShake }],
     liked: [{ name: "수박", image: WaterMelon }],
     okay: [],
     normal: [{ name: "빛바랜 상회의 곡괭이" }, { name: "고추", image: Chili }],
@@ -328,7 +328,10 @@ export const npcData = [
     job: "광물 상점 판매원",
     description:
       "사춘기 한창인 18살.\n부모님에 의해 억지로 상점에 앉혀졌다.\n퉁명스럽고 자존감이 낮지만 친해지면 한없이 잘해주는 아이다.",
-    loved: [{ name: "초코 뚱카롱", image: ChocoMacaron }],
+    loved: [
+      { name: "초코 뚱카롱", image: ChocoMacaron },
+      { name: "초코 쉐이크", image: ChocoShake },
+    ],
     liked: [{ name: "고추", image: Chili }],
     okay: [],
     normal: [{ name: "주문 도착 티켓", image: OrderArrivalTicket }],
@@ -383,6 +386,7 @@ export const npcData = [
       { name: "달걀", image: Egg },
       { name: "참나무 울타리", image: OakFence },
       { name: "설탕", image: Sugar },
+      { name: "초코 쉐이크", image: ChocoShake },
     ],
     disliked: [{ name: "아티초크", image: Artichoke }],
     hints: ["카페에서 맛있는것 좀 가져다주시면 안돼요?"],
