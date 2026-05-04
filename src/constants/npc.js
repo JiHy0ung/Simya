@@ -473,6 +473,7 @@ export const npcData = [
       { name: "딸기", image: Strawberry },
       { name: "산삼", image: Ginseng },
       { name: "메론빵", image: MelonBread },
+      { name: "태양의 목걸이", image: SunNecklace },
     ],
     disliked: [
       { name: "히비스커스", image: Hibiscus },
