@@ -327,7 +327,7 @@ export const npcData = [
     job: "농작물 상점 주인",
     description:
       "농사에 열정적이고 털털한 심야잡화점의 말괄량이.\n주근깨가 매력 포인트이며, 아재 개그를 진심으로 사랑하는 비밀스러운 취미가 있다.",
-    loved: [],
+    loved: [{ name: "블루베리 케이크", image: BlueberryCake }],
     liked: [
       { name: "올리브나무 판자", image: OlivePlanks },
       { name: "김치찌개", image: KimchiStew },
@@ -411,7 +411,7 @@ export const npcData = [
     job: "블록 상점 주인",
     description:
       "12살이지만 비상한 두뇌로 가게를 직접 구상한 아이.\n어른인 척하지만 가끔 어린아이 티가 난다.\n밝고 장난기 많으며 신기한 걸 탐구하길 좋아한다.",
-    loved: [],
+    loved: [{ name: "옥수수 아이스크림", image: CornIcecream }],
     liked: [
       { name: "멜론", image: Melon },
       { name: "오렌지 사탕", image: OrangeCandy },
@@ -439,7 +439,7 @@ export const npcData = [
     job: "토큰 상점 주인",
     description:
       "이세계 귀족 출신.\n차별을 없애고자 직접 가게를 차렸다.\n공평하고 절제된 아름다움을 가졌으며,\n아닌 건 아니라고 확실히 말하는 주관이 뚜렷한 사람이다.",
-    loved: [],
+    loved: [{ name: "우유 롤케이크", image: MilkRoll }],
     liked: [{ name: "산삼", image: Ginseng }],
     okay: [{ name: "채소 덮밥", image: VeggieRice }],
     normal: [
@@ -464,8 +464,11 @@ export const npcData = [
     description:
       "모두에게 사랑받는 엄친아.\n빈곤하게 자라서인지 반짝이는 것과 고급스러운 것을 좋아한다.\n너무 헤프다는 말도 있지만 한 번이라도 만나보면 그 말이 나오지 않는다.",
     loved: [],
-    liked: [{ name: "태양의 축복보석", image: SunBlessingGem }],
-    okay: [],
+    liked: [
+      { name: "태양의 축복 보석", image: SunBlessingGem },
+      { name: "바다의 여명 보석", image: SeaDawnGem },
+    ],
+    okay: [{ name: "바다의 목걸이", image: SeaNecklace }],
     normal: [
       { name: "능소화", image: Jacaranda },
       { name: "야자나무 판자", image: PalmPlanks },
@@ -518,7 +521,7 @@ export const npcData = [
       "알을 다루는 이종족 루카족 출신.\n화를 낼 줄 모르고 누구에게나 친절하지만,\n생명을 모독하는 순간만큼은 절대 건드려선 안 된다.",
     loved: [{ name: "생명의 광휘 보석", image: LifeRadianceGem }],
     liked: [],
-    okay: [],
+    okay: [{ name: "단풍나무 판자", image: MaplePlanks }],
     normal: [
       { name: "달걀", image: Egg },
       { name: "오렌지", image: Orange },
