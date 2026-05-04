@@ -218,7 +218,11 @@ export const npcData = [
     loved: [{ name: "초코 쉐이크", image: ChocoShake }],
     liked: [{ name: "수박", image: WaterMelon }],
     okay: [],
-    normal: [{ name: "빛바랜 상회의 곡괭이" }, { name: "고추", image: Chili }],
+    normal: [
+      { name: "빛바랜 상회의 곡괭이" },
+      { name: "고추", image: Chili },
+      { name: "수박 화채", image: WatermelonPunch },
+    ],
     disliked: [
       { name: "수국", image: Hydrangea },
       { name: "네더 사마귀", image: NetherWart },
@@ -307,8 +311,9 @@ export const npcData = [
     loved: [{ name: "용설란 꽃", image: Agave }],
     liked: [{ name: "사막 장미", image: DesertRose }],
     okay: [],
-    normal: [],
+    normal: [{ name: "불꽃 백합", image: FlameLily }],
     disliked: [{ name: "사탕수수", image: Sugarcane }],
+    hints: ["기름진 건 싫어요."],
     blush: {
       background: "rgba(255, 123, 147, 0.66)",
       left: { x: "43%", y: "67%" },
@@ -326,6 +331,7 @@ export const npcData = [
     liked: [
       { name: "올리브나무 판자", image: OlivePlanks },
       { name: "김치찌개", image: KimchiStew },
+      { name: "된장찌개", image: DoenjangStew },
     ],
     okay: [],
     normal: [
@@ -334,12 +340,13 @@ export const npcData = [
       { name: "단풍나무 통나무", image: Maple },
       { name: "야자나무 판자", image: PalmPlanks },
       { name: "유칼립투스 통나무", image: Eucalyptus },
+      { name: "육수", image: Stock },
     ],
     disliked: [],
     hints: [
       "좋아하는 나무 종류가 있어!",
       "난 초콜릿이 싫어!",
-      "뜨끈한 국물이 떙기는걸?",
+      "뜨끈한 국물이 떙기는데요?",
     ],
     blush: {
       background: "rgba(255, 134, 69, 0.68)",
@@ -407,6 +414,7 @@ export const npcData = [
     liked: [
       { name: "멜론", image: Melon },
       { name: "오렌지 사탕", image: OrangeCandy },
+      { name: "우유 롤케이크", image: MilkRoll },
     ],
     okay: [],
     normal: [
@@ -432,7 +440,7 @@ export const npcData = [
       "이세계 귀족 출신.\n차별을 없애고자 직접 가게를 차렸다.\n공평하고 절제된 아름다움을 가졌으며,\n아닌 건 아니라고 확실히 말하는 주관이 뚜렷한 사람이다.",
     loved: [],
     liked: [{ name: "산삼", image: Ginseng }],
-    okay: [],
+    okay: [{ name: "채소 덮밥", image: VeggieRice }],
     normal: [
       { name: "달걀", image: Egg },
       { name: "포도", image: Grape },
@@ -455,7 +463,7 @@ export const npcData = [
     description:
       "모두에게 사랑받는 엄친아.\n빈곤하게 자라서인지 반짝이는 것과 고급스러운 것을 좋아한다.\n너무 헤프다는 말도 있지만 한 번이라도 만나보면 그 말이 나오지 않는다.",
     loved: [],
-    liked: [],
+    liked: [{ name: "태양의 축복보석", image: SunBlessingGem }],
     okay: [],
     normal: [
       { name: "능소화", image: Jacaranda },
@@ -463,11 +471,13 @@ export const npcData = [
       { name: "가넷 보석", image: GarnetGem },
       { name: "딸기", image: Strawberry },
       { name: "산삼", image: Ginseng },
+      { name: "메론빵", image: MelonBread },
     ],
     disliked: [
       { name: "히비스커스", image: Hibiscus },
       { name: "당근", image: Carrot },
     ],
+    hints: ["부를 티내는 걸 좋아하진 않지만, 받으면 좋은 건 사실인 것 같아요"],
     blush: {
       background: "rgba(255, 157, 132, 0.77)",
       left: { x: "36%", y: "71%" },
