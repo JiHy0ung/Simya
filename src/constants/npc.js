@@ -396,7 +396,7 @@ export const npcData = [
       { name: "딸기", image: Strawberry },
     ],
     disliked: [],
-    hints: ["인간냄새, 바다냄새 극혐이야."],
+    hints: ["인간냄새, 바다냄새는 역겹군."],
     blush: {
       background: "rgba(255, 145, 109, 0.71)",
       left: { x: "40%", y: "67%" },
