@@ -222,13 +222,17 @@ export const npcData = [
       { name: "빛바랜 상회의 곡괭이" },
       { name: "고추", image: Chili },
       { name: "수박 화채", image: WatermelonPunch },
+      { name: "딸기 마카롱", image: StrawberryMacaron },
     ],
     disliked: [
       { name: "수국", image: Hydrangea },
       { name: "네더 사마귀", image: NetherWart },
       { name: "히비스커스", image: Hibiscus },
     ],
-    hints: ["단거라도 주시면 좋았을 것 같은데..."],
+    hints: [
+      "단거라도 주시면 좋았을 것 같은데...",
+      "와인이라도 주시는 줄 알았는데...",
+    ],
     blush: {
       background: "rgba(255, 151, 123, 0.77)",
       left: { x: "32%", y: "67%" },
@@ -395,6 +399,7 @@ export const npcData = [
       { name: "주문 전달 티켓", image: OrderDeliveryTicket },
       { name: "야자나무 판자", image: PalmPlanks },
       { name: "딸기", image: Strawberry },
+      { name: "생명의 광휘 보석", image: LifeRadianceGem },
     ],
     disliked: [],
     hints: ["인간냄새, 바다냄새는 역겹군."],
@@ -468,7 +473,10 @@ export const npcData = [
       { name: "태양의 축복 보석", image: SunBlessingGem },
       { name: "바다의 여명 보석", image: SeaDawnGem },
     ],
-    okay: [{ name: "바다의 목걸이", image: SeaNecklace }],
+    okay: [
+      { name: "바다의 목걸이", image: SeaNecklace },
+      { name: "열정의 목걸이", image: PassionNecklace },
+    ],
     normal: [
       { name: "능소화", image: Jacaranda },
       { name: "야자나무 판자", image: PalmPlanks },
@@ -546,7 +554,7 @@ export const npcData = [
     loved: [],
     liked: [{ name: "사과", image: Apple }],
     okay: [],
-    normal: [],
+    normal: [{ name: "초코 쉐이크", image: ChocoShake }],
     disliked: [],
     blush: {
       background: "rgba(255, 136, 132, 0.67)",
