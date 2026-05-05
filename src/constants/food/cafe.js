@@ -117,7 +117,7 @@ export const cafeRecipes = [
     price: 7162,
     ingredients: [
       { name: "크림", count: 2, image: Cream },
-      { name: "블루베리", count: 8, image: getItemImage("블루베리") },
+      { name: "블루베리", count: 6, image: getItemImage("블루베리") },
       { name: "설탕", count: 1, image: Sugar },
     ],
   },
