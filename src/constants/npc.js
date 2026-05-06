@@ -337,6 +337,7 @@ export const npcData = [
       { name: "김치찌개", image: KimchiStew },
       { name: "된장찌개", image: DoenjangStew },
       { name: "고추장찌개", image: GochujangStew },
+      { name: "김치", image: Kimchi },
     ],
     okay: [],
     normal: [
