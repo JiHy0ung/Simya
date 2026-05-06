@@ -207,6 +207,8 @@ import StrawberryPunch from "../assets/images/food/restaurant/strawberry_punch.p
 import WatermelonPunch from "../assets/images/food/restaurant/watermelon_punch.png";
 import CreamPasta from "../assets/images/food/restaurant/cream_pasta.png";
 
+import Oak from "../assets/images/wood/oak.png";
+
 export const npcData = [
   {
     name: "헨리",
@@ -295,7 +297,7 @@ export const npcData = [
     loved: [{ name: "사과", image: Apple }],
     liked: [],
     okay: [],
-    normal: [],
+    normal: [{ name: "참나무 원목", image: Oak }],
     disliked: [],
     blush: {
       background: "rgba(255, 124, 88, 0.68)",
@@ -399,6 +401,8 @@ export const npcData = [
       { name: "야자나무 판자", image: PalmPlanks },
       { name: "딸기", image: Strawberry },
       { name: "생명의 광휘 보석", image: LifeRadianceGem },
+      { name: "참나무 원목", image: Oak },
+      { name: "용혈수 통나무", image: Dragon },
     ],
     disliked: [],
     hints: ["인간냄새, 바다냄새는 역겹군."],
@@ -471,6 +475,7 @@ export const npcData = [
     liked: [
       { name: "태양의 축복 보석", image: SunBlessingGem },
       { name: "바다의 여명 보석", image: SeaDawnGem },
+      { name: "열정의 불꽃 보석", image: PassionFlameGem },
     ],
     okay: [
       { name: "바다의 목걸이", image: SeaNecklace },
@@ -484,6 +489,7 @@ export const npcData = [
       { name: "산삼", image: Ginseng },
       { name: "메론빵", image: MelonBread },
       { name: "태양의 목걸이", image: SunNecklace },
+      { name: "시트린 보석", image: CitrineGem },
     ],
     disliked: [
       { name: "히비스커스", image: Hibiscus },
@@ -526,7 +532,10 @@ export const npcData = [
     job: "테이밍 도우미",
     description:
       "알을 다루는 이종족 루카족 출신.\n화를 낼 줄 모르고 누구에게나 친절하지만,\n생명을 모독하는 순간만큼은 절대 건드려선 안 된다.",
-    loved: [{ name: "생명의 광휘 보석", image: LifeRadianceGem }],
+    loved: [
+      { name: "생명의 광휘 보석", image: LifeRadianceGem },
+      { name: "수양나무 판자", image: WeepingPlanks },
+    ],
     liked: [],
     okay: [{ name: "단풍나무 판자", image: MaplePlanks }],
     normal: [
