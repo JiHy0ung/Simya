@@ -209,6 +209,8 @@ import CreamPasta from "../assets/images/food/restaurant/cream_pasta.png";
 
 import Oak from "../assets/images/wood/oak.png";
 
+import Money from "../assets/images/items/money.png";
+
 export const npcData = [
   {
     name: "헨리",
@@ -490,10 +492,15 @@ export const npcData = [
       { name: "메론빵", image: MelonBread },
       { name: "태양의 목걸이", image: SunNecklace },
       { name: "시트린 보석", image: CitrineGem },
+      { name: "수표", image: Money },
+      { name: "엠버 원석", image: AmberRaw },
+      { name: "용설란 꽃", image: Agave },
     ],
     disliked: [
       { name: "히비스커스", image: Hibiscus },
       { name: "당근", image: Carrot },
+      { name: "블루베리 케이크", image: BlueberryCake },
+      { name: "초코 쉐이크", image: ChocoShake },
     ],
     hints: ["부를 티내는 걸 좋아하진 않지만, 받으면 좋은 건 사실인 것 같아요"],
     blush: {
@@ -562,7 +569,11 @@ export const npcData = [
     loved: [],
     liked: [{ name: "사과", image: Apple }],
     okay: [],
-    normal: [{ name: "초코 쉐이크", image: ChocoShake }],
+    normal: [
+      { name: "초코 쉐이크", image: ChocoShake },
+      { name: "딸기", image: Strawberry },
+      { name: "멜론", image: Melon },
+    ],
     disliked: [],
     blush: {
       background: "rgba(255, 136, 132, 0.67)",
