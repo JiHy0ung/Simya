@@ -247,14 +247,12 @@ export const npcData = [
     description:
       "원래 심야잡화점 거리 출신 고양이.\n이상한 걸 주워 먹고 사람이 됐다.\n 가공식품점 할아버지의 도움으로 판매원으로 일하고 있으며, 아직 사람을 많이 경계한다.",
     loved: [{ name: "딸기", image: Strawberry }],
-    liked: [
-      { name: "창포", image: Calamus },
-      { name: "아쿠아마린 보석", image: AquamarineGem },
-    ],
+    liked: [{ name: "아쿠아마린 보석", image: AquamarineGem }],
     okay: [],
     normal: [
       { name: "수박", image: WaterMelon },
       { name: "라벤더", image: Lavender },
+      { name: "창포", image: Calamus },
     ],
     disliked: [
       { name: "파", image: GreenOnion },
