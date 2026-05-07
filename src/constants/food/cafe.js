@@ -134,7 +134,7 @@ export const cafeRecipes = [
   {
     name: "오렌지캔디",
     image: OrangeCandy,
-    price: 5722,
+    price: 8122,
     ingredients: [
       { name: "설탕", count: 2, image: Sugar },
       { name: "시럽", count: 2, image: Syrup },

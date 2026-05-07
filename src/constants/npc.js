@@ -478,10 +478,12 @@ export const npcData = [
       { name: "태양의 축복 보석", image: SunBlessingGem },
       { name: "바다의 여명 보석", image: SeaDawnGem },
       { name: "열정의 불꽃 보석", image: PassionFlameGem },
+      { name: "생명의 광휘 보석", image: LifeRadianceGem },
     ],
     okay: [
       { name: "바다의 목걸이", image: SeaNecklace },
       { name: "열정의 목걸이", image: PassionNecklace },
+      { name: "생명의 목걸이", image: LifeRadianceGem },
     ],
     normal: [
       { name: "능소화", image: Jacaranda },
@@ -501,8 +503,12 @@ export const npcData = [
       { name: "당근", image: Carrot },
       { name: "블루베리 케이크", image: BlueberryCake },
       { name: "초코 쉐이크", image: ChocoShake },
+      { name: "딸기 화채", image: StrawberryPunch },
     ],
-    hints: ["부를 티내는 걸 좋아하진 않지만, 받으면 좋은 건 사실인 것 같아요"],
+    hints: [
+      "부를 티내는 걸 좋아하진 않지만, 받으면 좋은 건 사실인 것 같아요",
+      "물에 빠진 과일을 꺼려요.",
+    ],
     blush: {
       background: "rgba(255, 157, 132, 0.77)",
       left: { x: "36%", y: "71%" },
@@ -567,7 +573,11 @@ export const npcData = [
     description:
       "어디서 왔는지 아무도 모르는 정체 모를 존재.\n말수가 적고 알아들을 수 없는 말을 남발하지만, 친해질수록 조금씩 소통이 된다.\n이 거리의 비밀을 가장 많이 아는 존재일지도.",
     loved: [],
-    liked: [{ name: "사과", image: Apple }],
+    liked: [
+      { name: "사과", image: Apple },
+      { name: "마늘", image: Garlic },
+      { name: "김치", image: Kimchi },
+    ],
     okay: [],
     normal: [
       { name: "초코 쉐이크", image: ChocoShake },
