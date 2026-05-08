@@ -497,6 +497,7 @@ export const npcData = [
       { name: "수표", image: Money },
       { name: "엠버 원석", image: AmberRaw },
       { name: "용설란 꽃", image: Agave },
+      { name: "망고", image: Mango },
     ],
     disliked: [
       { name: "히비스커스", image: Hibiscus },
@@ -576,9 +577,8 @@ export const npcData = [
     liked: [
       { name: "사과", image: Apple },
       { name: "마늘", image: Garlic },
-      { name: "김치", image: Kimchi },
     ],
-    okay: [],
+    okay: [{ name: "김치", image: Kimchi }],
     normal: [
       { name: "초코 쉐이크", image: ChocoShake },
       { name: "딸기", image: Strawberry },
