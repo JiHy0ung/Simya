@@ -257,6 +257,7 @@ export const npcData = [
       { name: "수박", image: WaterMelon },
       { name: "라벤더", image: Lavender },
       { name: "창포", image: Calamus },
+      { name: "히비스커스", image: Hibiscus },
     ],
     disliked: [
       { name: "파", image: GreenOnion },
@@ -405,6 +406,7 @@ export const npcData = [
       { name: "생명의 광휘 보석", image: LifeRadianceGem },
       { name: "참나무 원목", image: Oak },
       { name: "용혈수 통나무", image: Dragon },
+      { name: "블루베리", image: Blueberry },
     ],
     disliked: [],
     hints: ["인간냄새, 바다냄새는 역겹군."],
@@ -498,6 +500,7 @@ export const npcData = [
       { name: "엠버 원석", image: AmberRaw },
       { name: "용설란 꽃", image: Agave },
       { name: "망고", image: Mango },
+      { name: "크림 리조또", image: CreamRisotto },
     ],
     disliked: [
       { name: "히비스커스", image: Hibiscus },
@@ -578,7 +581,10 @@ export const npcData = [
       { name: "사과", image: Apple },
       { name: "마늘", image: Garlic },
     ],
-    okay: [{ name: "김치", image: Kimchi }],
+    okay: [
+      { name: "김치", image: Kimchi },
+      { name: "김치찌개", image: KimchiStew },
+    ],
     normal: [
       { name: "초코 쉐이크", image: ChocoShake },
       { name: "딸기", image: Strawberry },
