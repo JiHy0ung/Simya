@@ -118,7 +118,12 @@ const JewelPage = () => {
   });
 
   const [selectedName, setSelectedName] = useState(() => {
-    return localStorage.getItem("jewel_selected") || null;
+    const saved = localStorage.getItem(`jewel_selected_${tab}`);
+
+    if (saved) return saved;
+
+    const defaultData = TABS.find((t) => t.value === tab)?.data ?? [];
+    return defaultData[0]?.name ?? null;
   });
 
   const currentData = TABS.find((t) => t.value === tab)?.data ?? [];
@@ -135,11 +140,19 @@ const JewelPage = () => {
   }, [tab]);
 
   useEffect(() => {
-    localStorage.setItem("jewel_selected", selectedName || "");
-  }, [selectedName]);
+    localStorage.setItem(`jewel_selected_${tab}`, selectedName || "");
+  }, [selectedName, tab]);
 
   const handleTabChange = (_, v) => {
     setTab(v);
+
+    const saved = localStorage.getItem(`jewel_selected_${v}`);
+
+    if (saved) {
+      setSelectedName(saved);
+      return;
+    }
+
     const newData = TABS.find((t) => t.value === v)?.data ?? [];
     setSelectedName(newData[0]?.name ?? null);
   };

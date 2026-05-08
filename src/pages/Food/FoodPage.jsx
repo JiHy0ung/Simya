@@ -136,8 +136,12 @@ const FoodPage = () => {
   });
 
   const [selected, setSelected] = useState(() => {
-    const saved = localStorage.getItem("food_selected");
-    return saved ? JSON.parse(saved) : (processedRecipes[0] ?? null);
+    const saved = localStorage.getItem(`food_selected_${tab}`);
+
+    if (saved) return JSON.parse(saved);
+
+    const defaultData = TABS.find((t) => t.value === tab)?.data ?? [];
+    return defaultData[0] ?? null;
   });
 
   useEffect(() => {
@@ -146,9 +150,9 @@ const FoodPage = () => {
 
   useEffect(() => {
     if (selected) {
-      localStorage.setItem("food_selected", JSON.stringify(selected));
+      localStorage.setItem(`food_selected_${tab}`, JSON.stringify(selected));
     }
-  }, [selected]);
+  }, [selected, tab]);
 
   const currentData = TABS.find((t) => t.value === tab)?.data ?? [];
 
@@ -160,8 +164,16 @@ const FoodPage = () => {
 
   const handleTabChange = (_, v) => {
     setTab(v);
+
+    const saved = localStorage.getItem(`food_selected_${v}`);
+
+    if (saved) {
+      setSelected(JSON.parse(saved));
+      return;
+    }
+
     const newData = TABS.find((t) => t.value === v)?.data ?? [];
-    setSelected(newData[0] ?? null); // 탭 전환 시 첫번째 자동 선택
+    setSelected(newData[0] ?? null);
   };
 
   return (
