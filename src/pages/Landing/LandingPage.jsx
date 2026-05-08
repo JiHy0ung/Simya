@@ -242,9 +242,8 @@ const LandingPage = () => {
         </NoticeTitle>
 
         <NoticeText>
-          · 계절 작물 종류수 계산 로직 수정
-          <br /> · 레시피 정렬 기능 추가
-          <br />· 레시피 목록에서 계절 작물 성장 일자 표시
+          · 제작 시간 정보 추가
+          {/* <br /> · 레시피 정렬 기능 추가 */}
         </NoticeText>
 
         <NoticeText sx={{ opacity: 0.6, fontFamily: "Mona8x12" }}>
