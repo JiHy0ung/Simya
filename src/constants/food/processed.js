@@ -23,6 +23,7 @@ export const processedRecipes = [
     name: "김치",
     image: Kimchi,
     price: 13035,
+    craftTime: 40,
     ingredients: [
       { name: "배추", count: 8, image: getItemImage("배추") },
       { name: "양념장", count: 1, image: Seasoning },
@@ -32,24 +33,28 @@ export const processedRecipes = [
     name: "밀가루",
     image: Flour,
     price: 384,
+    craftTime: 10,
     ingredients: [{ name: "밀", count: 128, image: getItemImage("밀") }],
   },
   {
     name: "쌀가루",
     image: RiceFlour,
     price: 2400,
+    craftTime: 20,
     ingredients: [{ name: "쌀", count: 8, image: getItemImage("쌀") }],
   },
   {
     name: "전분가루",
     image: Starch,
     price: 1200,
+    craftTime: 10,
     ingredients: [{ name: "옥수수", count: 8, image: getItemImage("옥수수") }],
   },
   {
     name: "시럽",
     image: Syrup,
     price: 128,
+    craftTime: 10,
     ingredients: [
       { name: "사탕수수", count: 128, image: getItemImage("사탕수수") },
     ],
@@ -58,6 +63,7 @@ export const processedRecipes = [
     name: "코코아가루",
     image: CocoaPowder,
     price: 128,
+    craftTime: 10,
     ingredients: [
       { name: "코코아콩", count: 128, image: getItemImage("코코아콩") },
     ],
@@ -66,6 +72,7 @@ export const processedRecipes = [
     name: "토마토케첩",
     image: Ketchup,
     price: 4242,
+    craftTime: 20,
     ingredients: [
       { name: "토마토", count: 16, image: getItemImage("토마토") },
       { name: "양파", count: 4, image: getItemImage("양파") },
@@ -76,6 +83,7 @@ export const processedRecipes = [
     name: "육수",
     image: Stock,
     price: 3370,
+    craftTime: 20,
     ingredients: [
       { name: "양배추", count: 4, image: getItemImage("양배추") },
       { name: "당근", count: 64, image: getItemImage("당근") },
@@ -87,6 +95,7 @@ export const processedRecipes = [
     name: "간장",
     image: SoySauce,
     price: 4070,
+    craftTime: 20,
     ingredients: [
       { name: "콩", count: 16, image: getItemImage("콩") },
       { name: "쌀", count: 4, image: getItemImage("쌀") },
@@ -97,6 +106,7 @@ export const processedRecipes = [
     name: "된장",
     image: Doenjang,
     price: 2860,
+    craftTime: 20,
     ingredients: [
       { name: "콩", count: 16, image: getItemImage("콩") },
       { name: "소금", count: 2, image: getItemImage("소금") },
@@ -106,6 +116,7 @@ export const processedRecipes = [
     name: "고추장",
     image: Gochujang,
     price: 6222,
+    craftTime: 30,
     ingredients: [
       { name: "고추", count: 16, image: getItemImage("고추") },
       { name: "쌀", count: 2, image: getItemImage("쌀") },
@@ -116,6 +127,7 @@ export const processedRecipes = [
     name: "마늘기름",
     image: GarlicOil,
     price: 5390,
+    craftTime: 30,
     ingredients: [
       { name: "마늘", count: 8, image: getItemImage("마늘") },
       { name: "기름", count: 1, image: Oil },
@@ -125,6 +137,7 @@ export const processedRecipes = [
     name: "고추기름",
     image: ChiliOil,
     price: 5390,
+    craftTime: 30,
     ingredients: [
       { name: "고추", count: 16, image: getItemImage("고추") },
       { name: "기름", count: 1, image: Oil },
@@ -134,6 +147,7 @@ export const processedRecipes = [
     name: "양념장",
     image: Seasoning,
     price: 8250,
+    craftTime: 30,
     ingredients: [
       { name: "고추", count: 10, image: getItemImage("고추") },
       { name: "마늘", count: 5, image: getItemImage("마늘") },
@@ -144,6 +158,7 @@ export const processedRecipes = [
     name: "크림",
     image: Cream,
     price: 1956,
+    craftTime: 20,
     ingredients: [
       { name: "우유", count: 16, image: getItemImage("우유") },
       { name: "설탕", count: 1, image: Sugar },
@@ -154,6 +169,7 @@ export const processedRecipes = [
     name: "피클",
     image: Pickle,
     price: 7022,
+    craftTime: 30,
     ingredients: [
       { name: "비트", count: 128, image: getItemImage("비트") },
       { name: "무", count: 8, image: getItemImage("무") },
@@ -164,6 +180,7 @@ export const processedRecipes = [
     name: "설탕",
     image: Sugar,
     price: 256,
+    craftTime: 10,
     ingredients: [
       { name: "사탕수수", count: 64, image: getItemImage("사탕수수") },
       { name: "비트", count: 64, image: getItemImage("비트") },

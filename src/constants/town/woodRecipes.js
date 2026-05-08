@@ -38,6 +38,7 @@ export const woodRecipes = [
     name: "버드나무 판자",
     image: WillowPlanks,
     price: 90,
+    craftTime: 5,
     ingredients: [
       { name: "버드나무 통나무", image: Willow, price: 0, count: 8 },
     ],
@@ -46,6 +47,7 @@ export const woodRecipes = [
     name: "단풍나무 판자",
     image: MaplePlanks,
     price: 90,
+    craftTime: 5,
     ingredients: [
       { name: "단풍나무 통나무", image: Maple, price: 0, count: 8 },
     ],
@@ -54,12 +56,14 @@ export const woodRecipes = [
     name: "야자나무 판자",
     image: PalmPlanks,
     price: 100,
+    craftTime: 5,
     ingredients: [{ name: "야자나무 통나무", image: Palm, price: 0, count: 8 }],
   },
   {
     name: "바오밥나무 판자",
     image: BaobabPlanks,
     price: 100,
+    craftTime: 5,
     ingredients: [
       { name: "바오밥나무 통나무", image: Baobab, price: 0, count: 8 },
     ],
@@ -68,6 +72,7 @@ export const woodRecipes = [
     name: "올리브나무 판자",
     image: OlivePlanks,
     price: 100,
+    craftTime: 5,
     ingredients: [
       { name: "올리브나무 통나무", image: Olive, price: 0, count: 8 },
     ],
@@ -76,6 +81,7 @@ export const woodRecipes = [
     name: "사이프러스나무 판자",
     image: CypressPlanks,
     price: 100,
+    craftTime: 5,
     ingredients: [
       { name: "사이프러스나무 통나무", image: Cypress, price: 0, count: 8 },
     ],
@@ -84,6 +90,7 @@ export const woodRecipes = [
     name: "유칼립투스 판자",
     image: EucalyptusPlanks,
     price: 100,
+    craftTime: 5,
     ingredients: [
       { name: "유칼립투스 통나무", image: Eucalyptus, price: 0, count: 8 },
     ],
@@ -92,6 +99,7 @@ export const woodRecipes = [
     name: "용혈수 판자",
     image: DragonPlanks,
     price: 100,
+    craftTime: 5,
     ingredients: [{ name: "용혈수 통나무", image: Dragon, price: 0, count: 8 }],
   },
   // 2차 합성 목재
@@ -99,6 +107,7 @@ export const woodRecipes = [
     name: "고목나무 판자",
     image: OldTreePlanks,
     price: 1021,
+    craftTime: 15,
     ingredients: [
       { name: "올리브나무 판자", image: OlivePlanks, count: 4 },
       { name: "사이프러스나무 판자", image: CypressPlanks, count: 4 },
@@ -110,6 +119,7 @@ export const woodRecipes = [
     name: "열대나무 판자",
     image: TropicalPlanks,
     price: 1021,
+    craftTime: 15,
     ingredients: [
       { name: "야자나무 판자", image: PalmPlanks, count: 4 },
       { name: "바오밥나무 판자", image: BaobabPlanks, count: 4 },
@@ -121,6 +131,7 @@ export const woodRecipes = [
     name: "화산나무 판자",
     image: VolcanicPlanks,
     price: 1021,
+    craftTime: 15,
     ingredients: [
       { name: "유칼립투스 판자", image: EucalyptusPlanks, count: 4 },
       { name: "용혈수 판자", image: DragonPlanks, count: 4 },
@@ -132,6 +143,7 @@ export const woodRecipes = [
     name: "수양나무 판자",
     image: WeepingPlanks,
     price: 933,
+    craftTime: 15,
     ingredients: [
       { name: "버드나무 판자", image: WillowPlanks, count: 4 },
       { name: "단풍나무 판자", image: MaplePlanks, count: 4 },
@@ -144,6 +156,7 @@ export const woodRecipes = [
     name: "합판",
     image: Plywood,
     price: 2149,
+    craftTime: 30,
     ingredients: [
       { name: "수양나무 판자", image: WeepingPlanks, count: 1 },
       { name: "열대나무 판자", image: TropicalPlanks, count: 1 },
@@ -153,6 +166,7 @@ export const woodRecipes = [
     name: "고급 합판",
     image: PremiumPlywood,
     price: 2246,
+    craftTime: 40,
     ingredients: [
       { name: "고목나무 판자", image: OldTreePlanks, count: 1 },
       { name: "화산나무 판자", image: VolcanicPlanks, count: 1 },

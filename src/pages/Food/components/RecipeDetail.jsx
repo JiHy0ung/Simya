@@ -10,6 +10,7 @@ import {
 import { SEASON_THEME } from "../../../constants/commons";
 import IngredientTree from "../../../commons/components/IngredientTree";
 import { collectSeasonalNames } from "../../../utils/sortUtils";
+import { formatCraftTime } from "../../../utils/formatTime";
 
 const Panel = styled(Box)(({ theme }) => ({
   background: "#18171c",
@@ -175,6 +176,12 @@ const RecipeDetail = ({ recipe }) => {
             {netProfit.toLocaleString()}G
           </StatValue>
         </StatRow>
+        {recipe.craftTime && (
+          <StatRow>
+            <span>제작 시간</span>
+            <StatValue>{formatCraftTime(recipe.craftTime)}</StatValue>
+          </StatRow>
+        )}
         {maxDay > 0 && (
           <StatRow>
             <span>최대 성장 기간</span>

@@ -15,7 +15,6 @@ import Seasoning from "../../assets/images/food/processed/seasoning_sauce.png";
 import Cream from "../../assets/images/food/processed/cream.png";
 import Pickle from "../../assets/images/food/processed/pickle.png";
 import Sugar from "../../assets/images/food/processed/sugar.png";
-
 import StirMeatFry from "../../assets/images/food/restaurant/stir_fried_meat.png";
 import Baechujeon from "../../assets/images/food/restaurant/baechujeon.png";
 import PineapplePizza from "../../assets/images/food/restaurant/pineapple_pizza.png";
@@ -41,6 +40,7 @@ export const restaurantRecipes = [
     name: "고기볶음",
     image: StirMeatFry,
     price: 22770,
+    craftTime: 100,
     ingredients: [
       { name: "고기", count: 8, image: getItemImage("고기") },
       { name: "고추기름", count: 2, image: ChiliOil },
@@ -52,6 +52,7 @@ export const restaurantRecipes = [
     name: "배추전",
     image: Baechujeon,
     price: 17235,
+    craftTime: 100,
     ingredients: [
       { name: "배추", count: 8, image: getItemImage("배추") },
       { name: "마늘기름", count: 1, image: GarlicOil },
@@ -63,6 +64,7 @@ export const restaurantRecipes = [
     name: "파인애플피자",
     image: PineapplePizza,
     price: 18885,
+    craftTime: 100,
     ingredients: [
       { name: "파인애플", count: 8, image: getItemImage("파인애플") },
       { name: "토마토", count: 8, image: getItemImage("토마토") },
@@ -74,6 +76,7 @@ export const restaurantRecipes = [
     name: "비빔밥",
     image: Bibimbap,
     price: 16779,
+    craftTime: 100,
     ingredients: [
       { name: "쌀", count: 16, image: getItemImage("쌀") },
       { name: "당근", count: 64, image: getItemImage("당근") },
@@ -85,6 +88,7 @@ export const restaurantRecipes = [
     name: "채소덮밥",
     image: VeggieRice,
     price: 18897,
+    craftTime: 100,
     ingredients: [
       { name: "쌀", count: 16, image: getItemImage("쌀") },
       { name: "브로콜리", count: 8, image: getItemImage("브로콜리") },
@@ -96,6 +100,7 @@ export const restaurantRecipes = [
     name: "크림리조또",
     image: CreamRisotto,
     price: 20934,
+    craftTime: 100,
     ingredients: [
       { name: "쌀", count: 16, image: getItemImage("쌀") },
       { name: "크림", count: 1, image: Cream },
@@ -108,6 +113,7 @@ export const restaurantRecipes = [
     name: "토마토파스타",
     image: TomatoPasta,
     price: 15615,
+    craftTime: 100,
     ingredients: [
       { name: "밀가루", count: 2, image: Flour },
       { name: "토마토케첩", count: 1, image: Ketchup },
@@ -119,6 +125,7 @@ export const restaurantRecipes = [
     name: "된장찌개",
     image: DoenjangStew,
     price: 22650,
+    craftTime: 100,
     ingredients: [
       { name: "된장", count: 1, image: Doenjang },
       { name: "육수", count: 1, image: Stock },
@@ -130,6 +137,7 @@ export const restaurantRecipes = [
     name: "김치찌개",
     image: KimchiStew,
     price: 28508,
+    craftTime: 100,
     ingredients: [
       { name: "김치", count: 1, image: Kimchi },
       { name: "육수", count: 1, image: Stock },
@@ -141,6 +149,7 @@ export const restaurantRecipes = [
     name: "고추장찌개",
     image: GochujangStew,
     price: 18180,
+    craftTime: 100,
     ingredients: [
       { name: "고추장", count: 1, image: Gochujang },
       { name: "육수", count: 1, image: Stock },
@@ -152,6 +161,7 @@ export const restaurantRecipes = [
     name: "크림수프",
     image: CreamSoup,
     price: 8442,
+    craftTime: 60,
     ingredients: [
       { name: "옥수수", count: 16, image: getItemImage("옥수수") },
       { name: "우유", count: 1, image: getItemImage("우유") },
@@ -164,6 +174,7 @@ export const restaurantRecipes = [
     name: "모둠튀김",
     image: MixedFries,
     price: 18159,
+    craftTime: 100,
     ingredients: [
       { name: "고구마", count: 4, image: getItemImage("고구마") },
       { name: "감자", count: 64, image: getItemImage("감자") },
@@ -175,6 +186,7 @@ export const restaurantRecipes = [
     name: "고구마스틱",
     image: SweetPotatoStick,
     price: 7734,
+    craftTime: 60,
     ingredients: [
       { name: "고구마", count: 4, image: getItemImage("고구마") },
       { name: "시럽", count: 2, image: Syrup },
@@ -186,6 +198,7 @@ export const restaurantRecipes = [
     name: "야채튀김",
     image: VeggieFries,
     price: 3942,
+    craftTime: 40,
     ingredients: [
       { name: "감자", count: 64, image: getItemImage("감자") },
       { name: "당근", count: 64, image: getItemImage("당근") },
@@ -197,6 +210,7 @@ export const restaurantRecipes = [
     name: "딸기화채",
     image: StrawberryPunch,
     price: 16200,
+    craftTime: 100,
     ingredients: [
       { name: "딸기", count: 16, image: getItemImage("딸기") },
       { name: "멜론", count: 4, image: getItemImage("멜론") },
@@ -208,6 +222,7 @@ export const restaurantRecipes = [
     name: "수박화채",
     image: WatermelonPunch,
     price: 19092,
+    craftTime: 100,
     ingredients: [
       { name: "수박", count: 64, image: getItemImage("수박") },
       { name: "블루베리", count: 10, image: getItemImage("블루베리") },
@@ -219,6 +234,7 @@ export const restaurantRecipes = [
     name: "크림파스타",
     image: CreamPasta,
     price: 10620,
+    craftTime: 100,
     ingredients: [
       { name: "밀가루", count: 4, image: Flour },
       { name: "크림", count: 2, image: Cream },

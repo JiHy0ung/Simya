@@ -5,6 +5,7 @@ import { getJewelryCost, getJewelryProfit } from "../../../utils/jewelryUtils";
 import { getRequiredTowns } from "../../../utils/jewelryUtils";
 import { SEASON_THEME } from "../../../constants/commons";
 import IngredientTree from "../../../commons/components/IngredientTree";
+import { formatCraftTime } from "../../../utils/formatTime";
 
 const Panel = styled(Box)(({ theme }) => ({
   background: "#18171c",
@@ -168,6 +169,12 @@ const JewelDetail = ({ recipe }) => {
             {netProfit.toLocaleString()}G
           </StatValue>
         </StatRow>
+        {recipe.craftTime && (
+          <StatRow>
+            <span>제작 시간</span>
+            <StatValue>{formatCraftTime(recipe.craftTime)}</StatValue>
+          </StatRow>
+        )}
       </Box>
 
       <SectionLabel>재료</SectionLabel>
