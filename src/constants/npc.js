@@ -591,7 +591,7 @@ export const npcData = [
       { name: "멜론", image: Melon },
     ],
     disliked: [],
-    hints: ["◦라리 잼▲ 가▲오◆△", "☐긴 MSG◆ △찮더☐"],
+    hints: ["○라리 잼▲ 가▲오◆△", "☐긴 MSG◆ △찮더☐", "☐트러○.. ▲가 좋아△○ 거☐"],
     blush: {
       background: "rgba(255, 136, 132, 0.67)",
       left: { x: "40%", y: "69%" },
