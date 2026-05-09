@@ -211,6 +211,27 @@ import Oak from "../assets/images/wood/oak.png";
 
 import Money from "../assets/images/items/money.png";
 
+import BananaJam from "../assets/images/food/jam/banana_jam.png";
+import BlueberryJam from "../assets/images/food/jam/blueberry_jam.png";
+import GrapeJam from "../assets/images/food/jam/grape_jam.png";
+import LemonJam from "../assets/images/food/jam/lemon_jam.png";
+import MangoJam from "../assets/images/food/jam/mango_jam.png";
+import MelonJam from "../assets/images/food/jam/melon_jam.png";
+import OrangeJam from "../assets/images/food/jam/orange_jam.png";
+import PeachJam from "../assets/images/food/jam/peach_jam.png";
+import PineappleJam from "../assets/images/food/jam/pineapple_jam.png";
+import StrawberryJam from "../assets/images/food/jam/strawberry_jam.png";
+import BananaWine from "../assets/images/food/wine/banana_wine.png";
+import BlueberryWine from "../assets/images/food/wine/blueberry_wine.png";
+import GrapeWine from "../assets/images/food/wine/grape_wine.png";
+import LemonWine from "../assets/images/food/wine/lemon_wine.png";
+import MangoWine from "../assets/images/food/wine/mango_wine.png";
+import MelonWine from "../assets/images/food/wine/melon_wine.png";
+import OrangeWine from "../assets/images/food/wine/orange_wine.png";
+import PeachWine from "../assets/images/food/wine/peach_wine.png";
+import PineappleWine from "../assets/images/food/wine/pineapple_wine.png";
+import StrawberryWine from "../assets/images/food/wine/strawberry_wine.png";
+
 export const npcData = [
   {
     name: "헨리",
@@ -485,7 +506,8 @@ export const npcData = [
     okay: [
       { name: "바다의 목걸이", image: SeaNecklace },
       { name: "열정의 목걸이", image: PassionNecklace },
-      { name: "생명의 목걸이", image: LifeRadianceGem },
+      { name: "생명의 목걸이", image: LifeNecklace },
+      { name: "생명의 반지", image: LifeRing },
     ],
     normal: [
       { name: "능소화", image: Jacaranda },
@@ -501,6 +523,7 @@ export const npcData = [
       { name: "용설란 꽃", image: Agave },
       { name: "망고", image: Mango },
       { name: "크림 리조또", image: CreamRisotto },
+      { name: "럭셔리 뷰티 코인" },
     ],
     disliked: [
       { name: "히비스커스", image: Hibiscus },
@@ -576,7 +599,7 @@ export const npcData = [
     job: "심야잡화점 주인",
     description:
       "어디서 왔는지 아무도 모르는 정체 모를 존재.\n말수가 적고 알아들을 수 없는 말을 남발하지만, 친해질수록 조금씩 소통이 된다.\n이 거리의 비밀을 가장 많이 아는 존재일지도.",
-    loved: [],
+    loved: [{ name: "오렌지 잼", image: OrangeJam }],
     liked: [
       { name: "사과", image: Apple },
       { name: "마늘", image: Garlic },
