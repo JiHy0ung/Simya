@@ -399,6 +399,7 @@ export const npcData = [
     okay: [],
     normal: [{ name: "주문 도착 티켓", image: OrderArrivalTicket }],
     disliked: [{ name: "페리도트 보석", image: PeridotGem }],
+    hints: ["해안가와 관련된 건 질색이야"],
     blush: {
       background: "rgba(255, 117, 161, 0.6)",
       left: { x: "41%", y: "70%" },
@@ -496,7 +497,7 @@ export const npcData = [
     job: "루나 상점 주인",
     description:
       "모두에게 사랑받는 엄친아.\n빈곤하게 자라서인지 반짝이는 것과 고급스러운 것을 좋아한다.\n너무 헤프다는 말도 있지만 한 번이라도 만나보면 그 말이 나오지 않는다.",
-    loved: [],
+    loved: [{ name: "김치", image: Kimchi }],
     liked: [
       { name: "태양의 축복 보석", image: SunBlessingGem },
       { name: "바다의 여명 보석", image: SeaDawnGem },
@@ -524,6 +525,7 @@ export const npcData = [
       { name: "망고", image: Mango },
       { name: "크림 리조또", image: CreamRisotto },
       { name: "럭셔리 뷰티 코인" },
+      { name: "빛나는 마늘" },
     ],
     disliked: [
       { name: "히비스커스", image: Hibiscus },
@@ -581,6 +583,7 @@ export const npcData = [
       { name: "파인애플", image: Pineapple },
       { name: "수양나무 판자", image: WeepingPlanks },
       { name: "버드나무 판자", image: WillowPlanks },
+      { name: "오렌지 잼", image: OrangeJam },
     ],
     disliked: [{ name: "달걀", image: Egg }],
     hints: ["다음엔 와인 종류면 좋겠어요."],
