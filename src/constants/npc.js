@@ -576,14 +576,13 @@ export const npcData = [
     liked: [],
     okay: [{ name: "단풍나무 판자", image: MaplePlanks }],
     normal: [
-      { name: "달걀", image: Egg },
       { name: "오렌지", image: Orange },
       { name: "포도", image: Grape },
       { name: "파인애플", image: Pineapple },
       { name: "수양나무 판자", image: WeepingPlanks },
       { name: "버드나무 판자", image: WillowPlanks },
     ],
-    disliked: [],
+    disliked: [{ name: "달걀", image: Egg }],
     hints: ["다음엔 와인 종류면 좋겠어요."],
     blush: {
       background: "rgba(255, 146, 170, 0.63)",
