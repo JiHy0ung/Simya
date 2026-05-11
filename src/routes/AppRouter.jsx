@@ -9,6 +9,9 @@ const WoodPage = React.lazy(() => import("../pages/Wood/WoodPage"));
 const LikePage = React.lazy(() => import("../pages/Like/LikePage"));
 const ShopPage = React.lazy(() => import("../pages/Shop/ShopPage"));
 const SeasonPage = React.lazy(() => import("../pages/Season/SeasonPage"));
+const GeneralStorePage = React.lazy(
+  () => import("../pages/GeneralStore/GeneralStorePage"),
+);
 
 const AppRouter = () => {
   return (
@@ -22,6 +25,7 @@ const AppRouter = () => {
           <Route path="/like" element={<LikePage />} />
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/season" element={<SeasonPage />} />
+          <Route path="/general-store" element={<GeneralStorePage />} />
         </Route>
       </Routes>
     </Suspense>

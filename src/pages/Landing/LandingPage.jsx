@@ -51,12 +51,11 @@ const SectionTitle = styled(Typography)({
   letterSpacing: "0.08em",
 });
 
-/* 메뉴 (2x2 유지 + 인터랙션 추가) */
 const MenuGrid = styled(Box)(({ theme }) => ({
   display: "grid",
   gap: "0.75rem",
   width: "100%",
-  gridTemplateColumns: "repeat(1, 1fr)",
+  gridTemplateColumns: "repeat(2, 1fr)",
 
   [theme.breakpoints.up("sm")]: {
     gridTemplateColumns: "repeat(2, 1fr)",
@@ -64,12 +63,12 @@ const MenuGrid = styled(Box)(({ theme }) => ({
   },
 
   [theme.breakpoints.up("md")]: {
-    gridTemplateColumns: "repeat(3, 1fr)",
+    gridTemplateColumns: "repeat(4, 1fr)",
     width: "100%",
   },
 
   [theme.breakpoints.up("lg")]: {
-    gridTemplateColumns: "repeat(6, 1fr)",
+    gridTemplateColumns: "repeat(7, 1fr)",
     width: "100%",
   },
 }));
@@ -187,6 +186,12 @@ const NpcWrapper = styled(Box)({
 });
 
 const MENUS = [
+  {
+    icon: "🛒",
+    label: "개인 잡화점",
+    desc: "주문 / 납품 정보",
+    path: "/general-store",
+  },
   {
     icon: "🌅",
     label: "계절 정보",
