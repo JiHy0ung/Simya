@@ -242,8 +242,8 @@ const LandingPage = () => {
         </NoticeTitle>
 
         <NoticeText>
-          · 제작 시간 정보 추가
-          {/* <br /> · 레시피 정렬 기능 추가 */}
+          · npc 호감도 하트 기록 기능 추가
+          <br /> · 호감도에 따른 호감도 아이템 추천
         </NoticeText>
 
         <NoticeText sx={{ opacity: 0.6, fontFamily: "Mona8x12" }}>
