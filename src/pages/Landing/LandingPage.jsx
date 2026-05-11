@@ -244,6 +244,7 @@ const LandingPage = () => {
         <NoticeText>
           · npc 호감도 하트 기록 기능 추가
           <br /> · 호감도에 따른 호감도 아이템 추천
+          <br /> · npc 탭 키보드 이동
         </NoticeText>
 
         <NoticeText sx={{ opacity: 0.6, fontFamily: "Mona8x12" }}>

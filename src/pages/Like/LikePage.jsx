@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { styled } from "@mui/material/styles";
 import { Box, Container, Typography, Rating } from "@mui/material";
 import { npcData } from "../../constants/npc";
@@ -118,6 +118,14 @@ const TabButton = styled("button")(({ selected }) => ({
   "&:hover": {
     borderColor: "rgba(183,179,218,0.5)",
     color: "#c4bdff",
+  },
+
+  "&:focus": {
+    outline: "none",
+  },
+
+  "&:focus-visible": {
+    outline: "none",
   },
 }));
 
@@ -275,12 +283,20 @@ const EmptyText = styled(Typography)({
 });
 
 const LikePage = () => {
+  const tabRefs = useRef([]);
+
   const [selected, setSelected] = useState(npcData[0]);
 
   const [hearts, setHearts] = useState(() => {
     const saved = localStorage.getItem("npc_hearts");
     return saved ? JSON.parse(saved) : {};
   });
+
+  useEffect(() => {
+    const currentIndex = npcData.findIndex((npc) => npc.name === selected.name);
+
+    tabRefs.current[currentIndex]?.focus();
+  }, []);
 
   useEffect(() => {
     localStorage.setItem("npc_hearts", JSON.stringify(hearts));
@@ -317,6 +333,26 @@ const LikePage = () => {
 
   const recommendedSection = getRecommendedSection(selected, currentHeart);
 
+  const handleTabKeyDown = (e, currentIndex) => {
+    let nextIndex = currentIndex;
+
+    if (e.key === "ArrowRight") {
+      nextIndex = (currentIndex + 1) % npcData.length;
+    }
+
+    if (e.key === "ArrowLeft") {
+      nextIndex = (currentIndex - 1 + npcData.length) % npcData.length;
+    }
+
+    if (nextIndex !== currentIndex) {
+      setSelected(npcData[nextIndex]);
+
+      requestAnimationFrame(() => {
+        tabRefs.current[nextIndex]?.focus();
+      });
+    }
+  };
+
   return (
     <LikeContainer>
       <LikeTitle>NPC 호감도</LikeTitle>
@@ -330,11 +366,14 @@ const LikePage = () => {
       </LikeDescription>
 
       <TabContainer>
-        {npcData.map((npc) => (
+        {npcData.map((npc, index) => (
           <TabButton
             key={npc.name}
+            ref={(el) => (tabRefs.current[index] = el)}
             selected={selected.name === npc.name}
             onClick={() => setSelected(npc)}
+            onKeyDown={(e) => handleTabKeyDown(e, index)}
+            tabIndex={selected.name === npc.name ? 0 : -1}
           >
             {npc.name}
           </TabButton>
