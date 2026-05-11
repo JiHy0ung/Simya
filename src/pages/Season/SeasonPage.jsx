@@ -40,6 +40,7 @@ const findItemImage = (name, type) => {
 };
 
 const SeasonContainer = styled(Container)({
+  minHeight: "100vh",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",

@@ -1,8 +1,51 @@
 import React, { useEffect, useState } from "react";
 import { styled } from "@mui/material/styles";
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container, Typography, Rating } from "@mui/material";
 import { npcData } from "../../constants/npc";
 import NpcHint from "./components/NpcHint";
+
+const GIFT_SECTIONS = [
+  {
+    key: "loved",
+    emoji: "😍",
+    label: "가장 좋아하는 선물",
+    score: "+4점",
+    color: "#fb7185",
+    reaction: "대폭 상승",
+  },
+  {
+    key: "liked",
+    emoji: "😀",
+    label: "좋아하는 선물",
+    score: "+2점",
+    color: "#fbbf24",
+    reaction: "상승",
+  },
+  {
+    key: "okay",
+    emoji: "🙂",
+    label: "그럭저럭 선물",
+    score: "+1점",
+    color: "#94a3b8",
+    reaction: "소폭 상승",
+  },
+  {
+    key: "normal",
+    emoji: "😶",
+    label: "보통의 선물",
+    score: "0점",
+    color: "#6b7280",
+    reaction: "유지",
+  },
+  {
+    key: "disliked",
+    emoji: "🤢",
+    label: "싫어하는 선물",
+    score: "-3점",
+    color: "#818cf8",
+    reaction: "하락",
+  },
+];
 
 const LikeContainer = styled(Container)(({ theme }) => ({
   display: "flex",
@@ -10,6 +53,7 @@ const LikeContainer = styled(Container)(({ theme }) => ({
   alignItems: "center",
   marginTop: "3rem",
   paddingBottom: "3rem",
+
   [theme.breakpoints.down("sm")]: {
     paddingInline: "2rem",
   },
@@ -19,6 +63,7 @@ const LikeTitle = styled(Typography)(({ theme }) => ({
   fontSize: "3.5rem",
   fontWeight: "900",
   marginBottom: "1rem",
+
   [theme.breakpoints.down("md")]: {
     fontSize: "3rem",
   },
@@ -29,6 +74,7 @@ const LikeSubtitle = styled(Typography)(({ theme }) => ({
   color: "#666",
   marginBottom: "0.5rem",
   textAlign: "center",
+
   [theme.breakpoints.down("md")]: {
     fontSize: "0.875rem",
   },
@@ -40,6 +86,7 @@ const LikeDescription = styled(Typography)(({ theme }) => ({
   textAlign: "center",
   maxWidth: "600px",
   marginBottom: "4rem",
+
   [theme.breakpoints.down("md")]: {
     fontSize: "0.75rem",
     marginBottom: "3rem",
@@ -67,6 +114,7 @@ const TabButton = styled("button")(({ selected }) => ({
   cursor: "var(--cursor-pointer)",
   fontWeight: selected ? "bold" : "normal",
   fontFamily: "Mona10x12",
+
   "&:hover": {
     borderColor: "rgba(183,179,218,0.5)",
     color: "#c4bdff",
@@ -79,21 +127,25 @@ const ContentLayout = styled(Box)(({ theme }) => ({
   gridTemplateColumns: "270px 1fr",
   gap: "1.5rem",
   alignItems: "start",
+
   [theme.breakpoints.down("sm")]: {
     gridTemplateColumns: "1fr",
   },
 }));
 
-const ProfilePanel = styled(Box)({
+const ProfilePanel = styled(Box)(({ theme }) => ({
   background: "#18171c",
   border: "2px solid #3d3a52",
   padding: "1.25rem",
   position: "sticky",
   top: "1rem",
-  "@media (max-width: 768px)": { position: "static" },
-});
 
-const NpcImage = styled("img")({
+  "@media (max-width: 768px)": {
+    position: "static",
+  },
+}));
+
+const NpcImage = styled("img")(({ theme }) => ({
   width: "100%",
   aspectRatio: "1",
   objectFit: "cover",
@@ -101,14 +153,13 @@ const NpcImage = styled("img")({
   marginBottom: "1rem",
   border: "2px solid #3d3a52",
   background: "#b19cff1d",
-});
+}));
 
 const NpcName = styled(Typography)({
   fontSize: "1.25rem",
   fontWeight: "bold",
   color: "#e8e4ff",
   fontFamily: "Mona10x12",
-  marginBottom: "4px",
 });
 
 const NpcMeta = styled(Typography)({
@@ -139,9 +190,9 @@ const GiftSection = styled(Box)({
   background: "#18171c",
   border: "2px solid #3d3a52",
   padding: "1rem 1.25rem",
+  transition: "0.2s",
 });
 
-// styled 완전히 제거, 인라인 style로 교체
 const SectionLabel = ({ labelColor, style, children, ...props }) => (
   <Typography
     {...props}
@@ -200,7 +251,9 @@ const GiftBadge = styled(Box, {
       border: "rgba(99,102,241,0.3)",
     },
   };
-  const s = styles[variant] ?? styles.neutral;
+
+  const s = styles[variant];
+
   return {
     display: "flex",
     justifyContent: "center",
@@ -221,65 +274,17 @@ const EmptyText = styled(Typography)({
   fontFamily: "Mona8x12",
 });
 
-const NoticeText = styled(Typography)(({ theme }) => ({
-  fontSize: "0.75rem",
-  color: "rgba(255,255,255,0.35)",
-  textAlign: "center",
-  marginBottom: "1rem",
-  fontFamily: "Mona8x12",
-  lineHeight: 1.6,
-  maxWidth: "500px",
-
-  [theme.breakpoints.down("md")]: {
-    fontSize: "0.7rem",
-  },
-}));
-
-const GIFT_SECTIONS = [
-  {
-    key: "loved",
-    emoji: "😍",
-    label: "가장 좋아하는 선물",
-    score: "+4점",
-    color: "#fb7185",
-    reaction: "대폭 상승",
-  },
-  {
-    key: "liked",
-    emoji: "😀",
-    label: "좋아하는 선물",
-    score: "+2점",
-    color: "#fbbf24",
-    reaction: "상승",
-  },
-  {
-    key: "okay",
-    emoji: "🙂",
-    label: "그럭저럭 선물",
-    score: "+1점",
-    color: "#94a3b8",
-    reaction: "소폭 상승",
-  },
-  {
-    key: "normal",
-    emoji: "😶",
-    label: "보통의 선물",
-    score: "0점",
-    color: "#6b7280",
-    reaction: "유지",
-  },
-  {
-    key: "disliked",
-    emoji: "🤢",
-    label: "싫어하는 선물",
-    score: "-3점",
-    color: "#818cf8",
-    reaction: "하락",
-  },
-];
-
 const LikePage = () => {
   const [selected, setSelected] = useState(npcData[0]);
+
+  const [hearts, setHearts] = useState(() => {
+    const saved = localStorage.getItem("npc_hearts");
+    return saved ? JSON.parse(saved) : {};
+  });
+
+  useEffect(() => {
+    localStorage.setItem("npc_hearts", JSON.stringify(hearts));
+  }, [hearts]);
 
   useEffect(() => {
     npcData.forEach((npc) => {
@@ -288,10 +293,36 @@ const LikePage = () => {
     });
   }, []);
 
+  const handleHeartChange = (npcName, value) => {
+    setHearts((prev) => ({
+      ...prev,
+      [npcName]: value,
+    }));
+  };
+
+  const getRecommendedSection = (npc, heart) => {
+    const keys =
+      heart < 5
+        ? ["loved", "liked", "okay", "normal"]
+        : ["normal", "okay", "liked"];
+
+    return (
+      keys
+        .map((key) => GIFT_SECTIONS.find((section) => section.key === key))
+        .find((section) => npc[section.key]?.length > 0) || null
+    );
+  };
+
+  const currentHeart = hearts[selected.name] || 0;
+
+  const recommendedSection = getRecommendedSection(selected, currentHeart);
+
   return (
     <LikeContainer>
       <LikeTitle>NPC 호감도</LikeTitle>
+
       <LikeSubtitle>주민과의 관계를 쌓아보세요</LikeSubtitle>
+
       <LikeDescription>
         선물을 통해 호감 점수를 올릴 수 있어요.
         <br />
@@ -311,73 +342,175 @@ const LikePage = () => {
       </TabContainer>
 
       <ContentLayout>
-        {/* 왼쪽: NPC 프로필 */}
         <ProfilePanel>
           <NpcImage src={selected.image} alt={selected.name} />
-          <NpcName>{selected.name}</NpcName>
-          <NpcMeta>
-            {selected.job}
-            {selected.age ? ` · ${selected.age}세` : ""}
-          </NpcMeta>
-          <NpcDescription>{selected.description}</NpcDescription>
-          <NpcHint npc={selected} />
+
+          <Box sx={{ width: "100%" }}>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                flexWrap: "wrap",
+                gap: "0.5rem",
+                marginBottom: "4px",
+              }}
+            >
+              <NpcName>{selected.name}</NpcName>
+
+              <Rating
+                value={currentHeart}
+                precision={0.5}
+                max={5}
+                onChange={(_, newValue) => {
+                  handleHeartChange(selected.name, newValue || 0);
+                }}
+                icon={
+                  <span
+                    style={{
+                      fontFamily: "Mona12",
+                      fontSize: "1.3rem",
+                      cursor: "var(--cursor-pointer)",
+                    }}
+                  >
+                    🩵
+                  </span>
+                }
+                emptyIcon={
+                  <span
+                    style={{
+                      fontFamily: "Mona12",
+                      fontSize: "1.3rem",
+                      opacity: 0.2,
+                      cursor: "var(--cursor-pointer)",
+                    }}
+                  >
+                    🩵
+                  </span>
+                }
+                sx={{
+                  cursor: "var(--cursor-pointer)",
+
+                  gap: "1px",
+                  "& .MuiRating-icon": {
+                    transform: "none !important",
+                    transition: "none !important",
+                  },
+
+                  "& .MuiRating-label": {
+                    transform: "none !important",
+                    transition: "none !important",
+                  },
+
+                  "& .MuiRating-iconActive": {
+                    transform: "none !important",
+                  },
+
+                  WebkitTapHighlightColor: "transparent",
+                }}
+              />
+
+              <Typography
+                sx={{
+                  fontSize: "0.75rem",
+                  color: "#7d7897",
+                  fontFamily: "Mona8x12",
+                }}
+              >
+                {currentHeart.toFixed(1)}
+              </Typography>
+            </Box>
+
+            <NpcMeta>
+              {selected.job}
+              {selected.age ? ` · ${selected.age}세` : ""}
+            </NpcMeta>
+
+            <NpcDescription>{selected.description}</NpcDescription>
+
+            <NpcHint npc={selected} />
+          </Box>
         </ProfilePanel>
 
-        {/* 오른쪽: 선물 정보 */}
         <GiftPanel>
           {GIFT_SECTIONS.map(
-            ({ key, emoji, label, score, color, reaction }) => (
-              <GiftSection key={key}>
-                <Box
+            ({ key, emoji, label, score, color, reaction }) => {
+              const isRecommended = recommendedSection?.key === key;
+
+              return (
+                <GiftSection
+                  key={key}
                   sx={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    mb: "0.5rem",
+                    borderColor: isRecommended ? color : "#3d3a52",
                   }}
                 >
                   <Box
-                    sx={{ display: "flex", alignItems: "center", gap: "4px" }}
+                    sx={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      mb: "0.5rem",
+                    }}
                   >
-                    <SectionLabel labelColor={color}>
-                      <span
-                        style={{
-                          fontFamily: "Mona12",
-                          fontWeight: "normal",
-                          fontSize: "0.875rem",
-                        }}
-                      >
-                        {emoji}{" "}
-                      </span>
-                      {label}
-                    </SectionLabel>
-                    <SectionLabel
-                      labelColor={color}
-                      style={{
-                        opacity: 0.6,
-                        fontFamily: "Mona8x12",
-                        fontWeight: "normal",
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "4px",
+                        flexWrap: "wrap",
                       }}
                     >
-                      · {reaction}
-                    </SectionLabel>
+                      <SectionLabel labelColor={color}>
+                        <span
+                          style={{
+                            fontFamily: "Mona12",
+                            fontWeight: "normal",
+                            fontSize: "0.875rem",
+                          }}
+                        >
+                          {emoji}
+                        </span>
+
+                        {label}
+                      </SectionLabel>
+
+                      <SectionLabel
+                        labelColor={color}
+                        style={{
+                          opacity: 0.6,
+                          fontFamily: "Mona8x12",
+                          fontWeight: "normal",
+                        }}
+                      >
+                        · {reaction}
+                      </SectionLabel>
+                    </Box>
+
+                    <SectionLabel labelColor={color}>{score}</SectionLabel>
                   </Box>
-                  <SectionLabel labelColor={color}>{score}</SectionLabel>
-                </Box>
-                <GiftList>
-                  {selected[key].length > 0 ? (
-                    selected[key].map((gift, i) => (
-                      <GiftBadge key={i} variant={key}>
-                        <img src={gift.image} style={{ height: "1rem" }} />
-                        {gift.name}
-                      </GiftBadge>
-                    ))
-                  ) : (
-                    <EmptyText>찾아 헤매는 중</EmptyText>
-                  )}
-                </GiftList>
-              </GiftSection>
-            ),
+
+                  <GiftList>
+                    {selected[key].length > 0 ? (
+                      selected[key].map((gift, i) => (
+                        <GiftBadge key={i} variant={key}>
+                          {gift.image && (
+                            <img
+                              src={gift.image}
+                              style={{
+                                height: "1rem",
+                              }}
+                            />
+                          )}
+
+                          {gift.name}
+                        </GiftBadge>
+                      ))
+                    ) : (
+                      <EmptyText>찾아 헤매는 중</EmptyText>
+                    )}
+                  </GiftList>
+                </GiftSection>
+              );
+            },
           )}
         </GiftPanel>
       </ContentLayout>
