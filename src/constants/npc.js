@@ -307,7 +307,11 @@ export const npcData = [
     okay: [],
     normal: [{ name: "사과", image: Apple }],
     disliked: [],
-    hints: ["시트러스 향 나는게 좋아~", "사막 기념품 좀 갖다주시면 안될까요?"],
+    hints: [
+      "시트러스 향 나는게 좋아~",
+      "사막 기념품 좀 갖다주시면 안될까요?",
+      "우울한 날엔 따듯한 수프가 자꾸 생각나요",
+    ],
     blush: {
       background: "rgba(255, 146, 132, 0.59)",
       left: { x: "40%", y: "67%" },
@@ -374,6 +378,7 @@ export const npcData = [
       { name: "야자나무 판자", image: PalmPlanks },
       { name: "유칼립투스 통나무", image: Eucalyptus },
       { name: "육수", image: Stock },
+      { name: "양념장", image: Seasoning },
     ],
     disliked: [],
     hints: [
@@ -432,6 +437,7 @@ export const npcData = [
       { name: "참나무 원목", image: Oak },
       { name: "용혈수 통나무", image: Dragon },
       { name: "블루베리", image: Blueberry },
+      { name: "사과", image: Apple },
     ],
     disliked: [],
     hints: ["인간냄새, 바다냄새는 역겹군."],
@@ -484,6 +490,7 @@ export const npcData = [
       { name: "포도", image: Grape },
       { name: "아스파라거스", image: Asparagus },
       { name: "어른 캔디", image: AdultCandy },
+      { name: "라리마 보석", image: LarimarGem },
     ],
     disliked: [],
     hints: ["와인 종류를 좋아해~", "건강한 음식은 즐겁게 받을 수 있지~"],
@@ -577,9 +584,15 @@ export const npcData = [
     job: "테이밍 도우미",
     description:
       "알을 다루는 이종족 루카족 출신.\n화를 낼 줄 모르고 누구에게나 친절하지만,\n생명을 모독하는 순간만큼은 절대 건드려선 안 된다.",
-    loved: [{ name: "생명의 광휘 보석", image: LifeRadianceGem }],
+    loved: [
+      { name: "생명의 광휘 보석", image: LifeRadianceGem },
+      { name: "파프리카", image: Paprika },
+    ],
     liked: [],
-    okay: [{ name: "단풍나무 판자", image: MaplePlanks }],
+    okay: [
+      { name: "단풍나무 판자", image: MaplePlanks },
+      { name: "산삼", image: Ginseng },
+    ],
     normal: [
       { name: "오렌지", image: Orange },
       { name: "포도", image: Grape },
@@ -587,6 +600,7 @@ export const npcData = [
       { name: "수양나무 판자", image: WeepingPlanks },
       { name: "버드나무 판자", image: WillowPlanks },
       { name: "오렌지 잼", image: OrangeJam },
+      { name: "산호석 보석", image: CoralGem },
     ],
     disliked: [{ name: "달걀", image: Egg }],
     hints: [
@@ -620,6 +634,7 @@ export const npcData = [
       { name: "딸기", image: Strawberry },
       { name: "멜론", image: Melon },
       { name: "딸기 잼", image: StrawberryJam },
+      { name: "책장" },
     ],
     disliked: [],
     hints: ["○라리 잼▲ 가▲오◆△", "☐긴 MSG◆ △찮더☐", "☐트러○.. ▲가 좋아△○ 거☐"],
