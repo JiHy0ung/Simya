@@ -384,7 +384,7 @@ export const npcData = [
     hints: [
       "좋아하는 나무 종류가 있어!",
       "난 초콜릿이 싫어!",
-      "뜨끈한 국물이 떙기는데요?",
+      "뜨끈한 국물이 땡기는데요?",
     ],
     blush: {
       background: "rgba(255, 134, 69, 0.68)",
@@ -405,7 +405,10 @@ export const npcData = [
     ],
     liked: [{ name: "고추", image: Chili }],
     okay: [],
-    normal: [{ name: "주문 도착 티켓", image: OrderArrivalTicket }],
+    normal: [
+      { name: "주문 도착 티켓", image: OrderArrivalTicket },
+      { name: "이리듐 주괴", image: Iridium },
+    ],
     disliked: [{ name: "페리도트 보석", image: PeridotGem }],
     hints: ["해안가와 관련된 건 질색이야"],
     blush: {
@@ -493,7 +496,10 @@ export const npcData = [
       { name: "라리마 보석", image: LarimarGem },
     ],
     disliked: [],
-    hints: ["와인 종류를 좋아해~", "건강한 음식은 즐겁게 받을 수 있지~"],
+    hints: [
+      "와인 종류를 좋아해~",
+      "여유롭게 즐길 수 있는 음식이라던데 아니면 건강한 음식을 좋아해요.",
+    ],
     blush: {
       background: "rgba(255, 146, 132, 0.66)",
       left: { x: "40%", y: "67%" },
@@ -571,6 +577,7 @@ export const npcData = [
     okay: [],
     normal: [{ name: "용사의 모험 코인", image: AdventureCoin }],
     disliked: [{ name: "감자", image: Potato }],
+    hints: ["차라리 헨리 오빠네에서 파스타 받아오시면 안돼요?"],
     blush: {
       background: "rgba(255, 109, 143, 0.71)",
       left: { x: "40%", y: "69%" },
