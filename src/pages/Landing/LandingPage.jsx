@@ -247,7 +247,8 @@ const LandingPage = () => {
         </NoticeTitle>
 
         <NoticeText>
-          · npc 호감도 하트 기록 기능 추가
+          · 개인 잡화점 페이지 추가(주문, 무역)
+          <br /> · npc 호감도 하트 기록 기능 추가
           <br /> · 호감도에 따른 호감도 아이템 추천
           <br /> · npc 탭 키보드 이동
         </NoticeText>
