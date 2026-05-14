@@ -285,7 +285,10 @@ export const npcData = [
       { name: "마늘", image: Garlic },
       { name: "네더 사마귀", image: NetherWart },
     ],
-    hints: ["꽃 중에 좋은 향이 나는게 하나 있던데..."],
+    hints: [
+      "꽃 중에 좋은 향이 나는게 하나 있던데...",
+      "빨간색은 다 좋지만.. 빨간색 야채는 이름이 뭐더라 그건 너무 싫다옹..",
+    ],
     blush: {
       background: "rgba(255, 130, 117, 0.6)",
       left: { x: "35%", y: "68%" },
@@ -304,7 +307,7 @@ export const npcData = [
     okay: [],
     normal: [{ name: "사과", image: Apple }],
     disliked: [],
-    hints: ["시트러스 향 나는게 좋아~"],
+    hints: ["시트러스 향 나는게 좋아~", "사막 기념품 좀 갖다주시면 안될까요?"],
     blush: {
       background: "rgba(255, 146, 132, 0.59)",
       left: { x: "40%", y: "67%" },
@@ -586,7 +589,10 @@ export const npcData = [
       { name: "오렌지 잼", image: OrangeJam },
     ],
     disliked: [{ name: "달걀", image: Egg }],
-    hints: ["다음엔 와인 종류면 좋겠어요."],
+    hints: [
+      "다음엔 와인 종류면 좋겠어요.",
+      "인간 세상의 술은 참 맛있는 것 같아요!",
+    ],
     blush: {
       background: "rgba(255, 146, 170, 0.63)",
       left: { x: "35%", y: "78%" },
@@ -613,6 +619,7 @@ export const npcData = [
       { name: "초코 쉐이크", image: ChocoShake },
       { name: "딸기", image: Strawberry },
       { name: "멜론", image: Melon },
+      { name: "딸기 잼", image: StrawberryJam },
     ],
     disliked: [],
     hints: ["○라리 잼▲ 가▲오◆△", "☐긴 MSG◆ △찮더☐", "☐트러○.. ▲가 좋아△○ 거☐"],

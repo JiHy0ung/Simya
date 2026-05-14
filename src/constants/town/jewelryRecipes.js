@@ -53,6 +53,98 @@ import Spinel from "../../assets/images/ingot/spinel.png";
 import Tungsten from "../../assets/images/ingot/tungsten.png";
 import YellowCrystal from "../../assets/images/ingot/yellow_crystal.png";
 
+export const flower = [
+  {
+    name: "수국",
+    image: Hydrangea,
+    price: 5,
+  },
+  {
+    name: "창포",
+    image: Calamus,
+    price: 5,
+  },
+  {
+    name: "히비스커스",
+    image: Hibiscus,
+    price: 5,
+  },
+  {
+    name: "사막 장미",
+    image: DesertRose,
+    price: 5,
+  },
+  {
+    name: "라벤더",
+    image: Lavender,
+    price: 5,
+  },
+  {
+    name: "능소화",
+    image: Jacaranda,
+    price: 5,
+  },
+  {
+    name: "불꽃 백합",
+    image: FlameLily,
+    price: 5,
+  },
+  {
+    name: "용설란 꽃",
+    image: Agave,
+    price: 5,
+  },
+];
+
+export const ingot = [
+  // 기본 주괴
+  {
+    name: "자수정 주괴",
+    image: Amethyst,
+    price: 1,
+  },
+  {
+    name: "황수정 주괴",
+    image: YellowCrystal,
+    price: 1,
+  },
+  {
+    name: "텅스텐 주괴",
+    image: Tungsten,
+    price: 2,
+  },
+  {
+    name: "공작석 주괴",
+    image: Malachite,
+    price: 4,
+  },
+  {
+    name: "제이드 주괴",
+    image: Jade,
+    price: 5,
+  },
+  {
+    name: "스피넬 주괴",
+    image: Spinel,
+    price: 3,
+  },
+  {
+    name: "사파이어 주괴",
+    image: Sapphire,
+    price: 10,
+  },
+  {
+    name: "이리듐 주괴",
+    image: Iridium,
+    price: 15,
+  },
+  {
+    name: "아다만티움 주괴",
+    image: Adamantium,
+    price: 20,
+  },
+];
+
 export const jewelryRecipes = [
   // 1차 보석 가공
   {

@@ -64,7 +64,7 @@ export const cafeRecipes = [
     ],
   },
   {
-    name: "고구마롤케이크",
+    name: "고구마 롤케이크",
     image: SweetPotatoRoll,
     price: 6494,
     craftTime: 50,
@@ -75,7 +75,7 @@ export const cafeRecipes = [
     ],
   },
   {
-    name: "우유롤케이크",
+    name: "우유 롤케이크",
     image: MilkRoll,
     price: 5736,
     craftTime: 50,
@@ -86,7 +86,7 @@ export const cafeRecipes = [
     ],
   },
   {
-    name: "망고롤케이크",
+    name: "망고 롤케이크",
     image: MangoRoll,
     price: 9187,
     craftTime: 50,

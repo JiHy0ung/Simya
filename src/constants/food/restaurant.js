@@ -171,7 +171,7 @@ export const restaurantRecipes = [
     ],
   },
   {
-    name: "모둠튀김",
+    name: "모듬튀김",
     image: MixedFries,
     price: 18159,
     craftTime: 100,
@@ -236,7 +236,7 @@ export const restaurantRecipes = [
     price: 10620,
     craftTime: 100,
     ingredients: [
-      { name: "밀가루", count: 4, image: Flour },
+      { name: "밀가루", count: 2, image: Flour },
       { name: "크림", count: 2, image: Cream },
       { name: "브로콜리", count: 4, image: getItemImage("브로콜리") },
       { name: "파슬리", count: 4, image: getItemImage("파슬리") },
