@@ -4,7 +4,6 @@ import { Box, Typography } from "@mui/material";
 import {
   getMaxGrowthDay,
   getNetProfit,
-  getSeasonalIngredients,
   getTotalCost,
 } from "../../../utils/recipeUtils";
 import { SEASON_THEME } from "../../../constants/commons";

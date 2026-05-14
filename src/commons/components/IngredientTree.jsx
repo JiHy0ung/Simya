@@ -6,6 +6,7 @@ import { jewelryRecipes } from "../../constants/town/jewelryRecipes";
 import { woodRecipes } from "../../constants/town/woodRecipes";
 import { getSeasonalInfo, SEASON_LABEL } from "../../utils/recipeUtils";
 import { SEASON_THEME } from "../../constants/commons";
+import { formatSetCount } from "../../utils/formatSetCount";
 
 const allProcessed = [...processedRecipes, ...jewelryRecipes, ...woodRecipes];
 
@@ -17,7 +18,7 @@ const findSubRecipe = (name) =>
 const Row = styled(Box)(({ depth }) => ({
   display: "flex",
   flexDirection: "column",
-  paddingLeft: depth > 0 ? "10px" : "0",
+  paddingLeft: depth > 0 ? "8px" : "0",
   borderLeft: depth > 0 ? "1px solid #28263a" : "none",
   marginLeft: depth > 0 ? "4px" : "0",
 }));
@@ -28,7 +29,7 @@ const IngItem = styled(Box)(({ expandable }) => ({
   alignItems: "center",
   fontSize: "0.75rem",
   color: "#8a86aa",
-  fontFamily: "Mona8x12",
+  fontFamily: "Mona10x12",
   padding: "5px 0",
   cursor: expandable ? "var(--cursor-pointer)" : "default",
   "&:hover": expandable ? { color: "#c4bdff" } : {},
@@ -38,7 +39,8 @@ const IngLeft = styled(Box)({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  gap: "4px",
+  gap: "3px",
+  wordBreak: "keep-all",
 });
 
 const IngIcon = styled("img")({
@@ -62,8 +64,8 @@ const SeasonBadge = styled("span")(({ season }) => {
     text: "#fff",
   };
   return {
-    fontSize: "0.625rem",
-    padding: "1px 5px",
+    fontSize: "0.5rem",
+    padding: "1px 4px 1px 5px",
     background: c.bg,
     color: c.text,
     fontFamily: "Mona8x12",
@@ -90,7 +92,12 @@ const IngredientNode = ({ ing, depth = 0 }) => {
               {SEASON_LABEL[seasonal.season]}
             </SeasonBadge>
           )}
-          <span style={{ color: expandable && open ? "#c4bdff" : undefined }}>
+          <span
+            style={{
+              color: expandable && open ? "#c4bdff" : undefined,
+              fontSize: "0.7rem",
+            }}
+          >
             {ing.name}{" "}
           </span>
           {seasonal && (
@@ -100,15 +107,22 @@ const IngredientNode = ({ ing, depth = 0 }) => {
           )}
           {expandable && <ExpandIcon open={open}>▶</ExpandIcon>}
         </IngLeft>
-        <span style={{ color: "#c4bdff", fontFamily: "Mona8x12" }}>
-          x {ing.count}
+        <span style={{ color: "#c4bdff" }}>
+          x {ing.count}개{" "}
+          <span style={{ color: "#837eaf", fontSize: "0.625rem" }}>
+            ({formatSetCount(ing.count)})
+          </span>
         </span>
       </IngItem>
 
       {open && subRecipe && (
         <Box sx={{ mt: "2px", mb: "4px" }}>
           {subRecipe.ingredients.map((subIng, i) => (
-            <IngredientNode key={i} ing={subIng} depth={depth + 1} />
+            <IngredientNode
+              key={i}
+              ing={{ ...subIng, count: subIng.count * ing.count }}
+              depth={depth + 1}
+            />
           ))}
         </Box>
       )}

@@ -25,7 +25,7 @@ const AppRouter = () => {
           <Route path="/like" element={<LikePage />} />
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/season" element={<SeasonPage />} />
-          <Route path="/general-store" element={<GeneralStorePage />} />
+          <Route path="/store" element={<GeneralStorePage />} />
         </Route>
       </Routes>
     </Suspense>

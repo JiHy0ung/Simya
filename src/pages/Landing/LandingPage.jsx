@@ -190,7 +190,7 @@ const MENUS = [
     icon: "🛒",
     label: "개인 잡화점",
     desc: "주문 / 납품 정보",
-    path: "/general-store",
+    path: "/store",
   },
   {
     icon: "🌅",

@@ -20,7 +20,7 @@ const HeaderContainer = styled(Box)({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  gap: "2rem",
+  gap: "0.5rem",
   padding: "0.75rem 1.625rem",
   backgroundColor: "#18171c",
   borderBottom: "0.5px solid #b7b3da",
@@ -98,7 +98,7 @@ const MobileHeaderTitle = styled(Typography)({
 });
 
 const MENU_ITEMS = [
-  { label: "개인 잡화점", path: "/general-store", emoji: "🛒" },
+  { label: "개인 잡화점", path: "/store", emoji: "🛒" },
   { label: "계절", path: "/season", emoji: "🌅" },
   { label: "호감도", path: "/like", emoji: "❤️" },
   { label: "행상인", path: "/shop", emoji: "🧺" },
@@ -126,7 +126,7 @@ const Header = () => {
         sx={{
           display: "flex",
           alignItems: "center",
-          gap: { xs: "1rem", md: "5rem" },
+          gap: { xs: "1rem", md: "2.5rem" },
         }}
       >
         <HeaderLogoBox onClick={() => navigate("/")}>
