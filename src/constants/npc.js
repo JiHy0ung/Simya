@@ -308,7 +308,7 @@ export const npcData = [
     normal: [{ name: "사과", image: Apple }],
     disliked: [],
     hints: [
-      "시트러스 향 나는게 좋아~",
+      "그나마 시트러스 향 나는게 좋아해요",
       "사막 기념품 좀 갖다주시면 안될까요?",
       "우울한 날엔 따듯한 수프가 자꾸 생각나요",
     ],
@@ -345,7 +345,7 @@ export const npcData = [
       "지적이고 호기심 넘치는 MBTI 대문자 T.\n예의를 중시하고 분석적이라 젊은 꼰대 소리를 듣기도 하지만, 친해지면 누구보다 다정하다.",
     loved: [{ name: "용설란 꽃", image: Agave }],
     liked: [{ name: "사막 장미", image: DesertRose }],
-    okay: [],
+    okay: [{ name: "이리듐 주괴", image: Iridium }],
     normal: [{ name: "불꽃 백합", image: FlameLily }],
     disliked: [{ name: "사탕수수", image: Sugarcane }],
     hints: ["기름진 건 싫어요."],
@@ -370,7 +370,7 @@ export const npcData = [
       { name: "고추장찌개", image: GochujangStew },
       { name: "김치", image: Kimchi },
     ],
-    okay: [],
+    okay: [{ name: "이리듐 주괴", image: Iridium }],
     normal: [
       { name: "이끼 블록", image: MossBlock },
       { name: "경작지" },
@@ -410,7 +410,10 @@ export const npcData = [
       { name: "이리듐 주괴", image: Iridium },
     ],
     disliked: [{ name: "페리도트 보석", image: PeridotGem }],
-    hints: ["해안가와 관련된 건 질색이야"],
+    hints: [
+      "해안가와 관련된 건 질색이야",
+      "나에 대해 분석할 노력 좀 해봐. 예를 들어 초콜릿이라든지",
+    ],
     blush: {
       background: "rgba(255, 117, 161, 0.6)",
       left: { x: "41%", y: "70%" },
@@ -443,7 +446,10 @@ export const npcData = [
       { name: "사과", image: Apple },
     ],
     disliked: [],
-    hints: ["인간냄새, 바다냄새는 역겹군."],
+    hints: [
+      "인간냄새, 바다냄새는 역겹군.",
+      "나무는 기름을 먹는 걸 싫어하지.. 나도 마찬가지야.",
+    ],
     blush: {
       background: "rgba(255, 145, 109, 0.71)",
       left: { x: "40%", y: "67%" },
@@ -471,7 +477,10 @@ export const npcData = [
       { name: "초코 쉐이크", image: ChocoShake },
     ],
     disliked: [{ name: "아티초크", image: Artichoke }],
-    hints: ["카페에서 맛있는것 좀 가져다주시면 안돼요?"],
+    hints: [
+      "카페에서 맛있는것 좀 가져다주시면 안돼요?",
+      "달달한 거 먹고 싶은데 그건 없나요?",
+    ],
     blush: {
       background: "rgba(255, 132, 123, 0.71)",
       left: { x: "36%", y: "75%" },
@@ -575,7 +584,10 @@ export const npcData = [
       { name: "아쿠아마린 보석", image: AquamarineGem },
     ],
     okay: [],
-    normal: [{ name: "용사의 모험 코인", image: AdventureCoin }],
+    normal: [
+      { name: "용사의 모험 코인", image: AdventureCoin },
+      { name: "이리듐 주괴", image: Iridium },
+    ],
     disliked: [{ name: "감자", image: Potato }],
     hints: ["차라리 헨리 오빠네에서 파스타 받아오시면 안돼요?"],
     blush: {
@@ -608,6 +620,7 @@ export const npcData = [
       { name: "버드나무 판자", image: WillowPlanks },
       { name: "오렌지 잼", image: OrangeJam },
       { name: "산호석 보석", image: CoralGem },
+      { name: "참나무 원목", image: Oak },
     ],
     disliked: [{ name: "달걀", image: Egg }],
     hints: [
