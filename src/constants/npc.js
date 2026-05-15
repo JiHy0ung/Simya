@@ -304,7 +304,7 @@ export const npcData = [
       "심야잡화점의 햇살 같은 존재.\n밝고 명량하며 거절을 잘 못하지만 선은 분명하다.\n비 오는 날엔 유독 기운이 빠지는 비밀이 있다.",
     loved: [{ name: "능소화", image: Jacaranda }],
     liked: [{ name: "수국", image: Hydrangea }],
-    okay: [],
+    okay: [{ name: "오렌지", image: Orange }],
     normal: [{ name: "사과", image: Apple }],
     disliked: [],
     hints: [
@@ -328,7 +328,10 @@ export const npcData = [
     loved: [{ name: "사과", image: Apple }],
     liked: [],
     okay: [],
-    normal: [{ name: "참나무 원목", image: Oak }],
+    normal: [
+      { name: "참나무 원목", image: Oak },
+      { name: "블루베리", image: Blueberry },
+    ],
     disliked: [],
     blush: {
       background: "rgba(255, 124, 88, 0.68)",
@@ -346,7 +349,10 @@ export const npcData = [
     loved: [{ name: "용설란 꽃", image: Agave }],
     liked: [{ name: "사막 장미", image: DesertRose }],
     okay: [{ name: "이리듐 주괴", image: Iridium }],
-    normal: [{ name: "불꽃 백합", image: FlameLily }],
+    normal: [
+      { name: "불꽃 백합", image: FlameLily },
+      { name: "산삼", image: Ginseng },
+    ],
     disliked: [{ name: "사탕수수", image: Sugarcane }],
     hints: ["기름진 건 싫어요."],
     blush: {
@@ -379,6 +385,7 @@ export const npcData = [
       { name: "유칼립투스 통나무", image: Eucalyptus },
       { name: "육수", image: Stock },
       { name: "양념장", image: Seasoning },
+      { name: "레몬", image: Lemon },
     ],
     disliked: [],
     hints: [
@@ -408,6 +415,7 @@ export const npcData = [
     normal: [
       { name: "주문 도착 티켓", image: OrderArrivalTicket },
       { name: "이리듐 주괴", image: Iridium },
+      { name: "포도", image: Grape },
     ],
     disliked: [{ name: "페리도트 보석", image: PeridotGem }],
     hints: [
@@ -468,6 +476,7 @@ export const npcData = [
       { name: "멜론", image: Melon },
       { name: "오렌지 사탕", image: OrangeCandy },
       { name: "우유 롤케이크", image: MilkRoll },
+      { name: "바나나", image: Banana },
     ],
     okay: [],
     normal: [
@@ -576,7 +585,10 @@ export const npcData = [
     job: "잡화점 관리인",
     description:
       "돈 쓸 곳은 많아 취업한 20살 MZ. 기본적으로 불친절하지만 잘해주는 사람에겐 어쩔 줄 몰라한다. 일하는 내내 핸드폰을 놓지 않는 SNS 중독자.",
-    loved: [{ name: "라벤더", image: Lavender }],
+    loved: [
+      { name: "라벤더", image: Lavender },
+      { name: "복숭아", image: Peach },
+    ],
     liked: [
       { name: "산호석 보석", image: CoralGem },
       { name: "불꽃 백합", image: FlameLily },
