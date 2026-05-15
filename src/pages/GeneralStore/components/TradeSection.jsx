@@ -109,10 +109,18 @@ const TradeGrid = styled(Box)(({ theme }) => ({
 }));
 
 const TradeCard = styled(Box, {
-  shouldForwardProp: (p) => p !== "ischecked",
-})(({ ischecked }) => ({
-  background: ischecked ? "rgba(166, 107, 239, 0.04)" : "#131216",
-  border: ischecked ? "1.5px solid #5e3d8a" : "1.5px solid #3d3a52",
+  shouldForwardProp: (p) => p !== "ischecked" && p !== "isbingo",
+})(({ ischecked, isbingo }) => ({
+  background: isbingo
+    ? "rgba(255, 235, 19, 0.04)"
+    : ischecked
+      ? "rgba(166, 107, 239, 0.04)"
+      : "#131216",
+  border: isbingo
+    ? "1.5px solid #7a6e00"
+    : ischecked
+      ? "1.5px solid #5e3d8a"
+      : "1.5px solid #3d3a52",
   padding: "0.75rem",
   display: "flex",
   flexDirection: "column",
@@ -389,6 +397,9 @@ const TradeSection = () => {
   const checkedCount = Object.values(checked).filter(Boolean).length;
   const bingoCount = getCompletedLines(checked).length;
 
+  const completedLines = getCompletedLines(checked);
+  const bingoCardIndices = new Set(completedLines.flat());
+
   return (
     <Section>
       <SectionHeader>
@@ -456,7 +467,11 @@ const TradeSection = () => {
           const isChecked = !!checked[cardIdx];
 
           return (
-            <TradeCard key={cardIdx} ischecked={isChecked}>
+            <TradeCard
+              key={cardIdx}
+              ischecked={isChecked}
+              isbingo={bingoCardIndices.has(cardIdx)}
+            >
               <CardHeader isFilled={card.items.length !== 0}>
                 {card.items.length !== 0 && (
                   <>
@@ -468,6 +483,7 @@ const TradeSection = () => {
                       }}
                     >
                       <CheckboxWrap
+                        isbingo={bingoCardIndices.has(cardIdx)}
                         ischecked={isChecked}
                         onClick={() => toggleChecked(cardIdx)}
                       >
