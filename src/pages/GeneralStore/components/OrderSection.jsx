@@ -244,6 +244,8 @@ const OrderSection = () => {
   const [highlightedIndex, setHighlightedIndex] = useState(-1);
   const countInputRefs = useRef({}); // { "slotIdx-itemIdx": ref }
 
+  const justSelectedRef = useRef(false);
+
   // const heartBonus = getHeartBonus();
   // const maxHeartCount = getMaxHeartCount();
 
@@ -464,6 +466,7 @@ const OrderSection = () => {
                     placeholder="물품 이름 검색..."
                     value={slot.query}
                     onChange={(e) => {
+                      if (justSelectedRef.current) return; // 방금 선택한 직후면 무시
                       updateSlotQuery(slotIdx, e.target.value);
                       setOpenDropdown(slotIdx);
                       setHighlightedIndex(-1);
@@ -484,19 +487,20 @@ const OrderSection = () => {
                         setHighlightedIndex((prev) => Math.max(prev - 1, 0));
                       } else if (e.key === "Enter") {
                         e.preventDefault();
+                        e.stopPropagation();
                         const target =
                           filtered[highlightedIndex] ?? filtered[0];
                         if (target) {
+                          justSelectedRef.current = true; // 플래그 설정
                           addItemToSlot(slotIdx, target);
                           setHighlightedIndex(-1);
-                          // 추가된 아이템의 countInput 포커스
                           const newItemIdx = slots[slotIdx].items.findIndex(
                             (it) => it.item.name === target.name,
                           );
                           const key = `${slotIdx}-${newItemIdx !== -1 ? newItemIdx : slots[slotIdx].items.length}`;
                           requestAnimationFrame(() => {
                             countInputRefs.current[key]?.focus();
-                            countInputRefs.current[key]?.select();
+                            justSelectedRef.current = false; // 플래그 해제
                           });
                         }
                       } else if (e.key === "Escape") {
