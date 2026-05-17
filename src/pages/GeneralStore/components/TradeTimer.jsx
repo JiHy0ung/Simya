@@ -123,29 +123,12 @@ const TradeTimer = () => {
         audioRef.current.play().catch((e) => {
           console.log("sound play failed", e);
         });
-
-        if ("Notification" in window) {
-          if (Notification.permission === "granted") {
-            new Notification("[시먀]", {
-              body: "무역 대기 시간이 끝났습니다!\n이제 물품을 납품할 수 있습니다!",
-              icon: "/simya_favicon.png",
-            });
-          }
-        }
       } else {
         setTimeLeft(remain);
       }
     }, 1000);
 
     return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-    if ("Notification" in window) {
-      if (Notification.permission !== "granted") {
-        Notification.requestPermission();
-      }
-    }
   }, []);
 
   return (
