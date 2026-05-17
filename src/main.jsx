@@ -9,7 +9,7 @@ import { ThemeProvider } from "@mui/material";
 createRoot(document.getElementById("root")).render(
   <ThemeProvider theme={theme}>
     <BrowserRouter>
-      <App />
+      <App translate="no" />
     </BrowserRouter>
   </ThemeProvider>,
 );
