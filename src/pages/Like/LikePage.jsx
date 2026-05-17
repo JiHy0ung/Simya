@@ -354,7 +354,7 @@ const LikePage = () => {
   };
 
   return (
-    <LikeContainer>
+    <LikeContainer translate="no">
       <LikeTitle>NPC 호감도</LikeTitle>
 
       <LikeSubtitle>주민과의 관계를 쌓아보세요</LikeSubtitle>
