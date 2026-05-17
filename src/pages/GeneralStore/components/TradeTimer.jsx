@@ -116,12 +116,21 @@ const TradeTimer = () => {
         setTimeLeft(0);
         localStorage.removeItem("tradeEndTime");
 
-        audioRef.current.play();
+        clearInterval(interval);
 
-        if ("Notification" in window && Notification.permission === "granted") {
-          new Notification("무역 완료!", {
-            body: "무역 대기 시간이 끝났습니다.",
-          });
+        audioRef.current.currentTime = 0;
+
+        audioRef.current.play().catch((e) => {
+          console.log("sound play failed", e);
+        });
+
+        if ("Notification" in window) {
+          if (Notification.permission === "granted") {
+            new Notification("[시먀]", {
+              body: "무역 대기 시간이 끝났습니다!\n이제 물품을 납품할 수 있습니다!",
+              icon: "/simya_favicon.png",
+            });
+          }
         }
       } else {
         setTimeLeft(remain);
