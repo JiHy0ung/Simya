@@ -247,7 +247,7 @@ const LandingPage = () => {
         </NoticeTitle>
 
         <NoticeText>
-          · [hot fix] 크롬 브라우저 브라우저 번역 사용 시 발생하던 화면
+          · <strong>[hot fix] </strong> 크롬 브라우저 번역 사용 시 발생하던 화면
           {/* <br /> · (hot fix)크롬 브라우저 브라우저 번역 사용 시 발생하던 화면 */}
           깨짐 현상 수정
         </NoticeText>
