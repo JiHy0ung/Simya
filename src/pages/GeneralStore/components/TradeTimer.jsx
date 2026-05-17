@@ -61,7 +61,7 @@ const TimerText = styled(Typography, {
 const TradeTimer = () => {
   const [timeLeft, setTimeLeft] = useState(0);
 
-  const audioRef = useRef(new Audio("/sounds/notification.wav"));
+  const audioRef = useRef(new Audio("/sounds/notification1.wav"));
 
   const formatTime = (seconds) => {
     const h = String(Math.floor(seconds / 3600)).padStart(2, "0");
