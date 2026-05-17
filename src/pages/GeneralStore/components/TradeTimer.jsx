@@ -83,7 +83,7 @@ const TradeTimer = () => {
       console.log("audio unlock failed", e);
     }
 
-    const endTime = Date.now() + 60 * 60;
+    const endTime = Date.now() + 60 * 60 * 1000;
 
     localStorage.setItem("tradeEndTime", endTime);
     setTimeLeft(3600);
