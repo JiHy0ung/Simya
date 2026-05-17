@@ -15,6 +15,7 @@ import { woodRecipes } from "../../../constants/town/woodRecipes";
 import IngredientTree from "../../../commons/components/IngredientTree";
 import { seasonal } from "../../../constants/food/seasonal";
 import { vanilla } from "../../../constants/food/vanilla";
+import TradeTimer from "./TradeTimer";
 
 const allSeasonalCrops = Object.values(seasonal).flat();
 const crops = [...vanilla, ...allSeasonalCrops];
@@ -129,7 +130,9 @@ const TradeCard = styled(Box, {
   transition: "background 0.15s, border-color 0.15s",
 }));
 
-const CardHeader = styled(Box)(({ isFilled }) => ({
+const CardHeader = styled(Box, {
+  shouldForwardProp: (prop) => prop !== "isFilled",
+})(({ isFilled }) => ({
   display: isFilled ? "flex" : "none",
   justifyContent: "space-between",
   alignItems: "center",
@@ -410,6 +413,7 @@ const TradeSection = () => {
           무역
         </SectionTitle>
         <Box sx={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+          <TradeTimer />
           {bingoCount > 0 && <BingoBadge>BINGO x {bingoCount}</BingoBadge>}
           <Typography
             sx={{
