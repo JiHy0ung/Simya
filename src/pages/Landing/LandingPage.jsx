@@ -247,10 +247,9 @@ const LandingPage = () => {
         </NoticeTitle>
 
         <NoticeText>
-          · 개인 잡화점 페이지 추가(주문, 무역)
-          <br /> · npc 호감도 하트 기록 기능 추가
-          <br /> · 호감도에 따른 호감도 아이템 추천
-          <br /> · npc 탭 키보드 이동
+          · [hot fix] 크롬 브라우저 브라우저 번역 사용 시 발생하던 화면
+          {/* <br /> · (hot fix)크롬 브라우저 브라우저 번역 사용 시 발생하던 화면 */}
+          깨짐 현상 수정
         </NoticeText>
 
         <NoticeText sx={{ opacity: 0.6, fontFamily: "Mona8x12" }}>
