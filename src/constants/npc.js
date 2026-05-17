@@ -241,7 +241,10 @@ export const npcData = [
     description:
       "전직 유명 호텔 수셰프.\n 요리에 인생을 바치다 보니 숫기가 없어졌고,\n 더 많은 사람에게 음식을 선보이고 싶어 심야잡화점에 가게를 차렸다.",
     loved: [{ name: "초코 쉐이크", image: ChocoShake }],
-    liked: [{ name: "수박", image: WaterMelon }],
+    liked: [
+      { name: "수박", image: WaterMelon },
+      { name: "오렌지", image: Orange },
+    ],
     okay: [],
     normal: [
       { name: "빛바랜 상회의 곡괭이" },
@@ -276,7 +279,7 @@ export const npcData = [
       "원래 심야잡화점 거리 출신 고양이.\n이상한 걸 주워 먹고 사람이 됐다.\n 가공식품점 할아버지의 도움으로 판매원으로 일하고 있으며, 아직 사람을 많이 경계한다.",
     loved: [{ name: "딸기", image: Strawberry }],
     liked: [{ name: "아쿠아마린 보석", image: AquamarineGem }],
-    okay: [],
+    okay: [{ name: "루비 보석", image: RubyGem }],
     normal: [
       { name: "수박", image: WaterMelon },
       { name: "라벤더", image: Lavender },
@@ -308,7 +311,10 @@ export const npcData = [
     job: "카페 바리스타",
     description:
       "심야잡화점의 햇살 같은 존재.\n밝고 명량하며 거절을 잘 못하지만 선은 분명하다.\n비 오는 날엔 유독 기운이 빠지는 비밀이 있다.",
-    loved: [{ name: "능소화", image: Jacaranda }],
+    loved: [
+      { name: "능소화", image: Jacaranda },
+      { name: "크림수프", image: CreamSoup },
+    ],
     liked: [{ name: "수국", image: Hydrangea }],
     okay: [
       { name: "오렌지", image: Orange },
@@ -348,6 +354,7 @@ export const npcData = [
       { name: "사막장미", image: DesertRose },
       { name: "망고", image: Mango },
       { name: "오렌지", image: Orange },
+      { name: "양배추", image: Cabbage },
     ],
     disliked: [],
     hints: ["야채는 싱싱했을 때 바로 먹어야돼."],
@@ -364,7 +371,10 @@ export const npcData = [
     job: "보석상 주인",
     description:
       "지적이고 호기심 넘치는 MBTI 대문자 T.\n예의를 중시하고 분석적이라 젊은 꼰대 소리를 듣기도 하지만, 친해지면 누구보다 다정하다.",
-    loved: [{ name: "용설란 꽃", image: Agave }],
+    loved: [
+      { name: "용설란 꽃", image: Agave },
+      { name: "아다만티움 주괴", image: Adamantium },
+    ],
     liked: [{ name: "사막 장미", image: DesertRose }],
     okay: [{ name: "이리듐 주괴", image: Iridium }],
     normal: [
@@ -410,6 +420,7 @@ export const npcData = [
       { name: "수박", image: WaterMelon },
       { name: "포도", image: Grape },
       { name: "블루베리", image: Grape },
+      { name: "사이프러스나무 판자", image: CypressPlanks },
     ],
     disliked: [],
     hints: [
@@ -433,6 +444,7 @@ export const npcData = [
     loved: [
       { name: "초코 뚱카롱", image: ChocoMacaron },
       { name: "초코 쉐이크", image: ChocoShake },
+      { name: "초코 크림 도넛", image: ChocoCreamDonut },
     ],
     liked: [{ name: "고추", image: Chili }],
     okay: [],
@@ -480,6 +492,7 @@ export const npcData = [
       { name: "블루베리", image: Blueberry },
       { name: "사과", image: Apple },
       { name: "사막장미", image: DesertRose },
+      { name: "산삼", image: Ginseng },
     ],
     disliked: [],
     hints: [
@@ -512,6 +525,7 @@ export const npcData = [
       { name: "참나무 울타리", image: OakFence },
       { name: "설탕", image: Sugar },
       { name: "초코 쉐이크", image: ChocoShake },
+      { name: "멜론 빵", image: MelonBread },
     ],
     disliked: [{ name: "아티초크", image: Artichoke }],
     hints: [
@@ -531,7 +545,10 @@ export const npcData = [
     job: "토큰 상점 주인",
     description:
       "이세계 귀족 출신.\n차별을 없애고자 직접 가게를 차렸다.\n공평하고 절제된 아름다움을 가졌으며,\n아닌 건 아니라고 확실히 말하는 주관이 뚜렷한 사람이다.",
-    loved: [{ name: "우유 롤케이크", image: MilkRoll }],
+    loved: [
+      { name: "우유 롤케이크", image: MilkRoll },
+      { name: "크림 파스타", image: CreamPasta },
+    ],
     liked: [{ name: "산삼", image: Ginseng }],
     okay: [
       { name: "채소 덮밥", image: VeggieRice },
@@ -631,7 +648,7 @@ export const npcData = [
     normal: [
       { name: "용사의 모험 코인", image: AdventureCoin },
       { name: "이리듐 주괴", image: Iridium },
-      { name: "이리듐 주괴", image: Iridium },
+      { name: "생명의 광휘 보석", image: LifeRadianceGem },
     ],
     disliked: [{ name: "감자", image: Potato }],
     hints: [
@@ -670,12 +687,14 @@ export const npcData = [
       { name: "산호석 보석", image: CoralGem },
       { name: "참나무 원목", image: Oak },
       { name: "수박", image: WaterMelon },
+      { name: "생명의 반지", image: LifeRing },
     ],
     disliked: [{ name: "달걀", image: Egg }],
     hints: [
       "다음엔 와인 종류면 좋겠어요.",
       "인간 세상의 술은 참 맛있는 것 같아요!",
       "생명을 모독하는 선물 빼고는 싫은 선물은 딱히 없어요!",
+      "생명 넘치는 선물을 좋아해요",
     ],
     blush: {
       background: "rgba(255, 146, 170, 0.63)",
