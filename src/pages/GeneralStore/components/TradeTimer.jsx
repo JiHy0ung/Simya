@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { styled } from "@mui/material/styles";
-import { Box, Typography } from "@mui/material";
+import { Box, Tooltip, Typography } from "@mui/material";
 
 const TimerBox = styled(Box)({
   display: "flex",
@@ -61,7 +61,7 @@ const TimerText = styled(Typography, {
 const TradeTimer = () => {
   const [timeLeft, setTimeLeft] = useState(0);
 
-  const audioRef = useRef(new Audio("/sounds/notification0.wav"));
+  const audioRef = useRef(new Audio("/sounds/notification1.wav"));
 
   const formatTime = (seconds) => {
     const h = String(Math.floor(seconds / 3600)).padStart(2, "0");
@@ -141,13 +141,17 @@ const TradeTimer = () => {
 
   return (
     <TimerBox>
-      <TimerButton
-        onClick={startTimer}
-        disabled={timeLeft > 0}
-        active={timeLeft > 0}
-      >
-        무역 시작
-      </TimerButton>
+      <Tooltip title="무역 확인 바로 전에 눌러주세요." arrow placement="top">
+        <span>
+          <TimerButton
+            onClick={startTimer}
+            disabled={timeLeft > 0}
+            active={timeLeft > 0}
+          >
+            무역 대기 시작
+          </TimerButton>
+        </span>
+      </Tooltip>
 
       {timeLeft > 0 && <TimerButton onClick={stopTimer}>중지</TimerButton>}
 
