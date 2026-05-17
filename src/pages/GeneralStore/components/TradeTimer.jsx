@@ -61,7 +61,7 @@ const TimerText = styled(Typography, {
 const TradeTimer = () => {
   const [timeLeft, setTimeLeft] = useState(0);
 
-  const audioRef = useRef(new Audio("/sounds/notification1.wav"));
+  const audioRef = useRef(new Audio("/sounds/notification0.wav"));
 
   const formatTime = (seconds) => {
     const h = String(Math.floor(seconds / 3600)).padStart(2, "0");
@@ -83,7 +83,7 @@ const TradeTimer = () => {
       console.log("audio unlock failed", e);
     }
 
-    const endTime = Date.now() + 60 * 60 * 1000;
+    const endTime = Date.now() + 60 * 60;
 
     localStorage.setItem("tradeEndTime", endTime);
     setTimeLeft(3600);
