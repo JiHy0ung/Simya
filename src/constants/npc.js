@@ -248,6 +248,9 @@ export const npcData = [
       { name: "고추", image: Chili },
       { name: "수박 화채", image: WatermelonPunch },
       { name: "딸기 마카롱", image: StrawberryMacaron },
+      { name: "계란", image: Egg },
+      { name: "멜론", image: Melon },
+      { name: "복숭아", image: Peach },
     ],
     disliked: [
       { name: "수국", image: Hydrangea },
@@ -279,6 +282,9 @@ export const npcData = [
       { name: "라벤더", image: Lavender },
       { name: "창포", image: Calamus },
       { name: "히비스커스", image: Hibiscus },
+      { name: "계란", image: Egg },
+      { name: "수국", image: Hydrangea },
+      { name: "사막장미", image: DesertRose },
     ],
     disliked: [
       { name: "파", image: GreenOnion },
@@ -304,13 +310,21 @@ export const npcData = [
       "심야잡화점의 햇살 같은 존재.\n밝고 명량하며 거절을 잘 못하지만 선은 분명하다.\n비 오는 날엔 유독 기운이 빠지는 비밀이 있다.",
     loved: [{ name: "능소화", image: Jacaranda }],
     liked: [{ name: "수국", image: Hydrangea }],
-    okay: [{ name: "오렌지", image: Orange }],
-    normal: [{ name: "사과", image: Apple }],
+    okay: [
+      { name: "오렌지", image: Orange },
+      { name: "레몬", image: Lemon },
+    ],
+    normal: [
+      { name: "사과", image: Apple },
+      { name: "계란", image: Egg },
+      { name: "망고", image: Mango },
+    ],
     disliked: [],
     hints: [
       "그나마 시트러스 향 나는게 좋아해요",
       "사막 기념품 좀 갖다주시면 안될까요?",
       "우울한 날엔 따듯한 수프가 자꾸 생각나요",
+      "저는 와인 그닥 좋아하진 않아요, 제가 좋아하는 향 빼고는 그닥...",
     ],
     blush: {
       background: "rgba(255, 146, 132, 0.59)",
@@ -331,8 +345,12 @@ export const npcData = [
     normal: [
       { name: "참나무 원목", image: Oak },
       { name: "블루베리", image: Blueberry },
+      { name: "사막장미", image: DesertRose },
+      { name: "망고", image: Mango },
+      { name: "오렌지", image: Orange },
     ],
     disliked: [],
+    hints: ["야채는 싱싱했을 때 바로 먹어야돼."],
     blush: {
       background: "rgba(255, 124, 88, 0.68)",
       left: { x: "43%", y: "67%" },
@@ -352,6 +370,9 @@ export const npcData = [
     normal: [
       { name: "불꽃 백합", image: FlameLily },
       { name: "산삼", image: Ginseng },
+      { name: "계란", image: Egg },
+      { name: "아티초크", image: Artichoke },
+      { name: "아스파라거스", image: Asparagus },
     ],
     disliked: [{ name: "사탕수수", image: Sugarcane }],
     hints: ["기름진 건 싫어요."],
@@ -386,6 +407,9 @@ export const npcData = [
       { name: "육수", image: Stock },
       { name: "양념장", image: Seasoning },
       { name: "레몬", image: Lemon },
+      { name: "수박", image: WaterMelon },
+      { name: "포도", image: Grape },
+      { name: "블루베리", image: Grape },
     ],
     disliked: [],
     hints: [
@@ -416,6 +440,9 @@ export const npcData = [
       { name: "주문 도착 티켓", image: OrderArrivalTicket },
       { name: "이리듐 주괴", image: Iridium },
       { name: "포도", image: Grape },
+      { name: "사막장미", image: DesertRose },
+      { name: "아스파라거스", image: Asparagus },
+      { name: "복숭아", image: Peach },
     ],
     disliked: [{ name: "페리도트 보석", image: PeridotGem }],
     hints: [
@@ -452,6 +479,7 @@ export const npcData = [
       { name: "용혈수 통나무", image: Dragon },
       { name: "블루베리", image: Blueberry },
       { name: "사과", image: Apple },
+      { name: "사막장미", image: DesertRose },
     ],
     disliked: [],
     hints: [
@@ -505,13 +533,17 @@ export const npcData = [
       "이세계 귀족 출신.\n차별을 없애고자 직접 가게를 차렸다.\n공평하고 절제된 아름다움을 가졌으며,\n아닌 건 아니라고 확실히 말하는 주관이 뚜렷한 사람이다.",
     loved: [{ name: "우유 롤케이크", image: MilkRoll }],
     liked: [{ name: "산삼", image: Ginseng }],
-    okay: [{ name: "채소 덮밥", image: VeggieRice }],
+    okay: [
+      { name: "채소 덮밥", image: VeggieRice },
+      { name: "브로콜리", image: Broccoli },
+    ],
     normal: [
       { name: "달걀", image: Egg },
       { name: "포도", image: Grape },
       { name: "아스파라거스", image: Asparagus },
       { name: "어른 캔디", image: AdultCandy },
       { name: "라리마 보석", image: LarimarGem },
+      { name: "순무", image: Turnip },
     ],
     disliked: [],
     hints: [
@@ -599,9 +631,13 @@ export const npcData = [
     normal: [
       { name: "용사의 모험 코인", image: AdventureCoin },
       { name: "이리듐 주괴", image: Iridium },
+      { name: "이리듐 주괴", image: Iridium },
     ],
     disliked: [{ name: "감자", image: Potato }],
-    hints: ["차라리 헨리 오빠네에서 파스타 받아오시면 안돼요?"],
+    hints: [
+      "차라리 헨리 오빠네에서 파스타 받아오시면 안돼요?",
+      "보석 같은 거라도 들고 오면 내가 말을 안 하지...",
+    ],
     blush: {
       background: "rgba(255, 109, 143, 0.71)",
       left: { x: "40%", y: "69%" },
@@ -633,11 +669,13 @@ export const npcData = [
       { name: "오렌지 잼", image: OrangeJam },
       { name: "산호석 보석", image: CoralGem },
       { name: "참나무 원목", image: Oak },
+      { name: "수박", image: WaterMelon },
     ],
     disliked: [{ name: "달걀", image: Egg }],
     hints: [
       "다음엔 와인 종류면 좋겠어요.",
       "인간 세상의 술은 참 맛있는 것 같아요!",
+      "생명을 모독하는 선물 빼고는 싫은 선물은 딱히 없어요!",
     ],
     blush: {
       background: "rgba(255, 146, 170, 0.63)",
