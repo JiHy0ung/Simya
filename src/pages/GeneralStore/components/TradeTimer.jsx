@@ -59,9 +59,15 @@ const TimerText = styled(Typography, {
 }));
 
 const TradeTimer = () => {
-  const [timeLeft, setTimeLeft] = useState(0);
+  const [timeLeft, setTimeLeft] = useState(() => {
+    const saved = localStorage.getItem("tradeEndTime");
 
+    if (!saved) return 0;
+
+    return Math.max(0, Math.floor((Number(saved) - Date.now()) / 1000));
+  });
   const audioRef = useRef(new Audio("/sounds/notification1.wav"));
+  const intervalRef = useRef(null);
 
   const formatTime = (seconds) => {
     const h = String(Math.floor(seconds / 3600)).padStart(2, "0");
@@ -71,11 +77,36 @@ const TradeTimer = () => {
     return `${h}:${m}:${s}`;
   };
 
+  const updateTimer = () => {
+    const saved = localStorage.getItem("tradeEndTime");
+
+    if (!saved) {
+      setTimeLeft(0);
+      return;
+    }
+
+    const remain = Math.max(0, Math.floor((Number(saved) - Date.now()) / 1000));
+
+    setTimeLeft(remain);
+
+    if (remain <= 0) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+
+      localStorage.removeItem("tradeEndTime");
+
+      audioRef.current.currentTime = 0;
+
+      audioRef.current.play().catch((e) => {
+        console.log("sound play failed", e);
+      });
+    }
+  };
+
   const startTimer = async () => {
     try {
       audioRef.current.volume = 1;
 
-      // 오디오 활성화
       await audioRef.current.play();
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
@@ -83,52 +114,48 @@ const TradeTimer = () => {
       console.log("audio unlock failed", e);
     }
 
-    const endTime = Date.now() + 60 * 60;
+    const endTime = Date.now() + 60 * 60 * 1000;
 
     localStorage.setItem("tradeEndTime", endTime);
-    setTimeLeft(3600);
+
+    updateTimer();
+
+    clearInterval(intervalRef.current);
+
+    intervalRef.current = setInterval(updateTimer, 1000);
   };
 
   const stopTimer = () => {
     localStorage.removeItem("tradeEndTime");
+
+    clearInterval(intervalRef.current);
+    intervalRef.current = null;
+
     setTimeLeft(0);
   };
 
   useEffect(() => {
-    const savedEndTime = localStorage.getItem("tradeEndTime");
+    const saved = localStorage.getItem("tradeEndTime");
 
-    if (savedEndTime) {
-      const remain = Math.floor((Number(savedEndTime) - Date.now()) / 1000);
-
-      if (remain > 0) {
-        setTimeLeft(remain);
-      }
+    if (saved) {
+      intervalRef.current = setInterval(updateTimer, 1000);
     }
 
-    const interval = setInterval(() => {
-      const saved = localStorage.getItem("tradeEndTime");
-
-      if (!saved) return;
-
-      const remain = Math.floor((Number(saved) - Date.now()) / 1000);
-
-      if (remain <= 0) {
-        setTimeLeft(0);
-        localStorage.removeItem("tradeEndTime");
-
-        clearInterval(interval);
-
-        audioRef.current.currentTime = 0;
-
-        audioRef.current.play().catch((e) => {
-          console.log("sound play failed", e);
-        });
-      } else {
-        setTimeLeft(remain);
+    const handleVisibility = () => {
+      if (document.visibilityState === "visible") {
+        updateTimer();
       }
-    }, 1000);
+    };
 
-    return () => clearInterval(interval);
+    window.addEventListener("focus", updateTimer);
+    document.addEventListener("visibilitychange", handleVisibility);
+
+    return () => {
+      clearInterval(intervalRef.current);
+
+      window.removeEventListener("focus", updateTimer);
+      document.removeEventListener("visibilitychange", handleVisibility);
+    };
   }, []);
 
   return (
