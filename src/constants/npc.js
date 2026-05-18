@@ -299,6 +299,7 @@ export const npcData = [
     hints: [
       "꽃 중에 좋은 향이 나는게 하나 있던데...",
       "빨간색은 다 좋지만.. 빨간색 야채는 이름이 뭐더라 그건 너무 싫다옹..",
+      "반짝반짝 아님 먹는거.. 빼고 다 별로다옹.",
     ],
     blush: {
       background: "rgba(255, 130, 117, 0.6)",
@@ -361,6 +362,7 @@ export const npcData = [
       { name: "양배추", image: Cabbage },
       { name: "무", image: Radish },
       { name: "순무", image: Turnip },
+      { name: "계란", image: Egg },
     ],
     disliked: [],
     hints: ["야채는 싱싱했을 때 바로 먹어야돼."],
@@ -391,6 +393,7 @@ export const npcData = [
       { name: "아스파라거스", image: Asparagus },
       { name: "오렌지", image: Orange },
       { name: "파슬리", image: Parsley },
+      { name: "계란", image: Egg },
     ],
     disliked: [{ name: "사탕수수", image: Sugarcane }],
     hints: ["기름진 건 싫어요."],
@@ -431,6 +434,7 @@ export const npcData = [
       { name: "사이프러스나무 판자", image: CypressPlanks },
       { name: "오렌지", image: Orange },
       { name: "토마토", image: Tomato },
+      { name: "계란", image: Egg },
     ],
     disliked: [],
     hints: [
@@ -467,6 +471,7 @@ export const npcData = [
       { name: "복숭아", image: Peach },
       { name: "딸기", image: Strawberry },
       { name: "바나나", image: Banana },
+      { name: "계란", image: Egg },
     ],
     disliked: [{ name: "페리도트 보석", image: PeridotGem }],
     hints: [
@@ -505,6 +510,7 @@ export const npcData = [
       { name: "사과", image: Apple },
       { name: "사막장미", image: DesertRose },
       { name: "산삼", image: Ginseng },
+      { name: "계란", image: Egg },
     ],
     disliked: [],
     hints: [
@@ -625,6 +631,7 @@ export const npcData = [
       { name: "크림 리조또", image: CreamRisotto },
       { name: "럭셔리 뷰티 코인" },
       { name: "빛나는 마늘" },
+      { name: "계란", image: Egg },
     ],
     disliked: [
       { name: "히비스커스", image: Hibiscus },
@@ -665,11 +672,13 @@ export const npcData = [
       { name: "용사의 모험 코인", image: AdventureCoin },
       { name: "이리듐 주괴", image: Iridium },
       { name: "생명의 광휘 보석", image: LifeRadianceGem },
+      { name: "계란", image: Egg },
     ],
     disliked: [{ name: "감자", image: Potato }],
     hints: [
       "차라리 헨리 오빠네에서 파스타 받아오시면 안돼요?",
       "보석 같은 거라도 들고 오면 내가 말을 안 하지...",
+      "뭔.. 나무 쪼가리 들고 오거나, 맘에 안드는 거 들고 오는 것 보단 낫네요.",
     ],
     blush: {
       background: "rgba(255, 109, 143, 0.71)",
