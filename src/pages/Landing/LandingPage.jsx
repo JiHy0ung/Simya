@@ -249,7 +249,7 @@ const LandingPage = () => {
         <NoticeText>
           · <strong>[hot fix] </strong> 크롬 브라우저 번역 사용 시 발생하던
           화면, 폰트 깨짐 현상 수정
-          {/* <br /> · (hot fix)크롬 브라우저 브라우저 번역 사용 시 발생하던 화면 */}
+          <br /> · 무역 대기 시간 알림 추가
         </NoticeText>
 
         <NoticeText sx={{ opacity: 0.6, fontFamily: "Mona8x12" }}>
