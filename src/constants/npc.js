@@ -261,7 +261,7 @@ export const npcData = [
       { name: "포도", image: Grape },
       { name: "무", image: Radish },
       { name: "바나나", image: Banana },
-      { name: "블루베리", image: Blueberryß },
+      { name: "블루베리", image: Blueberry },
     ],
     disliked: [
       { name: "수국", image: Hydrangea },
@@ -302,7 +302,7 @@ export const npcData = [
       { name: "사과", image: Apple },
       { name: "바나나", image: Banana },
       { name: "오렌지", image: Orange },
-      { name: "망고", image: Mangoß },
+      { name: "망고", image: Mango },
     ],
     disliked: [
       { name: "파", image: GreenOnion },
