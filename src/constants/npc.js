@@ -262,6 +262,8 @@ export const npcData = [
       { name: "무", image: Radish },
       { name: "바나나", image: Banana },
       { name: "블루베리", image: Blueberry },
+      { name: "아스파라거스", image: Asparagus },
+      { name: "배추", image: NapaCabbage },
     ],
     disliked: [
       { name: "수국", image: Hydrangea },
@@ -303,11 +305,13 @@ export const npcData = [
       { name: "바나나", image: Banana },
       { name: "오렌지", image: Orange },
       { name: "망고", image: Mango },
+      { name: "포도", image: Grape },
     ],
     disliked: [
       { name: "파", image: GreenOnion },
       { name: "마늘", image: Garlic },
       { name: "네더 사마귀", image: NetherWart },
+      { name: "블루베리", image: Blueberry },
     ],
     hints: [
       "꽃 중에 좋은 향이 나는게 하나 있던데...",
@@ -348,6 +352,7 @@ export const npcData = [
       { name: "바나나", image: Banana },
       { name: "아스파라거스", image: Asparagus },
       { name: "복숭아", image: Peach },
+      { name: "포도", image: Grape },
     ],
     disliked: [],
     hints: [
@@ -374,6 +379,7 @@ export const npcData = [
     okay: [
       { name: "파", image: GreenOnion },
       { name: "배추", image: NapaCabbage },
+      { name: "아티초크", image: Artichoke },
     ],
     normal: [
       { name: "참나무 원목", image: Oak },
@@ -390,6 +396,8 @@ export const npcData = [
       { name: "옥수수", image: Corn },
       { name: "바나나", image: Banana },
       { name: "아스파라거스", image: Asparagus },
+      { name: "토마토", image: Tomato },
+      { name: "당근", image: Carrot },
     ],
     disliked: [],
     hints: [
@@ -413,7 +421,10 @@ export const npcData = [
       { name: "용설란 꽃", image: Agave },
       { name: "아다만티움 주괴", image: Adamantium },
     ],
-    liked: [{ name: "사막 장미", image: DesertRose }],
+    liked: [
+      { name: "사막 장미", image: DesertRose },
+      { name: "브로콜리", image: Broccoli },
+    ],
     okay: [{ name: "이리듐 주괴", image: Iridium }],
     normal: [
       { name: "불꽃 백합", image: FlameLily },
@@ -430,6 +441,7 @@ export const npcData = [
       { name: "바나나", image: Banana },
       { name: "파인애플", image: Pineapple },
       { name: "레몬", image: Lemon },
+      { name: "포도", image: Grape },
     ],
     disliked: [{ name: "사탕수수", image: Sugarcane }],
     hints: ["기름진 건 싫어요."],
@@ -477,6 +489,7 @@ export const npcData = [
       { name: "바나나", image: Banana },
       { name: "순무", image: Turnip },
       { name: "복숭아", image: Peach },
+      { name: "아티초크", image: Artichoke },
     ],
     disliked: [],
     hints: [
@@ -522,6 +535,7 @@ export const npcData = [
       { name: "바나나", image: Banana },
       { name: "마늘", image: Garlic },
       { name: "멜론", image: Melon },
+      { name: "레몬", image: Lemon },
     ],
     disliked: [{ name: "페리도트 보석", image: PeridotGem }],
     hints: [
@@ -566,6 +580,8 @@ export const npcData = [
       { name: "아티초크", image: Artichoke },
       { name: "바나나", image: Banana },
       { name: "파프리카", image: Paprika },
+      { name: "아스파라거스", image: Asparagus },
+      { name: "가지", image: Eggplant },
     ],
     disliked: [],
     hints: [
@@ -606,6 +622,7 @@ export const npcData = [
       { name: "복숭아", image: Peach },
       { name: "파인애플", image: Pineapple },
       { name: "레몬", image: Lemon },
+      { name: "블루베리", image: Blueberry },
     ],
     disliked: [{ name: "아티초크", image: Artichoke }],
     hints: [
@@ -648,6 +665,8 @@ export const npcData = [
       { name: "가지", image: Eggplant },
       { name: "바나나", image: Banana },
       { name: "복숭아", image: Peach },
+      { name: "양배추", image: Cabbage },
+      { name: "오렌지", image: Orange },
     ],
     disliked: [],
     hints: [
@@ -701,6 +720,8 @@ export const npcData = [
       { name: "마늘", image: Garlic },
       { name: "바나나", image: Banana },
       { name: "복숭아", image: Peach },
+      { name: "레몬", image: Lemon },
+      { name: "포도", image: Grape },
     ],
     disliked: [
       { name: "히비스커스", image: Hibiscus },
@@ -748,6 +769,8 @@ export const npcData = [
       { name: "망고", image: Mango },
       { name: "바나나", image: Banana },
       { name: "딸기", image: Strawberry },
+      { name: "레몬", image: Lemon },
+      { name: "포도", image: Grape },
     ],
     disliked: [{ name: "감자", image: Potato }],
     hints: [
@@ -789,6 +812,8 @@ export const npcData = [
       { name: "수박", image: WaterMelon },
       { name: "생명의 반지", image: LifeRing },
       { name: "토마토", image: Tomato },
+      { name: "사과", image: Apple },
+      { name: "브로콜리", image: Broccoli },
     ],
     disliked: [{ name: "달걀", image: Egg }],
     hints: [
