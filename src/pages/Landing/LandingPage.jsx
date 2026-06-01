@@ -246,11 +246,7 @@ const LandingPage = () => {
           최근 업데이트
         </NoticeTitle>
 
-        <NoticeText>
-          · <strong>[hot fix] </strong> 크롬 브라우저 번역 사용 시 발생하던
-          화면, 폰트 깨짐 현상 수정
-          <br /> · 무역 대기 시간 알림 추가
-        </NoticeText>
+        <NoticeText>· 가공 / 요리 시세 패치</NoticeText>
 
         <NoticeText sx={{ opacity: 0.6, fontFamily: "Mona8x12" }}>
           본 사이트는 '심야 잡화점' 유저가 제작한 비공식 웹사이트로, 유저 제보를
