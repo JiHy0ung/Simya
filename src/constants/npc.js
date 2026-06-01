@@ -381,6 +381,7 @@ export const npcData = [
       { name: "파", image: GreenOnion },
       { name: "배추", image: NapaCabbage },
       { name: "아티초크", image: Artichoke },
+      { name: "수박", image: WaterMelon },
     ],
     normal: [
       { name: "참나무 원목", image: Oak },
