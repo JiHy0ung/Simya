@@ -22,7 +22,7 @@ export const processedRecipes = [
   {
     name: "김치",
     image: Kimchi,
-    price: 13035,
+    price: 12049,
     craftTime: 40,
     ingredients: [
       { name: "배추", count: 8, image: getItemImage("배추") },
@@ -71,7 +71,7 @@ export const processedRecipes = [
   {
     name: "토마토케첩",
     image: Ketchup,
-    price: 4242,
+    price: 4049,
     craftTime: 20,
     ingredients: [
       { name: "토마토", count: 16, image: getItemImage("토마토") },
@@ -82,7 +82,7 @@ export const processedRecipes = [
   {
     name: "육수",
     image: Stock,
-    price: 3370,
+    price: 3217,
     craftTime: 20,
     ingredients: [
       { name: "양배추", count: 4, image: getItemImage("양배추") },
@@ -94,7 +94,7 @@ export const processedRecipes = [
   {
     name: "간장",
     image: SoySauce,
-    price: 4070,
+    price: 3885,
     craftTime: 20,
     ingredients: [
       { name: "콩", count: 16, image: getItemImage("콩") },
@@ -105,7 +105,7 @@ export const processedRecipes = [
   {
     name: "된장",
     image: Doenjang,
-    price: 2860,
+    price: 2730,
     craftTime: 20,
     ingredients: [
       { name: "콩", count: 16, image: getItemImage("콩") },
@@ -115,7 +115,7 @@ export const processedRecipes = [
   {
     name: "고추장",
     image: Gochujang,
-    price: 6222,
+    price: 5939,
     craftTime: 30,
     ingredients: [
       { name: "고추", count: 16, image: getItemImage("고추") },
@@ -126,7 +126,7 @@ export const processedRecipes = [
   {
     name: "마늘기름",
     image: GarlicOil,
-    price: 5390,
+    price: 5145,
     craftTime: 30,
     ingredients: [
       { name: "마늘", count: 8, image: getItemImage("마늘") },
@@ -136,7 +136,7 @@ export const processedRecipes = [
   {
     name: "고추기름",
     image: ChiliOil,
-    price: 5390,
+    price: 5145,
     craftTime: 30,
     ingredients: [
       { name: "고추", count: 16, image: getItemImage("고추") },
@@ -146,7 +146,7 @@ export const processedRecipes = [
   {
     name: "양념장",
     image: Seasoning,
-    price: 8250,
+    price: 7875,
     craftTime: 30,
     ingredients: [
       { name: "고추", count: 10, image: getItemImage("고추") },
@@ -168,7 +168,7 @@ export const processedRecipes = [
   {
     name: "피클",
     image: Pickle,
-    price: 7022,
+    price: 6703,
     craftTime: 30,
     ingredients: [
       { name: "비트", count: 128, image: getItemImage("비트") },
