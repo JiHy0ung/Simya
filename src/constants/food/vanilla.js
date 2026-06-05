@@ -8,12 +8,12 @@ import Pumpkin from "../../assets/images/food/vanilla/pumpkin.png";
 import WaterMelon from "../../assets/images/food/vanilla/watermelon.png";
 
 export const vanilla = [
-  { id: "wheat", name: "밀", image: Wheat, price: 3 },
-  { id: "carrot", name: "당근", image: Carrot, price: 1 },
-  { id: "potato", name: "감자", image: Potato, price: 1 },
-  { id: "sugar_cane", name: "사탕수수", image: SugarCane, price: 1 },
-  { id: "beetroot", name: "비트", image: BeetRoot, price: 3 },
-  { id: "cocoa_beans", name: "코코아콩", image: CocoaBeans, price: 1 },
-  { id: "pumpkin", name: "호박", image: Pumpkin, price: 2 },
-  { id: "watermelon", name: "수박", image: WaterMelon, price: 2 },
+  { id: "wheat", name: "밀", image: Wheat, price: 6 },
+  { id: "carrot", name: "당근", image: Carrot, price: 2 },
+  { id: "potato", name: "감자", image: Potato, price: 2 },
+  { id: "sugar_cane", name: "사탕수수", image: SugarCane, price: 2 },
+  { id: "beetroot", name: "비트", image: BeetRoot, price: 6 },
+  { id: "cocoa_beans", name: "코코아콩", image: CocoaBeans, price: 2 },
+  { id: "pumpkin", name: "호박", image: Pumpkin, price: 4 },
+  { id: "watermelon", name: "수박", image: WaterMelon, price: 4 },
 ];
