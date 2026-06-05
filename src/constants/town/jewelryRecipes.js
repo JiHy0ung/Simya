@@ -226,7 +226,7 @@ export const jewelryRecipes = [
   {
     name: "생명의 광휘 보석",
     image: LifeRadianceGem,
-    price: 950,
+    price: 1037,
     craftTime: 8,
     ingredients: [
       { name: "아쿠아마린 보석", image: AquamarineGem, count: 4 },
@@ -238,7 +238,7 @@ export const jewelryRecipes = [
   {
     name: "태양의 축복 보석",
     image: SunBlessingGem,
-    price: 1021,
+    price: 634,
     craftTime: 8,
     ingredients: [
       { name: "앰버 보석", image: AmberGem, count: 4 },
@@ -250,7 +250,7 @@ export const jewelryRecipes = [
   {
     name: "바다의 여명 보석",
     image: SeaDawnGem,
-    price: 1038,
+    price: 1133,
     craftTime: 8,
     ingredients: [
       { name: "산호석 보석", image: CoralGem, count: 4 },
@@ -262,7 +262,7 @@ export const jewelryRecipes = [
   {
     name: "열정의 불꽃 보석",
     image: PassionFlameGem,
-    price: 1118,
+    price: 1219,
     craftTime: 8,
     ingredients: [
       { name: "가넷 보석", image: GarnetGem, count: 4 },
@@ -276,7 +276,7 @@ export const jewelryRecipes = [
   {
     name: "생명의 목걸이",
     image: LifeNecklace,
-    price: 1404,
+    price: 1736,
     craftTime: 10,
     ingredients: [
       { name: "생명의 광휘 보석", image: LifeRadianceGem, count: 1 },
@@ -288,7 +288,7 @@ export const jewelryRecipes = [
   {
     name: "태양의 목걸이",
     image: SunNecklace,
-    price: 1496,
+    price: 1131,
     craftTime: 10,
     ingredients: [
       { name: "태양의 축복 보석", image: SunBlessingGem, count: 1 },
@@ -300,7 +300,7 @@ export const jewelryRecipes = [
   {
     name: "바다의 목걸이",
     image: SeaNecklace,
-    price: 1518,
+    price: 1880,
     craftTime: 10,
     ingredients: [
       { name: "바다의 여명 보석", image: SeaDawnGem, count: 1 },
@@ -312,7 +312,7 @@ export const jewelryRecipes = [
   {
     name: "열정의 목걸이",
     image: PassionNecklace,
-    price: 1622,
+    price: 2009,
     craftTime: 10,
     ingredients: [
       { name: "열정의 불꽃 보석", image: PassionFlameGem, count: 1 },
@@ -325,7 +325,7 @@ export const jewelryRecipes = [
   {
     name: "생명의 반지",
     image: LifeRing,
-    price: 1365,
+    price: 1676,
     craftTime: 15,
     ingredients: [
       { name: "생명의 광휘 보석", image: LifeRadianceGem, count: 1 },
@@ -336,7 +336,7 @@ export const jewelryRecipes = [
   {
     name: "태양의 반지",
     image: SunRing,
-    price: 1457,
+    price: 1071,
     craftTime: 15,
     ingredients: [
       { name: "태양의 축복 보석", image: SunBlessingGem, count: 1 },
@@ -347,7 +347,7 @@ export const jewelryRecipes = [
   {
     name: "바다의 반지",
     image: SeaRing,
-    price: 1479,
+    price: 1820,
     craftTime: 15,
     ingredients: [
       { name: "바다의 여명 보석", image: SeaDawnGem, count: 1 },
@@ -358,7 +358,7 @@ export const jewelryRecipes = [
   {
     name: "열정의 반지",
     image: PassionRing,
-    price: 1583,
+    price: 1949,
     craftTime: 15,
     ingredients: [
       { name: "열정의 불꽃 보석", image: PassionFlameGem, count: 1 },
