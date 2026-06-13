@@ -12,6 +12,7 @@ import { findJewelryByIngredient } from "../../utils/jewelryUtils";
 import { woodRecipes } from "../../constants/town/woodRecipes";
 import { jewelryRecipes } from "../../constants/town/jewelryRecipes";
 import RecipeDetail from "../Food/components/RecipeDetail";
+import { fish as fishList } from "../../constants/town/fish";
 
 const findItemImage = (name, type) => {
   if (type === "wood") {
@@ -26,6 +27,15 @@ const findItemImage = (name, type) => {
       )?.image ?? null
     );
   }
+
+  if (type === "fish") {
+    return (
+      fishList.find(
+        (f) => f.name.replace(/\s/g, "") === name.replace(/\s/g, ""),
+      )?.image ?? null
+    );
+  }
+
   // mineral, flower
   const recipe = jewelryRecipes.find((r) =>
     r.ingredients.some(
@@ -316,7 +326,9 @@ const SeasonPage = () => {
   const townItemRecipes = selectedTownItem
     ? selectedTownItem.type === "wood"
       ? findWoodByIngredient(selectedTownItem.name)
-      : findJewelryByIngredient(selectedTownItem.name)
+      : selectedTownItem.type === "fish"
+        ? [] // fish 레시피 아직 없음
+        : findJewelryByIngredient(selectedTownItem.name)
     : [];
 
   useEffect(() => {
@@ -510,6 +522,7 @@ const SeasonPage = () => {
                           ...t.resources.minerals,
                           ...t.resources.trees,
                           ...t.resources.flowers,
+                          ...t.resources.fishes,
                         ].map((item) => (
                           <span
                             key={item}
@@ -649,8 +662,46 @@ const SeasonPage = () => {
                 </Box>
               )}
 
-              {/* 완성품 카드 */}
-              {selectedTownItem && (
+              {/* 물고기 */}
+              {selectedTown.resources.fishes?.length > 0 && (
+                <Box sx={{ mb: "1.25rem" }}>
+                  <Typography
+                    sx={{
+                      fontSize: "0.75rem",
+                      color: "#5a5670",
+                      fontFamily: "Mona10x12",
+                      textTransform: "uppercase",
+                      letterSpacing: "0.05em",
+                      mb: "6px",
+                    }}
+                  >
+                    물고기
+                  </Typography>
+
+                  <CropGrid>
+                    {selectedTown.resources.fishes.map((item) => (
+                      <CropCard
+                        key={item}
+                        selected={selectedTownItem?.name === item}
+                        season={selectedSeason}
+                        onClick={() => handleTownItemClick(item, "fish")}
+                      >
+                        {findItemImage(item, "fish") && (
+                          <CropIcon
+                            src={findItemImage(item, "fish")}
+                            alt={item}
+                          />
+                        )}
+                        <CropName>{item}</CropName>
+                      </CropCard>
+                    ))}
+                  </CropGrid>
+                </Box>
+              )}
+
+              {/* 완성품 카드
+              추후 fish 타입 삭제 */}
+              {selectedTownItem && selectedTownItem.type !== "fish" && (
                 <Box sx={{ pt: "1rem", borderTop: "1px solid #3d3a52" }}>
                   <Typography
                     sx={{

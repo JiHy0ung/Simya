@@ -3,6 +3,7 @@ import { seasonal } from "../constants/food/seasonal";
 import { etc } from "../constants/food/etc";
 import { woodRecipes } from "../constants/town/woodRecipes";
 import { jewelryRecipes } from "../constants/town/jewelryRecipes";
+import { fish } from "../constants/town/fish";
 
 const allSeasonalCrops = Object.values(seasonal).flat();
 
@@ -26,7 +27,7 @@ const ingredientItems = [
   ...extractIngredients(jewelryRecipes),
 ];
 
-const allItems = [...crops, ...recipeItems, ...ingredientItems];
+const allItems = [...crops, ...recipeItems, ...ingredientItems, ...fish];
 
 export const getItemImage = (name) =>
   allItems.find((item) => item.name === name)?.image ?? null;

@@ -252,6 +252,7 @@ const SeasonWidget = () => {
                       ...(t.resources.minerals || []),
                       ...(t.resources.trees || []),
                       ...(t.resources.flowers || []),
+                      ...(t.resources.fishes || []),
                     ].map((item) => (
                       <CropBadge key={item}>
                         <CropIcon src={getItemImage(item)} alt={item.name} />

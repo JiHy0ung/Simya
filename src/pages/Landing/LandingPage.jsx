@@ -246,7 +246,7 @@ const LandingPage = () => {
           최근 업데이트
         </NoticeTitle>
 
-        <NoticeText>· 바닐라 작물 가격 밸런스 패치</NoticeText>
+        <NoticeText>· 계절별 어획 가능 물고기 추가</NoticeText>
 
         <NoticeText sx={{ opacity: 0.6, fontFamily: "Mona8x12" }}>
           본 사이트는 '심야 잡화점' 유저가 제작한 비공식 웹사이트로, 유저 제보를
