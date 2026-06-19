@@ -55,7 +55,7 @@ const MenuGrid = styled(Box)(({ theme }) => ({
   display: "grid",
   gap: "0.75rem",
   width: "100%",
-  gridTemplateColumns: "repeat(2, 1fr)",
+  gridTemplateColumns: "repeat(2, 2fr)",
 
   [theme.breakpoints.up("sm")]: {
     gridTemplateColumns: "repeat(2, 1fr)",
@@ -68,7 +68,7 @@ const MenuGrid = styled(Box)(({ theme }) => ({
   },
 
   [theme.breakpoints.up("lg")]: {
-    gridTemplateColumns: "repeat(7, 1fr)",
+    gridTemplateColumns: "repeat(4, 1fr)",
     width: "100%",
   },
 }));
