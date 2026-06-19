@@ -65,11 +65,11 @@ import SpicyRawFish from "../../assets/images/food/restaurant/spicyrawfish.png";
 import Sushi from "../../assets/images/food/restaurant/sushi.png";
 import FishCroquettes from "../../assets/images/food/restaurant/fishcroquettes.png";
 import GrilledFish from "../../assets/images/food/restaurant/grilledfish.png";
-import FishBurger from "../../assets/images/food/restaurant/FishBurger.png";
-import SpicyFishStew from "../../assets/images/food/restaurant/SpicyFishStew.png";
-import RawFishBowl from "../../assets/images/food/restaurant/RawFishBowl.png";
-import Tteokbbokki from "../../assets/images/food/restaurant/Tteokbbokki.png";
-import FishSalad from "../../assets/images/food/restaurant/FishSalad.png";
+import FishBurger from "../../assets/images/food/restaurant/fishburger.png";
+import SpicyFishStew from "../../assets/images/food/restaurant/spicyfishstew.png";
+import RawFishBowl from "../../assets/images/food/restaurant/rawfishbowl.png";
+import Tteokbbokki from "../../assets/images/food/restaurant/tteokbbokki.png";
+import FishSalad from "../../assets/images/food/restaurant/fishsalad.png";
 
 import NoImage from "../../assets/images/no_image.png";
 
