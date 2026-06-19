@@ -213,6 +213,12 @@ const MENUS = [
   },
   { icon: "💎", label: "보석 공방", desc: "보석 제작 & 마을", path: "/jewel" },
   { icon: "🪵", label: "나무 공방", desc: "목재 제작 & 마을", path: "/wood" },
+  {
+    icon: "🎣",
+    label: "낚시",
+    desc: "(업데이트 예정) 생선 가격 & 분해 정보",
+    path: "",
+  },
 ];
 
 const LINKS = [
@@ -246,7 +252,11 @@ const LandingPage = () => {
           최근 업데이트
         </NoticeTitle>
 
-        <NoticeText>· 마을 별 어획 가능한 물고기 정보 추가</NoticeText>
+        <NoticeText>
+          · (가공 / 레스토랑 / 디저트) 레시피, 가격 패치
+          <br />· 신규 아이템 추가
+          <br />· 아이템 이미지 추후 업데이트 및 수정 예정
+        </NoticeText>
 
         <NoticeText sx={{ opacity: 0.6, fontFamily: "Mona8x12" }}>
           본 사이트는 '심야 잡화점' 유저가 제작한 비공식 웹사이트로, 유저 제보를
