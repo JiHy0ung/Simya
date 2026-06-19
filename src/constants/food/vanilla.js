@@ -6,6 +6,7 @@ import BeetRoot from "../../assets/images/food/vanilla/beetroot.png";
 import CocoaBeans from "../../assets/images/food/vanilla/cocoa_beans.png";
 import Pumpkin from "../../assets/images/food/vanilla/pumpkin.png";
 import WaterMelon from "../../assets/images/food/vanilla/watermelon.png";
+import NoImage from "../../assets/images/no_image.png";
 
 export const vanilla = [
   { id: "wheat", name: "밀", image: Wheat, price: 6 },

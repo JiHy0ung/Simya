@@ -16,13 +16,14 @@ import Cream from "../../assets/images/food/processed/cream.png";
 import Pickle from "../../assets/images/food/processed/pickle.png";
 import Sugar from "../../assets/images/food/processed/sugar.png";
 import Oil from "../../assets/images/food/etc/oil.png";
+import NoImage from "../../assets/images/no_image.png";
 import { getItemImage } from "../../utils/getItemImage";
 
 export const processedRecipes = [
   {
     name: "김치",
     image: Kimchi,
-    price: 12049,
+    price: 12989,
     craftTime: 40,
     ingredients: [
       { name: "배추", count: 8, image: getItemImage("배추") },
@@ -32,9 +33,11 @@ export const processedRecipes = [
   {
     name: "밀가루",
     image: Flour,
-    price: 384,
+    price: 1536,
     craftTime: 10,
-    ingredients: [{ name: "밀", count: 128, image: getItemImage("밀") }],
+    ingredients: [
+      { name: "밀 주머니", count: 4, image: getItemImage("밀 주머니") },
+    ],
   },
   {
     name: "쌀가루",
@@ -46,35 +49,43 @@ export const processedRecipes = [
   {
     name: "전분가루",
     image: Starch,
-    price: 1200,
+    price: 1800,
     craftTime: 10,
-    ingredients: [{ name: "옥수수", count: 8, image: getItemImage("옥수수") }],
+    ingredients: [{ name: "옥수수", count: 12, image: getItemImage("옥수수") }],
   },
   {
     name: "시럽",
     image: Syrup,
-    price: 128,
+    price: 768,
     craftTime: 10,
     ingredients: [
-      { name: "사탕수수", count: 128, image: getItemImage("사탕수수") },
+      {
+        name: "사탕수수 주머니",
+        count: 6,
+        image: getItemImage("사탕수수 주머니"),
+      },
     ],
   },
   {
-    name: "코코아가루",
+    name: "코코아 파우더",
     image: CocoaPowder,
-    price: 128,
+    price: 640,
     craftTime: 10,
     ingredients: [
-      { name: "코코아콩", count: 128, image: getItemImage("코코아콩") },
+      {
+        name: "코코아콩 주머니",
+        count: 5,
+        image: getItemImage("코코아콩 주머니"),
+      },
     ],
   },
   {
     name: "토마토케첩",
     image: Ketchup,
-    price: 4049,
+    price: 3730,
     craftTime: 20,
     ingredients: [
-      { name: "토마토", count: 16, image: getItemImage("토마토") },
+      { name: "토마토", count: 8, image: getItemImage("토마토") },
       { name: "양파", count: 4, image: getItemImage("양파") },
       { name: "설탕", count: 1, image: Sugar },
     ],
@@ -82,43 +93,43 @@ export const processedRecipes = [
   {
     name: "육수",
     image: Stock,
-    price: 3217,
+    price: 4948,
     craftTime: 20,
     ingredients: [
-      { name: "양배추", count: 4, image: getItemImage("양배추") },
-      { name: "당근", count: 64, image: getItemImage("당근") },
-      { name: "양파", count: 4, image: getItemImage("양파") },
-      { name: "파", count: 4, image: getItemImage("파") },
+      { name: "양배추", count: 8, image: getItemImage("양배추") },
+      { name: "당근 주머니", count: 4, image: getItemImage("당근 주머니") },
+      { name: "산삼", count: 4, image: getItemImage("산삼") },
     ],
   },
   {
     name: "간장",
     image: SoySauce,
-    price: 3885,
+    price: 2680,
     craftTime: 20,
     ingredients: [
-      { name: "콩", count: 16, image: getItemImage("콩") },
-      { name: "쌀", count: 4, image: getItemImage("쌀") },
-      { name: "소금", count: 1, image: getItemImage("소금") },
+      { name: "콩", count: 8, image: getItemImage("콩") },
+      { name: "소금", count: 2, image: getItemImage("소금") },
+      { name: "설탕", count: 1, image: Sugar },
     ],
   },
   {
     name: "된장",
     image: Doenjang,
-    price: 2730,
+    price: 4990,
     craftTime: 20,
     ingredients: [
-      { name: "콩", count: 16, image: getItemImage("콩") },
-      { name: "소금", count: 2, image: getItemImage("소금") },
+      { name: "콩", count: 8, image: getItemImage("콩") },
+      { name: "설탕", count: 1, image: getItemImage("설탕") },
+      { name: "고추", count: 8, image: getItemImage("고추") },
     ],
   },
   {
     name: "고추장",
     image: Gochujang,
-    price: 5939,
+    price: 4360,
     craftTime: 30,
     ingredients: [
-      { name: "고추", count: 16, image: getItemImage("고추") },
+      { name: "고추", count: 8, image: getItemImage("고추") },
       { name: "쌀", count: 2, image: getItemImage("쌀") },
       { name: "설탕", count: 1, image: Sugar },
     ],
@@ -126,41 +137,43 @@ export const processedRecipes = [
   {
     name: "마늘기름",
     image: GarlicOil,
-    price: 5145,
+    price: 5519,
     craftTime: 30,
     ingredients: [
       { name: "마늘", count: 8, image: getItemImage("마늘") },
-      { name: "기름", count: 1, image: Oil },
+      { name: "기름", count: 2, image: Oil },
+      { name: "네더사마귀 주머니", count: 2, image: NoImage },
     ],
   },
   {
     name: "고추기름",
     image: ChiliOil,
-    price: 5145,
+    price: 4259,
     craftTime: 30,
     ingredients: [
-      { name: "고추", count: 16, image: getItemImage("고추") },
-      { name: "기름", count: 1, image: Oil },
+      { name: "고추", count: 12, image: getItemImage("고추") },
+      { name: "기름", count: 2, image: Oil },
+      { name: "네더사마귀 주머니", count: 2, image: NoImage },
     ],
   },
   {
     name: "양념장",
     image: Seasoning,
-    price: 7875,
+    price: 8770,
     craftTime: 30,
     ingredients: [
-      { name: "고추", count: 10, image: getItemImage("고추") },
-      { name: "마늘", count: 5, image: getItemImage("마늘") },
-      { name: "파", count: 5, image: getItemImage("파") },
+      { name: "고추", count: 8, image: getItemImage("고추") },
+      { name: "마늘", count: 8, image: getItemImage("마늘") },
+      { name: "설탕", count: 1, image: Sugar },
     ],
   },
   {
     name: "크림",
     image: Cream,
-    price: 1956,
+    price: 2155,
     craftTime: 20,
     ingredients: [
-      { name: "우유", count: 16, image: getItemImage("우유") },
+      { name: "우유", count: 8, image: getItemImage("우유") },
       { name: "설탕", count: 1, image: Sugar },
       { name: "계란", count: 1, image: getItemImage("계란") },
     ],
@@ -168,22 +181,131 @@ export const processedRecipes = [
   {
     name: "피클",
     image: Pickle,
-    price: 6703,
+    price: 7510,
     craftTime: 30,
     ingredients: [
-      { name: "비트", count: 128, image: getItemImage("비트") },
       { name: "무", count: 8, image: getItemImage("무") },
       { name: "순무", count: 8, image: getItemImage("순무") },
+      { name: "비트 주머니", count: 3, image: getItemImage("비트 주머니") },
     ],
   },
   {
     name: "설탕",
     image: Sugar,
-    price: 256,
+    price: 1152,
     craftTime: 10,
     ingredients: [
+      {
+        name: "사탕수수 주머니",
+        count: 3,
+        image: getItemImage("사탕수수 주머니"),
+      },
+      { name: "비트 주머니", count: 2, image: getItemImage("비트 주머니") },
+    ],
+  },
+  {
+    name: "완자",
+    image: NoImage,
+    price: 7560,
+    craftTime: 20,
+    ingredients: [
+      { name: "세레니티 소형 생선살", count: 6, image: NoImage },
+      { name: "블루나 소형 생선살", count: 6, image: NoImage },
+      { name: "썬브리즈 소형 생선살", count: 6, image: NoImage },
+      { name: "퓨리 소형 생선살", count: 6, image: NoImage },
+    ],
+  },
+  {
+    name: "어묵",
+    image: NoImage,
+    price: 6300,
+    craftTime: 20,
+    ingredients: [
+      { name: "세레니티 중형 생선살", count: 3, image: NoImage },
+      { name: "블루나 중형 생선살", count: 3, image: NoImage },
+      { name: "썬브리즈 중형 생선살", count: 3, image: NoImage },
+      { name: "퓨리 중형 생선살", count: 3, image: NoImage },
+    ],
+  },
+  {
+    name: "모둠 생선 필렛",
+    image: NoImage,
+    price: 5880,
+    craftTime: 20,
+    ingredients: [
+      { name: "세레니티 대형 생선살", count: 2, image: NoImage },
+      { name: "블루나 대형 생선살", count: 2, image: NoImage },
+      { name: "썬브리즈 대형 생선살", count: 2, image: NoImage },
+      { name: "퓨리 대형 생선살", count: 2, image: NoImage },
+    ],
+  },
+  {
+    name: "감자 주머니",
+    image: NoImage,
+    price: 128,
+    craftTime: 0,
+    ingredients: [{ name: "감자", count: 64, image: getItemImage("감자") }],
+  },
+  {
+    name: "당근 주머니",
+    image: NoImage,
+    price: 128,
+    craftTime: 0,
+    ingredients: [{ name: "당근", count: 64, image: getItemImage("당근") }],
+  },
+  {
+    name: "밀 주머니",
+    image: NoImage,
+    price: 384,
+    craftTime: 0,
+    ingredients: [{ name: "밀", count: 64, image: getItemImage("밀") }],
+  },
+  {
+    name: "사탕수수 주머니",
+    image: NoImage,
+    price: 128,
+    craftTime: 0,
+    ingredients: [
       { name: "사탕수수", count: 64, image: getItemImage("사탕수수") },
-      { name: "비트", count: 64, image: getItemImage("비트") },
+    ],
+  },
+  {
+    name: "비트 주머니",
+    image: NoImage,
+    price: 384,
+    craftTime: 0,
+    ingredients: [{ name: "비트", count: 64, image: getItemImage("비트") }],
+  },
+  {
+    name: "호박 주머니",
+    image: NoImage,
+    price: 256,
+    craftTime: 0,
+    ingredients: [{ name: "호박", count: 64, image: getItemImage("호박") }],
+  },
+  {
+    name: "수박 주머니",
+    image: NoImage,
+    price: 256,
+    craftTime: 0,
+    ingredients: [{ name: "수박", count: 64, image: getItemImage("수박") }],
+  },
+  {
+    name: "네더사마귀 주머니",
+    image: NoImage,
+    price: 128,
+    craftTime: 0,
+    ingredients: [
+      { name: "네더사마귀", count: 64, image: getItemImage("네더사마귀") },
+    ],
+  },
+  {
+    name: "코코아콩 주머니",
+    image: NoImage,
+    price: 128,
+    craftTime: 0,
+    ingredients: [
+      { name: "코코아콩", count: 64, image: getItemImage("코코아콩") },
     ],
   },
 ];

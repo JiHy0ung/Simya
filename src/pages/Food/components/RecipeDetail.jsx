@@ -175,7 +175,7 @@ const RecipeDetail = ({ recipe }) => {
             {netProfit.toLocaleString()}G
           </StatValue>
         </StatRow>
-        {recipe.craftTime && (
+        {recipe.craftTime >= 0 && (
           <StatRow>
             <span>제작 시간</span>
             <StatValue>{formatCraftTime(recipe.craftTime)}</StatValue>
