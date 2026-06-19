@@ -255,7 +255,7 @@ const LandingPage = () => {
         <NoticeText>
           · (가공 / 레스토랑 / 디저트) 레시피, 가격 패치
           <br />· 신규 아이템 추가
-          <br />· 아이템 이미지 추후 업데이트 및 수정 예정
+          <br />· (업데이트 예정) 물고기 이미지 수정 예정
         </NoticeText>
 
         <NoticeText sx={{ opacity: 0.6, fontFamily: "Mona8x12" }}>

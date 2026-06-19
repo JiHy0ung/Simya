@@ -32,6 +32,45 @@ import VeggieFries from "../../assets/images/food/restaurant/veggie_fries.png";
 import StrawberryPunch from "../../assets/images/food/restaurant/strawberry_punch.png";
 import WatermelonPunch from "../../assets/images/food/restaurant/watermelon_punch.png";
 import CreamPasta from "../../assets/images/food/restaurant/cream_pasta.png";
+
+import Wanja from "../../assets/images/food/processed/wanja.png";
+import Uhmuk from "../../assets/images/food/processed/uhmuk.png";
+import Filet from "../../assets/images/food/processed/filet.png";
+
+import WheatBundle from "../../assets/images/food/processed/wheat_bundle.png";
+import CarrotBundle from "../../assets/images/food/processed/carrot_bundle.png";
+import PotatoBundle from "../../assets/images/food/processed/potato_bundle.png";
+import SugarCaneBundle from "../../assets/images/food/processed/sugarcane_bundle.png";
+import BeetRootBundle from "../../assets/images/food/processed/beetroot_bundle.png";
+import CocoaBeansBundle from "../../assets/images/food/processed/cocoa_bundle.png";
+import PumpkinBundle from "../../assets/images/food/processed/pumpkin_bundle.png";
+import WaterMelonBundle from "../../assets/images/food/processed/watermelon_bundle.png";
+import NetherWartBundle from "../../assets/images/food/processed/netherwart_bundle.png";
+
+import SmallSerenity from "../../assets/images/food/fish/small_serenity.png";
+import MediumSerenity from "../../assets/images/food/fish/medium_serenity.png";
+import LargeSerenity from "../../assets/images/food/fish/large_serenity.png";
+import SmallBluena from "../../assets/images/food/fish/small_bluena.png";
+import MediumBluena from "../../assets/images/food/fish/medium_bluena.png";
+import LargeBluena from "../../assets/images/food/fish/large_bluena.png";
+import SmallSunbreeze from "../../assets/images/food/fish/small_sunbreeze.png";
+import MediumSunbreeze from "../../assets/images/food/fish/medium_sunbreeze.png";
+import LargeSunbreeze from "../../assets/images/food/fish/large_sunbreeze.png";
+import SmallFury from "../../assets/images/food/fish/small_fury.png";
+import MediumFury from "../../assets/images/food/fish/medium_fury.png";
+import LargeFury from "../../assets/images/food/fish/large_fury.png";
+
+import SeafoodPancake from "../../assets/images/food/restaurant/seafoodpancake.png";
+import SpicyRawFish from "../../assets/images/food/restaurant/spicyrawfish.png";
+import Sushi from "../../assets/images/food/restaurant/sushi.png";
+import FishCroquettes from "../../assets/images/food/restaurant/fishcroquettes.png";
+import GrilledFish from "../../assets/images/food/restaurant/grilledfish.png";
+import FishBurger from "../../assets/images/food/restaurant/FishBurger.png";
+import SpicyFishStew from "../../assets/images/food/restaurant/SpicyFishStew.png";
+import RawFishBowl from "../../assets/images/food/restaurant/RawFishBowl.png";
+import Tteokbbokki from "../../assets/images/food/restaurant/Tteokbbokki.png";
+import FishSalad from "../../assets/images/food/restaurant/FishSalad.png";
+
 import NoImage from "../../assets/images/no_image.png";
 
 import { getItemImage } from "../../utils/getItemImage";
@@ -46,7 +85,7 @@ export const restaurantRecipes = [
       { name: "고기", count: 8, image: getItemImage("고기") },
       { name: "고추기름", count: 1, image: ChiliOil },
       { name: "마늘", count: 8, image: getItemImage("마늘") },
-      { name: "당근 주머니", count: 8, image: NoImage },
+      { name: "당근 주머니", count: 8, image: CarrotBundle },
     ],
   },
   {
@@ -75,122 +114,122 @@ export const restaurantRecipes = [
   },
   {
     name: "생선 샐러드",
-    image: NoImage,
+    image: FishSalad,
     price: 19555,
     craftTime: 100,
     ingredients: [
-      { name: "완자", count: 1, image: NoImage },
+      { name: "완자", count: 1, image: Wanja },
       { name: "레몬", count: 12, image: getItemImage("레몬") },
       { name: "양파", count: 6, image: getItemImage("양파") },
-      { name: "비트 주머니", count: 4, image: getItemImage("비트 주머니") },
+      { name: "비트 주머니", count: 4, image: BeetRootBundle },
     ],
   },
   {
     name: "떡볶이",
-    image: NoImage,
+    image: Tteokbbokki,
     price: 17400,
     craftTime: 100,
     ingredients: [
-      { name: "어묵", count: 1, image: NoImage },
-      { name: "밀 주머니", count: 10, image: NoImage },
+      { name: "어묵", count: 1, image: Uhmuk },
+      { name: "밀 주머니", count: 10, image: WheatBundle },
       { name: "고추장", count: 1, image: Gochujang },
     ],
   },
   {
     name: "회덮밥",
-    image: NoImage,
+    image: RawFishBowl,
     price: 15134,
     craftTime: 100,
     ingredients: [
-      { name: "블루나 소형 생선살", count: 10, image: NoImage },
-      { name: "세레니티 중형 생선살", count: 5, image: NoImage },
-      { name: "당근 주머니", count: 4, image: NoImage },
+      { name: "블루나 소형 생선살", count: 10, image: SmallBluena },
+      { name: "세레니티 중형 생선살", count: 5, image: MediumSerenity },
+      { name: "당근 주머니", count: 4, image: CarrotBundle },
       { name: "쌀", count: 12, image: getItemImage("쌀") },
       { name: "아티초크", count: 4, image: getItemImage("아티초크") },
     ],
   },
   {
     name: "매운탕",
-    image: NoImage,
+    image: SpicyFishStew,
     price: 15874,
     craftTime: 100,
     ingredients: [
-      { name: "모둠 생선 필렛", count: 1, image: NoImage },
+      { name: "모둠 생선 필렛", count: 1, image: Filet },
       { name: "무", count: 8, image: getItemImage("무") },
       { name: "육수", count: 1, image: Stock },
     ],
   },
   {
     name: "피시버거",
-    image: NoImage,
+    image: FishBurger,
     price: 21367,
     craftTime: 100,
     ingredients: [
-      { name: "완자", count: 1, image: NoImage },
+      { name: "완자", count: 1, image: Wanja },
       { name: "토마토", count: 8, image: getItemImage("토마토") },
-      { name: "밀 주머니", count: 4, image: NoImage },
+      { name: "밀 주머니", count: 4, image: WheatBundle },
       { name: "피클", count: 1, image: Pickle },
     ],
   },
   {
     name: "생선 구이",
-    image: NoImage,
+    image: GrilledFish,
     price: 14870,
     craftTime: 100,
     ingredients: [
-      { name: "모둠 생선 필렛", count: 1, image: NoImage },
-      { name: "감자 주머니", count: 4, image: NoImage },
+      { name: "모둠 생선 필렛", count: 1, image: Filet },
+      { name: "감자 주머니", count: 4, image: PotatoBundle },
       { name: "토마토", count: 8, image: getItemImage("토마토") },
       { name: "아스파라거스", count: 8, image: getItemImage("아스파라거스") },
     ],
   },
   {
     name: "생선 고로켓",
-    image: NoImage,
+    image: FishCroquettes,
     price: 8736,
     craftTime: 100,
     ingredients: [
-      { name: "퓨리 소형 생선살", count: 10, image: NoImage },
-      { name: "썬브리즈 소형 생선살", count: 10, image: NoImage },
-      { name: "감자 주머니", count: 5, image: NoImage },
-      { name: "당근 주머니", count: 5, image: NoImage },
+      { name: "퓨리 소형 생선살", count: 10, image: SmallFury },
+      { name: "썬브리즈 소형 생선살", count: 10, image: SmallSunbreeze },
+      { name: "감자 주머니", count: 5, image: PotatoBundle },
+      { name: "당근 주머니", count: 5, image: CarrotBundle },
     ],
   },
   {
     name: "초밥 세트",
-    image: NoImage,
+    image: Sushi,
     price: 15576,
     craftTime: 100,
     ingredients: [
-      { name: "세레니티 중형 생선살", count: 6, image: NoImage },
-      { name: "블루나 중형 생선살", count: 5, image: NoImage },
+      { name: "세레니티 중형 생선살", count: 6, image: MediumSerenity },
+      { name: "블루나 중형 생선살", count: 5, image: MediumBluena },
       { name: "쌀", count: 16, image: getItemImage("쌀") },
       { name: "간장", count: 1, image: SoySauce },
     ],
   },
   {
     name: "물회",
-    image: NoImage,
+    image: SpicyRawFish,
     price: 12461,
     craftTime: 100,
     ingredients: [
-      { name: "썬브리즈 중형 생선살", count: 5, image: NoImage },
-      { name: "퓨리 중형 생선살", count: 5, image: NoImage },
+      { name: "썬브리즈 중형 생선살", count: 5, image: MediumSunbreeze },
+      { name: "퓨리 중형 생선살", count: 5, image: MediumFury },
       { name: "고추장", count: 1, image: Gochujang },
-      { name: "당근 주머니", count: 4, image: NoImage },
-      { name: "수박 주머니", count: 2, image: NoImage },
+      { name: "당근 주머니", count: 4, image: CarrotBundle },
+      { name: "수박 주머니", count: 2, image: WaterMelonBundle },
     ],
   },
   {
     name: "해물 파전",
-    image: NoImage,
+    image: SeafoodPancake,
     price: 7085,
     craftTime: 100,
     ingredients: [
-      { name: "호박 주머니", count: 3, image: NoImage },
+      { name: "호박 주머니", count: 3, image: PumpkinBundle },
       { name: "파", count: 8, image: getItemImage("파") },
       { name: "밀가루", count: 1, image: Flour },
-      { name: "세레니티 소형 생선살", count: 6, image: NoImage },
+      { name: "세레니티 소형 생선살", count: 6, image: SmallSerenity },
     ],
   },
   {
@@ -200,7 +239,7 @@ export const restaurantRecipes = [
     craftTime: 100,
     ingredients: [
       { name: "쌀", count: 16, image: getItemImage("쌀") },
-      { name: "당근 주머니", count: 5, image: NoImage },
+      { name: "당근 주머니", count: 5, image: CarrotBundle },
       { name: "고추장", count: 1, image: Gochujang },
       { name: "계란", count: 1, image: getItemImage("계란") },
     ],
@@ -213,7 +252,7 @@ export const restaurantRecipes = [
     ingredients: [
       { name: "쌀", count: 16, image: getItemImage("쌀") },
       { name: "브로콜리", count: 8, image: getItemImage("브로콜리") },
-      { name: "당근 주머니", count: 5, image: NoImage },
+      { name: "당근 주머니", count: 5, image: CarrotBundle },
       { name: "간장", count: 1, image: SoySauce },
     ],
   },
@@ -225,7 +264,7 @@ export const restaurantRecipes = [
     ingredients: [
       { name: "크림", count: 1, image: Cream },
       { name: "쌀", count: 8, image: getItemImage("쌀") },
-      { name: "완자", count: 1, image: NoImage },
+      { name: "완자", count: 1, image: Wanja },
       { name: "파슬리", count: 4, image: getItemImage("파슬리") },
     ],
   },
@@ -249,7 +288,7 @@ export const restaurantRecipes = [
     ingredients: [
       { name: "된장", count: 1, image: Doenjang },
       { name: "육수", count: 1, image: Stock },
-      { name: "감자 주머니", count: 4, image: NoImage },
+      { name: "감자 주머니", count: 4, image: PotatoBundle },
     ],
   },
   {
@@ -284,7 +323,7 @@ export const restaurantRecipes = [
       { name: "옥수수", count: 16, image: getItemImage("옥수수") },
       { name: "크림", count: 1, image: Cream },
       { name: "양파", count: 6, image: getItemImage("양파") },
-      { name: "호박 주머니", count: 4, image: NoImage },
+      { name: "호박 주머니", count: 4, image: PumpkinBundle },
     ],
   },
   {
@@ -294,7 +333,7 @@ export const restaurantRecipes = [
     craftTime: 100,
     ingredients: [
       { name: "고구마", count: 8, image: getItemImage("고구마") },
-      { name: "감자 주머니", count: 5, image: NoImage },
+      { name: "감자 주머니", count: 5, image: PotatoBundle },
       { name: "가지", count: 8, image: getItemImage("가지") },
       { name: "토마토케첩", count: 1, image: Ketchup },
     ],
@@ -317,8 +356,8 @@ export const restaurantRecipes = [
     price: 5362,
     craftTime: 40,
     ingredients: [
-      { name: "감자 주머니", count: 3, image: NoImage },
-      { name: "당근 주머니", count: 3, image: NoImage },
+      { name: "감자 주머니", count: 3, image: PotatoBundle },
+      { name: "당근 주머니", count: 3, image: CarrotBundle },
       { name: "전분가루", count: 2, image: Starch },
       { name: "기름", count: 1, image: getItemImage("기름") },
     ],
@@ -340,7 +379,7 @@ export const restaurantRecipes = [
     price: 10229,
     craftTime: 100,
     ingredients: [
-      { name: "수박 주머니", count: 4, image: NoImage },
+      { name: "수박 주머니", count: 4, image: WaterMelonBundle },
       { name: "블루베리", count: 5, image: getItemImage("블루베리") },
       { name: "복숭아", count: 5, image: getItemImage("복숭아") },
       { name: "포도", count: 5, image: getItemImage("포도") },

@@ -6,6 +6,7 @@ import BeetRoot from "../../assets/images/food/vanilla/beetroot.png";
 import CocoaBeans from "../../assets/images/food/vanilla/cocoa_beans.png";
 import Pumpkin from "../../assets/images/food/vanilla/pumpkin.png";
 import WaterMelon from "../../assets/images/food/vanilla/watermelon.png";
+import NetherWart from "../../assets/images/food/vanilla/netherwart.png";
 import NoImage from "../../assets/images/no_image.png";
 
 export const vanilla = [
@@ -17,4 +18,5 @@ export const vanilla = [
   { id: "cocoa_beans", name: "코코아콩", image: CocoaBeans, price: 2 },
   { id: "pumpkin", name: "호박", image: Pumpkin, price: 4 },
   { id: "watermelon", name: "수박", image: WaterMelon, price: 4 },
+  { id: "netherwart", name: "네더사마귀", image: NetherWart, price: 1 },
 ];
