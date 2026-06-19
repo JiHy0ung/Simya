@@ -62,9 +62,7 @@ export const processedRecipes = [
     image: Flour,
     price: 1536,
     craftTime: 10,
-    ingredients: [
-      { name: "밀 주머니", count: 4, image: getItemImage("밀 주머니") },
-    ],
+    ingredients: [{ name: "밀 주머니", count: 4, image: WheatBundle }],
   },
   {
     name: "쌀가루",
@@ -124,7 +122,7 @@ export const processedRecipes = [
     craftTime: 20,
     ingredients: [
       { name: "양배추", count: 8, image: getItemImage("양배추") },
-      { name: "당근 주머니", count: 4, image: getItemImage("당근 주머니") },
+      { name: "당근 주머니", count: 4, image: CarrotBundle },
       { name: "산삼", count: 4, image: getItemImage("산삼") },
     ],
   },

@@ -310,7 +310,7 @@ export const restaurantRecipes = [
     ingredients: [
       { name: "고추장", count: 1, image: Gochujang },
       { name: "육수", count: 1, image: Stock },
-      { name: "감자  주머니", count: 4, image: NoImage },
+      { name: "감자  주머니", count: 4, image: PotatoBundle },
       { name: "파", count: 8, image: getItemImage("파") },
     ],
   },
