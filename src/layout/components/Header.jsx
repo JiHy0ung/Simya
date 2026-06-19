@@ -105,6 +105,7 @@ const MENU_ITEMS = [
   { label: "레스토랑 & 카페", path: "/food", emoji: "🍖" },
   { label: "보석", path: "/jewel", emoji: "💎" },
   { label: "목재", path: "/wood", emoji: "🪵" },
+  { label: "낚시", path: "/fish", emoji: "🎣" },
 ];
 
 const Header = () => {

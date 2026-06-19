@@ -216,8 +216,8 @@ const MENUS = [
   {
     icon: "🎣",
     label: "낚시",
-    desc: "(업데이트 예정) 생선 가격 & 분해 정보",
-    path: "",
+    desc: "생선 가격 & 분해 정보",
+    path: "/fish",
   },
 ];
 

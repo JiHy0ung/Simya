@@ -131,6 +131,14 @@ const EmptyPanel = styled(Box)({
   border: "2px solid #3d3a52",
 });
 
+const FallbackNotice = styled(Box)({
+  fontSize: "0.6875rem",
+  color: "#5a5670",
+  fontFamily: "Mona8x12",
+  padding: "4px 0 6px",
+  borderBottom: "1px solid #28263a",
+});
+
 const getProfitColor = (value) => {
   if (value > 0) return "#6befc3";
   if (value < 0) return "#f4365f";
@@ -141,7 +149,7 @@ const RecipeDetail = ({ recipe }) => {
   if (!recipe) return <EmptyPanel>레시피를 선택하세요</EmptyPanel>;
 
   const maxDay = getMaxGrowthDay(recipe.ingredients);
-  const seasonalIngs = collectSeasonalNames(recipe.ingredients);
+  const seasonalNames = collectSeasonalNames(recipe.ingredients);
   const totalCost = getTotalCost(recipe.ingredients);
   const netProfit = getNetProfit(recipe);
 
@@ -167,14 +175,11 @@ const RecipeDetail = ({ recipe }) => {
         </StatRow>
         <StatRow>
           <span>순수익</span>
-          <StatValue
-            style={{
-              color: getProfitColor(netProfit),
-            }}
-          >
+          <StatValue style={{ color: getProfitColor(netProfit) }}>
             {netProfit.toLocaleString()}G
           </StatValue>
         </StatRow>
+
         {recipe.craftTime >= 0 && (
           <StatRow>
             <span>제작 시간</span>
@@ -187,10 +192,10 @@ const RecipeDetail = ({ recipe }) => {
             <StatValue>{maxDay}일</StatValue>
           </StatRow>
         )}
-        {seasonalIngs.size > 0 && (
+        {seasonalNames.size > 0 && (
           <StatRow>
             <span>계절 재료</span>
-            <StatValue>{seasonalIngs.size}종</StatValue>
+            <StatValue>{seasonalNames.size}종</StatValue>
           </StatRow>
         )}
       </Box>

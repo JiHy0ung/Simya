@@ -389,14 +389,14 @@ export const fish = [
     price: 300,
     grade: "일반",
     size: "소형",
-    image: Shrimp,
+    image: Starfish,
   },
   {
     name: "특별한 불가사리",
     price: 900,
     grade: "일반",
     size: "소형",
-    image: S_Shrimp,
+    image: S_Starfish,
   },
 
   { name: "가오리", price: 700, grade: "일반", size: "대형", image: Stingray },

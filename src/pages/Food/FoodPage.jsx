@@ -10,6 +10,7 @@ import { jamRecipes } from "../../constants/food/jam";
 import { wineRecipes } from "../../constants/food/wine";
 import { sortRecipes } from "../../utils/sortUtils";
 import SortBar from "../../commons/components/SortBar";
+import RodSettingsBar from "../../commons/components/RodSettingsBar";
 
 const FoodContainer = styled(Container)({
   display: "flex",
@@ -123,7 +124,14 @@ const TABS = [
   { value: "winery", label: "양조통", data: wineRecipes },
 ];
 
+const RodBar = styled(Box)({
+  width: "100%",
+  marginBottom: "2rem",
+});
+
 const FoodPage = () => {
+  const [rodVersion, setRodVersion] = useState(0);
+
   const [sort, setSort] = useState(() => {
     return localStorage.getItem("food_sort") || "default";
   });
@@ -186,6 +194,10 @@ const FoodPage = () => {
         재료 구성과 총 비용, 순수익을 확인해 효율을 분석하세요.
       </FoodDescription>
 
+      <RodBar>
+        <RodSettingsBar onChange={() => setRodVersion((v) => v + 1)} />
+      </RodBar>
+
       <TabsWrapper>
         {TABS.map((t) => (
           <StyledTab
@@ -201,7 +213,7 @@ const FoodPage = () => {
       <ContentLayout>
         {/* 왼쪽: 선택된 레시피 상세 */}
         <Box sx={{ mt: { xs: 0, md: "2.5rem" } }}>
-          <RecipeDetail recipe={selected} />
+          <RecipeDetail key={rodVersion} recipe={selected} />
         </Box>
 
         {/* 오른쪽: 카드 그리드 */}

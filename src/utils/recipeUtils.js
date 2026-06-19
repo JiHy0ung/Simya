@@ -6,6 +6,7 @@ import { restaurantRecipes } from "../constants/food/restaurant";
 import { cafeRecipes } from "../constants/food/cafe";
 import { jamRecipes } from "../constants/food/jam";
 import { wineRecipes } from "../constants/food/wine";
+import { getExpectedFishMeatPriceByName } from "./fishingRodUtils";
 
 export const SEASON_LABEL = {
   봄: "봄",
@@ -35,6 +36,9 @@ const getPriceMap = () => {
  * 재료의 비용(Cost)을 가져오는 함수
  */
 const getIngredientPrice = (name) => {
+  if (name.includes("생선살")) {
+    return getExpectedFishMeatPriceByName(name);
+  }
   const priceMap = getPriceMap();
   return priceMap[name] ?? 0;
 };

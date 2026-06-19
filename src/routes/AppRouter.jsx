@@ -12,6 +12,7 @@ const SeasonPage = React.lazy(() => import("../pages/Season/SeasonPage"));
 const GeneralStorePage = React.lazy(
   () => import("../pages/GeneralStore/GeneralStorePage"),
 );
+const FishPage = React.lazy(() => import("../pages/Fish/FishPage"));
 
 const AppRouter = () => {
   return (
@@ -26,6 +27,7 @@ const AppRouter = () => {
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/season" element={<SeasonPage />} />
           <Route path="/store" element={<GeneralStorePage />} />
+          <Route path="/fish" element={<FishPage />} />
         </Route>
       </Routes>
     </Suspense>
