@@ -405,6 +405,7 @@ export const npcData = [
     hints: [
       "야채는 싱싱했을 때 바로 먹어야돼.",
       "헨리네에서 음식 배달 좀 해줄래?",
+      "나이가 많은건 아닌데, 단건 좀 꺼리게 되더라고",
     ],
     blush: {
       background: "rgba(255, 124, 88, 0.68)",
@@ -543,6 +544,7 @@ export const npcData = [
     hints: [
       "해안가와 관련된 건 질색이야",
       "나에 대해 분석할 노력 좀 해봐. 예를 들어 초콜릿이라든지",
+      "내가 그렇게 알기 어려운 취향인가? 되게 쉬운데. 패스트푸드 좋아하고.. 단 거 좋아하고..",
     ],
     blush: {
       background: "rgba(255, 117, 161, 0.6)",
@@ -759,6 +761,7 @@ export const npcData = [
       { name: "불꽃 백합", image: FlameLily },
       { name: "사막 장미 ", image: DesertRose },
       { name: "아쿠아마린 보석", image: AquamarineGem },
+      { name: "크림 리조또", image: CreamRisotto },
     ],
     okay: [],
     normal: [
@@ -824,6 +827,7 @@ export const npcData = [
       "생명을 모독하는 선물 빼고는 싫은 선물은 딱히 없어요!",
       "생명 넘치는 선물을 좋아해요",
       "반지 선물이 종종 들어오곤 하는데.. 그떄마다 낄 수 없다고 손을 보여줘야 다들 이해하더라고요..",
+      "최근에 세레니티 폭포에 놀러갔는데.. 정말 좋더라고요. 특히 나무 냄새가요!",
     ],
     blush: {
       background: "rgba(255, 146, 170, 0.63)",
