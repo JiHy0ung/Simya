@@ -911,6 +911,7 @@ export const npcData = [
       { name: "고구마 스틱", image: SweetPotatoStick },
       { name: "모둠 생선 필렛", image: Filet },
       { name: "딸기 화채", image: StrawberryPunch },
+      { name: "배추전", image: Baechujeon },
     ],
     disliked: [],
     hints: [],
