@@ -12,6 +12,7 @@ import Kevin from "../assets/images/npc/kevin.png";
 import Ian from "../assets/images/npc/ian.png";
 import Luca from "../assets/images/npc/luca.png";
 import Who from "../assets/images/npc/who.png";
+import Ted from "../assets/images/npc/ted.png";
 
 // 아이템 이미지
 import WheatFlour from "../assets/images/food/processed/flour.png";
@@ -231,6 +232,34 @@ import OrangeWine from "../assets/images/food/wine/orange_wine.png";
 import PeachWine from "../assets/images/food/wine/peach_wine.png";
 import PineappleWine from "../assets/images/food/wine/pineapple_wine.png";
 import StrawberryWine from "../assets/images/food/wine/strawberry_wine.png";
+
+import SmallSerenity from "../assets/images/food/fish/small_serenity.png";
+import MediumSerenity from "../assets/images/food/fish/medium_serenity.png";
+import LargeSerenity from "../assets/images/food/fish/large_serenity.png";
+import SmallBluena from "../assets/images/food/fish/small_bluena.png";
+import MediumBluena from "../assets/images/food/fish/medium_bluena.png";
+import LargeBluena from "../assets/images/food/fish/large_bluena.png";
+import SmallSunbreeze from "../assets/images/food/fish/small_sunbreeze.png";
+import MediumSunbreeze from "../assets/images/food/fish/medium_sunbreeze.png";
+import LargeSunbreeze from "../assets/images/food/fish/large_sunbreeze.png";
+import SmallFury from "../assets/images/food/fish/small_fury.png";
+import MediumFury from "../assets/images/food/fish/medium_fury.png";
+import LargeFury from "../assets/images/food/fish/large_fury.png";
+
+import SeafoodPancake from "../assets/images/food/restaurant/seafoodpancake.png";
+import SpicyRawFish from "../assets/images/food/restaurant/spicyrawfish.png";
+import Sushi from "../assets/images/food/restaurant/sushi.png";
+import FishCroquettes from "../assets/images/food/restaurant/fishcroquettes.png";
+import GrilledFish from "../assets/images/food/restaurant/grilledfish.png";
+import FishBurger from "../assets/images/food/restaurant/fishburger.png";
+import SpicyFishStew from "../assets/images/food/restaurant/spicyfishstew.png";
+import RawFishBowl from "../assets/images/food/restaurant/rawfishbowl.png";
+import Tteokbbokki from "../assets/images/food/restaurant/tteokbbokki.png";
+import FishSalad from "../assets/images/food/restaurant/fishsalad.png";
+
+import Wanja from "../assets/images/food/processed/wanja.png";
+import Uhmuk from "../assets/images/food/processed/uhmuk.png";
+import Filet from "../assets/images/food/processed/filet.png";
 
 export const npcData = [
   {
@@ -864,6 +893,31 @@ export const npcData = [
       background: "rgba(255, 136, 132, 0.67)",
       left: { x: "40%", y: "69%" },
       right: { x: "67%", y: "69%" },
+    },
+  },
+  {
+    name: "테드",
+    image: Ted,
+    age: null,
+    job: "낚시 상점 주인",
+    description: "낚시 상점의 주인이다.",
+    loved: [{ name: "수박 화채", image: WatermelonPunch }],
+    liked: [],
+    okay: [],
+    normal: [
+      { name: "매운탕", image: SpicyFishStew },
+      { name: "당근", image: Carrot },
+      { name: "오렌지 잼", image: OrangeJam },
+      { name: "고구마 스틱", image: SweetPotatoStick },
+      { name: "모둠 생선 필렛", image: Filet },
+      { name: "딸기 화채", image: StrawberryPunch },
+    ],
+    disliked: [],
+    hints: [],
+    blush: {
+      background: "rgba(255, 132, 175, 0.67)",
+      left: { x: "40%", y: "69%" },
+      right: { x: "85%", y: "69%" },
     },
   },
 ];
