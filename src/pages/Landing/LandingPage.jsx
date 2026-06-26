@@ -252,12 +252,7 @@ const LandingPage = () => {
           최근 업데이트
         </NoticeTitle>
 
-        <NoticeText>
-          · (가공 / 레스토랑 / 디저트) 레시피, 가격 패치
-          <br />· 낚시 페이지 추가
-          <br />· 신규 아이템 추가
-          <br />· (예정) 일부 물고기 이미지 수정
-        </NoticeText>
+        <NoticeText>· 신규 호감도 npc 테드 추가</NoticeText>
 
         <NoticeText sx={{ opacity: 0.6, fontFamily: "Mona8x12" }}>
           본 사이트는 '심야 잡화점' 유저가 제작한 비공식 웹사이트로, 유저 제보를

@@ -902,7 +902,7 @@ export const npcData = [
     job: "낚시 상점 주인",
     description: "낚시 상점의 주인이다.",
     loved: [{ name: "수박 화채", image: WatermelonPunch }],
-    liked: [],
+    liked: [{ name: "샌드위치", image: Sandwich }],
     okay: [],
     normal: [
       { name: "매운탕", image: SpicyFishStew },
