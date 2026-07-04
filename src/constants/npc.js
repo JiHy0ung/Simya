@@ -13,6 +13,7 @@ import Ian from "../assets/images/npc/ian.png";
 import Luca from "../assets/images/npc/luca.png";
 import Who from "../assets/images/npc/who.png";
 import Ted from "../assets/images/npc/ted.png";
+import Milo from "../assets/images/npc/milo.png";
 
 // 아이템 이미지
 import WheatFlour from "../assets/images/food/processed/flour.png";
@@ -919,6 +920,29 @@ export const npcData = [
       background: "rgba(255, 132, 175, 0.67)",
       left: { x: "40%", y: "69%" },
       right: { x: "85%", y: "69%" },
+    },
+  },
+  {
+    name: "마일로",
+    image: Milo,
+    age: null,
+    job: "모험가",
+    description: "용감한 모험가이다.",
+    loved: [],
+    liked: [{ name: "고기볶음", image: StirMeatFry }],
+    okay: [{ name: "떡볶이", image: Tteokbbokki }],
+    normal: [
+      { name: "매운탕", image: SpicyFishStew },
+      { name: "오렌지 와인", image: OrangeWine },
+    ],
+    disliked: [],
+    hints: [
+      "내가 좋아하는 거? 종류가 너무 다양해서.. 흠.. 일단 단백질 좋아하고, 그냥 분식 좋아하는 것 같은데? 잘 모르겠어. 나도.",
+    ],
+    blush: {
+      background: "rgba(255, 132, 153, 0.67)",
+      left: { x: "40%", y: "67%" },
+      right: { x: "70%", y: "67%" },
     },
   },
 ];
