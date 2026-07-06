@@ -928,7 +928,7 @@ export const npcData = [
     age: null,
     job: "모험가",
     description: "용감한 모험가이다.",
-    loved: [],
+    loved: [{ name: "초코쉐이크", image: ChocoShake }],
     liked: [{ name: "고기볶음", image: StirMeatFry }],
     okay: [
       { name: "떡볶이", image: Tteokbbokki },
