@@ -944,7 +944,6 @@ export const npcData = [
       { name: "어묵", image: Uhmuk },
       { name: "생선구이", image: GrilledFish },
       { name: "생선 고로켓", image: FishCroquettes },
-      { name: "생선 샐러드", image: FishSalad },
       { name: "해물파전", image: SeafoodPancake },
       { name: "피시버거", image: FishBurger },
       { name: "초밥", image: Sushi },
@@ -957,7 +956,7 @@ export const npcData = [
       { name: "초코 크림 도넛", image: ChocoCreamDonut },
       { name: "고기", image: Meat },
     ],
-    disliked: [],
+    disliked: [{ name: "생선 샐러드", image: FishSalad }],
     hints: [
       "내가 좋아하는 거? 종류가 너무 다양해서.. 흠.. 일단 단백질 좋아하고, 그냥 분식 좋아하는 것 같은데? 잘 모르겠어. 나도.",
       "표정 관리가 안 되네.. 그래도 신경써서 가지고 와준건 알겠어.. 야채는 아니잖아?",
