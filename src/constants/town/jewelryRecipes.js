@@ -8,6 +8,7 @@ import GarnetRaw from "../../assets/images/jewelry/garnet_raw.png";
 import RubyRaw from "../../assets/images/jewelry/ruby_raw.png";
 import CobbleStone from "../../assets/images/jewelry/cobble_stone.png";
 import CobbledDeepslate from "../../assets/images/jewelry/cobbled_deepslate.png";
+import Fluit from "../../assets/images/jewelry/fluit.png";
 
 import AquamarineGem from "../../assets/images/jewelry/aquamarine_gem.png";
 import PeridotGem from "../../assets/images/jewelry/peridot_gem.png";
@@ -226,8 +227,8 @@ export const jewelryRecipes = [
   {
     name: "생명의 광휘 보석",
     image: LifeRadianceGem,
-    price: 1037,
-    craftTime: 8,
+    price: 1584,
+    craftTime: 10,
     ingredients: [
       { name: "아쿠아마린 보석", image: AquamarineGem, count: 4 },
       { name: "페리도트 보석", image: PeridotGem, count: 4 },
@@ -238,8 +239,8 @@ export const jewelryRecipes = [
   {
     name: "태양의 축복 보석",
     image: SunBlessingGem,
-    price: 634,
-    craftTime: 8,
+    price: 1728,
+    craftTime: 10,
     ingredients: [
       { name: "앰버 보석", image: AmberGem, count: 4 },
       { name: "시트린 보석", image: CitrineGem, count: 4 },
@@ -250,8 +251,8 @@ export const jewelryRecipes = [
   {
     name: "바다의 여명 보석",
     image: SeaDawnGem,
-    price: 1133,
-    craftTime: 8,
+    price: 1744,
+    craftTime: 10,
     ingredients: [
       { name: "산호석 보석", image: CoralGem, count: 4 },
       { name: "라리마 보석", image: LarimarGem, count: 4 },
@@ -262,8 +263,8 @@ export const jewelryRecipes = [
   {
     name: "열정의 불꽃 보석",
     image: PassionFlameGem,
-    price: 1219,
-    craftTime: 8,
+    price: 1816,
+    craftTime: 10,
     ingredients: [
       { name: "가넷 보석", image: GarnetGem, count: 4 },
       { name: "루비 보석", image: RubyGem, count: 4 },
@@ -276,94 +277,94 @@ export const jewelryRecipes = [
   {
     name: "생명의 목걸이",
     image: LifeNecklace,
-    price: 1736,
-    craftTime: 10,
+    price: 30797,
+    craftTime: 100,
     ingredients: [
       { name: "생명의 광휘 보석", image: LifeRadianceGem, count: 1 },
-      { name: "수국", image: Hydrangea, price: 5, count: 12 },
-      { name: "창포", image: Calamus, price: 5, count: 12 },
-      { name: "돌 뭉치", image: StoneChunk, count: 1 },
+      { name: "수국", image: Hydrangea, price: 5, count: 8 },
+      { name: "창포", image: Calamus, price: 5, count: 8 },
+      { name: "플루이트", image: Fluit, count: 16 },
     ],
   },
   {
     name: "태양의 목걸이",
     image: SunNecklace,
-    price: 1131,
-    craftTime: 10,
+    price: 30970,
+    craftTime: 100,
     ingredients: [
       { name: "태양의 축복 보석", image: SunBlessingGem, count: 1 },
-      { name: "히비스커스", image: Hibiscus, price: 5, count: 12 },
-      { name: "사막 장미", image: DesertRose, price: 5, count: 12 },
-      { name: "돌 뭉치", image: StoneChunk, count: 1 },
+      { name: "히비스커스", image: Hibiscus, price: 5, count: 8 },
+      { name: "사막 장미", image: DesertRose, price: 5, count: 8 },
+      { name: "플루이트", image: Fluit, count: 16 },
     ],
   },
   {
     name: "바다의 목걸이",
     image: SeaNecklace,
-    price: 1880,
-    craftTime: 10,
+    price: 30989,
+    craftTime: 100,
     ingredients: [
       { name: "바다의 여명 보석", image: SeaDawnGem, count: 1 },
-      { name: "라벤더", image: Lavender, price: 5, count: 12 },
-      { name: "능소화", image: Jacaranda, price: 5, count: 12 },
-      { name: "돌 뭉치", image: StoneChunk, count: 1 },
+      { name: "라벤더", image: Lavender, price: 5, count: 8 },
+      { name: "능소화", image: Jacaranda, price: 5, count: 8 },
+      { name: "플루이트", image: Fluit, count: 16 },
     ],
   },
   {
     name: "열정의 목걸이",
     image: PassionNecklace,
-    price: 2009,
-    craftTime: 10,
+    price: 31075,
+    craftTime: 100,
     ingredients: [
       { name: "열정의 불꽃 보석", image: PassionFlameGem, count: 1 },
-      { name: "불꽃 백합", image: FlameLily, price: 5, count: 12 },
-      { name: "용설란 꽃", image: Agave, price: 5, count: 12 },
-      { name: "돌 뭉치", image: StoneChunk, count: 1 },
+      { name: "불꽃 백합", image: FlameLily, price: 5, count: 8 },
+      { name: "용설란 꽃", image: Agave, price: 5, count: 8 },
+      { name: "플루이트", image: Fluit, count: 16 },
     ],
   },
   // 반지
   {
     name: "생명의 반지",
     image: LifeRing,
-    price: 1676,
-    craftTime: 15,
+    price: 30797,
+    craftTime: 100,
     ingredients: [
       { name: "생명의 광휘 보석", image: LifeRadianceGem, count: 1 },
       { name: "아만타디움 주괴", image: Adamantium, price: 20, count: 4 },
-      { name: "돌 뭉치", image: StoneChunk, count: 2 },
+      { name: "플루이트", image: Fluit, count: 16 },
     ],
   },
   {
     name: "태양의 반지",
     image: SunRing,
-    price: 1071,
-    craftTime: 15,
+    price: 30970,
+    craftTime: 100,
     ingredients: [
       { name: "태양의 축복 보석", image: SunBlessingGem, count: 1 },
       { name: "아만타디움 주괴", image: Adamantium, price: 20, count: 4 },
-      { name: "돌 뭉치", image: StoneChunk, count: 2 },
+      { name: "플루이트", image: Fluit, count: 16 },
     ],
   },
   {
     name: "바다의 반지",
     image: SeaRing,
-    price: 1820,
-    craftTime: 15,
+    price: 30989,
+    craftTime: 100,
     ingredients: [
       { name: "바다의 여명 보석", image: SeaDawnGem, count: 1 },
       { name: "아만타디움 주괴", image: Adamantium, price: 20, count: 4 },
-      { name: "돌 뭉치", image: StoneChunk, count: 2 },
+      { name: "플루이트", image: Fluit, count: 16 },
     ],
   },
   {
     name: "열정의 반지",
     image: PassionRing,
-    price: 1949,
-    craftTime: 15,
+    price: 31075,
+    craftTime: 100,
     ingredients: [
       { name: "열정의 불꽃 보석", image: PassionFlameGem, count: 1 },
       { name: "아만타디움 주괴", image: Adamantium, price: 20, count: 4 },
-      { name: "돌 뭉치", image: StoneChunk, count: 2 },
+      { name: "플루이트", image: Fluit, count: 16 },
     ],
   },
 ];

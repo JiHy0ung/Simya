@@ -252,7 +252,7 @@ const LandingPage = () => {
           최근 업데이트
         </NoticeTitle>
 
-        <NoticeText>· 신규 호감도 npc 마일로 추가</NoticeText>
+        <NoticeText>· 보석상 생산품 가격 및 레시피 수정</NoticeText>
 
         <NoticeText sx={{ opacity: 0.6, fontFamily: "Mona8x12" }}>
           본 사이트는 '심야 잡화점' 유저가 제작한 비공식 웹사이트로, 유저 제보를
