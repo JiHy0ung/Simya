@@ -982,11 +982,13 @@ export const npcData = [
     normal: [
       { name: "생선 샐러드", image: FishSalad },
       { name: "초코쉐이크", image: ChocoShake },
+      { name: "배추전", image: Baechujeon },
     ],
     disliked: [],
     hints: [
       "제일 좋아하는 과일은.. 음.. 열대과일? 그건 보통 다 괜찮더라구요",
       "저는 보통 음식을 좋아하는 편이랍니다. 특히 건강하게 기름진 음식?",
+      "보통 바다향기 나는 걸 좋아해요. 제 첫 여행지였거든요",
     ],
     blush: {
       background: "rgba(255, 129, 87, 0.67)",
