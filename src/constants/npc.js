@@ -977,12 +977,16 @@ export const npcData = [
     job: "박물관장",
     description: "박물관장이다.",
     loved: [],
-    liked: [],
+    liked: [
+      { name: "생선구이", image: GrilledFish },
+      { name: "생선 고로케", image: FishCroquettes },
+    ],
     okay: [],
     normal: [
       { name: "생선 샐러드", image: FishSalad },
       { name: "초코쉐이크", image: ChocoShake },
       { name: "배추전", image: Baechujeon },
+      { name: "망고", image: Mango },
     ],
     disliked: [],
     hints: [
