@@ -252,7 +252,10 @@ const LandingPage = () => {
           최근 업데이트
         </NoticeTitle>
 
-        <NoticeText>· 보석상 레시피, 제작 시간, 가격 수정</NoticeText>
+        <NoticeText>
+          · 보석상 생산품(귀걸이, 벨트) 추가
+          <br />· 신규 호감도 npc 미아 추가
+        </NoticeText>
 
         <NoticeText sx={{ opacity: 0.6, fontFamily: "Mona8x12" }}>
           본 사이트는 '심야 잡화점' 유저가 제작한 비공식 웹사이트로, 유저 제보를

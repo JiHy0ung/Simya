@@ -35,6 +35,16 @@ import SunRing from "../../assets/images/jewelry/sun_ring.png";
 import SeaRing from "../../assets/images/jewelry/sea_ring.png";
 import PassionRing from "../../assets/images/jewelry/passion_ring.png";
 
+import LifeEaring from "../../assets/images/jewelry/life_earing.png";
+import SunEaring from "../../assets/images/jewelry/sun_earing.png";
+import SeaEaring from "../../assets/images/jewelry/sea_earing.png";
+import PassionEaring from "../../assets/images/jewelry/passion_earing.png";
+
+import LifeBelt from "../../assets/images/jewelry/life_belt.png";
+import SunBelt from "../../assets/images/jewelry/sun_belt.png";
+import SeaBelt from "../../assets/images/jewelry/sea_belt.png";
+import PassionBelt from "../../assets/images/jewelry/passion_belt.png";
+
 import Hydrangea from "../../assets/images/flower/hydrangea.png";
 import Calamus from "../../assets/images/flower/calamus.png";
 import Hibiscus from "../../assets/images/flower/hibiscus.png";
@@ -53,6 +63,11 @@ import Sapphire from "../../assets/images/ingot/sapphire.png";
 import Spinel from "../../assets/images/ingot/spinel.png";
 import Tungsten from "../../assets/images/ingot/tungsten.png";
 import YellowCrystal from "../../assets/images/ingot/yellow_crystal.png";
+
+import OldTreePlanks from "../../assets/images/wood/old_tree_planks.png";
+import TropicalPlanks from "../../assets/images/wood/tropical_planks.png";
+import VolcanicPlanks from "../../assets/images/wood/volcanic_planks.png";
+import WeepingPlanks from "../../assets/images/wood/weeping_planks.png";
 
 export const flower = [
   {
@@ -213,7 +228,7 @@ export const jewelryRecipes = [
     ingredients: [{ name: "루비 원석", image: RubyRaw, price: 0, count: 8 }],
   },
   {
-    name: "돌 뭉치",
+    name: "돌뭉치",
     image: StoneChunk,
     price: 10,
     craftTime: 10,
@@ -275,7 +290,7 @@ export const jewelryRecipes = [
   // 최종 주얼리 제작
   // 목걸이
   {
-    name: "생명의 목걸이",
+    name: "생명의 광휘 목걸이",
     image: LifeNecklace,
     price: 30797,
     craftTime: 100,
@@ -287,7 +302,7 @@ export const jewelryRecipes = [
     ],
   },
   {
-    name: "태양의 목걸이",
+    name: "태양의 축복 목걸이",
     image: SunNecklace,
     price: 30970,
     craftTime: 100,
@@ -299,7 +314,7 @@ export const jewelryRecipes = [
     ],
   },
   {
-    name: "바다의 목걸이",
+    name: "바다의 여명 목걸이",
     image: SeaNecklace,
     price: 30989,
     craftTime: 100,
@@ -311,7 +326,7 @@ export const jewelryRecipes = [
     ],
   },
   {
-    name: "열정의 목걸이",
+    name: "열정의 불꽃 목걸이",
     image: PassionNecklace,
     price: 31075,
     craftTime: 100,
@@ -324,7 +339,7 @@ export const jewelryRecipes = [
   },
   // 반지
   {
-    name: "생명의 반지",
+    name: "생명의 광휘 반지",
     image: LifeRing,
     price: 30797,
     craftTime: 100,
@@ -335,7 +350,7 @@ export const jewelryRecipes = [
     ],
   },
   {
-    name: "태양의 반지",
+    name: "태양의 축복 반지",
     image: SunRing,
     price: 30970,
     craftTime: 100,
@@ -346,7 +361,7 @@ export const jewelryRecipes = [
     ],
   },
   {
-    name: "바다의 반지",
+    name: "바다의 여명 반지",
     image: SeaRing,
     price: 30989,
     craftTime: 100,
@@ -357,13 +372,105 @@ export const jewelryRecipes = [
     ],
   },
   {
-    name: "열정의 반지",
+    name: "열정의 불꽃 반지",
     image: PassionRing,
     price: 31075,
     craftTime: 100,
     ingredients: [
       { name: "열정의 불꽃 보석", image: PassionFlameGem, count: 1 },
       { name: "아만타디움 주괴", image: Adamantium, price: 20, count: 4 },
+      { name: "플루이트", image: Fluit, count: 16 },
+    ],
+  },
+
+  // 귀걸이
+  {
+    name: "생명의 광휘 귀걸이",
+    image: LifeEaring,
+    price: 32227,
+    craftTime: 100,
+    ingredients: [
+      { name: "생명의 광휘 보석", image: LifeRadianceGem, count: 1 },
+      { name: "수양나무 판자", image: WeepingPlanks, price: 933, count: 1 },
+      { name: "플루이트", image: Fluit, count: 16 },
+    ],
+  },
+  {
+    name: "태양의 축복 귀걸이",
+    image: SunEaring,
+    price: 32544,
+    craftTime: 100,
+    ingredients: [
+      { name: "태양의 축복 보석", image: SunBlessingGem, count: 1 },
+      { name: "고목나무 판자", image: OldTreePlanks, price: 1021, count: 1 },
+      { name: "플루이트", image: Fluit, count: 16 },
+    ],
+  },
+  {
+    name: "바다의 여명 귀걸이",
+    image: SeaEaring,
+    price: 32563,
+    craftTime: 100,
+    ingredients: [
+      { name: "바다의 여명 보석", image: SeaDawnGem, count: 1 },
+      { name: "열대나무 판자", image: TropicalPlanks, price: 1021, count: 1 },
+      { name: "플루이트", image: Fluit, count: 16 },
+    ],
+  },
+  {
+    name: "열정의 불꽃 귀걸이",
+    image: PassionEaring,
+    price: 32650,
+    craftTime: 100,
+    ingredients: [
+      { name: "열정의 불꽃 보석", image: PassionFlameGem, count: 1 },
+      { name: "화산나무 판자", image: VolcanicPlanks, price: 1021, count: 1 },
+      { name: "플루이트", image: Fluit, count: 16 },
+    ],
+  },
+
+  // 벨트
+  {
+    name: "생명의 광휘 벨트",
+    image: LifeBelt,
+    price: 30713,
+    craftTime: 100,
+    ingredients: [
+      { name: "생명의 광휘 보석", image: LifeRadianceGem, count: 1 },
+      { name: "돌뭉치", image: StoneChunk, count: 1 },
+      { name: "플루이트", image: Fluit, count: 16 },
+    ],
+  },
+  {
+    name: "태양의 축복 벨트",
+    image: SunBelt,
+    price: 30886,
+    craftTime: 100,
+    ingredients: [
+      { name: "태양의 축복 보석", image: SunBlessingGem, count: 1 },
+      { name: "돌뭉치", image: StoneChunk, count: 1 },
+      { name: "플루이트", image: Fluit, count: 16 },
+    ],
+  },
+  {
+    name: "바다의 여명 벨트",
+    image: SeaBelt,
+    price: 30905,
+    craftTime: 100,
+    ingredients: [
+      { name: "바다의 여명 보석", image: SeaDawnGem, count: 1 },
+      { name: "돌뭉치", image: StoneChunk, count: 1 },
+      { name: "플루이트", image: Fluit, count: 16 },
+    ],
+  },
+  {
+    name: "열정의 불꽃 벨트",
+    image: PassionBelt,
+    price: 30991,
+    craftTime: 100,
+    ingredients: [
+      { name: "열정의 불꽃 보석", image: PassionFlameGem, count: 1 },
+      { name: "돌뭉치", image: StoneChunk, count: 1 },
       { name: "플루이트", image: Fluit, count: 16 },
     ],
   },
