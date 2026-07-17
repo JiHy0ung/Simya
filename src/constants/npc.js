@@ -976,11 +976,8 @@ export const npcData = [
     age: null,
     job: "박물관장",
     description: "박물관장이다.",
-    loved: [],
-    liked: [
-      { name: "생선구이", image: GrilledFish },
-      { name: "생선 고로케", image: FishCroquettes },
-    ],
+    loved: [{ name: "생선 고로케", image: FishCroquettes }],
+    liked: [{ name: "생선구이", image: GrilledFish }],
     okay: [],
     normal: [
       { name: "생선 샐러드", image: FishSalad },
