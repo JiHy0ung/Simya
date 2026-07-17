@@ -253,8 +253,8 @@ const LandingPage = () => {
         </NoticeTitle>
 
         <NoticeText>
-          · 보석상 생산품(귀걸이, 벨트) 추가
-          <br />· 신규 호감도 npc 미아 추가
+          · 신규 호감도 npc 미아 추가
+          <br />· 보석상 생산품(귀걸이, 벨트) 추가
         </NoticeText>
 
         <NoticeText sx={{ opacity: 0.6, fontFamily: "Mona8x12" }}>
