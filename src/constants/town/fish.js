@@ -375,13 +375,13 @@ export const fish = [
     image: S_Shrimp,
   },
 
-  { name: "오징어", price: 1300, grade: "고급", size: "중형", image: Shrimp },
+  { name: "오징어", price: 1300, grade: "고급", size: "중형", image: Squid },
   {
     name: "특별한 오징어",
     price: 3900,
     grade: "고급",
     size: "중형",
-    image: S_Shrimp,
+    image: S_Squid,
   },
 
   {
